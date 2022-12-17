@@ -20,88 +20,88 @@
 		},
 		"Tauros" :
 		{
-			"type" : [],
-			"ability" : [],
+			"type" : ["Fighting"],
+			"ability" : ["Intimidate", "Anger Point", "Cud Chew"],
 			"stats" :
 			{
-				"hp": 0,
-				"attack" : 0,
-				"defense" : 0,
-				"spatk" : 0,
-				"spdef" : 0,
-				"speed" : 0
+				"hp": 75,
+				"attack" : 110,
+				"defense" : 105,
+				"spatk" : 30,
+				"spdef" : 70,
+				"speed" : 100
 			},
-			"moves" : [],
-			"normal" : "",
-			"shiny" : ""
+			"moves" : ["Close Combat", "Thrash", "Zen Headbutt", "Raging Bull", "Bulk Up", "Screech"],
+			"normal" : "https://www.serebii.net/scarletviolet/pokemon/new/128-p.png",
+			"shiny" : "https://www.serebii.net/Shiny/SV/new/128-p.png"
 		},
 		"Tauros (Fire)" :
 		{
-			"type" : [],
-			"ability" : [],
+			"type" : ["Fighting", "Fire"],
+			"ability" : ["Intimidate", "Anger Point", "Cud Chew"],
 			"stats" :
 			{
-				"hp": 0,
-				"attack" : 0,
-				"defense" : 0,
-				"spatk" : 0,
-				"spdef" : 0,
-				"speed" : 0
+				"hp": 75,
+				"attack" : 110,
+				"defense" : 105,
+				"spatk" : 30,
+				"spdef" : 70,
+				"speed" : 100
 			},
-			"moves" : [],
-			"normal" : "",
-			"shiny" : ""
+			"moves" : ["Flare Blitz", "Close Combat", "Flamethrower", "Headbutt", "Sunny Day", "Bulk Up"],
+			"normal" : "https://www.serebii.net/scarletviolet/pokemon/new/128-b.png",
+			"shiny" : "https://www.serebii.net/Shiny/SV/new/128-b.png"
 		},
 		"Tauros (Water)" :
 		{
-			"type" : [],
-			"ability" : [],
+			"type" : ["Fighting", "Water"],
+			"ability" : ["Intimidate", "Anger Point", "Cud Chew"],
 			"stats" :
 			{
-				"hp": 0,
-				"attack" : 0,
-				"defense" : 0,
-				"spatk" : 0,
-				"spdef" : 0,
-				"speed" : 0
+				"hp": 75,
+				"attack" : 110,
+				"defense" : 105,
+				"spatk" : 30,
+				"spdef" : 70,
+				"speed" : 100
 			},
-			"moves" : [],
-			"normal" : "",
-			"shiny" : ""
+			"moves" : ["Wave Crash", "Close Combat", "Surf", "Headbutt", "Rain Dance", "Bulk Up"],
+			"normal" : "https://www.serebii.net/scarletviolet/pokemon/new/128-a.png",
+			"shiny" : "https://www.serebii.net/Shiny/SV/new/128-a.png"
 		},
 		"Gyarados" :
 		{
-			"type" : [],
-			"ability" : [],
+			"type" : ["Water", "Flying"],
+			"ability" : ["Intimidate", "Moxie"],
 			"stats" :
 			{
-				"hp": 0,
-				"attack" : 0,
-				"defense" : 0,
-				"spatk" : 0,
-				"spdef" : 0,
-				"speed" : 0
+				"hp": 95,
+				"attack" : 125,
+				"defense" : 79,
+				"spatk" : 60,
+				"spdef" : 100,
+				"speed" : 81
 			},
-			"moves" : [],
-			"normal" : "",
-			"shiny" : ""
+			"moves" : ["Aqua Tail", "Crunch", "Hurricane", "Ice Fang", "Taunt", "Dragon Dance"],
+			"normal" : "https://www.serebii.net/scarletviolet/pokemon/new/130.png",
+			"shiny" : "https://www.serebii.net/Shiny/SV/new/130.png"
 		},
 		"Ditto" :
 		{
-			"type" : [],
-			"ability" : [],
+			"type" : ["Normal"],
+			"ability" : ["Limber", "Imposter"],
 			"stats" :
 			{
-				"hp": 0,
-				"attack" : 0,
-				"defense" : 0,
-				"spatk" : 0,
-				"spdef" : 0,
-				"speed" : 0
+				"hp": 48,
+				"attack" : 48,
+				"defense" : 48,
+				"spatk" : 48,
+				"spdef" : 48,
+				"speed" : 48
 			},
-			"moves" : [],
-			"normal" : "",
-			"shiny" : ""
+			"moves" : ["Transform"],
+			"normal" : "https://www.serebii.net/scarletviolet/pokemon/new/132.png",
+			"shiny" : "https://www.serebii.net/Shiny/SV/new/132.png"
 		},
 		"Vaporeon" :
 		{
