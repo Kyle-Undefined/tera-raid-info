@@ -1,0 +1,1195 @@
+{
+	"pokemon" :
+	{
+		"Gengar" :
+		{
+			"type" : ["Ghost", "Poison"],
+			"ability" : ["Cursed Body"],
+			"stats" :
+			{
+				"hp" : 60,
+				"attack" : 65,
+				"defense" : 60,
+				"spatk" : 130,
+				"spdef" : 75,
+				"speed" : 110
+			},
+			"moves" : ["Shadow Ball", "Sludge Bomb", "Dazzling Gleam", "Will-O-Wisp", "Hypnosis"],
+			"normal" : "https://www.serebii.net/scarletviolet/pokemon/new/094.png",
+			"shiny" : "https://www.serebii.net/Shiny/SV/new/094.png"
+		},
+		"Tauros" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Tauros (Fire)" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Tauros (Water)" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Gyarados" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Ditto" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Vaporeon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Jolteon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Flareon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Dragonite" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Espeon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Umbreon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Slowking" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Scizor" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Heracross" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Blissey" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Tyranitar" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Pelipper" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Gardevoir" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Breloom" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Torkoal" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Salamence" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Staraptor" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Garchomp" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Hippowdon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Magnezone" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Leafeon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Glaceon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Gallade" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Amoonguss" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Haxorus" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Hydreigon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Volcarona" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Talonflame" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Dragalge" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Clawitzer" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Sylveon" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Goodra" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Avalugg" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Lycanroc" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Toxapex" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Mimikyu" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Corviknight" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Pincurchin" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Frosmoth" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Dragapult" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Pawmot" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Maushold" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Dachsbun" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Garganacl" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Armarouge" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Ceruledge" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Kilowattrel" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Mabosstiff" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Grafaiai" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Toedscruel" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Klawf" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Tinkaton" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Bombirdier" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Revavroom" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Cyclizar" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Orthworm" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Glimmora" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Cetitan" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Dondozo" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Annihilape" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Clodsire" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Farigiraf" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Kingambit" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		},
+		"Baxcalibur" :
+		{
+			"type" : [],
+			"ability" : [],
+			"stats" :
+			{
+				"hp": 0,
+				"attack" : 0,
+				"defense" : 0,
+				"spatk" : 0,
+				"spdef" : 0,
+				"speed" : 0
+			},
+			"moves" : [],
+			"normal" : "",
+			"shiny" : ""
+		}
+	}
+}
