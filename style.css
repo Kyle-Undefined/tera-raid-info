@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-size: 14px;
+  background-color: hsl(220 20% 20%);
+  color: hsl(220 20% 90%);
+}
