@@ -1,2 +1,2 @@
-# Six Star Tera Raid Calculator
-Online calculator for best types of Pokemon to use in Scarlet &amp; Violet 6 Star Tera Raid battles.
+# Six Star Tera Raid Info
+Online view of the Serebii Six Star Tera Raid Info for Pokemon Scarlet & Violet
