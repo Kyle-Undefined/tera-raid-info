@@ -15,7 +15,8 @@
 				"speed" : 110
 			},
 			"moves" : ["Shadow Ball", "Sludge Bomb", "Dazzling Gleam", "Will-O-Wisp", "Hypnosis"],
-			"dex" : "094"
+			"dex" : "094",
+			"herbs" : ["Bitter"]
 		},
 		"Tauros" :
 		{
@@ -31,7 +32,8 @@
 				"speed" : 100
 			},
 			"moves" : ["Close Combat", "Thrash", "Zen Headbutt", "Raging Bull", "Bulk Up", "Screech"],
-			"dex" : "128-p"
+			"dex" : "128-p",
+			"herbs" : ["Spicy"]
 		},
 		"Tauros (Fire)" :
 		{
@@ -47,7 +49,8 @@
 				"speed" : 100
 			},
 			"moves" : ["Flare Blitz", "Close Combat", "Flamethrower", "Headbutt", "Sunny Day", "Bulk Up"],
-			"dex" : "128-b"
+			"dex" : "128-b",
+			"herbs" : ["Spicy"]
 		},
 		"Tauros (Water)" :
 		{
@@ -63,7 +66,8 @@
 				"speed" : 100
 			},
 			"moves" : ["Wave Crash", "Close Combat", "Surf", "Headbutt", "Rain Dance", "Bulk Up"],
-			"dex" : "128-a"
+			"dex" : "128-a",
+			"herbs" : ["Spicy"]
 		},
 		"Gyarados" :
 		{
@@ -79,7 +83,8 @@
 				"speed" : 81
 			},
 			"moves" : ["Aqua Tail", "Crunch", "Hurricane", "Ice Fang", "Taunt", "Dragon Dance"],
-			"dex" : "130"
+			"dex" : "130",
+			"herbs" : ["Spicy"]
 		},
 		"Ditto" :
 		{
@@ -95,7 +100,8 @@
 				"speed" : 48
 			},
 			"moves" : ["Transform"],
-			"dex" : "132"
+			"dex" : "132",
+			"herbs" : ["Sweet"]
 		},
 		"Vaporeon" :
 		{
@@ -111,7 +117,8 @@
 				"speed" : 65
 			},
 			"moves" : ["Tera Blast", "Surf", "Hyper Voice", "Yawn", "Rain Dance", "Calm Mind"],
-			"dex" : "134"
+			"dex" : "134",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
 		},
 		"Jolteon" :
 		{
@@ -127,7 +134,8 @@
 				"speed" : 130
 			},
 			"moves" : ["Tera Blast", "Thunderbolt", "Shadow Ball", "Thunder Wave", "Electric Terrain", "Calm Mind"],
-			"dex" : "135"
+			"dex" : "135",
+			"herbs" : ["Sweet"]
 		},
 		"Flareon" :
 		{
@@ -143,7 +151,8 @@
 				"speed" : 65
 			},
 			"moves" : ["Tera Blast", "Flare Blitz", "Lava Plume", "Will-O-Wisp", "Sunny Day", "Curse"],
-			"dex" : "136"
+			"dex" : "136",
+			"herbs" : ["Spicy"]
 		},
 		"Dragonite" :
 		{
@@ -159,7 +168,8 @@
 				"speed" : 80
 			},
 			"moves" : ["Dragon Rush", "Extreme Speed", "Dragon Dance", "Aqua Tail", "Light Screen"],
-			"dex" : "149"
+			"dex" : "149",
+			"herbs" : ["Spicy"]
 		},
 		"Espeon" :
 		{
@@ -175,7 +185,8 @@
 				"speed" : 110
 			},
 			"moves" : ["Tera Blast", "Psychic", "Psyshock", "Tickle", "Psychic Terrain", "Calm Mind"],
-			"dex" : "196"
+			"dex" : "196",
+			"herbs" : ["Bitter"]
 		},
 		"Umbreon" :
 		{
@@ -191,7 +202,8 @@
 				"speed" : 65
 			},
 			"moves" : ["Tera Blast", "Dark Pulse", "Foul Play", "Tickle", "Calm Mind", "Curse"],
-			"dex" : "197"
+			"dex" : "197",
+			"herbs" : ["Sour"]
 		},
 		"Slowking" :
 		{
@@ -207,7 +219,8 @@
 				"speed": 30
 			},
 			"moves" : ["Surf", "Psyshock", "Trick Room", "Flamethrower", "Light Screen", "Rain Dance", "Calm Mind"],
-			"dex" : "199"
+			"dex" : "199",
+			"herbs" : ["Sour"]
 		},
 		"Scizor" :
 		{
@@ -223,7 +236,8 @@
 				"speed": 65
 			},
 			"moves" : ["X-Scissor", "Bullet Punch", "Close Combat", "Iron Head", "Iron Defense", "Focus Energy"],
-			"dex" : "212"
+			"dex" : "212",
+			"herbs" : ["Spicy"]
 		},
 		"Heracross" :
 		{
@@ -239,7 +253,8 @@
 				"speed": 85
 			},
 			"moves" : ["Megahorn", "Close Combat", "Thrash", "Leer", "Bulk Up"],
-			"dex" : "214"
+			"dex" : "214",
+			"herbs" : ["Spicy"]
 		},
 		"Blissey" :
 		{
@@ -255,7 +270,8 @@
 				"speed": 55
 			},
 			"moves" : ["Dazzling Gleam", "Hyper Voice", "Sing", "Light Screen", "Defense Curl"],
-			"dex" : "242"
+			"dex" : "242",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
 		},
 		"Tyranitar" :
 		{
@@ -271,7 +287,8 @@
 				"speed": 61
 			},
 			"moves" : ["Stone Edge", "Crunch", "Screech", "Rock Blast", "Iron Defense"],
-			"dex" : "248"
+			"dex" : "248",
+			"herbs" : ["Spicy"]
 		},
 		"Pelipper" :
 		{
@@ -287,7 +304,8 @@
 				"speed": 65
 			},
 			"moves" : ["Hurricane", "Hydro Pump", "Mist", "Supersonic", "Rain Dance", "Agility"],
-			"dex" : "279"
+			"dex" : "279",
+			"herbs" : ["Salty"]
 		},
 		"Gardevoir" :
 		{
@@ -303,7 +321,8 @@
 				"speed": 80
 			},
 			"moves" : ["Moonblast", "Psychic", "Calm Mind", "Thunder Wave", "Misty Terrain", "Psychic Terrain"],
-			"dex" : "282"
+			"dex" : "282",
+			"herbs" : ["Bitter"]
 		},
 		"Breloom" :
 		{
@@ -319,7 +338,8 @@
 				"speed": 70
 			},
 			"moves" : ["Bullet Seed", "Low Sweep", "Spore", "Aerial Ace", "Grassy Terrain"],
-			"dex" : "286"
+			"dex" : "286",
+			"herbs" : ["Spicy"]
 		},
 		"Torkoal" :
 		{
@@ -335,7 +355,8 @@
 				"speed": 20
 			},
 			"moves" : ["Lava Plume", "Yawn", "Clear Smog", "Body Slam", "Sunny Day", "Iron Defense"],
-			"dex" : "324"
+			"dex" : "324",
+			"herbs" : ["Salty"]
 		},
 		"Salamence" :
 		{
@@ -351,7 +372,8 @@
 				"speed": 100
 			},
 			"moves" : ["Outrage", "Dual Wingbeat", "Flamethrower", "Tera Blast", "Dragon Dance"],
-			"dex" : "373"
+			"dex" : "373",
+			"herbs" : ["Spicy"]
 		},
 		"Staraptor" :
 		{
@@ -367,7 +389,8 @@
 				"speed": 100
 			},
 			"moves" : ["Close Combat", "Brave Bird", "Double-Edge", "Feather Dance"],
-			"dex" : "398"
+			"dex" : "398",
+			"herbs" : ["Spicy"]
 		},
 		"Garchomp" :
 		{
@@ -383,7 +406,8 @@
 				"speed": 102
 			},
 			"moves" : ["Outrage", "Earthquake", "Flamethrower", "Rock Slide", "Swords Dance"],
-			"dex" : "445"
+			"dex" : "445",
+			"herbs" : ["Spicy"]
 		},
 		"Hippowdon" :
 		{
@@ -399,7 +423,8 @@
 				"speed": 47
 			},
 			"moves" : ["Earthquake", "Ice Fang", "Yawn", "Rock Slide"],
-			"dex" : "450"
+			"dex" : "450",
+			"herbs" : ["Salty"]
 		},
 		"Magnezone" :
 		{
@@ -415,7 +440,8 @@
 				"speed": 60
 			},
 			"moves" : ["Thunder", "Flash Cannon", "Tri Attack", "Thunder Wave", "Rain Dance", "Iron Defense", "Electric Terrain"],
-			"dex" : "462"
+			"dex" : "462",
+			"herbs" : ["Bitter"]
 		},
 		"Leafeon" :
 		{
@@ -431,7 +457,8 @@
 				"speed": 95
 			},
 			"moves" : ["Tera Blast", "Leaf Blade", "Double Kick", "Charm", "Sunny Day", "Swords Dance"],
-			"dex" : "470"
+			"dex" : "470",
+			"herbs" : ["Spicy"]
 		},
 		"Glaceon" :
 		{
@@ -447,7 +474,8 @@
 				"speed": 65
 			},
 			"moves" : ["Tera Blast", "Ice Beam", "Blizzard", "Charm", "Snowscape", "Calm Mind"],
-			"dex" : "471"
+			"dex" : "471",
+			"herbs" : ["Bitter"]
 		},
 		"Gallade" :
 		{
@@ -463,7 +491,8 @@
 				"speed": 80
 			},
 			"moves" : ["Psycho Cut", "Close Combat", "Will-O-Wisp", "Aerial Ace", "Hypnosis", "Disable", "Psychic Terrain"],
-			"dex" : "475"
+			"dex" : "475",
+			"herbs" : ["Spicy"]
 		},
 		"Amoonguss" :
 		{
@@ -479,7 +508,8 @@
 				"speed": 30
 			},
 			"moves" : ["Energy Ball", "Foul Play", "Spore", "Sludge Bomb", "Grassy Terrain"],
-			"dex" : "591"
+			"dex" : "591",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
 		},
 		"Haxorus" :
 		{
@@ -495,7 +525,8 @@
 				"speed": 97
 			},
 			"moves" : ["Outrage", "Crunch", "Giga Impact", "First Impression", "Dragon Dance"],
-			"dex" : "612"
+			"dex" : "612",
+			"herbs" : ["Spicy"]
 		},
 		"Hydreigon" :
 		{
@@ -511,7 +542,8 @@
 				"speed": 98
 			},
 			"moves" : ["Dark Pulse", "Dragon Pulse", "Crunch", "Taunt", "Work Up", "Nasty Plot"],
-			"dex" : "635"
+			"dex" : "635",
+			"herbs" : ["Bitter"]
 		},
 		"Volcarona" :
 		{
@@ -527,7 +559,8 @@
 				"speed": 100
 			},
 			"moves" : ["Bug Buzz", "Flamethrower", "Hurricane", "Tailwind", "Amnesia", "Sunny Day", "Light Screen", "Quiver Dance"],
-			"dex" : "637"
+			"dex" : "637",
+			"herbs" : ["Bitter"]
 		},
 		"Talonflame" :
 		{
@@ -543,7 +576,8 @@
 				"speed": 126
 			},
 			"moves" : ["Brave Bird", "Flare Blitz", "Flamethrower", "Tera Blast", "Sunny Day", "Swords Dance"],
-			"dex" : "663"
+			"dex" : "663",
+			"herbs" : ["Sweet"]
 		},
 		"Dragalge" :
 		{
@@ -559,7 +593,8 @@
 				"speed": 44
 			},
 			"moves" : ["Dragon Pulse", "Sludge Bomb", "Water Pulse", "Toxic", "Acid Spray", "Draco Meteor"],
-			"dex" : "691"
+			"dex" : "691",
+			"herbs" : ["Bitter"]
 		},
 		"Clawitzer" :
 		{
@@ -575,7 +610,8 @@
 				"speed": 59
 			},
 			"moves" : ["Water Pulse", "Dragon Pulse", "Aura Sphere", "Crabhammer", "Rain Dance"],
-			"dex" : "693"
+			"dex" : "693",
+			"herbs" : ["Bitter"]
 		},
 		"Sylveon" :
 		{
@@ -591,7 +627,8 @@
 				"speed": 60
 			},
 			"moves" : ["Tera Blast", "Hyper Voice", "Moonblast", "Yawn", "Misty Terrain", "Calm Mind"],
-			"dex" : "700"
+			"dex" : "700",
+			"herbs" : ["Bitter"]
 		},
 		"Goodra" :
 		{
@@ -607,7 +644,8 @@
 				"speed": 80
 			},
 			"moves" : ["Dragon Pulse", "Surf", "Sludge Bomb", "Power Whip", "Rain Dance"],
-			"dex" : "706"
+			"dex" : "706",
+			"herbs" : ["Sour"]
 		},
 		"Avalugg" :
 		{
@@ -623,7 +661,8 @@
 				"speed": 28
 			},
 			"moves" : ["Icicle Crash", "Heavy Slam", "Snowscape", "Ice Spinner", "Iron Defense"],
-			"dex" : "713"
+			"dex" : "713",
+			"herbs" : ["Salty"]
 		},
 		"Lycanroc" :
 		{
@@ -639,7 +678,8 @@
 				"speed": 110
 			},
 			"moves" : ["Accelerock", "Rock Slide", "Crunch", "Taunt", "Sandstorm"],
-			"dex" : "745-d"
+			"dex" : "745-d",
+			"herbs" : ["Spicy"]
 		},
 		"Toxapex" :
 		{
@@ -655,7 +695,8 @@
 				"speed": 35
 			},
 			"moves" : ["Water Pulse", "Liquidation", "Poison Jab", "Pin Missile", "Chilling Water", "Toxic"],
-			"dex" : "748"
+			"dex" : "748",
+			"herbs" : ["Salty"]
 		},
 		"Mimikyu" :
 		{
@@ -671,7 +712,8 @@
 				"speed": 96
 			},
 			"moves" : ["Play Rough", "Shadow Claw", "Shadow Sneak", "Wood Hammer", "Misty Terrain", "Swords Dance"],
-			"dex" : "778"
+			"dex" : "778",
+			"herbs" : ["Sour"]
 		},
 		"Corviknight" :
 		{
@@ -687,7 +729,8 @@
 				"speed": 67
 			},
 			"moves" : ["Iron Head", "Drill Peck", "Body Press", "Hone Claws", "Tailwind"],
-			"dex" : "823"
+			"dex" : "823",
+			"herbs" : ["Salty"]
 		},
 		"Pincurchin" :
 		{
@@ -703,7 +746,8 @@
 				"speed": 15
 			},
 			"moves" : ["Zing Zap", "Thunder", "Surf", "Poison Jab", "Thunder Wave", "Electric Terrain"],
-			"dex" : "871"
+			"dex" : "871",
+			"herbs" : ["Spicy"]
 		},
 		"Frosmoth" :
 		{
@@ -719,7 +763,8 @@
 				"speed": 65
 			},
 			"moves" : ["Blizzard", "Bug Buzz", "Hurricane", "Snowscape"],
-			"dex" : "873"
+			"dex" : "873",
+			"herbs" : ["Sour"]
 		},
 		"Dragapult" :
 		{
@@ -735,7 +780,8 @@
 				"speed": 142
 			},
 			"moves" : ["Shadow Ball", "Dragon Pulse", "Thunderbolt", "Flamethrower", "Reflect", "Light Screen"],
-			"dex" : "887"
+			"dex" : "887",
+			"herbs" : ["Sweet"]
 		},
 		"Pawmot" :
 		{
@@ -751,7 +797,8 @@
 				"speed": 105
 			},
 			"moves" : ["Wild Charge", "Close Combat", "Double Shock", "Nuzzle", "Electric Terrain"],
-			"dex" : "923"
+			"dex" : "923",
+			"herbs" : ["Spicy"]
 		},
 		"Maushold" :
 		{
@@ -767,7 +814,8 @@
 				"speed": 111
 			},
 			"moves" : ["Play Rough", "Take Down", "Low Kick", "Charm", "Tidy Up"],
-			"dex" : "925-f"
+			"dex" : "925-f",
+			"herbs" : ["Sweet"]
 		},
 		"Dachsbun" :
 		{
@@ -783,7 +831,8 @@
 				"speed": 95
 			},
 			"moves" : ["Play Rough", "Double-Edge", "Bite", "Baby-Doll Eyes"],
-			"dex" : "927"
+			"dex" : "927",
+			"herbs" : ["Salty"]
 		},
 		"Garganacl" :
 		{
@@ -799,7 +848,8 @@
 				"speed": 35
 			},
 			"moves" : ["Stone Edge", "Heavy Slam", "Salt Cure", "Hammer Arm", "Sandstorm", "Rock Slide"],
-			"dex" : "934"
+			"dex" : "934",
+			"herbs" : ["Salty"]
 		},
 		"Armarouge" :
 		{
@@ -815,7 +865,8 @@
 				"speed": 75
 			},
 			"moves" : ["Armor Cannon", "Psychic", "Night Shade", "Will-O-Wisp", "Calm Mind", "Sunny Day"],
-			"dex" : "936"
+			"dex" : "936",
+			"herbs" : ["Bitter"]
 		},
 		"Ceruledge" :
 		{
@@ -831,7 +882,8 @@
 				"speed": 85
 			},
 			"moves" : ["Bitter Blade", "Shadow Claw", "Psycho Cut", "Will-O-Wisp", "Sunny Day"],
-			"dex" : "937"
+			"dex" : "937",
+			"herbs" : ["Spicy"]
 		},
 		"Kilowattrel" :
 		{
@@ -847,7 +899,8 @@
 				"speed": 125
 			},
 			"moves" : ["Hurricane", "Thunder", "Uproar", "Scary Face", "Charge", "Rain Dance"],
-			"dex" : "941"
+			"dex" : "941",
+			"herbs" : ["Sweet"]
 		},
 		"Mabosstiff" :
 		{
@@ -863,7 +916,8 @@
 				"speed": 85
 			},
 			"moves" : ["Crunch", "Reversal", "Outrage", "Take Down", "Taunt"],
-			"dex" : "943"
+			"dex" : "943",
+			"herbs" : ["Spicy"]
 		},
 		"Grafaiai" :
 		{
@@ -879,7 +933,8 @@
 				"speed": 110
 			},
 			"moves" : ["Knock Off", "Gunk Shot", "Take Down", "Flatter", "Toxic"],
-			"dex" : "945"
+			"dex" : "945",
+			"herbs" : ["Sweet"]
 		},
 		"Toedscruel" :
 		{
@@ -895,7 +950,8 @@
 				"speed": 100
 			},
 			"moves" : ["Energy Ball", "Earth Power", "Spore", "Hex", "Grassy Terrain"],
-			"dex" : "949"
+			"dex" : "949",
+			"herbs" : ["Sour"]
 		},
 		"Klawf" :
 		{
@@ -911,7 +967,8 @@
 				"speed": 75
 			},
 			"moves" : ["Stone Edge", "Rock Smash", "X-Scissor", "Sandstorm", "Knock Off", "Iron Defense"],
-			"dex" : "950"
+			"dex" : "950",
+			"herbs" : ["Salty"]
 		},
 		"Tinkaton" :
 		{
@@ -927,7 +984,8 @@
 				"speed": 94
 			},
 			"moves" : ["Gigaton Hammer", "Play Rough", "Knock Off", "Thunder Wave", "Misty Terrain", "Sweet Kiss"],
-			"dex" : "959"
+			"dex" : "959",
+			"herbs" : ["Sour"]
 		},
 		"Bombirdier" :
 		{
@@ -943,7 +1001,8 @@
 				"speed": 82
 			},
 			"moves" : ["Rock Slide", "Acrobatics", "Knock Off", "Feather Dance"],
-			"dex" : "962"
+			"dex" : "962",
+			"herbs" : ["Spicy"]
 		},
 		"Revavroom" :
 		{
@@ -959,7 +1018,8 @@
 				"speed": 90
 			},
 			"moves" : ["Gunk Shot", "Overheat", "Iron Head", "Taunt", "Scary Face", "Shift Gear"],
-			"dex" : "966"
+			"dex" : "966",
+			"herbs" : ["Spicy"]
 		},
 		"Cyclizar" :
 		{
@@ -975,7 +1035,8 @@
 				"speed": 121
 			},
 			"moves" : ["Double-Edge", "Dragon Claw", "Dragon Pulse", "Knock Off", "Shift Gear"],
-			"dex" : "967"
+			"dex" : "967",
+			"herbs" : ["Sweet"]
 		},
 		"Orthworm" :
 		{
@@ -991,7 +1052,8 @@
 				"speed": 65
 			},
 			"moves" : ["Iron Head", "Earthquake", "Smack Down", "Sandstorm", "Coil"],
-			"dex" : "968"
+			"dex" : "968",
+			"herbs" : ["Salty"]
 		},
 		"Glimmora" :
 		{
@@ -1007,7 +1069,8 @@
 				"speed": 86
 			},
 			"moves" : ["Power Gem", "Sludge Wave", "Hyper Beam", "Rock Polish", "Sandstorm"],
-			"dex" : "970"
+			"dex" : "970",
+			"herbs" : ["Bitter"]
 		},
 		"Cetitan" :
 		{
@@ -1023,7 +1086,8 @@
 				"speed": 73
 			},
 			"moves" : ["Ice Spinner", "Body Slam", "Snowscape", "Stomping Tantrum", "Yawn"],
-			"dex" : "975"
+			"dex" : "975",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
 		},
 		"Dondozo" :
 		{
@@ -1039,7 +1103,8 @@
 				"speed": 35
 			},
 			"moves" : ["Wave Crash", "Order Up", "Heavy Slam", "Yawn", "Rain Dance", "Curse"],
-			"dex" : "977"
+			"dex" : "977",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
 		},
 		"Annihilape" :
 		{
@@ -1055,7 +1120,8 @@
 				"speed": 90
 			},
 			"moves" : ["Close Combat", "Shadow Claw", "Assurance", "Focus Energy", "Bulk Up", "Rage Fist"],
-			"dex" : "979"
+			"dex" : "979",
+			"herbs" : ["Spicy"]
 		},
 		"Clodsire" :
 		{
@@ -1071,7 +1137,8 @@
 				"speed": 20
 			},
 			"moves" : ["Earthquake", "Poison Jab", "Megahorn", "Yawn"],
-			"dex" : "980"
+			"dex" : "980",
+			"herbs" : ["Sour"]
 		},
 		"Farigiraf" :
 		{
@@ -1087,7 +1154,8 @@
 				"speed": 60
 			},
 			"moves" : ["Twin Beam", "Hyper Voice", "Low Kick", "Uproar", "Agility"],
-			"dex" : "981"
+			"dex" : "981",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
 		},
 		"Kingambit" :
 		{
@@ -1103,7 +1171,8 @@
 				"speed": 50
 			},
 			"moves" : ["Iron Head", "Night Slash", "Kowtow Cleave", "Thunder Wave", "Swords Dance"],
-			"dex" : "983"
+			"dex" : "983",
+			"herbs" : ["Spicy"]
 		},
 		"Baxcalibur" :
 		{
@@ -1119,7 +1188,8 @@
 				"speed": 87
 			},
 			"moves" : ["Icicle Spear", "Dragon Rush", "Snowscape", "Body Press"],
-			"dex" : "998"
+			"dex" : "998",
+			"herbs" : ["Spicy"]
 		}
 	}
 }

@@ -190,6 +190,10 @@ select {
 	margin: .55em 0 .25em;
 }
 
+.pokemonHerbs {
+	margin: .55em 0 .25em;
+}
+
 table {
 	border: 1px solid hsl(220 20% 90%);
 	border-collapse: collapse;

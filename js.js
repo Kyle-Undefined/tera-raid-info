@@ -111,6 +111,10 @@ function getPokemonMoves(pokemon) {
 	$('#pokemonMoves').prepend(`Moves: <br/>${data.pokemon[pokemon].moves.join(", ")}`);
 }
 
+function getPokemonHerbs(pokemon) {
+	$('#pokemonHerbs').prepend(`Herbs Dropped: <br/>${data.pokemon[pokemon].herbs.join(", ")}`);
+}
+
 function clearPokemonData() {
 	$('#pokemonTypes').empty();
 	$('#pokemonImageNormal').empty();
@@ -118,6 +122,7 @@ function clearPokemonData() {
 	$('#pokemonAbility').empty();
 	$('#pokemonStats').empty();
 	$('#pokemonMoves').empty();
+	$('#pokemonHerbs').empty();
 }
 
 $(function() {
@@ -130,6 +135,7 @@ $(function() {
 			getPokemonAbility($(this).val());
 			getPokemonStats($(this).val());
 			getPokemonMoves($(this).val());
+			getPokemonHerbs($(this).val());
 		}
 	});
 });
