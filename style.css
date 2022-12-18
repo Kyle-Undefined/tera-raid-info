@@ -38,7 +38,6 @@ select {
 }
 
 .typeText {
-	background: var(#333);
     color: #fff;
     text-shadow: 0 1px 0 #000, 0 0 1px rgb(0 0 0 / 60%), 0 0 2px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 80%), 0 0 4px rgb(0 0 0 / 90%);
 	text-align: center;
@@ -47,6 +46,18 @@ select {
 	border-style: solid;
     border-width: 2px;
 	float: left;
+}
+
+.typeAdvantageText {
+    color: #fff;
+    text-shadow: 0 1px 0 #000, 0 0 1px rgb(0 0 0 / 60%), 0 0 2px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 80%), 0 0 4px rgb(0 0 0 / 90%);
+	text-align: center;
+	border-radius: 5px;
+	border-style: solid;
+    border-width: 2px;
+	float: left;
+	padding: 5px;
+	margin: 5px 5px 5px 0px;
 }
 
 .normal {
@@ -192,6 +203,11 @@ select {
 
 .pokemonHerbs {
 	margin: .55em 0 .25em;
+}
+
+.pokemonTypeMatchups {
+	margin: .55em 0 .25em;
+	float: left;
 }
 
 table {
