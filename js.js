@@ -139,6 +139,12 @@ function getPokemonStats(pokemon) {
 
 function getPokemonMoves(pokemon) {
 	$('#pokemonMoves').prepend(`Moves: <br/>${data.pokemon[pokemon].moves.join(", ")}`);
+	
+	if($('#teraList').val() != '') {		
+		if($('#pokemonMoves').is(':contains("Tera Blast")')) {
+			displayTeraTypeAdvantages($('#teraList').val().toLowerCase());
+		}
+	}
 }
 
 function getPokemonHerbs(pokemon) {
@@ -153,26 +159,42 @@ function clearPokemonData() {
 	$('#pokemonStats').empty();
 	$('#pokemonMoves').empty();
 	$('#pokemonHerbs').empty();
-	$('#pokemonWeaknesses').empty();
+	$('#pokemonTypeAdvantages').empty();
 	$('#pokemonTeraWeaknesses').empty();
+	$('#pokemonTeraAdvantages').empty();
 }
 
-function calculateTypeAdvantage(type) {
-	var typeString = type.join('/');
+function displayTypeAdvantages(type) {
+	var advantages = calculateTypeAdvantage(type);
+	var display = createMatchupsDisplay(advantages);
 	
-	$('#pokemonWeaknesses').prepend('<div>Weaknesses:</div>');
-	
-	for(var i = 0; i < teraTypes.length; i++) {
-		$('#pokemonWeaknesses').append(`<div class="typeAdvantageText ${teraTypes[i].toLowerCase()}">${teraTypes[i]} - ${typeMultiplier(teraTypes[i], typeString)}</div>`);
+	if(display.length > 0) {
+		$('#pokemonTypeAdvantages').prepend('<div>Type Advantages:</div>');
+		$('#pokemonTypeAdvantages').append(display.join(''));
 	}
-	
 }
 
-function calculateTeraTypeAdvantage(type) {
-	$('#pokemonTeraWeaknesses').prepend('<div>Tera Weaknesses:</div>');
+function displayTypeWeaknesses(type) {
+	$('#pokemonTeraWeaknesses').empty();
 	
-	for(var i = 0; i < teraTypes.length; i++) {
-		$('#pokemonTeraWeaknesses').append(`<div class="typeAdvantageText ${teraTypes[i].toLowerCase()}">${teraTypes[i]} - ${typeMultiplier(teraTypes[i], type)}</div>`);
+	var weaknesses = calculateTypeWeakness(type);
+	var display = createMatchupsDisplay(weaknesses);
+	
+	if(display.length > 0) {
+		$('#pokemonTeraWeaknesses').prepend('<div>Tera Weaknesses:</div>');
+		$('#pokemonTeraWeaknesses').append(display.join(''));
+	}
+}
+
+function displayTeraTypeAdvantages(type) {
+	$('#pokemonTeraAdvantages').empty();
+	
+	var advantages = calculateTeraTypeAdvantage(type);
+	var display = createMatchupsDisplay(advantages);
+	
+	if(display.length > 0) {
+		$('#pokemonTeraAdvantages').prepend('<div>Tera Advantages:</div>');
+		$('#pokemonTeraAdvantages').append(display.join(''));
 	}
 }
 
@@ -187,10 +209,14 @@ $(function() {
 			getPokemonStats($(this).val());
 			getPokemonMoves($(this).val());
 			getPokemonHerbs($(this).val());
-			calculateTypeAdvantage(data.pokemon[$(this).val()].type);
+			displayTypeAdvantages(data.pokemon[$(this).val()].type);
 			
 			if($('#teraList').val() != '') {
-				calculateTeraTypeAdvantage($('#teraList').val());
+				displayTypeWeaknesses($('#teraList').val().toLowerCase());
+				
+				if($('#pokemonMoves').is(':contains("Tera Blast")')) {
+					displayTeraTypeAdvantages($('#teraList').val().toLowerCase());
+				}
 			}
 		}
 	});
@@ -199,7 +225,11 @@ $(function() {
 		$('#pokemonTeraWeaknesses').empty();
 		
 		if ($(this).val() != '' && $('#pokemonList').val() != '') {
-			calculateTeraTypeAdvantage($(this).val());
+			displayTypeWeaknesses($(this).val().toLowerCase());
+		}
+		
+		if($('#pokemonMoves').is(':contains("Tera Blast")')) {
+			displayTeraTypeAdvantages($(this).val().toLowerCase());
 		}
 	});
 });
@@ -209,28 +239,301 @@ populatePokemonList();
 populateTeraTypeList();
 
 /*
-Pokemon Type Multiplier
-Source: https://codegolf.stackexchange.com/a/55843
+
+Pokemon Type Matchup Calculator
+Data: https://pokeapi.co/api/v2/ & https://pokemondb.net/type
+
 */
-function typeMultiplier(a, b) {
-  // keys is a list of letters found in the types of attacks/defenses
-  var keys = [..."BWSEIRNulkcDPotyeG"];
 
-  // getIndex is a single case statement.
-  // it checks each of keys, one-by-one, falling through until we've found the proper index
-  var getIndex = x => keys.findIndex(c => x.match(c));
+let typeData = {
+	"normal": {
+		"attack": {
+			"double" : [],
+			"half": ["rock", "steel"],
+			"zero": ["ghost"]
+		},
+		"defense": {
+			"double" : ["fighting"],
+			"half": [],
+			"zero": ["ghost"]
+		}
+	},
+	"flying": {
+		"attack": {
+			"double" : ["fighting", "bug", "grass"],
+			"half": ["rock", "steel", "electric"],
+			"zero": []
+		},
+		"defense": {
+			"double" : ["rock", "electric", "ice"],
+			"half": ["fighting", "bug", "grass"],
+			"zero": ["ground"]
+		}
+	},
+	"poison": {
+		"attack": {
+			"double" : ["grass", "fairy"],
+			"half": ["poison", "ground", "rock", "fairy"],
+            "zero": ["steel"]
+		},
+        "defense": {
+            "half": ["fighting", "poison", "bug", "grass", "fairy"],
+            "double": ["ground", "psychic"],
+            "zero": []
+        }
+	},
+	"ground": {
+		"attack": {
+			"double" : ["poison", "rock", "steel", "fire", "electric"],
+			"half": ["bug", "grass"],
+			"zero": ["flying"]
+		},
+		"defense": {
+			"double" : ["water", "grass", "ice"],
+			"half": ["poison", "rock"],
+			"zero": ["electric"]
+		}
+	},
+	"rock": {
+		"attack": {
+			"double" : ["flying", "bug", "fire", "ice"],
+			"half": ["fighting", "ground", "steel"],
+			"zero": []
+		},
+		"defense": {
+			"double" : ["fighting", "ground", "steel", "water", "grass"],
+			"half": ["normal", "flying", "poison", "fire"],
+			"zero": []
+		}
+	},
+	"bug": {
+		"attack": {
+			"double" : ["grass", "psychic", "dark"],
+			"half": ["fighting", "flying", "poison", "ghost", "steel", "fire", "fairy"],
+			"zero": []
+		},
+		"defense": {
+			"double" : ["flying", "rock", "fire"],
+			"half": ["fighting", "ground", "grass"],
+			"zero": []
+		}
+	},
+	"steel": {
+		"attack": {
+			"double" : ["rock", "ice", "fairy"],
+			"half": ["steel", "fire", "water", "electric"],
+			"zero": []
+		},
+		"defense": {
+			"double" : ["fighting", "ground", "fire"],
+			"half": ["normal", "flying", "rock", "bug", "steel", "grass", "psychic", "ice", "dragon", "fairy"],
+			"zero": ["poison"]
+		}
+	},
+	"fire": {
+		"attack": {
+			"double" : ["bug", "steel", "grass", "ice"],
+			"half": ["rock", "fire", "water", "dragon"],
+			"zero": []
+		},
+		"defense": {
+			"double" : ["ground", "rock", "water"],
+			"half": ["bug", "steel", "fire", "grass", "ice", "fairy"],
+			"zero": []
+		}
+	},
+	"water": {
+		"attack": {
+			"double" : ["ground", "rock", "fire"],
+			"half": ["water", "grass", "dragon"],
+			"zero": []
+		},
+		"defense": {
+			"double" : ["grass", "electric"],
+			"half": ["steel", "fire", "water", "ice"],
+			"zero": []
+		}
+	},
+	"grass": {
+		"attack": {
+			"double" : ["ground", "rock", "water"],
+			"half": ["flying", "poison", "bug", "steel", "fire", "grass", "dragon" ],
+            "zero": []
+		},
+        "defense": {
+            "half": ["ground", "water", "grass", "electric"],
+            "double": ["flying", "poison", "bug", "fire", "ice"],
+            "zero": []
+        }
+	},
+	"electric": {
+		"attack": {
+			"double" : ["flying", "water"],
+			"half": ["grass", "electric", "dragon"],
+			"zero": ["ground"]
+		},
+		"defense": {
+			"double" : ["ground"],
+			"half": ["flying", "steel", "electric"],
+			"zero": []
+		}
+	},
+	"psychic": {
+		"attack": {
+			"double" : ["fighting", "poison"],
+			"half": ["steel", "psychic"],
+			"zero": ["dark"]
+		},
+		"defense": {
+			"double" : ["bug", "ghost", "dark"],
+			"half": ["fighting", "psychic"],
+			"zero": []
+		}
+	},
+	"ice": {
+		"attack": {
+			"double" : ["flying", "ground", "grass", "dragon"],
+			"half": ["steel", "fire", "water", "ice"],
+			"zero": []
+		},
+		"defense": {
+			"double" : ["fighting", "rock", "steel", "fire"],
+			"half": ["ice"],
+			"zero": []
+		}
+	},
+	"dragon": {
+		"attack": {
+			"double" : ["dragon"],
+			"half": ["steel"],
+			"zero": ["fairy"]
+		},
+		"defense": {
+			"double" : ["ice", "dragon", "fairy"],
+			"half": ["fire", "water", "grass", "electric"],
+			"zero": []
+		}
+	},
+	"dark": {
+		"attack": {
+			"double" : ["ghost", "psychic"],
+			"half": ["fighting", "dark", "fairy"],
+			"zero": []
+		},
+		"defense": {
+			"double" : ["fighting", "bug", "fairy"],
+			"half": ["ghost", "dark"],
+			"zero": ["psychic"]
+		}
+	},
+	"fairy": {
+		"attack": {
+			"double" : ["fighting", "dragon", "dark"],
+			"half": ["poison", "steel", "fire"],
+			"zero": []
+		},
+		"defense": {
+			"double" : ["poison", "steel"],
+			"half": ["fighting", "bug", "dark"],
+			"zero": ["dragon"]
+		}
+	},
+	"fighting": {
+		"attack": {
+			"double" : ["normal", "rock", "steel", "ice", "dark"],
+			"half": ["flying", "poison", "bug", "psychic", "fairy"],
+			"zero": ["ghost"]
+		},
+		"defense": {
+			"double" : ["flying", "psychic", "fairy"],
+			"half": ["rock", "bug", "dark"],
+			"zero": []
+		}
+	},
+	"ghost": {
+		"attack": {
+			"double" : ["ghost", "psychic"],
+			"half": ["dark"],
+			"zero": ["normal"]
+		},
+		"defense": {
+			"double" : ["ghost", "dark"],
+			"half": ["poison", "bug"],
+			"zero": ["normal", "fighting"]
+		}
+	}
+};
 
-  // encodedValues is a list, indexed by `keys`, where each value is 7-characters.
-  var encodedValues = "kjwhcgnj2xd6elihtlneemw82duxijsazl3sh4iz5akjmlmsqds06xf1sbb8d0rl1nu7a2kjwi3mykjwlbpmk1up4mzl1iuenedor0bdmkjwmpk6rhcg4h3en3pew5";
+function calculateTypeWeakness(type) {
+	let weaknesses = {};
+	let defense = typeData[type].defense;
+	
+	Object.entries(defense).forEach(([key, value]) => {
+		switch(key) {
+			case('double'):
+				value.forEach(i => { weaknesses[i] ? weaknesses[i] *= 2 : weaknesses[i] = 2 });
+				break;
+			case('half'):
+				value.forEach(i => { weaknesses[i] ? weaknesses[i] *= 0.5 : weaknesses[i] = 0.5 });
+				break;
+			case('zero'):
+				value.forEach(i => { weaknesses[i] = 0 });
+				break;
+		}
+	});
+	
+	return weaknesses;
+}
 
-  // the 7-character value (e.g., B=0="kjwhcgn", W=1="j2xd6el") were created by 
-  // turning base4 values into base36, so let's turn this back into a string the same way
-  var valuesForAttack = parseInt(encodedValues.substr(getIndex(a) * 7, 7), 36).toString(4);
+function calculateTypeAdvantage(type) {
+	let advantages = {};
+	
+	type.forEach(item => {
+		let attack = typeData[item.toLowerCase()].attack;
+		
+		Object.entries(attack).forEach(([key, value]) => {
+			switch(key) {
+				case('double'):
+					value.forEach(i => { advantages[i] ? advantages[i] *= 2 : advantages[i] = 2 });
+					break;
+			}
+		});
+	});
+	
+	return advantages;
+}
 
-  // valuesForAttack is indexed by defenseType.  The value will be 0..3, depending on the multiplier
+function calculateTeraTypeAdvantage(type) {
+	let advantages = {};
+	let attack = typeData[type].attack;
+	
+	Object.entries(attack).forEach(([key, value]) => {
+		switch(key) {
+			case('double'):
+				value.forEach(i => { advantages[i] ? advantages[i] *= 2 : advantages[i] = 2 });
+				break;
+		}
+	});
+	
+	return advantages;
+}
 
-  // let's get an array of the multipliers and reduce...
-  var multiplier = b.split('/').reduce((oldMultiplier, defenseType) => oldMultiplier * [0, 0.5, 1, 2][valuesForAttack[getIndex(defenseType)]], 1);
+function createMatchupsDisplay(matchups) {
+	const display = [];
+	
+	Object.entries(matchups).sort((a,b) => b[1]-a[1]).forEach(([key, value]) => {
+		display.push(createTypeMatchupDiv(key, value));
+	});
+	
+	return display;
+}
 
-  return multiplier + 'x';
+function createTypeMatchupDiv(type, matchup) {
+	return `<div class="typeMatchupText ${type}">${capitalize(type)} - ${matchup}x</div>`;
+}
+
+function capitalize(word) {
+  return word
+    .toLowerCase()
+    .replace(/\w/, firstLetter => firstLetter.toUpperCase());
 }

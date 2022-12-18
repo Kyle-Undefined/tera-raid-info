@@ -48,7 +48,7 @@ select {
 	float: left;
 }
 
-.typeAdvantageText {
+.typeMatchupText {
     color: #fff;
     text-shadow: 0 1px 0 #000, 0 0 1px rgb(0 0 0 / 60%), 0 0 2px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 80%), 0 0 4px rgb(0 0 0 / 90%);
 	text-align: center;
