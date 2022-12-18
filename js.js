@@ -1,5 +1,60 @@
 import data from './data.json' assert {type: 'json'};
 
+$.fn.cacheImages.defaults.storageDB = 'indexedDB';
+
+var cacheKeys = [];
+
+var getCachedImages = function(key, storagePrefix) {
+	if(typeof storagePrefix === 'undefined'){ storagePrefix = 'cached'; }
+	
+	var cacheKeys = [];
+	
+	if($.fn.cacheImages.defaults.storageDB == 'localStorage') {
+		for (var i = 0; i < localStorage.length; i++) {
+			if(localStorage.key(i).substr(0, storagePrefix.length + 1) !== storagePrefix + ':' ){ continue; }
+
+			if(localStorage.key(i).lastIndexOf(key) > 0) {
+				cacheKeys.push(localStorage.key(i));
+			}
+		}
+	} else {
+		var request = window.cacheImagesDb.transaction("offlineImages", "readonly").objectStore("offlineImages").openCursor();
+		request.onsuccess = function(e) {
+			var cursor = e.target.result;
+			
+			if(cursor) {
+				if(cursor.value.key.substr(0, storagePrefix.length + 1) === storagePrefix + ':' ) {
+					if(cursor.value.key.lastIndexOf(key) > 0) {
+						cacheKeys.push(cursor.value.key.substr(storagePrefix.length + 1));
+					}
+				}
+				
+				cursor.continue();
+			}else{
+				showCachedImages(cacheKeys);
+			}
+		};
+	}
+	
+	return true;
+},
+showCachedImages = function(cacheKeys) {
+	if(cacheKeys.length === 0){ return true; }
+	
+	$('#pokemonImageNormal').append($('<img alt="Normal" title="Normal" />').cacheImages({ url: cacheKeys[0] }));
+	$('#pokemonImageShiny').append($('<img alt="Shiny" title="Shiny" />').cacheImages({ url: cacheKeys[1] }));	
+	
+	return true;
+}
+
+function cacheImages() {
+	Object.entries(data.pokemon).forEach((pokemon) => {
+		const [mon] = pokemon;
+		
+		$.fn.cacheImages.fetchURL(`./img/${data.pokemon[mon].dex}.png`, function(url, image){ });
+		$.fn.cacheImages.fetchURL(`./img/shiny/${data.pokemon[mon].dex}.png`, function(url, image){ });
+	});
+}
 
 
 function populatePokemonList() {
@@ -41,8 +96,7 @@ function getPokemonTypes(pokemon) {
 }
 
 function getPokemonImage(pokemon) {
-	$('#pokemonImageNormal').prepend(`<img src="${data.pokemon[pokemon].normal}" id="${pokemon}" alt="Normal" />`);
-	$('#pokemonImageShiny').prepend(`<img src="${data.pokemon[pokemon].shiny}" id="${pokemon}" alt="Shiny" />`);
+	getCachedImages(data.pokemon[pokemon].dex);
 }
 
 function getPokemonAbility(pokemon) {
@@ -80,4 +134,5 @@ $(function() {
 	});
 });
 
+cacheImages();
 populatePokemonList();
