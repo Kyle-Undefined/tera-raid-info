@@ -5,24 +5,24 @@ $.fn.cacheImages.defaults.storageDB = 'indexedDB';
 var cacheKeys = [];
 
 const teraTypes = [
-	"Normal",
-	"Flying",
-	"Poison",
-	"Ground",
-	"Rock",
 	"Bug",
-	"Steel",
-	"Fire",
-	"Water",
-	"Grass",
-	"Electric",
-	"Psychic",
-	"Ice",
-	"Dragon",
 	"Dark",
+	"Dragon",
+	"Electric",
 	"Fairy",
 	"Fighting",
-	"Ghost"
+	"Fire",
+	"Flying",
+	"Ghost",
+	"Grass",
+	"Ground",
+	"Ice",
+	"Normal",
+	"Poison",
+	"Psychic",
+	"Rock",
+	"Steel",
+	"Water"
 ];
 
 var getCachedImages = function(key, storagePrefix) {
@@ -72,14 +72,14 @@ function cacheImages() {
 	Object.entries(data.pokemon).forEach((pokemon) => {
 		const [mon] = pokemon;
 		
-		$.fn.cacheImages.fetchURL(`../img/${data.pokemon[mon].dex}.png`, function(url, image){ });
-		$.fn.cacheImages.fetchURL(`../img/shiny/${data.pokemon[mon].dex}.png`, function(url, image){ });
+		$.fn.cacheImages.fetchURL(`./img/${data.pokemon[mon].dex}.png`, function(url, image){ });
+		$.fn.cacheImages.fetchURL(`./img/shiny/${data.pokemon[mon].dex}.png`, function(url, image){ });
 	});
 }
 
 
 function populatePokemonList() {
-	Object.entries(data.pokemon).forEach((pokemon) => {
+	Object.entries(data.pokemon).sort().forEach((pokemon) => {
 		const [mon] = pokemon;
 		
 		$('#pokemonList').append($('<option>', {
