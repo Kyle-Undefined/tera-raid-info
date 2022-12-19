@@ -72,8 +72,8 @@ function cacheImages() {
 	Object.entries(data.pokemon).forEach((pokemon) => {
 		const [mon] = pokemon;
 		
-		$.fn.cacheImages.fetchURL(`./img/${data.pokemon[mon].dex}.png`, function(url, image){ });
-		$.fn.cacheImages.fetchURL(`./img/shiny/${data.pokemon[mon].dex}.png`, function(url, image){ });
+		$.fn.cacheImages.fetchURL(`../img/${data.pokemon[mon].dex}.png`, function(url, image){ });
+		$.fn.cacheImages.fetchURL(`../img/shiny/${data.pokemon[mon].dex}.png`, function(url, image){ });
 	});
 }
 
