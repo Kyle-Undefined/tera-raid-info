@@ -1,0 +1,1195 @@
+{
+	"pokemon" :
+	{
+		"Gengar" :
+		{
+			"type" : ["Ghost", "Poison"],
+			"ability" : ["Cursed Body"],
+			"stats" :
+			{
+				"hp" : 60,
+				"attack" : 65,
+				"defense" : 60,
+				"spatk" : 130,
+				"spdef" : 75,
+				"speed" : 110
+			},
+			"moves" : ["Shadow Ball", "Sludge Bomb", "Dazzling Gleam", "Will-O-Wisp", "Hypnosis"],
+			"dex" : "094",
+			"herbs" : ["Bitter"]
+		},
+		"Tauros" :
+		{
+			"type" : ["Fighting"],
+			"ability" : ["Intimidate", "Anger Point", "Cud Chew"],
+			"stats" :
+			{
+				"hp": 75,
+				"attack" : 110,
+				"defense" : 105,
+				"spatk" : 30,
+				"spdef" : 70,
+				"speed" : 100
+			},
+			"moves" : ["Close Combat", "Thrash", "Zen Headbutt", "Raging Bull", "Bulk Up", "Screech"],
+			"dex" : "128-p",
+			"herbs" : ["Spicy"]
+		},
+		"Tauros (Fire)" :
+		{
+			"type" : ["Fighting", "Fire"],
+			"ability" : ["Intimidate", "Anger Point", "Cud Chew"],
+			"stats" :
+			{
+				"hp": 75,
+				"attack" : 110,
+				"defense" : 105,
+				"spatk" : 30,
+				"spdef" : 70,
+				"speed" : 100
+			},
+			"moves" : ["Flare Blitz", "Close Combat", "Flamethrower", "Headbutt", "Sunny Day", "Bulk Up"],
+			"dex" : "128-b",
+			"herbs" : ["Spicy"]
+		},
+		"Tauros (Water)" :
+		{
+			"type" : ["Fighting", "Water"],
+			"ability" : ["Intimidate", "Anger Point", "Cud Chew"],
+			"stats" :
+			{
+				"hp": 75,
+				"attack" : 110,
+				"defense" : 105,
+				"spatk" : 30,
+				"spdef" : 70,
+				"speed" : 100
+			},
+			"moves" : ["Wave Crash", "Close Combat", "Surf", "Headbutt", "Rain Dance", "Bulk Up"],
+			"dex" : "128-a",
+			"herbs" : ["Spicy"]
+		},
+		"Gyarados" :
+		{
+			"type" : ["Water", "Flying"],
+			"ability" : ["Intimidate", "Moxie"],
+			"stats" :
+			{
+				"hp": 95,
+				"attack" : 125,
+				"defense" : 79,
+				"spatk" : 60,
+				"spdef" : 100,
+				"speed" : 81
+			},
+			"moves" : ["Aqua Tail", "Crunch", "Hurricane", "Ice Fang", "Taunt", "Dragon Dance"],
+			"dex" : "130",
+			"herbs" : ["Spicy"]
+		},
+		"Ditto" :
+		{
+			"type" : ["Normal"],
+			"ability" : ["Limber", "Imposter"],
+			"stats" :
+			{
+				"hp": 48,
+				"attack" : 48,
+				"defense" : 48,
+				"spatk" : 48,
+				"spdef" : 48,
+				"speed" : 48
+			},
+			"moves" : ["Transform"],
+			"dex" : "132",
+			"herbs" : ["Sweet"]
+		},
+		"Vaporeon" :
+		{
+			"type" : ["Water"],
+			"ability" : ["Water Absorb", "Hydration"],
+			"stats" :
+			{
+				"hp": 130,
+				"attack" : 65,
+				"defense" : 60,
+				"spatk" : 110,
+				"spdef" : 95,
+				"speed" : 65
+			},
+			"moves" : ["Tera Blast", "Surf", "Hyper Voice", "Yawn", "Rain Dance", "Calm Mind"],
+			"dex" : "134",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
+		},
+		"Jolteon" :
+		{
+			"type" : ["Electric"],
+			"ability" : ["Volt Absorb", "Quick Feet"],
+			"stats" :
+			{
+				"hp": 65,
+				"attack" : 65,
+				"defense" : 60,
+				"spatk" : 110,
+				"spdef" : 95,
+				"speed" : 130
+			},
+			"moves" : ["Tera Blast", "Thunderbolt", "Shadow Ball", "Thunder Wave", "Electric Terrain", "Calm Mind"],
+			"dex" : "135",
+			"herbs" : ["Sweet"]
+		},
+		"Flareon" :
+		{
+			"type" : ["Fire"],
+			"ability" : ["Flash Fire", "Guts"],
+			"stats" :
+			{
+				"hp": 65,
+				"attack" : 130,
+				"defense" : 60,
+				"spatk" : 95,
+				"spdef" : 110,
+				"speed" : 65
+			},
+			"moves" : ["Tera Blast", "Flare Blitz", "Lava Plume", "Will-O-Wisp", "Sunny Day", "Curse"],
+			"dex" : "136",
+			"herbs" : ["Spicy"]
+		},
+		"Dragonite" :
+		{
+			"type" : ["Dragon", "Flying"],
+			"ability" : ["Inner Focus", "Multiscale"],
+			"stats" :
+			{
+				"hp": 91,
+				"attack" : 134,
+				"defense" : 95,
+				"spatk" : 100,
+				"spdef" : 100,
+				"speed" : 80
+			},
+			"moves" : ["Dragon Rush", "Extreme Speed", "Dragon Dance", "Aqua Tail", "Light Screen"],
+			"dex" : "149",
+			"herbs" : ["Spicy"]
+		},
+		"Espeon" :
+		{
+			"type" : ["Psychic"],
+			"ability" : ["Synchronize", "Magic Bounce"],
+			"stats" :
+			{
+				"hp": 65,
+				"attack" : 65,
+				"defense" : 60,
+				"spatk" : 130,
+				"spdef" : 95,
+				"speed" : 110
+			},
+			"moves" : ["Tera Blast", "Psychic", "Psyshock", "Tickle", "Psychic Terrain", "Calm Mind"],
+			"dex" : "196",
+			"herbs" : ["Bitter"]
+		},
+		"Umbreon" :
+		{
+			"type" : ["Dark"],
+			"ability" : ["Synchronize", "Inner Focus"],
+			"stats" :
+			{
+				"hp": 95,
+				"attack" : 65,
+				"defense" : 110,
+				"spatk" : 60,
+				"spdef" : 130,
+				"speed" : 65
+			},
+			"moves" : ["Tera Blast", "Dark Pulse", "Foul Play", "Tickle", "Calm Mind", "Curse"],
+			"dex" : "197",
+			"herbs" : ["Sour"]
+		},
+		"Slowking" :
+		{
+			"type" : ["Water", "Psychic"],
+			"ability" : ["Oblivious", "Own Tempo", "Regenerator"],
+			"stats" :
+			{
+				"hp": 95,
+				"attack": 75,
+				"defense": 80,
+				"spatk": 100,
+				"spdef": 110,
+				"speed": 30
+			},
+			"moves" : ["Surf", "Psyshock", "Trick Room", "Flamethrower", "Light Screen", "Rain Dance", "Calm Mind"],
+			"dex" : "199",
+			"herbs" : ["Sour"]
+		},
+		"Scizor" :
+		{
+			"type" : ["Bug", "Steel"],
+			"ability" : ["Swarm", "Technician", "Light Metal"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 130,
+				"defense": 100,
+				"spatk": 55,
+				"spdef": 80,
+				"speed": 65
+			},
+			"moves" : ["X-Scissor", "Bullet Punch", "Close Combat", "Iron Head", "Iron Defense", "Focus Energy"],
+			"dex" : "212",
+			"herbs" : ["Spicy"]
+		},
+		"Heracross" :
+		{
+			"type" : ["Bug", "Fighting"],
+			"ability" : ["Swarm", "Guts", "Moxie"],
+			"stats" :
+			{
+				"hp": 80,
+				"attack": 125,
+				"defense": 75,
+				"spatk": 40,
+				"spdef": 95,
+				"speed": 85
+			},
+			"moves" : ["Megahorn", "Close Combat", "Thrash", "Leer", "Bulk Up"],
+			"dex" : "214",
+			"herbs" : ["Spicy"]
+		},
+		"Blissey" :
+		{
+			"type" : ["Normal"],
+			"ability" : ["Natural Cure", "Serene Grace", "Healer"],
+			"stats" :
+			{
+				"hp": 255,
+				"attack": 10,
+				"defense": 10,
+				"spatk": 75,
+				"spdef": 135,
+				"speed": 55
+			},
+			"moves" : ["Dazzling Gleam", "Hyper Voice", "Sing", "Light Screen", "Defense Curl"],
+			"dex" : "242",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
+		},
+		"Tyranitar" :
+		{
+			"type" : ["Rock", "Dark"],
+			"ability" : ["Sand Stream", "Unnerve"],
+			"stats" :
+			{
+				"hp": 100,
+				"attack": 134,
+				"defense": 110,
+				"spatk": 95,
+				"spdef": 100,
+				"speed": 61
+			},
+			"moves" : ["Stone Edge", "Crunch", "Screech", "Rock Blast", "Iron Defense"],
+			"dex" : "248",
+			"herbs" : ["Spicy"]
+		},
+		"Pelipper" :
+		{
+			"type" : ["Water", "Flying"],
+			"ability" : ["Keen Eye", "Drizzle", "Rain Dish"],
+			"stats" :
+			{
+				"hp": 60,
+				"attack": 50,
+				"defense": 100,
+				"spatk": 95,
+				"spdef": 70,
+				"speed": 65
+			},
+			"moves" : ["Hurricane", "Hydro Pump", "Mist", "Supersonic", "Rain Dance", "Agility"],
+			"dex" : "279",
+			"herbs" : ["Salty"]
+		},
+		"Gardevoir" :
+		{
+			"type" : ["Psychic", "Fairy"],
+			"ability" : ["Synchronize", "Trace"],
+			"stats" :
+			{
+				"hp": 68,
+				"attack": 65,
+				"defense": 65,
+				"spatk": 125,
+				"spdef": 115,
+				"speed": 80
+			},
+			"moves" : ["Moonblast", "Psychic", "Calm Mind", "Thunder Wave", "Misty Terrain", "Psychic Terrain"],
+			"dex" : "282",
+			"herbs" : ["Bitter"]
+		},
+		"Breloom" :
+		{
+			"type" : ["Grass", "Fighting"],
+			"ability" : [" Effect Spore", "Poison Heal", "Technician"],
+			"stats" :
+			{
+				"hp": 60,
+				"attack": 130,
+				"defense": 80,
+				"spatk": 60,
+				"spdef": 60,
+				"speed": 70
+			},
+			"moves" : ["Bullet Seed", "Low Sweep", "Spore", "Aerial Ace", "Grassy Terrain"],
+			"dex" : "286",
+			"herbs" : ["Spicy"]
+		},
+		"Torkoal" :
+		{
+			"type" : ["Fire"],
+			"ability" : ["White Smoke", "Drought", "Shell Armor"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 85,
+				"defense": 140,
+				"spatk": 85,
+				"spdef": 70,
+				"speed": 20
+			},
+			"moves" : ["Lava Plume", "Yawn", "Clear Smog", "Body Slam", "Sunny Day", "Iron Defense"],
+			"dex" : "324",
+			"herbs" : ["Salty"]
+		},
+		"Salamence" :
+		{
+			"type" : ["Dragon", "Flying"],
+			"ability" : ["Intimidate", "Moxie"],
+			"stats" :
+			{
+				"hp": 95,
+				"attack": 135,
+				"defense": 80,
+				"spatk": 110,
+				"spdef": 80,
+				"speed": 100
+			},
+			"moves" : ["Outrage", "Dual Wingbeat", "Flamethrower", "Tera Blast", "Dragon Dance"],
+			"dex" : "373",
+			"herbs" : ["Spicy"]
+		},
+		"Staraptor" :
+		{
+			"type" : ["Normal", "Flying"],
+			"ability" : ["Intimidate", "Reckless"],
+			"stats" :
+			{
+				"hp": 85,
+				"attack": 120,
+				"defense": 70,
+				"spatk": 50,
+				"spdef": 60,
+				"speed": 100
+			},
+			"moves" : ["Close Combat", "Brave Bird", "Double-Edge", "Feather Dance"],
+			"dex" : "398",
+			"herbs" : ["Spicy"]
+		},
+		"Garchomp" :
+		{
+			"type" : ["Dragon", "Ground"],
+			"ability" : ["Sand Veil", "Rough Skin"],
+			"stats" :
+			{
+				"hp": 108,
+				"attack": 130,
+				"defense": 95,
+				"spatk": 80,
+				"spdef": 85,
+				"speed": 102
+			},
+			"moves" : ["Outrage", "Earthquake", "Flamethrower", "Rock Slide", "Swords Dance"],
+			"dex" : "445",
+			"herbs" : ["Spicy"]
+		},
+		"Hippowdon" :
+		{
+			"type" : ["Ground"],
+			"ability" : ["Sand Stream", "Sand Force"],
+			"stats" :
+			{
+				"hp": 108,
+				"attack": 112,
+				"defense": 118,
+				"spatk": 68,
+				"spdef": 72,
+				"speed": 47
+			},
+			"moves" : ["Earthquake", "Ice Fang", "Yawn", "Rock Slide"],
+			"dex" : "450",
+			"herbs" : ["Salty"]
+		},
+		"Magnezone" :
+		{
+			"type" : ["Electric", "Steel"],
+			"ability" : ["Magnet Pull", "Sturdy", "Analytic"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 70,
+				"defense": 115,
+				"spatk": 130,
+				"spdef": 90,
+				"speed": 60
+			},
+			"moves" : ["Thunder", "Flash Cannon", "Tri Attack", "Thunder Wave", "Rain Dance", "Iron Defense", "Electric Terrain"],
+			"dex" : "462",
+			"herbs" : ["Bitter"]
+		},
+		"Leafeon" :
+		{
+			"type" : ["Grass"],
+			"ability" : ["Leaf Guard", "Chlorophyll"],
+			"stats" :
+			{
+				"hp": 65,
+				"attack": 110,
+				"defense": 130,
+				"spatk": 60,
+				"spdef": 65,
+				"speed": 95
+			},
+			"moves" : ["Tera Blast", "Leaf Blade", "Double Kick", "Charm", "Sunny Day", "Swords Dance"],
+			"dex" : "470",
+			"herbs" : ["Spicy"]
+		},
+		"Glaceon" :
+		{
+			"type" : ["Ice"],
+			"ability" : ["Snow Cloak", "Ice Body"],
+			"stats" :
+			{
+				"hp": 65,
+				"attack": 60,
+				"defense": 110,
+				"spatk": 130,
+				"spdef": 95,
+				"speed": 65
+			},
+			"moves" : ["Tera Blast", "Ice Beam", "Blizzard", "Charm", "Snowscape", "Calm Mind"],
+			"dex" : "471",
+			"herbs" : ["Bitter"]
+		},
+		"Gallade" :
+		{
+			"type" : ["Psychic", "Fighting"],
+			"ability" : ["Steadfast", "Sharpness"],
+			"stats" :
+			{
+				"hp": 68,
+				"attack": 125,
+				"defense": 65,
+				"spatk": 65,
+				"spdef": 115,
+				"speed": 80
+			},
+			"moves" : ["Psycho Cut", "Close Combat", "Will-O-Wisp", "Aerial Ace", "Hypnosis", "Disable", "Psychic Terrain"],
+			"dex" : "475",
+			"herbs" : ["Spicy"]
+		},
+		"Amoonguss" :
+		{
+			"type" : ["Grass", "Poison"],
+			"ability" : ["Effect Spore", "Regenerator"],
+			"stats" :
+			{
+				"hp": 114,
+				"attack": 85,
+				"defense": 70,
+				"spatk": 85,
+				"spdef": 80,
+				"speed": 30
+			},
+			"moves" : ["Energy Ball", "Foul Play", "Spore", "Sludge Bomb", "Grassy Terrain"],
+			"dex" : "591",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
+		},
+		"Haxorus" :
+		{
+			"type" : ["Dragon"],
+			"ability" : ["Mold Breaker", "Unnerve"],
+			"stats" :
+			{
+				"hp": 76,
+				"attack": 147,
+				"defense": 90,
+				"spatk": 60,
+				"spdef": 70,
+				"speed": 97
+			},
+			"moves" : ["Outrage", "Crunch", "Giga Impact", "First Impression", "Dragon Dance"],
+			"dex" : "612",
+			"herbs" : ["Spicy"]
+		},
+		"Hydreigon" :
+		{
+			"type" : ["Dark", "Dragon"],
+			"ability" : ["Levitate"],
+			"stats" :
+			{
+				"hp": 92,
+				"attack": 105,
+				"defense": 90,
+				"spatk": 125,
+				"spdef": 90,
+				"speed": 98
+			},
+			"moves" : ["Dark Pulse", "Dragon Pulse", "Crunch", "Taunt", "Work Up", "Nasty Plot"],
+			"dex" : "635",
+			"herbs" : ["Bitter"]
+		},
+		"Volcarona" :
+		{
+			"type" : ["Bug", "Fire"],
+			"ability" : ["Flame Body", "Swarm"],
+			"stats" :
+			{
+				"hp": 85,
+				"attack": 60,
+				"defense": 65,
+				"spatk": 135,
+				"spdef": 105,
+				"speed": 100
+			},
+			"moves" : ["Bug Buzz", "Flamethrower", "Hurricane", "Tailwind", "Amnesia", "Sunny Day", "Light Screen", "Quiver Dance"],
+			"dex" : "637",
+			"herbs" : ["Bitter"]
+		},
+		"Talonflame" :
+		{
+			"type" : ["Fire", "Flying"],
+			"ability" : ["Flame Body", "Gale Wings"],
+			"stats" :
+			{
+				"hp": 78,
+				"attack": 81,
+				"defense": 71,
+				"spatk": 74,
+				"spdef": 69,
+				"speed": 126
+			},
+			"moves" : ["Brave Bird", "Flare Blitz", "Flamethrower", "Tera Blast", "Sunny Day", "Swords Dance"],
+			"dex" : "663",
+			"herbs" : ["Sweet"]
+		},
+		"Dragalge" :
+		{
+			"type" : ["Poison", "Dragon"],
+			"ability" : ["Poison Point", "Poison Touch", "Adaptability"],
+			"stats" :
+			{
+				"hp": 65,
+				"attack": 75,
+				"defense": 90,
+				"spatk": 97,
+				"spdef": 123,
+				"speed": 44
+			},
+			"moves" : ["Dragon Pulse", "Sludge Bomb", "Water Pulse", "Toxic", "Acid Spray", "Draco Meteor"],
+			"dex" : "691",
+			"herbs" : ["Bitter"]
+		},
+		"Clawitzer" :
+		{
+			"type" : ["Water"],
+			"ability" : ["Mega Launcher"],
+			"stats" :
+			{
+				"hp": 71,
+				"attack": 73,
+				"defense": 88,
+				"spatk": 120,
+				"spdef": 89,
+				"speed": 59
+			},
+			"moves" : ["Water Pulse", "Dragon Pulse", "Aura Sphere", "Crabhammer", "Rain Dance"],
+			"dex" : "693",
+			"herbs" : ["Bitter"]
+		},
+		"Sylveon" :
+		{
+			"type" : ["Fairy"],
+			"ability" : ["Cute Charm", "Pixilate"],
+			"stats" :
+			{
+				"hp": 95,
+				"attack": 65,
+				"defense": 65,
+				"spatk": 110,
+				"spdef": 130,
+				"speed": 60
+			},
+			"moves" : ["Tera Blast", "Hyper Voice", "Moonblast", "Yawn", "Misty Terrain", "Calm Mind"],
+			"dex" : "700",
+			"herbs" : ["Bitter"]
+		},
+		"Goodra" :
+		{
+			"type" : ["Dragon"],
+			"ability" : ["Sap Sipper", "Hydration", "Gooey"],
+			"stats" :
+			{
+				"hp": 90,
+				"attack": 100,
+				"defense": 70,
+				"spatk": 110,
+				"spdef": 150,
+				"speed": 80
+			},
+			"moves" : ["Dragon Pulse", "Surf", "Sludge Bomb", "Power Whip", "Rain Dance"],
+			"dex" : "706",
+			"herbs" : ["Sour"]
+		},
+		"Avalugg" :
+		{
+			"type" : ["Ice"],
+			"ability" : ["Own Tempo", "Ice Body", "Sturdy"],
+			"stats" :
+			{
+				"hp": 95,
+				"attack": 117,
+				"defense": 184,
+				"spatk": 44,
+				"spdef": 46,
+				"speed": 28
+			},
+			"moves" : ["Icicle Crash", "Heavy Slam", "Snowscape", "Ice Spinner", "Iron Defense"],
+			"dex" : "713",
+			"herbs" : ["Salty"]
+		},
+		"Lycanroc" :
+		{
+			"type" : ["Rock"],
+			"ability" : ["Tough Claws"],
+			"stats" :
+			{
+				"hp": 75,
+				"attack": 117,
+				"defense": 65,
+				"spatk": 55,
+				"spdef": 65,
+				"speed": 110
+			},
+			"moves" : ["Accelerock", "Rock Slide", "Crunch", "Taunt", "Sandstorm"],
+			"dex" : "745-d",
+			"herbs" : ["Spicy"]
+		},
+		"Toxapex" :
+		{
+			"type" : ["Poison", "Water"],
+			"ability" : ["Limber", "Regenerator"],
+			"stats" :
+			{
+				"hp": 50,
+				"attack": 63,
+				"defense": 152,
+				"spatk": 53,
+				"spdef": 142,
+				"speed": 35
+			},
+			"moves" : ["Water Pulse", "Liquidation", "Poison Jab", "Pin Missile", "Chilling Water", "Toxic"],
+			"dex" : "748",
+			"herbs" : ["Salty"]
+		},
+		"Mimikyu" :
+		{
+			"type" : ["Ghost", "Fairy"],
+			"ability" : ["Disguise"],
+			"stats" :
+			{
+				"hp": 55,
+				"attack": 90,
+				"defense": 80,
+				"spatk": 50,
+				"spdef": 105,
+				"speed": 96
+			},
+			"moves" : ["Play Rough", "Shadow Claw", "Shadow Sneak", "Wood Hammer", "Misty Terrain", "Swords Dance"],
+			"dex" : "778",
+			"herbs" : ["Sour"]
+		},
+		"Corviknight" :
+		{
+			"type" : ["Flying", "Steel"],
+			"ability" : ["Pressure", "Unnerve", "Mirror Armor "],
+			"stats" :
+			{
+				"hp": 98,
+				"attack": 87,
+				"defense": 105,
+				"spatk": 53,
+				"spdef": 85,
+				"speed": 67
+			},
+			"moves" : ["Iron Head", "Drill Peck", "Body Press", "Hone Claws", "Tailwind"],
+			"dex" : "823",
+			"herbs" : ["Salty"]
+		},
+		"Pincurchin" :
+		{
+			"type" : ["Electric"],
+			"ability" : ["Lightning Rod", "Electric Surge"],
+			"stats" :
+			{
+				"hp": 48,
+				"attack": 101,
+				"defense": 95,
+				"spatk": 91,
+				"spdef": 85,
+				"speed": 15
+			},
+			"moves" : ["Zing Zap", "Thunder", "Surf", "Poison Jab", "Thunder Wave", "Electric Terrain"],
+			"dex" : "871",
+			"herbs" : ["Spicy"]
+		},
+		"Frosmoth" :
+		{
+			"type" : ["Ice", "Bug"],
+			"ability" : ["Shield Dust", "Ice Scales"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 65,
+				"defense": 60,
+				"spatk": 125,
+				"spdef": 90,
+				"speed": 65
+			},
+			"moves" : ["Blizzard", "Bug Buzz", "Hurricane", "Snowscape"],
+			"dex" : "873",
+			"herbs" : ["Sour"]
+		},
+		"Dragapult" :
+		{
+			"type" : ["Dragon", "Ghost"],
+			"ability" : ["Clear Body", "Infiltrator", "Cursed Body"],
+			"stats" :
+			{
+				"hp": 88,
+				"attack": 120,
+				"defense": 75,
+				"spatk": 100,
+				"spdef": 75,
+				"speed": 142
+			},
+			"moves" : ["Shadow Ball", "Dragon Pulse", "Thunderbolt", "Flamethrower", "Reflect", "Light Screen"],
+			"dex" : "887",
+			"herbs" : ["Sweet"]
+		},
+		"Pawmot" :
+		{
+			"type" : ["Electric", "Fighting"],
+			"ability" : ["Volt Absorb", "Natural Cure", "Iron Fist"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 115,
+				"defense": 70,
+				"spatk": 70,
+				"spdef": 60,
+				"speed": 105
+			},
+			"moves" : ["Wild Charge", "Close Combat", "Double Shock", "Nuzzle", "Electric Terrain"],
+			"dex" : "923",
+			"herbs" : ["Spicy"]
+		},
+		"Maushold" :
+		{
+			"type" : ["Normal"],
+			"ability" : ["Friend Guard", "Cheek Pouch", "Technician"],
+			"stats" :
+			{
+				"hp": 74,
+				"attack": 75,
+				"defense": 70,
+				"spatk": 65,
+				"spdef": 75,
+				"speed": 111
+			},
+			"moves" : ["Play Rough", "Take Down", "Low Kick", "Charm", "Tidy Up"],
+			"dex" : "925-f",
+			"herbs" : ["Sweet"]
+		},
+		"Dachsbun" :
+		{
+			"type" : ["Fairy"],
+			"ability" : ["Well-Baked Body", "Aroma Veil"],
+			"stats" :
+			{
+				"hp": 57,
+				"attack": 80,
+				"defense": 115,
+				"spatk": 50,
+				"spdef": 80,
+				"speed": 95
+			},
+			"moves" : ["Play Rough", "Double-Edge", "Bite", "Baby-Doll Eyes"],
+			"dex" : "927",
+			"herbs" : ["Salty"]
+		},
+		"Garganacl" :
+		{
+			"type" : ["Rock"],
+			"ability" : ["Purifying Salt", "Sturdy", "Clear Body"],
+			"stats" :
+			{
+				"hp": 100,
+				"attack": 100,
+				"defense": 130,
+				"spatk": 45,
+				"spdef": 90,
+				"speed": 35
+			},
+			"moves" : ["Stone Edge", "Heavy Slam", "Salt Cure", "Hammer Arm", "Sandstorm", "Rock Slide"],
+			"dex" : "934",
+			"herbs" : ["Salty"]
+		},
+		"Armarouge" :
+		{
+			"type" : ["Fire", "Psychic"],
+			"ability" : ["Flash Fire", "Weak Armor"],
+			"stats" :
+			{
+				"hp": 85,
+				"attack": 60,
+				"defense": 100,
+				"spatk": 125,
+				"spdef": 80,
+				"speed": 75
+			},
+			"moves" : ["Armor Cannon", "Psychic", "Night Shade", "Will-O-Wisp", "Calm Mind", "Sunny Day"],
+			"dex" : "936",
+			"herbs" : ["Bitter"]
+		},
+		"Ceruledge" :
+		{
+			"type" : ["Fire", "Ghost"],
+			"ability" : ["Flash Fire", "Weak Armor "],
+			"stats" :
+			{
+				"hp": 75,
+				"attack": 125,
+				"defense": 80,
+				"spatk": 60,
+				"spdef": 100,
+				"speed": 85
+			},
+			"moves" : ["Bitter Blade", "Shadow Claw", "Psycho Cut", "Will-O-Wisp", "Sunny Day"],
+			"dex" : "937",
+			"herbs" : ["Spicy"]
+		},
+		"Kilowattrel" :
+		{
+			"type" : ["Electric", "Flying"],
+			"ability" : ["Wind Power", "Volt Absorb", "Competitive"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 70,
+				"defense": 60,
+				"spatk": 105,
+				"spdef": 60,
+				"speed": 125
+			},
+			"moves" : ["Hurricane", "Thunder", "Uproar", "Scary Face", "Charge", "Rain Dance"],
+			"dex" : "941",
+			"herbs" : ["Sweet"]
+		},
+		"Mabosstiff" :
+		{
+			"type" : ["Dark"],
+			"ability" : ["Intimidate", "Guard Dog", "Stakeout"],
+			"stats" :
+			{
+				"hp": 80,
+				"attack": 120,
+				"defense": 90,
+				"spatk": 60,
+				"spdef": 70,
+				"speed": 85
+			},
+			"moves" : ["Crunch", "Reversal", "Outrage", "Take Down", "Taunt"],
+			"dex" : "943",
+			"herbs" : ["Spicy"]
+		},
+		"Grafaiai" :
+		{
+			"type" : ["Poison", "Normal"],
+			"ability" : ["Unburden", "Poison Touch", "Prankster"],
+			"stats" :
+			{
+				"hp": 63,
+				"attack": 95,
+				"defense": 65,
+				"spatk": 80,
+				"spdef": 72,
+				"speed": 110
+			},
+			"moves" : ["Knock Off", "Gunk Shot", "Take Down", "Flatter", "Toxic"],
+			"dex" : "945",
+			"herbs" : ["Sweet"]
+		},
+		"Toedscruel" :
+		{
+			"type" : ["Ground", "Grass"],
+			"ability" : ["Mycelium Might"],
+			"stats" :
+			{
+				"hp": 80,
+				"attack": 70,
+				"defense": 65,
+				"spatk": 80,
+				"spdef": 120,
+				"speed": 100
+			},
+			"moves" : ["Energy Ball", "Earth Power", "Spore", "Hex", "Grassy Terrain"],
+			"dex" : "949",
+			"herbs" : ["Sour"]
+		},
+		"Klawf" :
+		{
+			"type" : ["Rock"],
+			"ability" : ["Anger Shell", "Shell Armor", "Regenerator"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 100,
+				"defense": 115,
+				"spatk": 35,
+				"spdef": 55,
+				"speed": 75
+			},
+			"moves" : ["Stone Edge", "Rock Smash", "X-Scissor", "Sandstorm", "Knock Off", "Iron Defense"],
+			"dex" : "950",
+			"herbs" : ["Salty"]
+		},
+		"Tinkaton" :
+		{
+			"type" : ["Fairy", "Steel"],
+			"ability" : ["Mold Breaker", "Own Tempo", "Pickpocket"],
+			"stats" :
+			{
+				"hp": 85,
+				"attack": 75,
+				"defense": 77,
+				"spatk": 70,
+				"spdef": 105,
+				"speed": 94
+			},
+			"moves" : ["Gigaton Hammer", "Play Rough", "Knock Off", "Thunder Wave", "Misty Terrain", "Sweet Kiss"],
+			"dex" : "959",
+			"herbs" : ["Sour"]
+		},
+		"Bombirdier" :
+		{
+			"type" : ["Flying", "Dark"],
+			"ability" : ["Big Pecks", "Keen Eye", "Rocky Payload"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 103,
+				"defense": 85,
+				"spatk": 60,
+				"spdef": 85,
+				"speed": 82
+			},
+			"moves" : ["Rock Slide", "Acrobatics", "Knock Off", "Feather Dance"],
+			"dex" : "962",
+			"herbs" : ["Spicy"]
+		},
+		"Revavroom" :
+		{
+			"type" : ["Steel", "Poison"],
+			"ability" : ["Overcoat", "Filter"],
+			"stats" :
+			{
+				"hp": 80,
+				"attack": 119,
+				"defense": 90,
+				"spatk": 54,
+				"spdef": 67,
+				"speed": 90
+			},
+			"moves" : ["Gunk Shot", "Overheat", "Iron Head", "Taunt", "Scary Face", "Shift Gear"],
+			"dex" : "966",
+			"herbs" : ["Spicy"]
+		},
+		"Cyclizar" :
+		{
+			"type" : ["Dragon", "Normal"],
+			"ability" : ["Shed Skin", "Regenerator"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 95,
+				"defense": 65,
+				"spatk": 85,
+				"spdef": 65,
+				"speed": 121
+			},
+			"moves" : ["Double-Edge", "Dragon Claw", "Dragon Pulse", "Knock Off", "Shift Gear"],
+			"dex" : "967",
+			"herbs" : ["Sweet"]
+		},
+		"Orthworm" :
+		{
+			"type" : ["Steel"],
+			"ability" : ["Earth Eater", "Sand Veil"],
+			"stats" :
+			{
+				"hp": 70,
+				"attack": 85,
+				"defense": 145,
+				"spatk": 60,
+				"spdef": 55,
+				"speed": 65
+			},
+			"moves" : ["Iron Head", "Earthquake", "Smack Down", "Sandstorm", "Coil"],
+			"dex" : "968",
+			"herbs" : ["Salty"]
+		},
+		"Glimmora" :
+		{
+			"type" : ["Rock", "Poison"],
+			"ability" : ["Toxic Debris", "Corrosion"],
+			"stats" :
+			{
+				"hp": 83,
+				"attack": 55,
+				"defense": 90,
+				"spatk": 130,
+				"spdef": 81,
+				"speed": 86
+			},
+			"moves" : ["Power Gem", "Sludge Wave", "Hyper Beam", "Rock Polish", "Sandstorm"],
+			"dex" : "970",
+			"herbs" : ["Bitter"]
+		},
+		"Cetitan" :
+		{
+			"type" : ["Ice"],
+			"ability" : ["Thick Fat", "Slush Rush", "Sheer Force"],
+			"stats" :
+			{
+				"hp": 170,
+				"attack": 113,
+				"defense": 65,
+				"spatk": 45,
+				"spdef": 55,
+				"speed": 73
+			},
+			"moves" : ["Ice Spinner", "Body Slam", "Snowscape", "Stomping Tantrum", "Yawn"],
+			"dex" : "975",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
+		},
+		"Dondozo" :
+		{
+			"type" : ["Water"],
+			"ability" : ["Unaware", "Oblivious", "Water Veil"],
+			"stats" :
+			{
+				"hp": 150,
+				"attack": 100,
+				"defense": 115,
+				"spatk": 65,
+				"spdef": 65,
+				"speed": 35
+			},
+			"moves" : ["Wave Crash", "Order Up", "Heavy Slam", "Yawn", "Rain Dance", "Curse"],
+			"dex" : "977",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
+		},
+		"Annihilape" :
+		{
+			"type" : ["Fighting", "Ghost"],
+			"ability" : ["Vital Spirit", "Inner Focus", "Defiant"],
+			"stats" :
+			{
+				"hp": 110,
+				"attack": 115,
+				"defense": 80,
+				"spatk": 50,
+				"spdef": 90,
+				"speed": 90
+			},
+			"moves" : ["Close Combat", "Shadow Claw", "Assurance", "Focus Energy", "Bulk Up", "Rage Fist"],
+			"dex" : "979",
+			"herbs" : ["Spicy"]
+		},
+		"Clodsire" :
+		{
+			"type" : ["Poison", "Ground"],
+			"ability" : ["Poison Point", "Water Absorb", "Unaware"],
+			"stats" :
+			{
+				"hp": 130,
+				"attack": 75,
+				"defense": 60,
+				"spatk": 45,
+				"spdef": 100,
+				"speed": 20
+			},
+			"moves" : ["Earthquake", "Poison Jab", "Megahorn", "Yawn"],
+			"dex" : "980",
+			"herbs" : ["Sour"]
+		},
+		"Farigiraf" :
+		{
+			"type" : ["Normal", "Psychic"],
+			"ability" : ["Cud Chew", "Armor Tail", "Sap Sipper"],
+			"stats" :
+			{
+				"hp": 120,
+				"attack": 90,
+				"defense": 70,
+				"spatk": 110,
+				"spdef": 70,
+				"speed": 60
+			},
+			"moves" : ["Twin Beam", "Hyper Voice", "Low Kick", "Uproar", "Agility"],
+			"dex" : "981",
+			"herbs" : ["Spicy", "Sweet", "Salty", "Bitter", "Sour"]
+		},
+		"Kingambit" :
+		{
+			"type" : ["Dark", "Steel"],
+			"ability" : ["Defiant", "Supreme Overlord", "Pressure"],
+			"stats" :
+			{
+				"hp": 100,
+				"attack": 135,
+				"defense": 120,
+				"spatk": 60,
+				"spdef": 85,
+				"speed": 50
+			},
+			"moves" : ["Iron Head", "Night Slash", "Kowtow Cleave", "Thunder Wave", "Swords Dance"],
+			"dex" : "983",
+			"herbs" : ["Spicy"]
+		},
+		"Baxcalibur" :
+		{
+			"type" : ["Dragon", "Ice"],
+			"ability" : ["Thermal Exchange", "Ice Body"],
+			"stats" :
+			{
+				"hp": 115,
+				"attack": 145,
+				"defense": 92,
+				"spatk": 75,
+				"spdef": 86,
+				"speed": 87
+			},
+			"moves" : ["Icicle Spear", "Dragon Rush", "Snowscape", "Body Press"],
+			"dex" : "998",
+			"herbs" : ["Spicy"]
+		}
+	}
+}
