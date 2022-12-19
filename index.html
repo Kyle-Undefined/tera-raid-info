@@ -9,27 +9,28 @@
 <body>
 	
 	<div class="wrapper">
-		<header class="header">Six Star Tera Raid Info</header>
-		
-		<aside class="sidebar">
-			Pokemon:
-			<select id="pokemonList">
-				<option value="">-- Select --</option>
-			</select>
-			
-			<br /><br />
-			
-			Tera Type:
-			<select id="teraList">
-				<option value="">-- Select --</option>
-			</select>
-		</aside>
+		<header class="header">
+			Six Star Tera Raid Info
+			<div class="dropdowns">
+				Pokemon:
+				&nbsp;
+				<select id="pokemonList">
+					<option value="">-- Select --</option>
+				</select>
+				&nbsp;
+				Tera Type:
+				&nbsp;
+				<select id="teraList">
+					<option value="">-- Select --</option>
+				</select>
+			</div>
+		</header>
 		
 		<article class="content">
 			<div id="pokemonTypes"></div>
 			<div class="pokemonImageWrapper">
-				<div id="pokemonImageNormal"></div>
-				<div id="pokemonImageShiny"></div>
+				<div id="pokemonImageNormal" class="imgNormal"></div>
+				<div id="pokemonImageShiny" class="imgShiny"></div>
 			</div>
 			<div id="pokemonAbility"></div>
 			<div id="pokemonStats"></div>
@@ -40,7 +41,7 @@
 			<div id="pokemonTeraAdvantages" class="pokemonTypeMatchups"><div>
 		</article>
 		
-		<footer class="footer">Created by: Kyle Undefined; Data & Images from <a href="https://www.serebii.net/" target="_blank">Serebii.net</a></footer>
+		<footer class="footer">Created by: <a href="https://github.com/kyle-undefined" target="_blank">Kyle Undefined</a> - Data & Images from <a href="https://www.serebii.net/" target="_blank">Serebii.net</a></footer>
 	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
