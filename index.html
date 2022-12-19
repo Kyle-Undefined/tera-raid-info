@@ -8,41 +8,34 @@
 </head>
 <body>
 	
-	<div class="wrapper">
-		<header class="header">
-			Six Star Tera Raid Info
-			<div class="dropdowns">
-				Pokemon:
-				&nbsp;
-				<select id="pokemonList">
-					<option value="">-- Select --</option>
-				</select>
-				&nbsp;
-				Tera Type:
-				&nbsp;
-				<select id="teraList">
-					<option value="">-- Select --</option>
-				</select>
-			</div>
-		</header>
-		
-		<article class="content">
-			<div id="pokemonTypes"></div>
-			<div class="pokemonImageWrapper">
-				<div id="pokemonImageNormal" class="imgNormal"></div>
-				<div id="pokemonImageShiny" class="imgShiny"></div>
-			</div>
-			<div id="pokemonAbility"></div>
-			<div id="pokemonStats"></div>
-			<div id="pokemonMoves" class="pokemonMoves"></div>
-			<div id="pokemonHerbs" class="pokemonHerbs"></div>
-			<div id="pokemonTypeAdvantages" class="pokemonTypeMatchups"></div>
-			<div id="pokemonTeraWeaknesses" class="pokemonTypeMatchups"></div>
-			<div id="pokemonTeraAdvantages" class="pokemonTypeMatchups"><div>
-		</article>
-		
-		<footer class="footer">Created by: <a href="https://github.com/kyle-undefined" target="_blank">Kyle Undefined</a> - Data & Images from <a href="https://www.serebii.net/" target="_blank">Serebii.net</a></footer>
-	</div>
+	<header class="header">
+		<h1>Six Star Tera Raid Info</h1>
+		<div class="dropdowns">
+			<select id="pokemonList">
+				<option value="">-- Pokemon --</option>
+			</select>
+			<select id="teraList">
+				<option value="">-- Tera Type --</option>
+			</select>
+		</div>
+	</header>
+	
+	<article class="content">
+		<div class="pokemonImageWrapper">
+			<div id="pokemonImageNormal" class="imgNormal"></div>
+			<div id="pokemonImageShiny" class="imgShiny"></div>
+		</div>
+		<div id="pokemonTypes"></div>
+		<div id="pokemonStats"></div>		
+		<div id="pokemonAbility"></div>
+		<div id="pokemonMoves" class="pokemonMoves"></div>
+		<div id="pokemonHerbs" class="pokemonHerbs"></div>
+		<div id="pokemonTypeAdvantages" class="pokemonTypeMatchups"></div>
+		<div id="pokemonTeraWeaknesses" class="pokemonTypeMatchups"></div>
+		<div id="pokemonTeraAdvantages" class="pokemonTypeMatchups"></div>
+	</article>
+	
+	<footer class="footer">Created by: <a href="https://github.com/kyle-undefined" target="_blank">Kyle Undefined</a> - Layout by: CronikCRS - Data & Images from <a href="https://www.serebii.net/" target="_blank">Serebii.net</a></footer>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="jquery.cacheImages.min.js"></script>
