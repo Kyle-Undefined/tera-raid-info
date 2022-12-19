@@ -24,6 +24,8 @@ h1 {
 }
 h3 {
 	font-weight: bold;
+    font-size: 14px;
+	line-height: 20px;
 }
 
 header, article, footer {
@@ -114,6 +116,8 @@ article.content {
     grid-area: 1 / 1 / 2 / -1;
     text-align: center;
     margin-top: 3px;
+    font-size: 18px;
+	line-height: 24px;
 }
 #pokemonStats .stat {
     background-color: #333c4d;
@@ -142,7 +146,6 @@ article.content {
 #pokemonMoves h3,
 #pokemonHerbs h3 {
     flex: 1 1 100%;
-    font-size: 14px;
 }
 #pokemonAbility .typeMatchupText,
 #pokemonMoves .typeMatchupText {
