@@ -110,9 +110,12 @@ function getPokemonTypes(pokemon) {
 	}
 }
 
-function getPokemonImage(pokemon) {
-	$('#pokemonImageNormal').append($(`<img alt="Normal" title="Normal" src="./images/${raids.pokemon[pokemon].dex}.png" />`));
-	$('#pokemonImageShiny').append($(`<img alt="Shiny" title="Shiny" src="./images/shiny/${raids.pokemon[pokemon].dex}.png" />`));
+async function getPokemonImage(pokemon) {
+	var normalPath = `./images/${raids.pokemon[pokemon].dex}.png`;
+	var shinyPath = `./images/shiny/${raids.pokemon[pokemon].dex}.png`;
+	
+	$('#pokemonImageNormal').append($(`<img alt="Normal" title="Normal" src="${await getImage(normalPath)}" />`));
+	$('#pokemonImageShiny').append($(`<img alt="Shiny" title="Shiny" src="${await getImage(shinyPath)}" />`));
 }
 
 function createAbilityDiv(ability) {
@@ -266,21 +269,60 @@ function capitalize(word) {
     .replace(/\w/, firstLetter => firstLetter.toUpperCase());
 }
 
-function preloadImages(srcs) {
-	if(!preloadImages.cache) {
-		preloadImages.cache = [];
+
+/*
+	Cache Storage for Images
+*/
+
+async function getImage(url) {
+	const cacheVersion = 1;
+	const cacheName = `tera-raid-info-${cacheVersion}`;
+	let cachedImage = await getCachedImage(cacheName, url);
+	
+	if (cachedImage) {
+		return cachedImage;
 	}
 	
-	var img;
+	const cacheStorage = await caches.open(cacheName);
+	await cacheStorage.add(url);
 	
-	for(var i = 0; i < srcs.length; i++) {
-		img = new Image();
-		img.src = srcs[i];
-		preloadImages.cache.push(img);
+	cachedImage = await getCachedImage(cacheName, url);
+	return cachedImage;
+}
+
+async function getCachedImage(cacheName, url) {
+	const cacheStorage = await caches.open(cacheName);
+	const cachedResponse = await cacheStorage.match(url);
+	
+	if(!cachedResponse || !cachedResponse.ok) {
+		return false;
+	}
+	
+	return await cachedResponse.url;
+}
+
+async function deleteCache(cacheName) {
+	const keys = await caches.keys();
+	
+	for(const key of keys) {
+		const ourCache = key.startsWith('tera-raid-info-');
+		
+		if(cacheName === key || !ourCache) {
+			continue;
+		}
+		
+		caches.delete(key);
 	}
 }
 
-var imageSources = ['icons/spicy.png', 'icons/sweet.png', 'icons/salty.png', 'icons/bitter.png', 'icons/sour.png'];
+function cacheIcons() {
+	getImage('./icons/spicy.png');
+	getImage('./icons/sweet.png');
+	getImage('./icons/salty.png');
+	getImage('./icons/bitter.png');
+	getImage('./icons/sour.png');
+	getImage('./icons/favicon.ico');
+}
 
 
 /*
@@ -295,9 +337,6 @@ function populatePokemonList() {
 			value: mon,
 			text: mon
 		}));
-		
-		imageSources.push(`images/${pokemon[1].dex}.png`);
-		imageSources.push(`images/shiny/${pokemon[1].dex}.png`);
 	});
 }
 
@@ -324,9 +363,9 @@ function clearPokemonData() {
 }
 
 $(function() {
+	cacheIcons();
 	populatePokemonList();
 	populateTeraTypeList();
-	preloadImages(imageSources);
 
 	$('#pokemonList').on('change', function() {
 		clearPokemonData();
