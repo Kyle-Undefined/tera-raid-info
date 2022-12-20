@@ -90,14 +90,32 @@ function getPokemonStats(pokemon) {
 	$('#pokemonStatsWrapper').prepend(createStatsDisplay(raids.pokemon[pokemon].stats));
 }
 
+function createMoveTypeAdvantagesDisplay(matchups) {
+	const display = [];
+	
+	Object.entries(matchups).sort((a,b) => b[1]-a[1]).forEach(([key, value]) => {
+		display.push(`${capitalize(key)}`);
+	});
+	
+	return display;
+}
+
+function getMoveTypeAdvantages(type) {
+	var advantages = calculateTypeAdvantage(type);
+	return createMoveTypeAdvantagesDisplay(advantages).join(', ');
+}
+
 function createMoveDiv(move) {
-	var moveStr = `<div class="typeMatchupText ${moves.dex[move].type.toLowerCase()}">${moves.dex[move].name}`;
+	var moveStr = `<div class="typeMatchupText ${types.dex[moves.dex[move].type].name.toLowerCase()}">${moves.dex[move].name}`;
 	moveStr += `<div class="moveStats">`;
 	moveStr += `<div class="type">${moves.dex[move].category}</div>`;
 	moveStr += `<div class="bp">Pwr: ${moves.dex[move].bp}</div>`;
 	moveStr += `<div class="pp">PP: ${moves.dex[move].pp}</div>`;
 	moveStr += `<div class="acc">Acc: ${moves.dex[move].acc}</div>`;
 	moveStr += `<div class="desc">${moves.dex[move].desc}</div>`;
+	if(moves.dex[move].category != 'Status') {
+		moveStr += `<div class="adv">Advantages: ${getMoveTypeAdvantages(moves.dex[move].type)}</div>`;
+	}
 	moveStr += '</div></div>';
 	
 	return moveStr;
@@ -142,8 +160,8 @@ function clearPokemonData() {
 	$('#pokemonTeraAdvantages').empty();
 }
 
-function displayTypeAdvantages(type) {
-	var advantages = calculateTypeAdvantage(type);
+function displayTypesAdvantage(type) {
+	var advantages = calculateTypesAdvantage(type);
 	var display = createMatchupsDisplay(advantages);
 	
 	if(display.length > 0) {
@@ -167,7 +185,7 @@ function displayTypeWeaknesses(type) {
 function displayTeraTypeAdvantages(type) {
 	$('#pokemonTeraAdvantages').empty();
 	
-	var advantages = calculateTeraTypeAdvantage(type);
+	var advantages = calculateTypeAdvantage(type);
 	var display = createMatchupsDisplay(advantages);
 	
 	if(display.length > 0) {
@@ -197,7 +215,7 @@ function calculateTypeWeakness(type) {
 	return weaknesses;
 }
 
-function calculateTypeAdvantage(type) {
+function calculateTypesAdvantage(type) {
 	let advantages = {};
 	
 	type.forEach(item => {
@@ -215,7 +233,7 @@ function calculateTypeAdvantage(type) {
 	return advantages;
 }
 
-function calculateTeraTypeAdvantage(type) {
+function calculateTypeAdvantage(type) {
 	let advantages = {};
 	let attack = types.dex[type].attack;
 	
@@ -261,7 +279,7 @@ $(function() {
 			getPokemonStats($(this).val());
 			getPokemonMoves($(this).val());
 			getPokemonHerbs($(this).val());
-			displayTypeAdvantages(raids.pokemon[$(this).val()].type);
+			displayTypesAdvantage(raids.pokemon[$(this).val()].type);
 			
 			if($('#teraList').val() != '') {
 				displayTypeWeaknesses($('#teraList').val());

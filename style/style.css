@@ -246,6 +246,9 @@ article.content {
 #pokemonMoves .typeMatchupText > .moveStats > .desc {
     grid-column: 1/-1
 }
+#pokemonMoves .typeMatchupText > .moveStats > .adv {
+    grid-column: 1/-1
+}
 
 .footer a {
 	color: hsl(220 20% 90%);

@@ -3,7 +3,7 @@
         {
             "id": 0,
             "name": "Accelerock",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 20,
             "bp": 40,
@@ -13,7 +13,7 @@
         {
             "id": 1,
             "name": "Acrobatics",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 15,
             "bp": 55,
@@ -23,7 +23,7 @@
         {
             "id": 2,
             "name": "Aerial Ace",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 20,
             "bp": 60,
@@ -33,7 +33,7 @@
         {
             "id": 3,
             "name": "Anchor Shot",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 20,
             "bp": 80,
@@ -43,7 +43,7 @@
         {
             "id": 4,
             "name": "Aqua Cutter",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 20,
             "bp": 70,
@@ -53,7 +53,7 @@
         {
             "id": 5,
             "name": "Aqua Jet",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 20,
             "bp": 40,
@@ -63,7 +63,7 @@
         {
             "id": 6,
             "name": "Aqua Step",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -73,7 +73,7 @@
         {
             "id": 7,
             "name": "Aqua Tail",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -83,7 +83,7 @@
         {
             "id": 8,
             "name": "Arm Thrust",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 20,
             "bp": 15,
@@ -93,7 +93,7 @@
         {
             "id": 9,
             "name": "Assurance",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": 60,
@@ -103,7 +103,7 @@
         {
             "id": 10,
             "name": "Astonish",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 15,
             "bp": 30,
@@ -113,7 +113,7 @@
         {
             "id": 11,
             "name": "Attack Order",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 15,
             "bp": 90,
@@ -123,7 +123,7 @@
         {
             "id": 12,
             "name": "Aura Wheel",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 10,
             "bp": 110,
@@ -133,7 +133,7 @@
         {
             "id": 13,
             "name": "Avalanche",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 10,
             "bp": 60,
@@ -143,7 +143,7 @@
         {
             "id": 14,
             "name": "Axe Kick",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 120,
@@ -153,7 +153,7 @@
         {
             "id": 15,
             "name": "Barb Barrage",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 10,
             "bp": 60,
@@ -163,7 +163,7 @@
         {
             "id": 16,
             "name": "Beak Blast",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 15,
             "bp": 100,
@@ -173,7 +173,7 @@
         {
             "id": 17,
             "name": "Beat Up",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": "--",
@@ -183,7 +183,7 @@
         {
             "id": 18,
             "name": "Behemoth Bash",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -193,7 +193,7 @@
         {
             "id": 19,
             "name": "Behemoth Blade",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -203,7 +203,7 @@
         {
             "id": 20,
             "name": "Bind",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 15,
@@ -213,7 +213,7 @@
         {
             "id": 21,
             "name": "Bite",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 25,
             "bp": 60,
@@ -223,7 +223,7 @@
         {
             "id": 22,
             "name": "Bitter Blade",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -233,7 +233,7 @@
         {
             "id": 23,
             "name": "Blaze Kick",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 10,
             "bp": 85,
@@ -243,7 +243,7 @@
         {
             "id": 24,
             "name": "Blazing Torque",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -253,7 +253,7 @@
         {
             "id": 25,
             "name": "Body Press",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -263,7 +263,7 @@
         {
             "id": 26,
             "name": "Body Slam",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 15,
             "bp": 85,
@@ -273,7 +273,7 @@
         {
             "id": 27,
             "name": "Bolt Beak",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 10,
             "bp": 85,
@@ -283,7 +283,7 @@
         {
             "id": 28,
             "name": "Bolt Strike",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 5,
             "bp": 130,
@@ -293,7 +293,7 @@
         {
             "id": 29,
             "name": "Bone Rush",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 25,
@@ -303,7 +303,7 @@
         {
             "id": 30,
             "name": "Bonemerang",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 50,
@@ -313,7 +313,7 @@
         {
             "id": 31,
             "name": "Bounce",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 5,
             "bp": 85,
@@ -323,7 +323,7 @@
         {
             "id": 32,
             "name": "Branch Poke",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 40,
             "bp": 40,
@@ -333,7 +333,7 @@
         {
             "id": 33,
             "name": "Brave Bird",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 15,
             "bp": 120,
@@ -343,7 +343,7 @@
         {
             "id": 34,
             "name": "Breaking Swipe",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 15,
             "bp": 60,
@@ -353,7 +353,7 @@
         {
             "id": 35,
             "name": "Brick Break",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 15,
             "bp": 75,
@@ -363,7 +363,7 @@
         {
             "id": 36,
             "name": "Brutal Swing",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 20,
             "bp": 60,
@@ -373,7 +373,7 @@
         {
             "id": 37,
             "name": "Bug Bite",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 20,
             "bp": 60,
@@ -383,7 +383,7 @@
         {
             "id": 38,
             "name": "Bulldoze",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 20,
             "bp": 60,
@@ -393,7 +393,7 @@
         {
             "id": 39,
             "name": "Bullet Punch",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 30,
             "bp": 40,
@@ -403,7 +403,7 @@
         {
             "id": 40,
             "name": "Bullet Seed",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 30,
             "bp": 25,
@@ -413,7 +413,7 @@
         {
             "id": 41,
             "name": "Ceaseless Edge",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 15,
             "bp": 65,
@@ -423,7 +423,7 @@
         {
             "id": 42,
             "name": "Circle Throw",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 60,
@@ -433,7 +433,7 @@
         {
             "id": 43,
             "name": "Close Combat",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -443,7 +443,7 @@
         {
             "id": 44,
             "name": "Collision Course",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -453,7 +453,7 @@
         {
             "id": 45,
             "name": "Combat Torque",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -463,7 +463,7 @@
         {
             "id": 46,
             "name": "Comeuppance",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": "--",
@@ -473,7 +473,7 @@
         {
             "id": 47,
             "name": "Counter",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 20,
             "bp": "--",
@@ -483,7 +483,7 @@
         {
             "id": 48,
             "name": "Covet",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 25,
             "bp": 60,
@@ -493,7 +493,7 @@
         {
             "id": 49,
             "name": "Crabhammer",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -503,7 +503,7 @@
         {
             "id": 50,
             "name": "Cross Chop",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -513,7 +513,7 @@
         {
             "id": 51,
             "name": "Cross Poison",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 20,
             "bp": 70,
@@ -523,7 +523,7 @@
         {
             "id": 52,
             "name": "Crunch",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -533,7 +533,7 @@
         {
             "id": 53,
             "name": "Crush Claw",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 75,
@@ -543,7 +543,7 @@
         {
             "id": 54,
             "name": "Crush Grip",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": "--",
@@ -553,7 +553,7 @@
         {
             "id": 55,
             "name": "Cut",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 30,
             "bp": 50,
@@ -563,7 +563,7 @@
         {
             "id": 56,
             "name": "Darkest Lariat",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": 85,
@@ -573,7 +573,7 @@
         {
             "id": 57,
             "name": "Diamond Storm",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -583,7 +583,7 @@
         {
             "id": 58,
             "name": "Dig",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -593,7 +593,7 @@
         {
             "id": 59,
             "name": "Dire Claw",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -603,7 +603,7 @@
         {
             "id": 60,
             "name": "Dive",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -613,7 +613,7 @@
         {
             "id": 61,
             "name": "Double Hit",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 35,
@@ -623,7 +623,7 @@
         {
             "id": 62,
             "name": "Double Iron Bash",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 5,
             "bp": 60,
@@ -633,7 +633,7 @@
         {
             "id": 63,
             "name": "Double Kick",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 30,
             "bp": 30,
@@ -643,7 +643,7 @@
         {
             "id": 64,
             "name": "Double Shock",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -653,7 +653,7 @@
         {
             "id": 65,
             "name": "Double-Edge",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 15,
             "bp": 120,
@@ -663,7 +663,7 @@
         {
             "id": 66,
             "name": "Dragon Ascent",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -673,7 +673,7 @@
         {
             "id": 67,
             "name": "Dragon Claw",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -683,7 +683,7 @@
         {
             "id": 68,
             "name": "Dragon Darts",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 10,
             "bp": 50,
@@ -693,7 +693,7 @@
         {
             "id": 69,
             "name": "Dragon Rush",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -703,7 +703,7 @@
         {
             "id": 70,
             "name": "Dragon Tail",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 10,
             "bp": 60,
@@ -713,7 +713,7 @@
         {
             "id": 71,
             "name": "Drain Punch",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 75,
@@ -723,7 +723,7 @@
         {
             "id": 72,
             "name": "Drill Peck",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 20,
             "bp": 80,
@@ -733,7 +733,7 @@
         {
             "id": 73,
             "name": "Drill Run",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -743,7 +743,7 @@
         {
             "id": 74,
             "name": "Drum Beating",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -753,7 +753,7 @@
         {
             "id": 75,
             "name": "Dual Wingbeat",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 10,
             "bp": 40,
@@ -763,7 +763,7 @@
         {
             "id": 76,
             "name": "Dynamic Punch",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -773,7 +773,7 @@
         {
             "id": 77,
             "name": "Earthquake",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -783,7 +783,7 @@
         {
             "id": 78,
             "name": "Endeavor",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": "--",
@@ -793,7 +793,7 @@
         {
             "id": 79,
             "name": "Explosion",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": 250,
@@ -803,7 +803,7 @@
         {
             "id": 80,
             "name": "Extreme Speed",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": 80,
@@ -813,7 +813,7 @@
         {
             "id": 81,
             "name": "Facade",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 70,
@@ -823,7 +823,7 @@
         {
             "id": 82,
             "name": "Fake Out",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 40,
@@ -833,7 +833,7 @@
         {
             "id": 83,
             "name": "False Surrender",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -843,7 +843,7 @@
         {
             "id": 84,
             "name": "False Swipe",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 40,
             "bp": 40,
@@ -853,7 +853,7 @@
         {
             "id": 85,
             "name": "Feint",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 30,
@@ -863,7 +863,7 @@
         {
             "id": 86,
             "name": "Fell Stinger",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 25,
             "bp": 50,
@@ -873,7 +873,7 @@
         {
             "id": 87,
             "name": "Fire Fang",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 15,
             "bp": 65,
@@ -883,7 +883,7 @@
         {
             "id": 88,
             "name": "Fire Lash",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -893,7 +893,7 @@
         {
             "id": 89,
             "name": "Fire Punch",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 15,
             "bp": 75,
@@ -903,7 +903,7 @@
         {
             "id": 90,
             "name": "First Impression",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -913,7 +913,7 @@
         {
             "id": 91,
             "name": "Fishious Rend",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 85,
@@ -923,7 +923,7 @@
         {
             "id": 92,
             "name": "Fissure",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 5,
             "bp": "--",
@@ -933,7 +933,7 @@
         {
             "id": 93,
             "name": "Flail",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 15,
             "bp": "--",
@@ -943,7 +943,7 @@
         {
             "id": 94,
             "name": "Flame Charge",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 20,
             "bp": 50,
@@ -953,7 +953,7 @@
         {
             "id": 95,
             "name": "Flame Wheel",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 25,
             "bp": 60,
@@ -963,7 +963,7 @@
         {
             "id": 96,
             "name": "Flare Blitz",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 15,
             "bp": 120,
@@ -973,7 +973,7 @@
         {
             "id": 97,
             "name": "Fling",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": "--",
@@ -983,7 +983,7 @@
         {
             "id": 98,
             "name": "Flip Turn",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 20,
             "bp": 60,
@@ -993,7 +993,7 @@
         {
             "id": 99,
             "name": "Flower Trick",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 10,
             "bp": 70,
@@ -1003,7 +1003,7 @@
         {
             "id": 100,
             "name": "Fly",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 15,
             "bp": 90,
@@ -1013,7 +1013,7 @@
         {
             "id": 101,
             "name": "Flying Press",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -1023,7 +1023,7 @@
         {
             "id": 102,
             "name": "Focus Punch",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 20,
             "bp": 150,
@@ -1033,7 +1033,7 @@
         {
             "id": 103,
             "name": "Force Palm",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 60,
@@ -1043,7 +1043,7 @@
         {
             "id": 104,
             "name": "Foul Play",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 15,
             "bp": 95,
@@ -1053,7 +1053,7 @@
         {
             "id": 105,
             "name": "Freeze Shock",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 5,
             "bp": 140,
@@ -1063,7 +1063,7 @@
         {
             "id": 106,
             "name": "Fury Attack",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 15,
@@ -1073,7 +1073,7 @@
         {
             "id": 107,
             "name": "Fury Cutter",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 20,
             "bp": 40,
@@ -1083,7 +1083,7 @@
         {
             "id": 108,
             "name": "Fury Swipes",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 15,
             "bp": 18,
@@ -1093,7 +1093,7 @@
         {
             "id": 109,
             "name": "Fusion Bolt",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -1103,7 +1103,7 @@
         {
             "id": 110,
             "name": "Gear Grind",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 15,
             "bp": 50,
@@ -1113,7 +1113,7 @@
         {
             "id": 111,
             "name": "Giga Impact",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": 150,
@@ -1123,7 +1123,7 @@
         {
             "id": 112,
             "name": "Gigaton Hammer",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 5,
             "bp": 160,
@@ -1133,7 +1133,7 @@
         {
             "id": 113,
             "name": "Glacial Lance",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -1143,7 +1143,7 @@
         {
             "id": 114,
             "name": "Glaive Rush",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -1153,7 +1153,7 @@
         {
             "id": 115,
             "name": "Grassy Glide",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 20,
             "bp": 60,
@@ -1163,7 +1163,7 @@
         {
             "id": 116,
             "name": "Grav Apple",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -1173,7 +1173,7 @@
         {
             "id": 117,
             "name": "Guillotine",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": "--",
@@ -1183,7 +1183,7 @@
         {
             "id": 118,
             "name": "Gunk Shot",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -1193,7 +1193,7 @@
         {
             "id": 119,
             "name": "Gyro Ball",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 5,
             "bp": "--",
@@ -1203,7 +1203,7 @@
         {
             "id": 120,
             "name": "Hammer Arm",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -1213,7 +1213,7 @@
         {
             "id": 121,
             "name": "Head Charge",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 15,
             "bp": 120,
@@ -1223,7 +1223,7 @@
         {
             "id": 122,
             "name": "Head Smash",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 5,
             "bp": 150,
@@ -1233,7 +1233,7 @@
         {
             "id": 123,
             "name": "Headbutt",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 15,
             "bp": 70,
@@ -1243,7 +1243,7 @@
         {
             "id": 124,
             "name": "Headlong Rush",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -1253,7 +1253,7 @@
         {
             "id": 125,
             "name": "Heat Crash",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 10,
             "bp": "--",
@@ -1263,7 +1263,7 @@
         {
             "id": 126,
             "name": "Heavy Slam",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 10,
             "bp": "--",
@@ -1273,7 +1273,7 @@
         {
             "id": 127,
             "name": "High Horsepower",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 95,
@@ -1283,7 +1283,7 @@
         {
             "id": 128,
             "name": "High Jump Kick",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 130,
@@ -1293,7 +1293,7 @@
         {
             "id": 129,
             "name": "Hold Back",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 40,
             "bp": 40,
@@ -1303,7 +1303,7 @@
         {
             "id": 130,
             "name": "Horn Attack",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 25,
             "bp": 65,
@@ -1313,7 +1313,7 @@
         {
             "id": 131,
             "name": "Horn Drill",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": "--",
@@ -1323,7 +1323,7 @@
         {
             "id": 132,
             "name": "Horn Leech",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 10,
             "bp": 75,
@@ -1333,7 +1333,7 @@
         {
             "id": 133,
             "name": "Hyper Drill",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -1343,7 +1343,7 @@
         {
             "id": 134,
             "name": "Hyperspace Fury",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -1353,7 +1353,7 @@
         {
             "id": 135,
             "name": "Ice Fang",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 15,
             "bp": 65,
@@ -1363,7 +1363,7 @@
         {
             "id": 136,
             "name": "Ice Hammer",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -1373,7 +1373,7 @@
         {
             "id": 137,
             "name": "Ice Punch",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 15,
             "bp": 75,
@@ -1383,7 +1383,7 @@
         {
             "id": 138,
             "name": "Ice Shard",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 30,
             "bp": 40,
@@ -1393,7 +1393,7 @@
         {
             "id": 139,
             "name": "Ice Spinner",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -1403,7 +1403,7 @@
         {
             "id": 140,
             "name": "Icicle Crash",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 10,
             "bp": 85,
@@ -1413,7 +1413,7 @@
         {
             "id": 141,
             "name": "Icicle Spear",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 30,
             "bp": 25,
@@ -1423,7 +1423,7 @@
         {
             "id": 142,
             "name": "Iron Head",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -1433,7 +1433,7 @@
         {
             "id": 143,
             "name": "Iron Tail",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 15,
             "bp": 100,
@@ -1443,7 +1443,7 @@
         {
             "id": 144,
             "name": "Jaw Lock",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -1453,7 +1453,7 @@
         {
             "id": 145,
             "name": "Jet Punch",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 15,
             "bp": 60,
@@ -1463,7 +1463,7 @@
         {
             "id": 146,
             "name": "Knock Off",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 20,
             "bp": 65,
@@ -1473,7 +1473,7 @@
         {
             "id": 147,
             "name": "Kowtow Cleave",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": 85,
@@ -1483,7 +1483,7 @@
         {
             "id": 148,
             "name": "Land's Wrath",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -1493,7 +1493,7 @@
         {
             "id": 149,
             "name": "Lash Out",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 5,
             "bp": 75,
@@ -1503,7 +1503,7 @@
         {
             "id": 150,
             "name": "Last Resort",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": 140,
@@ -1513,7 +1513,7 @@
         {
             "id": 151,
             "name": "Last Respects",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 10,
             "bp": 50,
@@ -1523,7 +1523,7 @@
         {
             "id": 152,
             "name": "Leaf Blade",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 15,
             "bp": 90,
@@ -1533,7 +1533,7 @@
         {
             "id": 153,
             "name": "Leafage",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 40,
             "bp": 40,
@@ -1543,7 +1543,7 @@
         {
             "id": 154,
             "name": "Leech Life",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -1553,7 +1553,7 @@
         {
             "id": 155,
             "name": "Lick",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 30,
             "bp": 30,
@@ -1563,7 +1563,7 @@
         {
             "id": 156,
             "name": "Liquidation",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 85,
@@ -1573,7 +1573,7 @@
         {
             "id": 157,
             "name": "Low Kick",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 20,
             "bp": "--",
@@ -1583,7 +1583,7 @@
         {
             "id": 158,
             "name": "Low Sweep",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 20,
             "bp": 65,
@@ -1593,7 +1593,7 @@
         {
             "id": 159,
             "name": "Lunge",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -1603,7 +1603,7 @@
         {
             "id": 160,
             "name": "Mach Punch",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 30,
             "bp": 40,
@@ -1613,7 +1613,7 @@
         {
             "id": 161,
             "name": "Magical Torque",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -1623,7 +1623,7 @@
         {
             "id": 162,
             "name": "Max Airstream",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1633,7 +1633,7 @@
         {
             "id": 163,
             "name": "Max Darkness",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1643,7 +1643,7 @@
         {
             "id": 164,
             "name": "Max Flare",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -1653,7 +1653,7 @@
         {
             "id": 165,
             "name": "Max Flutterby",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1663,7 +1663,7 @@
         {
             "id": 166,
             "name": "Max Geyser",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1673,7 +1673,7 @@
         {
             "id": 167,
             "name": "Max Hailstorm",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1683,7 +1683,7 @@
         {
             "id": 168,
             "name": "Max Knuckle",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1693,7 +1693,7 @@
         {
             "id": 169,
             "name": "Max Lightning",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1703,7 +1703,7 @@
         {
             "id": 170,
             "name": "Max Mindstorm",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1713,7 +1713,7 @@
         {
             "id": 171,
             "name": "Max Ooze",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1723,7 +1723,7 @@
         {
             "id": 172,
             "name": "Max Overgrowth",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1733,7 +1733,7 @@
         {
             "id": 173,
             "name": "Max Phantasm",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1743,7 +1743,7 @@
         {
             "id": 174,
             "name": "Max Quake",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1753,7 +1753,7 @@
         {
             "id": 175,
             "name": "Max Rockfall",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1763,7 +1763,7 @@
         {
             "id": 176,
             "name": "Max Starfall",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1773,7 +1773,7 @@
         {
             "id": 177,
             "name": "Max Steelspike",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1783,7 +1783,7 @@
         {
             "id": 178,
             "name": "Max Strike",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1793,7 +1793,7 @@
         {
             "id": 179,
             "name": "Max Wyrmwind",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -1803,7 +1803,7 @@
         {
             "id": 180,
             "name": "Mega Kick",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -1813,7 +1813,7 @@
         {
             "id": 181,
             "name": "Mega Punch",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 80,
@@ -1823,7 +1823,7 @@
         {
             "id": 182,
             "name": "Megahorn",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 10,
             "bp": 120,
@@ -1833,7 +1833,7 @@
         {
             "id": 183,
             "name": "Metal Burst",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 10,
             "bp": "--",
@@ -1843,7 +1843,7 @@
         {
             "id": 184,
             "name": "Metal Claw",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 35,
             "bp": 50,
@@ -1853,7 +1853,7 @@
         {
             "id": 185,
             "name": "Meteor Assault",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 5,
             "bp": 150,
@@ -1863,7 +1863,7 @@
         {
             "id": 186,
             "name": "Meteor Mash",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -1873,7 +1873,7 @@
         {
             "id": 187,
             "name": "Mortal Spin",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 15,
             "bp": 30,
@@ -1883,7 +1883,7 @@
         {
             "id": 188,
             "name": "Mountain Gale",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -1893,7 +1893,7 @@
         {
             "id": 189,
             "name": "Multi-Attack",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 120,
@@ -1903,7 +1903,7 @@
         {
             "id": 190,
             "name": "Night Slash",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 15,
             "bp": 70,
@@ -1913,7 +1913,7 @@
         {
             "id": 191,
             "name": "Noxious Torque",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 10,
             "bp": 100,
@@ -1923,7 +1923,7 @@
         {
             "id": 192,
             "name": "Nuzzle",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 20,
             "bp": 20,
@@ -1933,7 +1933,7 @@
         {
             "id": 193,
             "name": "Order Up",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -1943,7 +1943,7 @@
         {
             "id": 194,
             "name": "Outrage",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 10,
             "bp": 120,
@@ -1953,7 +1953,7 @@
         {
             "id": 195,
             "name": "Pay Day",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 40,
@@ -1963,7 +1963,7 @@
         {
             "id": 196,
             "name": "Payback",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": 50,
@@ -1973,7 +1973,7 @@
         {
             "id": 197,
             "name": "Peck",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 35,
             "bp": 35,
@@ -1983,7 +1983,7 @@
         {
             "id": 198,
             "name": "Petal Blizzard",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 15,
             "bp": 90,
@@ -1993,7 +1993,7 @@
         {
             "id": 199,
             "name": "Phantom Force",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -2003,7 +2003,7 @@
         {
             "id": 200,
             "name": "Pin Missile",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 20,
             "bp": 25,
@@ -2013,7 +2013,7 @@
         {
             "id": 201,
             "name": "Plasma Fists",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 15,
             "bp": 100,
@@ -2023,7 +2023,7 @@
         {
             "id": 202,
             "name": "Play Rough",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -2033,7 +2033,7 @@
         {
             "id": 203,
             "name": "Pluck",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 20,
             "bp": 60,
@@ -2043,7 +2043,7 @@
         {
             "id": 204,
             "name": "Poison Fang",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 15,
             "bp": 50,
@@ -2053,7 +2053,7 @@
         {
             "id": 205,
             "name": "Poison Jab",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 20,
             "bp": 80,
@@ -2063,7 +2063,7 @@
         {
             "id": 206,
             "name": "Poison Sting",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 35,
             "bp": 15,
@@ -2073,7 +2073,7 @@
         {
             "id": 207,
             "name": "Poison Tail",
-            "type": "POISON",
+            "type": 4,
             "category": "Physical",
             "pp": 25,
             "bp": 50,
@@ -2083,7 +2083,7 @@
         {
             "id": 208,
             "name": "Poltergeist",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 5,
             "bp": 110,
@@ -2093,7 +2093,7 @@
         {
             "id": 209,
             "name": "Population Bomb",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 20,
@@ -2103,7 +2103,7 @@
         {
             "id": 210,
             "name": "Pounce",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 20,
             "bp": 50,
@@ -2113,7 +2113,7 @@
         {
             "id": 211,
             "name": "Pound",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 35,
             "bp": 40,
@@ -2123,7 +2123,7 @@
         {
             "id": 212,
             "name": "Power Trip",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": 20,
@@ -2133,7 +2133,7 @@
         {
             "id": 213,
             "name": "Power Whip",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 10,
             "bp": 120,
@@ -2143,7 +2143,7 @@
         {
             "id": 214,
             "name": "Precipice Blades",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 120,
@@ -2153,7 +2153,7 @@
         {
             "id": 215,
             "name": "Present",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 15,
             "bp": "--",
@@ -2163,7 +2163,7 @@
         {
             "id": 216,
             "name": "Psychic Fangs",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Physical",
             "pp": 10,
             "bp": 85,
@@ -2173,7 +2173,7 @@
         {
             "id": 217,
             "name": "Psycho Cut",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Physical",
             "pp": 20,
             "bp": 70,
@@ -2183,7 +2183,7 @@
         {
             "id": 218,
             "name": "Psyshield Bash",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Physical",
             "pp": 10,
             "bp": 70,
@@ -2193,7 +2193,7 @@
         {
             "id": 219,
             "name": "Pyro Ball",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -2203,7 +2203,7 @@
         {
             "id": 220,
             "name": "Quick Attack",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 30,
             "bp": 40,
@@ -2213,7 +2213,7 @@
         {
             "id": 221,
             "name": "Rage Fist",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 10,
             "bp": 50,
@@ -2223,7 +2223,7 @@
         {
             "id": 222,
             "name": "Raging Bull",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -2233,7 +2233,7 @@
         {
             "id": 223,
             "name": "Raging Fury",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 10,
             "bp": 120,
@@ -2243,7 +2243,7 @@
         {
             "id": 224,
             "name": "Rapid Spin",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 40,
             "bp": 50,
@@ -2253,7 +2253,7 @@
         {
             "id": 225,
             "name": "Razor Leaf",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 25,
             "bp": 55,
@@ -2263,7 +2263,7 @@
         {
             "id": 226,
             "name": "Razor Shell",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 75,
@@ -2273,7 +2273,7 @@
         {
             "id": 227,
             "name": "Retaliate",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": 70,
@@ -2283,7 +2283,7 @@
         {
             "id": 228,
             "name": "Reversal",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 15,
             "bp": "--",
@@ -2293,7 +2293,7 @@
         {
             "id": 229,
             "name": "Rock Blast",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 10,
             "bp": 25,
@@ -2303,7 +2303,7 @@
         {
             "id": 230,
             "name": "Rock Slide",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 10,
             "bp": 75,
@@ -2313,7 +2313,7 @@
         {
             "id": 231,
             "name": "Rock Smash",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 15,
             "bp": 40,
@@ -2323,7 +2323,7 @@
         {
             "id": 232,
             "name": "Rock Throw",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 15,
             "bp": 50,
@@ -2333,7 +2333,7 @@
         {
             "id": 233,
             "name": "Rock Tomb",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 15,
             "bp": 60,
@@ -2343,7 +2343,7 @@
         {
             "id": 234,
             "name": "Rock Wrecker",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 5,
             "bp": 150,
@@ -2353,7 +2353,7 @@
         {
             "id": 235,
             "name": "Rollout",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 20,
             "bp": 30,
@@ -2363,7 +2363,7 @@
         {
             "id": 236,
             "name": "Sacred Fire",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -2373,7 +2373,7 @@
         {
             "id": 237,
             "name": "Sacred Sword",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 15,
             "bp": 90,
@@ -2383,7 +2383,7 @@
         {
             "id": 238,
             "name": "Salt Cure",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 15,
             "bp": 40,
@@ -2393,7 +2393,7 @@
         {
             "id": 239,
             "name": "Sand Tomb",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 15,
             "bp": 35,
@@ -2403,7 +2403,7 @@
         {
             "id": 240,
             "name": "Scale Shot",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Physical",
             "pp": 20,
             "bp": 25,
@@ -2413,7 +2413,7 @@
         {
             "id": 241,
             "name": "Scratch",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 35,
             "bp": 40,
@@ -2423,7 +2423,7 @@
         {
             "id": 242,
             "name": "Seed Bomb",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -2433,7 +2433,7 @@
         {
             "id": 243,
             "name": "Seismic Toss",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 20,
             "bp": "--",
@@ -2443,7 +2443,7 @@
         {
             "id": 244,
             "name": "Self-Destruct",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 5,
             "bp": 200,
@@ -2453,7 +2453,7 @@
         {
             "id": 245,
             "name": "Shadow Bone",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 10,
             "bp": 85,
@@ -2463,7 +2463,7 @@
         {
             "id": 246,
             "name": "Shadow Claw",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 15,
             "bp": 70,
@@ -2473,7 +2473,7 @@
         {
             "id": 247,
             "name": "Shadow Force",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -2483,7 +2483,7 @@
         {
             "id": 248,
             "name": "Shadow Punch",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 20,
             "bp": 60,
@@ -2493,7 +2493,7 @@
         {
             "id": 249,
             "name": "Shadow Sneak",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 30,
             "bp": 40,
@@ -2503,7 +2503,7 @@
         {
             "id": 250,
             "name": "Skitter Smack",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 10,
             "bp": 70,
@@ -2513,7 +2513,7 @@
         {
             "id": 251,
             "name": "Sky Attack",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 5,
             "bp": 140,
@@ -2523,7 +2523,7 @@
         {
             "id": 252,
             "name": "Slam",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 80,
@@ -2533,7 +2533,7 @@
         {
             "id": 253,
             "name": "Slash",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 70,
@@ -2543,7 +2543,7 @@
         {
             "id": 254,
             "name": "Smack Down",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 15,
             "bp": 50,
@@ -2553,7 +2553,7 @@
         {
             "id": 255,
             "name": "Smart Strike",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 10,
             "bp": 70,
@@ -2563,7 +2563,7 @@
         {
             "id": 256,
             "name": "Snap Trap",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 15,
             "bp": 35,
@@ -2573,7 +2573,7 @@
         {
             "id": 257,
             "name": "Solar Blade",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 10,
             "bp": 125,
@@ -2583,7 +2583,7 @@
         {
             "id": 258,
             "name": "Spark",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 20,
             "bp": 65,
@@ -2593,7 +2593,7 @@
         {
             "id": 259,
             "name": "Spectral Thief",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -2603,7 +2603,7 @@
         {
             "id": 260,
             "name": "Spin Out",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -2613,7 +2613,7 @@
         {
             "id": 261,
             "name": "Spirit Break",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Physical",
             "pp": 15,
             "bp": 75,
@@ -2623,7 +2623,7 @@
         {
             "id": 262,
             "name": "Spirit Shackle",
-            "type": "GHOST",
+            "type": 8,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -2633,7 +2633,7 @@
         {
             "id": 263,
             "name": "Steel Roller",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 5,
             "bp": 130,
@@ -2643,7 +2643,7 @@
         {
             "id": 264,
             "name": "Steel Wing",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 25,
             "bp": 70,
@@ -2653,7 +2653,7 @@
         {
             "id": 265,
             "name": "Stomp",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 65,
@@ -2663,7 +2663,7 @@
         {
             "id": 266,
             "name": "Stomping Tantrum",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 75,
@@ -2673,7 +2673,7 @@
         {
             "id": 267,
             "name": "Stone Axe",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 15,
             "bp": 65,
@@ -2683,7 +2683,7 @@
         {
             "id": 268,
             "name": "Stone Edge",
-            "type": "ROCK",
+            "type": 6,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -2693,7 +2693,7 @@
         {
             "id": 269,
             "name": "Storm Throw",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 60,
@@ -2703,7 +2703,7 @@
         {
             "id": 270,
             "name": "Strength",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -2713,7 +2713,7 @@
         {
             "id": 271,
             "name": "Struggle",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 1,
             "bp": 50,
@@ -2723,7 +2723,7 @@
         {
             "id": 272,
             "name": "Sucker Punch",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 5,
             "bp": 70,
@@ -2733,7 +2733,7 @@
         {
             "id": 273,
             "name": "Sunsteel Strike",
-            "type": "STEEL",
+            "type": 9,
             "category": "Physical",
             "pp": 5,
             "bp": 100,
@@ -2743,7 +2743,7 @@
         {
             "id": 274,
             "name": "Super Fang",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": "--",
@@ -2753,7 +2753,7 @@
         {
             "id": 275,
             "name": "Superpower",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 5,
             "bp": 120,
@@ -2763,7 +2763,7 @@
         {
             "id": 276,
             "name": "Surging Strikes",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 5,
             "bp": 25,
@@ -2773,7 +2773,7 @@
         {
             "id": 277,
             "name": "Tackle",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 35,
             "bp": 40,
@@ -2783,7 +2783,7 @@
         {
             "id": 278,
             "name": "Tail Slap",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 25,
@@ -2793,7 +2793,7 @@
         {
             "id": 279,
             "name": "Take Down",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 90,
@@ -2803,7 +2803,7 @@
         {
             "id": 280,
             "name": "Thief",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 25,
             "bp": 60,
@@ -2813,7 +2813,7 @@
         {
             "id": 281,
             "name": "Thousand Arrows",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -2823,7 +2823,7 @@
         {
             "id": 282,
             "name": "Thousand Waves",
-            "type": "GROUND",
+            "type": 5,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -2833,7 +2833,7 @@
         {
             "id": 283,
             "name": "Thrash",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 10,
             "bp": 120,
@@ -2843,7 +2843,7 @@
         {
             "id": 284,
             "name": "Throat Chop",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -2853,7 +2853,7 @@
         {
             "id": 285,
             "name": "Thunder Fang",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 15,
             "bp": 65,
@@ -2863,7 +2863,7 @@
         {
             "id": 286,
             "name": "Thunder Punch",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 15,
             "bp": 75,
@@ -2873,7 +2873,7 @@
         {
             "id": 287,
             "name": "Thunderous Kick",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -2883,7 +2883,7 @@
         {
             "id": 288,
             "name": "Trailblaze",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 20,
             "bp": 50,
@@ -2893,7 +2893,7 @@
         {
             "id": 289,
             "name": "Triple Arrows",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 90,
@@ -2903,7 +2903,7 @@
         {
             "id": 290,
             "name": "Triple Axel",
-            "type": "ICE",
+            "type": 15,
             "category": "Physical",
             "pp": 10,
             "bp": 20,
@@ -2913,7 +2913,7 @@
         {
             "id": 291,
             "name": "Triple Dive",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 30,
@@ -2923,7 +2923,7 @@
         {
             "id": 292,
             "name": "Triple Kick",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Physical",
             "pp": 10,
             "bp": 10,
@@ -2933,7 +2933,7 @@
         {
             "id": 293,
             "name": "Trop Kick",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 15,
             "bp": 70,
@@ -2943,7 +2943,7 @@
         {
             "id": 294,
             "name": "U-turn",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 20,
             "bp": 70,
@@ -2953,7 +2953,7 @@
         {
             "id": 295,
             "name": "V-create",
-            "type": "FIRE",
+            "type": 10,
             "category": "Physical",
             "pp": 5,
             "bp": 180,
@@ -2963,7 +2963,7 @@
         {
             "id": 296,
             "name": "Vine Whip",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 25,
             "bp": 45,
@@ -2973,7 +2973,7 @@
         {
             "id": 297,
             "name": "Vise Grip",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 30,
             "bp": 55,
@@ -2983,7 +2983,7 @@
         {
             "id": 298,
             "name": "Volt Tackle",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 15,
             "bp": 120,
@@ -2993,7 +2993,7 @@
         {
             "id": 299,
             "name": "Waterfall",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -3003,7 +3003,7 @@
         {
             "id": 300,
             "name": "Wave Crash",
-            "type": "WATER",
+            "type": 11,
             "category": "Physical",
             "pp": 10,
             "bp": 120,
@@ -3013,7 +3013,7 @@
         {
             "id": 301,
             "name": "Wicked Blow",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 5,
             "bp": 75,
@@ -3023,7 +3023,7 @@
         {
             "id": 302,
             "name": "Wicked Torque",
-            "type": "DARK",
+            "type": 17,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -3033,7 +3033,7 @@
         {
             "id": 303,
             "name": "Wild Charge",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 15,
             "bp": 90,
@@ -3043,7 +3043,7 @@
         {
             "id": 304,
             "name": "Wing Attack",
-            "type": "FLYING",
+            "type": 3,
             "category": "Physical",
             "pp": 35,
             "bp": 60,
@@ -3053,7 +3053,7 @@
         {
             "id": 305,
             "name": "Wood Hammer",
-            "type": "GRASS",
+            "type": 12,
             "category": "Physical",
             "pp": 15,
             "bp": 120,
@@ -3063,7 +3063,7 @@
         {
             "id": 306,
             "name": "Wrap",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Physical",
             "pp": 20,
             "bp": 15,
@@ -3073,7 +3073,7 @@
         {
             "id": 307,
             "name": "X-Scissor",
-            "type": "BUG",
+            "type": 7,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -3083,7 +3083,7 @@
         {
             "id": 308,
             "name": "Zen Headbutt",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Physical",
             "pp": 15,
             "bp": 80,
@@ -3093,7 +3093,7 @@
         {
             "id": 309,
             "name": "Zing Zap",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Physical",
             "pp": 10,
             "bp": 80,
@@ -3104,7 +3104,7 @@
         {
             "id": 310,
             "name": "Absorb",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 25,
             "bp": 20,
@@ -3114,7 +3114,7 @@
         {
             "id": 311,
             "name": "Acid",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 30,
             "bp": 40,
@@ -3124,7 +3124,7 @@
         {
             "id": 312,
             "name": "Acid Spray",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 20,
             "bp": 40,
@@ -3134,7 +3134,7 @@
         {
             "id": 313,
             "name": "Aeroblast",
-            "type": "FLYING",
+            "type": 3,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -3144,7 +3144,7 @@
         {
             "id": 314,
             "name": "Air Cutter",
-            "type": "FLYING",
+            "type": 3,
             "category": "Special",
             "pp": 25,
             "bp": 60,
@@ -3154,7 +3154,7 @@
         {
             "id": 315,
             "name": "Air Slash",
-            "type": "FLYING",
+            "type": 3,
             "category": "Special",
             "pp": 15,
             "bp": 75,
@@ -3164,7 +3164,7 @@
         {
             "id": 316,
             "name": "Ancient Power",
-            "type": "ROCK",
+            "type": 6,
             "category": "Special",
             "pp": 5,
             "bp": 60,
@@ -3174,7 +3174,7 @@
         {
             "id": 317,
             "name": "Apple Acid",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -3184,7 +3184,7 @@
         {
             "id": 318,
             "name": "Armor Cannon",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 120,
@@ -3194,7 +3194,7 @@
         {
             "id": 319,
             "name": "Astral Barrage",
-            "type": "GHOST",
+            "type": 8,
             "category": "Special",
             "pp": 5,
             "bp": 120,
@@ -3204,7 +3204,7 @@
         {
             "id": 320,
             "name": "Aura Sphere",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Special",
             "pp": 20,
             "bp": 80,
@@ -3214,7 +3214,7 @@
         {
             "id": 321,
             "name": "Aurora Beam",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 20,
             "bp": 65,
@@ -3224,7 +3224,7 @@
         {
             "id": 322,
             "name": "Belch",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 10,
             "bp": 120,
@@ -3234,7 +3234,7 @@
         {
             "id": 323,
             "name": "Bitter Malice",
-            "type": "GHOST",
+            "type": 8,
             "category": "Special",
             "pp": 10,
             "bp": 75,
@@ -3244,7 +3244,7 @@
         {
             "id": 324,
             "name": "Blast Burn",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -3254,7 +3254,7 @@
         {
             "id": 325,
             "name": "Bleakwind Storm",
-            "type": "FLYING",
+            "type": 3,
             "category": "Special",
             "pp": 10,
             "bp": 100,
@@ -3264,7 +3264,7 @@
         {
             "id": 326,
             "name": "Blizzard",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 5,
             "bp": 110,
@@ -3274,7 +3274,7 @@
         {
             "id": 327,
             "name": "Blue Flare",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 130,
@@ -3284,7 +3284,7 @@
         {
             "id": 328,
             "name": "Boomburst",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": 140,
@@ -3294,7 +3294,7 @@
         {
             "id": 329,
             "name": "Brine",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 10,
             "bp": 65,
@@ -3304,7 +3304,7 @@
         {
             "id": 330,
             "name": "Bubble Beam",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 20,
             "bp": 65,
@@ -3314,7 +3314,7 @@
         {
             "id": 331,
             "name": "Bug Buzz",
-            "type": "BUG",
+            "type": 7,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -3324,7 +3324,7 @@
         {
             "id": 332,
             "name": "Burn Up",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 130,
@@ -3334,7 +3334,7 @@
         {
             "id": 333,
             "name": "Burning Jealousy",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 70,
@@ -3344,7 +3344,7 @@
         {
             "id": 334,
             "name": "Charge Beam",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 10,
             "bp": 50,
@@ -3354,7 +3354,7 @@
         {
             "id": 335,
             "name": "Chatter",
-            "type": "FLYING",
+            "type": 3,
             "category": "Special",
             "pp": 20,
             "bp": 65,
@@ -3364,7 +3364,7 @@
         {
             "id": 336,
             "name": "Chilling Water",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 20,
             "bp": 50,
@@ -3374,7 +3374,7 @@
         {
             "id": 337,
             "name": "Chloroblast",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -3384,7 +3384,7 @@
         {
             "id": 338,
             "name": "Clanging Scales",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 5,
             "bp": 110,
@@ -3394,7 +3394,7 @@
         {
             "id": 339,
             "name": "Clear Smog",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 15,
             "bp": 50,
@@ -3404,7 +3404,7 @@
         {
             "id": 340,
             "name": "Confusion",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 25,
             "bp": 50,
@@ -3414,7 +3414,7 @@
         {
             "id": 341,
             "name": "Core Enforcer",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 10,
             "bp": 100,
@@ -3424,7 +3424,7 @@
         {
             "id": 342,
             "name": "Dark Pulse",
-            "type": "DARK",
+            "type": 17,
             "category": "Special",
             "pp": 15,
             "bp": 80,
@@ -3434,7 +3434,7 @@
         {
             "id": 343,
             "name": "Dazzling Gleam",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -3444,7 +3444,7 @@
         {
             "id": 344,
             "name": "Disarming Voice",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 15,
             "bp": 40,
@@ -3454,7 +3454,7 @@
         {
             "id": 345,
             "name": "Discharge",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 15,
             "bp": 80,
@@ -3464,7 +3464,7 @@
         {
             "id": 346,
             "name": "Draco Meteor",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 5,
             "bp": 130,
@@ -3474,7 +3474,7 @@
         {
             "id": 347,
             "name": "Dragon Breath",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 20,
             "bp": 60,
@@ -3484,7 +3484,7 @@
         {
             "id": 348,
             "name": "Dragon Energy",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -3494,7 +3494,7 @@
         {
             "id": 349,
             "name": "Dragon Pulse",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 10,
             "bp": 85,
@@ -3504,7 +3504,7 @@
         {
             "id": 350,
             "name": "Draining Kiss",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 10,
             "bp": 50,
@@ -3514,7 +3514,7 @@
         {
             "id": 351,
             "name": "Dream Eater",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 15,
             "bp": 100,
@@ -3524,7 +3524,7 @@
         {
             "id": 352,
             "name": "Dynamax Cannon",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -3534,7 +3534,7 @@
         {
             "id": 353,
             "name": "Earth Power",
-            "type": "GROUND",
+            "type": 5,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -3544,7 +3544,7 @@
         {
             "id": 354,
             "name": "Echoed Voice",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 15,
             "bp": 40,
@@ -3554,7 +3554,7 @@
         {
             "id": 355,
             "name": "Eerie Spell",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 5,
             "bp": 80,
@@ -3564,7 +3564,7 @@
         {
             "id": 356,
             "name": "Electro Ball",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 10,
             "bp": "--",
@@ -3574,7 +3574,7 @@
         {
             "id": 357,
             "name": "Electro Drift",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -3584,7 +3584,7 @@
         {
             "id": 358,
             "name": "Electroweb",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 15,
             "bp": 55,
@@ -3594,7 +3594,7 @@
         {
             "id": 359,
             "name": "Ember",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 25,
             "bp": 40,
@@ -3604,7 +3604,7 @@
         {
             "id": 360,
             "name": "Energy Ball",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -3614,7 +3614,7 @@
         {
             "id": 361,
             "name": "Eruption",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -3624,7 +3624,7 @@
         {
             "id": 362,
             "name": "Esper Wing",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -3634,7 +3634,7 @@
         {
             "id": 363,
             "name": "Expanding Force",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -3644,7 +3644,7 @@
         {
             "id": 364,
             "name": "Extrasensory",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 20,
             "bp": 80,
@@ -3654,7 +3654,7 @@
         {
             "id": 365,
             "name": "Fairy Wind",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 30,
             "bp": 40,
@@ -3664,7 +3664,7 @@
         {
             "id": 366,
             "name": "Fiery Dance",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -3674,7 +3674,7 @@
         {
             "id": 367,
             "name": "Fiery Wrath",
-            "type": "DARK",
+            "type": 17,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -3684,7 +3684,7 @@
         {
             "id": 368,
             "name": "Final Gambit",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Special",
             "pp": 5,
             "bp": "--",
@@ -3694,7 +3694,7 @@
         {
             "id": 369,
             "name": "Fire Blast",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 110,
@@ -3704,7 +3704,7 @@
         {
             "id": 370,
             "name": "Fire Pledge",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -3714,7 +3714,7 @@
         {
             "id": 371,
             "name": "Fire Spin",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 15,
             "bp": 35,
@@ -3724,7 +3724,7 @@
         {
             "id": 372,
             "name": "Flamethrower",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 15,
             "bp": 90,
@@ -3734,7 +3734,7 @@
         {
             "id": 373,
             "name": "Flash Cannon",
-            "type": "STEEL",
+            "type": 9,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -3744,7 +3744,7 @@
         {
             "id": 374,
             "name": "Fleur Cannon",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 5,
             "bp": 130,
@@ -3754,7 +3754,7 @@
         {
             "id": 375,
             "name": "Focus Blast",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Special",
             "pp": 5,
             "bp": 120,
@@ -3764,7 +3764,7 @@
         {
             "id": 376,
             "name": "Freeze-Dry",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 20,
             "bp": 70,
@@ -3774,7 +3774,7 @@
         {
             "id": 377,
             "name": "Freezing Glare",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -3784,7 +3784,7 @@
         {
             "id": 378,
             "name": "Frenzy Plant",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -3794,7 +3794,7 @@
         {
             "id": 379,
             "name": "Frost Breath",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 10,
             "bp": 60,
@@ -3804,7 +3804,7 @@
         {
             "id": 380,
             "name": "Fusion Flare",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -3814,7 +3814,7 @@
         {
             "id": 381,
             "name": "Future Sight",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 120,
@@ -3824,7 +3824,7 @@
         {
             "id": 382,
             "name": "Giga Drain",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 10,
             "bp": 75,
@@ -3834,7 +3834,7 @@
         {
             "id": 383,
             "name": "Glaciate",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 10,
             "bp": 65,
@@ -3844,7 +3844,7 @@
         {
             "id": 384,
             "name": "Grass Knot",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 20,
             "bp": "--",
@@ -3854,7 +3854,7 @@
         {
             "id": 385,
             "name": "Grass Pledge",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -3864,7 +3864,7 @@
         {
             "id": 386,
             "name": "Gust",
-            "type": "FLYING",
+            "type": 3,
             "category": "Special",
             "pp": 35,
             "bp": 40,
@@ -3874,7 +3874,7 @@
         {
             "id": 387,
             "name": "Heat Wave",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 10,
             "bp": 95,
@@ -3884,7 +3884,7 @@
         {
             "id": 388,
             "name": "Hex",
-            "type": "GHOST",
+            "type": 8,
             "category": "Special",
             "pp": 10,
             "bp": 65,
@@ -3894,7 +3894,7 @@
         {
             "id": 389,
             "name": "Hurricane",
-            "type": "FLYING",
+            "type": 3,
             "category": "Special",
             "pp": 10,
             "bp": 110,
@@ -3904,7 +3904,7 @@
         {
             "id": 390,
             "name": "Hydro Cannon",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -3914,7 +3914,7 @@
         {
             "id": 391,
             "name": "Hydro Pump",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 5,
             "bp": 110,
@@ -3924,7 +3924,7 @@
         {
             "id": 392,
             "name": "Hyper Beam",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -3934,7 +3934,7 @@
         {
             "id": 393,
             "name": "Hyper Voice",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -3944,7 +3944,7 @@
         {
             "id": 394,
             "name": "Hyperspace Hole",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 5,
             "bp": 80,
@@ -3954,7 +3954,7 @@
         {
             "id": 395,
             "name": "Ice Beam",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -3964,7 +3964,7 @@
         {
             "id": 396,
             "name": "Ice Burn",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 5,
             "bp": 140,
@@ -3974,7 +3974,7 @@
         {
             "id": 397,
             "name": "Icy Wind",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 15,
             "bp": 55,
@@ -3984,7 +3984,7 @@
         {
             "id": 398,
             "name": "Incinerate",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 15,
             "bp": 60,
@@ -3994,7 +3994,7 @@
         {
             "id": 399,
             "name": "Infernal Parade",
-            "type": "GHOST",
+            "type": 8,
             "category": "Special",
             "pp": 15,
             "bp": 60,
@@ -4004,7 +4004,7 @@
         {
             "id": 400,
             "name": "Inferno",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -4014,7 +4014,7 @@
         {
             "id": 401,
             "name": "Infestation",
-            "type": "BUG",
+            "type": 7,
             "category": "Special",
             "pp": 20,
             "bp": 20,
@@ -4024,7 +4024,7 @@
         {
             "id": 402,
             "name": "Judgment",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": 100,
@@ -4034,7 +4034,7 @@
         {
             "id": 403,
             "name": "Lava Plume",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 15,
             "bp": 80,
@@ -4044,7 +4044,7 @@
         {
             "id": 404,
             "name": "Leaf Storm",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 5,
             "bp": 130,
@@ -4054,7 +4054,7 @@
         {
             "id": 405,
             "name": "Light of Ruin",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 5,
             "bp": 140,
@@ -4064,7 +4064,7 @@
         {
             "id": 406,
             "name": "Lumina Crash",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -4074,7 +4074,7 @@
         {
             "id": 407,
             "name": "Luster Purge",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 5,
             "bp": 70,
@@ -4084,7 +4084,7 @@
         {
             "id": 408,
             "name": "Magical Leaf",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 20,
             "bp": 60,
@@ -4094,7 +4094,7 @@
         {
             "id": 409,
             "name": "Magma Storm",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -4104,7 +4104,7 @@
         {
             "id": 410,
             "name": "Make It Rain",
-            "type": "STEEL",
+            "type": 9,
             "category": "Special",
             "pp": 5,
             "bp": 120,
@@ -4114,7 +4114,7 @@
         {
             "id": 411,
             "name": "Mega Drain",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 15,
             "bp": 40,
@@ -4124,7 +4124,7 @@
         {
             "id": 412,
             "name": "Meteor Beam",
-            "type": "ROCK",
+            "type": 6,
             "category": "Special",
             "pp": 10,
             "bp": 120,
@@ -4134,7 +4134,7 @@
         {
             "id": 413,
             "name": "Mind Blown",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -4144,7 +4144,7 @@
         {
             "id": 414,
             "name": "Mirror Coat",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 20,
             "bp": "--",
@@ -4154,7 +4154,7 @@
         {
             "id": 415,
             "name": "Mist Ball",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 5,
             "bp": 70,
@@ -4164,7 +4164,7 @@
         {
             "id": 416,
             "name": "Misty Explosion",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -4174,7 +4174,7 @@
         {
             "id": 417,
             "name": "Moonblast",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 15,
             "bp": 95,
@@ -4184,7 +4184,7 @@
         {
             "id": 418,
             "name": "Moongeist Beam",
-            "type": "GHOST",
+            "type": 8,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -4194,7 +4194,7 @@
         {
             "id": 419,
             "name": "Mud Shot",
-            "type": "GROUND",
+            "type": 5,
             "category": "Special",
             "pp": 15,
             "bp": 55,
@@ -4204,7 +4204,7 @@
         {
             "id": 420,
             "name": "Mud-Slap",
-            "type": "GROUND",
+            "type": 5,
             "category": "Special",
             "pp": 10,
             "bp": 20,
@@ -4214,7 +4214,7 @@
         {
             "id": 421,
             "name": "Muddy Water",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -4224,7 +4224,7 @@
         {
             "id": 422,
             "name": "Mystical Fire",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 10,
             "bp": 75,
@@ -4234,7 +4234,7 @@
         {
             "id": 423,
             "name": "Mystical Power",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 70,
@@ -4244,7 +4244,7 @@
         {
             "id": 424,
             "name": "Nature's Madness",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 10,
             "bp": "--",
@@ -4254,7 +4254,7 @@
         {
             "id": 425,
             "name": "Night Daze",
-            "type": "DARK",
+            "type": 17,
             "category": "Special",
             "pp": 10,
             "bp": 85,
@@ -4264,7 +4264,7 @@
         {
             "id": 426,
             "name": "Night Shade",
-            "type": "GHOST",
+            "type": 8,
             "category": "Special",
             "pp": 15,
             "bp": "--",
@@ -4274,7 +4274,7 @@
         {
             "id": 427,
             "name": "Oblivion Wing",
-            "type": "FLYING",
+            "type": 3,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -4284,7 +4284,7 @@
         {
             "id": 428,
             "name": "Octazooka",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 10,
             "bp": 65,
@@ -4294,7 +4294,7 @@
         {
             "id": 429,
             "name": "Origin Pulse",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 10,
             "bp": 110,
@@ -4304,7 +4304,7 @@
         {
             "id": 430,
             "name": "Overdrive",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -4314,7 +4314,7 @@
         {
             "id": 431,
             "name": "Overheat",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 130,
@@ -4324,7 +4324,7 @@
         {
             "id": 432,
             "name": "Parabolic Charge",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 20,
             "bp": 65,
@@ -4334,7 +4334,7 @@
         {
             "id": 433,
             "name": "Petal Dance",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 10,
             "bp": 120,
@@ -4344,7 +4344,7 @@
         {
             "id": 434,
             "name": "Photon Geyser",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -4354,7 +4354,7 @@
         {
             "id": 435,
             "name": "Pollen Puff",
-            "type": "BUG",
+            "type": 7,
             "category": "Special",
             "pp": 15,
             "bp": 90,
@@ -4364,7 +4364,7 @@
         {
             "id": 436,
             "name": "Powder Snow",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 25,
             "bp": 40,
@@ -4374,7 +4374,7 @@
         {
             "id": 437,
             "name": "Power Gem",
-            "type": "ROCK",
+            "type": 6,
             "category": "Special",
             "pp": 20,
             "bp": 80,
@@ -4384,7 +4384,7 @@
         {
             "id": 438,
             "name": "Prismatic Laser",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 160,
@@ -4394,7 +4394,7 @@
         {
             "id": 439,
             "name": "Psybeam",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 20,
             "bp": 65,
@@ -4404,7 +4404,7 @@
         {
             "id": 440,
             "name": "Psychic",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -4414,7 +4414,7 @@
         {
             "id": 441,
             "name": "Psyshock",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -4424,7 +4424,7 @@
         {
             "id": 442,
             "name": "Psystrike",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 100,
@@ -4434,7 +4434,7 @@
         {
             "id": 443,
             "name": "Relic Song",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": 75,
@@ -4444,7 +4444,7 @@
         {
             "id": 444,
             "name": "Revelation Dance",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 15,
             "bp": 90,
@@ -4454,7 +4454,7 @@
         {
             "id": 445,
             "name": "Rising Voltage",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 20,
             "bp": 70,
@@ -4464,7 +4464,7 @@
         {
             "id": 446,
             "name": "Roar of Time",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -4474,7 +4474,7 @@
         {
             "id": 447,
             "name": "Round",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 15,
             "bp": 60,
@@ -4484,7 +4484,7 @@
         {
             "id": 448,
             "name": "Ruination",
-            "type": "DARK",
+            "type": 17,
             "category": "Special",
             "pp": 10,
             "bp": "--",
@@ -4494,7 +4494,7 @@
         {
             "id": 449,
             "name": "Sandsear Storm",
-            "type": "GROUND",
+            "type": 5,
             "category": "Special",
             "pp": 10,
             "bp": 100,
@@ -4504,7 +4504,7 @@
         {
             "id": 450,
             "name": "Scald",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 15,
             "bp": 80,
@@ -4514,7 +4514,7 @@
         {
             "id": 451,
             "name": "Scorching Sands",
-            "type": "GROUND",
+            "type": 5,
             "category": "Special",
             "pp": 10,
             "bp": 70,
@@ -4524,7 +4524,7 @@
         {
             "id": 452,
             "name": "Searing Shot",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -4534,7 +4534,7 @@
         {
             "id": 453,
             "name": "Secret Sword",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Special",
             "pp": 10,
             "bp": 85,
@@ -4544,7 +4544,7 @@
         {
             "id": 454,
             "name": "Seed Flare",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 5,
             "bp": 120,
@@ -4554,7 +4554,7 @@
         {
             "id": 455,
             "name": "Shadow Ball",
-            "type": "GHOST",
+            "type": 8,
             "category": "Special",
             "pp": 15,
             "bp": 80,
@@ -4564,7 +4564,7 @@
         {
             "id": 456,
             "name": "Sheer Cold",
-            "type": "ICE",
+            "type": 15,
             "category": "Special",
             "pp": 5,
             "bp": "--",
@@ -4574,7 +4574,7 @@
         {
             "id": 457,
             "name": "Shell Side Arm",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -4584,7 +4584,7 @@
         {
             "id": 458,
             "name": "Shell Trap",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -4594,7 +4594,7 @@
         {
             "id": 459,
             "name": "Shock Wave",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 20,
             "bp": 60,
@@ -4604,7 +4604,7 @@
         {
             "id": 460,
             "name": "Sludge",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 20,
             "bp": 65,
@@ -4614,7 +4614,7 @@
         {
             "id": 461,
             "name": "Sludge Bomb",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -4624,7 +4624,7 @@
         {
             "id": 462,
             "name": "Sludge Wave",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 10,
             "bp": 95,
@@ -4634,7 +4634,7 @@
         {
             "id": 463,
             "name": "Smog",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 20,
             "bp": 30,
@@ -4644,7 +4644,7 @@
         {
             "id": 464,
             "name": "Snarl",
-            "type": "DARK",
+            "type": 17,
             "category": "Special",
             "pp": 15,
             "bp": 55,
@@ -4654,7 +4654,7 @@
         {
             "id": 465,
             "name": "Snipe Shot",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 15,
             "bp": 80,
@@ -4664,7 +4664,7 @@
         {
             "id": 466,
             "name": "Snore",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 15,
             "bp": 50,
@@ -4674,7 +4674,7 @@
         {
             "id": 467,
             "name": "Solar Beam",
-            "type": "GRASS",
+            "type": 12,
             "category": "Special",
             "pp": 10,
             "bp": 120,
@@ -4684,7 +4684,7 @@
         {
             "id": 468,
             "name": "Spacial Rend",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -4694,7 +4694,7 @@
         {
             "id": 469,
             "name": "Sparkling Aria",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -4704,7 +4704,7 @@
         {
             "id": 470,
             "name": "Spit Up",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": "--",
@@ -4714,7 +4714,7 @@
         {
             "id": 471,
             "name": "Springtide Storm",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 5,
             "bp": 100,
@@ -4724,7 +4724,7 @@
         {
             "id": 472,
             "name": "Steam Eruption",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 5,
             "bp": 110,
@@ -4734,7 +4734,7 @@
         {
             "id": 473,
             "name": "Steel Beam",
-            "type": "STEEL",
+            "type": 9,
             "category": "Special",
             "pp": 5,
             "bp": 140,
@@ -4744,7 +4744,7 @@
         {
             "id": 474,
             "name": "Stored Power",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 20,
@@ -4754,7 +4754,7 @@
         {
             "id": 475,
             "name": "Strange Steam",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -4764,7 +4764,7 @@
         {
             "id": 476,
             "name": "Struggle Bug",
-            "type": "BUG",
+            "type": 7,
             "category": "Special",
             "pp": 20,
             "bp": 50,
@@ -4774,7 +4774,7 @@
         {
             "id": 477,
             "name": "Surf",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 15,
             "bp": 90,
@@ -4784,7 +4784,7 @@
         {
             "id": 478,
             "name": "Swift",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 20,
             "bp": 60,
@@ -4794,7 +4794,7 @@
         {
             "id": 479,
             "name": "Techno Blast",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 5,
             "bp": 120,
@@ -4804,7 +4804,7 @@
         {
             "id": 480,
             "name": "Tera Blast",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -4814,7 +4814,7 @@
         {
             "id": 481,
             "name": "Terrain Pulse",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": 50,
@@ -4824,7 +4824,7 @@
         {
             "id": 482,
             "name": "Thunder",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 10,
             "bp": 110,
@@ -4834,7 +4834,7 @@
         {
             "id": 483,
             "name": "Thunder Cage",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 15,
             "bp": 80,
@@ -4844,7 +4844,7 @@
         {
             "id": 484,
             "name": "Thunder Shock",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 30,
             "bp": 40,
@@ -4854,7 +4854,7 @@
         {
             "id": 485,
             "name": "Thunderbolt",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 15,
             "bp": 90,
@@ -4864,7 +4864,7 @@
         {
             "id": 486,
             "name": "Torch Song",
-            "type": "FIRE",
+            "type": 10,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -4874,7 +4874,7 @@
         {
             "id": 487,
             "name": "Tri Attack",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -4884,7 +4884,7 @@
         {
             "id": 488,
             "name": "Twin Beam",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Special",
             "pp": 10,
             "bp": 40,
@@ -4894,7 +4894,7 @@
         {
             "id": 489,
             "name": "Twister",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Special",
             "pp": 20,
             "bp": 40,
@@ -4904,7 +4904,7 @@
         {
             "id": 490,
             "name": "Uproar",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": 90,
@@ -4914,7 +4914,7 @@
         {
             "id": 491,
             "name": "Vacuum Wave",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Special",
             "pp": 30,
             "bp": 40,
@@ -4924,7 +4924,7 @@
         {
             "id": 492,
             "name": "Venoshock",
-            "type": "POISON",
+            "type": 4,
             "category": "Special",
             "pp": 10,
             "bp": 65,
@@ -4934,7 +4934,7 @@
         {
             "id": 493,
             "name": "Volt Switch",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 20,
             "bp": 70,
@@ -4944,7 +4944,7 @@
         {
             "id": 494,
             "name": "Water Gun",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 25,
             "bp": 40,
@@ -4954,7 +4954,7 @@
         {
             "id": 495,
             "name": "Water Pledge",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 10,
             "bp": 80,
@@ -4964,7 +4964,7 @@
         {
             "id": 496,
             "name": "Water Pulse",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 20,
             "bp": 60,
@@ -4974,7 +4974,7 @@
         {
             "id": 497,
             "name": "Water Shuriken",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 20,
             "bp": 15,
@@ -4984,7 +4984,7 @@
         {
             "id": 498,
             "name": "Water Spout",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 5,
             "bp": 150,
@@ -4994,7 +4994,7 @@
         {
             "id": 499,
             "name": "Weather Ball",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Special",
             "pp": 10,
             "bp": 50,
@@ -5004,7 +5004,7 @@
         {
             "id": 500,
             "name": "Whirlpool",
-            "type": "WATER",
+            "type": 11,
             "category": "Special",
             "pp": 15,
             "bp": 35,
@@ -5014,7 +5014,7 @@
         {
             "id": 501,
             "name": "Wildbolt Storm",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 10,
             "bp": 100,
@@ -5024,7 +5024,7 @@
         {
             "id": 502,
             "name": "Zap Cannon",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Special",
             "pp": 5,
             "bp": 120,
@@ -5034,7 +5034,7 @@
         {
             "id": 503,
             "name": "Acid Armor",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5044,7 +5044,7 @@
         {
             "id": 504,
             "name": "Acupressure",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5054,7 +5054,7 @@
         {
             "id": 505,
             "name": "After You",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5064,7 +5064,7 @@
         {
             "id": 506,
             "name": "Agility",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5074,7 +5074,7 @@
         {
             "id": 507,
             "name": "Ally Switch",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5084,7 +5084,7 @@
         {
             "id": 508,
             "name": "Amnesia",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5094,7 +5094,7 @@
         {
             "id": 509,
             "name": "Aqua Ring",
-            "type": "WATER",
+            "type": 11,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5104,7 +5104,7 @@
         {
             "id": 510,
             "name": "Aromatic Mist",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5114,7 +5114,7 @@
         {
             "id": 511,
             "name": "Attract",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5124,7 +5124,7 @@
         {
             "id": 512,
             "name": "Aurora Veil",
-            "type": "ICE",
+            "type": 15,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5134,7 +5134,7 @@
         {
             "id": 513,
             "name": "Baby-Doll Eyes",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5144,7 +5144,7 @@
         {
             "id": 514,
             "name": "Baneful Bunker",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5154,7 +5154,7 @@
         {
             "id": 515,
             "name": "Baton Pass",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -5164,7 +5164,7 @@
         {
             "id": 516,
             "name": "Belly Drum",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5174,7 +5174,7 @@
         {
             "id": 517,
             "name": "Block",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -5184,7 +5184,7 @@
         {
             "id": 518,
             "name": "Bulk Up",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5194,7 +5194,7 @@
         {
             "id": 519,
             "name": "Calm Mind",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5204,7 +5204,7 @@
         {
             "id": 520,
             "name": "Celebrate",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -5214,7 +5214,7 @@
         {
             "id": 521,
             "name": "Charge",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5224,7 +5224,7 @@
         {
             "id": 522,
             "name": "Charm",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5234,7 +5234,7 @@
         {
             "id": 523,
             "name": "Chilly Reception",
-            "type": "ICE",
+            "type": 15,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5244,7 +5244,7 @@
         {
             "id": 524,
             "name": "Clangorous Soul",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -5254,7 +5254,7 @@
         {
             "id": 525,
             "name": "Coaching",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5264,7 +5264,7 @@
         {
             "id": 526,
             "name": "Coil",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5274,7 +5274,7 @@
         {
             "id": 527,
             "name": "Confide",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5284,7 +5284,7 @@
         {
             "id": 528,
             "name": "Confuse Ray",
-            "type": "GHOST",
+            "type": 8,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5294,7 +5294,7 @@
         {
             "id": 529,
             "name": "Conversion",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5304,7 +5304,7 @@
         {
             "id": 530,
             "name": "Conversion 2",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5314,7 +5314,7 @@
         {
             "id": 531,
             "name": "Copycat",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5324,7 +5324,7 @@
         {
             "id": 532,
             "name": "Corrosive Gas",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -5334,7 +5334,7 @@
         {
             "id": 533,
             "name": "Cosmic Power",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5344,7 +5344,7 @@
         {
             "id": 534,
             "name": "Cotton Guard",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5354,7 +5354,7 @@
         {
             "id": 535,
             "name": "Cotton Spore",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -5364,7 +5364,7 @@
         {
             "id": 536,
             "name": "Court Change",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5374,7 +5374,7 @@
         {
             "id": 537,
             "name": "Curse",
-            "type": "GHOST",
+            "type": 8,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5384,7 +5384,7 @@
         {
             "id": 538,
             "name": "Dark Void",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5394,7 +5394,7 @@
         {
             "id": 539,
             "name": "Decorate",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5404,7 +5404,7 @@
         {
             "id": 540,
             "name": "Defend Order",
-            "type": "BUG",
+            "type": 7,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5414,7 +5414,7 @@
         {
             "id": 541,
             "name": "Defense Curl",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -5424,7 +5424,7 @@
         {
             "id": 542,
             "name": "Defog",
-            "type": "FLYING",
+            "type": 3,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5434,7 +5434,7 @@
         {
             "id": 543,
             "name": "Destiny Bond",
-            "type": "GHOST",
+            "type": 8,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -5444,7 +5444,7 @@
         {
             "id": 544,
             "name": "Detect",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -5454,7 +5454,7 @@
         {
             "id": 545,
             "name": "Disable",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5464,7 +5464,7 @@
         {
             "id": 546,
             "name": "Doodle",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5474,7 +5474,7 @@
         {
             "id": 547,
             "name": "Double Team",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5484,7 +5484,7 @@
         {
             "id": 548,
             "name": "Dragon Dance",
-            "type": "DRAGON",
+            "type": 16,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5494,7 +5494,7 @@
         {
             "id": 549,
             "name": "Eerie Impulse",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5504,7 +5504,7 @@
         {
             "id": 550,
             "name": "Electric Terrain",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5514,7 +5514,7 @@
         {
             "id": 551,
             "name": "Electrify",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5524,7 +5524,7 @@
         {
             "id": 552,
             "name": "Encore",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -5534,7 +5534,7 @@
         {
             "id": 553,
             "name": "Endure",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5544,7 +5544,7 @@
         {
             "id": 554,
             "name": "Entrainment",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5554,7 +5554,7 @@
         {
             "id": 555,
             "name": "Fairy Lock",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5564,7 +5564,7 @@
         {
             "id": 556,
             "name": "Fake Tears",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5574,7 +5574,7 @@
         {
             "id": 557,
             "name": "Feather Dance",
-            "type": "FLYING",
+            "type": 3,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5584,7 +5584,7 @@
         {
             "id": 558,
             "name": "Fillet Away",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5594,7 +5594,7 @@
         {
             "id": 559,
             "name": "Flatter",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5604,7 +5604,7 @@
         {
             "id": 560,
             "name": "Floral Healing",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5614,7 +5614,7 @@
         {
             "id": 561,
             "name": "Focus Energy",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5624,7 +5624,7 @@
         {
             "id": 562,
             "name": "Follow Me",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5634,7 +5634,7 @@
         {
             "id": 563,
             "name": "Forest's Curse",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5644,7 +5644,7 @@
         {
             "id": 564,
             "name": "Gastro Acid",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5654,7 +5654,7 @@
         {
             "id": 565,
             "name": "Geomancy",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5664,7 +5664,7 @@
         {
             "id": 566,
             "name": "Glare",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5674,7 +5674,7 @@
         {
             "id": 567,
             "name": "Grassy Terrain",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5684,7 +5684,7 @@
         {
             "id": 568,
             "name": "Gravity",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -5694,7 +5694,7 @@
         {
             "id": 569,
             "name": "Growl",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -5704,7 +5704,7 @@
         {
             "id": 570,
             "name": "Growth",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5714,7 +5714,7 @@
         {
             "id": 571,
             "name": "Guard Split",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5724,7 +5724,7 @@
         {
             "id": 572,
             "name": "Guard Swap",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5734,7 +5734,7 @@
         {
             "id": 573,
             "name": "Happy Hour",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5744,7 +5744,7 @@
         {
             "id": 574,
             "name": "Harden",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5754,7 +5754,7 @@
         {
             "id": 575,
             "name": "Haze",
-            "type": "ICE",
+            "type": 15,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5764,7 +5764,7 @@
         {
             "id": 576,
             "name": "Heal Bell",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -5774,7 +5774,7 @@
         {
             "id": 577,
             "name": "Heal Pulse",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5784,7 +5784,7 @@
         {
             "id": 578,
             "name": "Healing Wish",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5794,7 +5794,7 @@
         {
             "id": 579,
             "name": "Helping Hand",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5804,7 +5804,7 @@
         {
             "id": 580,
             "name": "Hold Hands",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -5814,7 +5814,7 @@
         {
             "id": 581,
             "name": "Hone Claws",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5824,7 +5824,7 @@
         {
             "id": 582,
             "name": "Howl",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -5834,7 +5834,7 @@
         {
             "id": 583,
             "name": "Hypnosis",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5844,7 +5844,7 @@
         {
             "id": 584,
             "name": "Imprison",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5854,7 +5854,7 @@
         {
             "id": 585,
             "name": "Ingrain",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -5864,7 +5864,7 @@
         {
             "id": 586,
             "name": "Instruct",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5874,7 +5874,7 @@
         {
             "id": 587,
             "name": "Iron Defense",
-            "type": "STEEL",
+            "type": 9,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5884,7 +5884,7 @@
         {
             "id": 588,
             "name": "Jungle Healing",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5894,7 +5894,7 @@
         {
             "id": 589,
             "name": "Kinesis",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -5904,7 +5904,7 @@
         {
             "id": 590,
             "name": "King's Shield",
-            "type": "STEEL",
+            "type": 9,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5914,7 +5914,7 @@
         {
             "id": 591,
             "name": "Leech Seed",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5924,7 +5924,7 @@
         {
             "id": 592,
             "name": "Leer",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5934,7 +5934,7 @@
         {
             "id": 593,
             "name": "Life Dew",
-            "type": "WATER",
+            "type": 11,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5944,7 +5944,7 @@
         {
             "id": 594,
             "name": "Light Screen",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -5954,7 +5954,7 @@
         {
             "id": 595,
             "name": "Lock-On",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -5964,7 +5964,7 @@
         {
             "id": 596,
             "name": "Lovely Kiss",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5974,7 +5974,7 @@
         {
             "id": 597,
             "name": "Lunar Blessing",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -5984,7 +5984,7 @@
         {
             "id": 598,
             "name": "Lunar Dance",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -5994,7 +5994,7 @@
         {
             "id": 599,
             "name": "Magic Powder",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6004,7 +6004,7 @@
         {
             "id": 600,
             "name": "Magic Room",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6014,7 +6014,7 @@
         {
             "id": 601,
             "name": "Magnet Rise",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6024,7 +6024,7 @@
         {
             "id": 602,
             "name": "Magnetic Flux",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6034,7 +6034,7 @@
         {
             "id": 603,
             "name": "Max Guard",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6044,7 +6044,7 @@
         {
             "id": 604,
             "name": "Mean Look",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6054,7 +6054,7 @@
         {
             "id": 605,
             "name": "Memento",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6064,7 +6064,7 @@
         {
             "id": 606,
             "name": "Metal Sound",
-            "type": "STEEL",
+            "type": 9,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -6074,7 +6074,7 @@
         {
             "id": 607,
             "name": "Metronome",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6084,7 +6084,7 @@
         {
             "id": 608,
             "name": "Milk Drink",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6094,7 +6094,7 @@
         {
             "id": 609,
             "name": "Mimic",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6104,7 +6104,7 @@
         {
             "id": 610,
             "name": "Minimize",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6114,7 +6114,7 @@
         {
             "id": 611,
             "name": "Mist",
-            "type": "ICE",
+            "type": 15,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -6124,7 +6124,7 @@
         {
             "id": 612,
             "name": "Misty Terrain",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6134,7 +6134,7 @@
         {
             "id": 613,
             "name": "Moonlight",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6144,7 +6144,7 @@
         {
             "id": 614,
             "name": "Morning Sun",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6154,7 +6154,7 @@
         {
             "id": 615,
             "name": "Nasty Plot",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6164,7 +6164,7 @@
         {
             "id": 616,
             "name": "No Retreat",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6174,7 +6174,7 @@
         {
             "id": 617,
             "name": "Noble Roar",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -6184,7 +6184,7 @@
         {
             "id": 618,
             "name": "Obstruct",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6194,7 +6194,7 @@
         {
             "id": 619,
             "name": "Octolock",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6204,7 +6204,7 @@
         {
             "id": 620,
             "name": "Pain Split",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6214,7 +6214,7 @@
         {
             "id": 621,
             "name": "Parting Shot",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6224,7 +6224,7 @@
         {
             "id": 622,
             "name": "Perish Song",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6234,7 +6234,7 @@
         {
             "id": 623,
             "name": "Play Nice",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6244,7 +6244,7 @@
         {
             "id": 624,
             "name": "Poison Gas",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -6254,7 +6254,7 @@
         {
             "id": 625,
             "name": "Poison Powder",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 35,
             "bp": "--",
@@ -6264,7 +6264,7 @@
         {
             "id": 626,
             "name": "Power Shift",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6274,7 +6274,7 @@
         {
             "id": 627,
             "name": "Power Split",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6284,7 +6284,7 @@
         {
             "id": 628,
             "name": "Power Swap",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6294,7 +6294,7 @@
         {
             "id": 629,
             "name": "Power Trick",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6304,7 +6304,7 @@
         {
             "id": 630,
             "name": "Protect",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6314,7 +6314,7 @@
         {
             "id": 631,
             "name": "Psych Up",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6324,7 +6324,7 @@
         {
             "id": 632,
             "name": "Psychic Terrain",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6334,7 +6334,7 @@
         {
             "id": 633,
             "name": "Purify",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6344,7 +6344,7 @@
         {
             "id": 634,
             "name": "Quash",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6354,7 +6354,7 @@
         {
             "id": 635,
             "name": "Quick Guard",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6364,7 +6364,7 @@
         {
             "id": 636,
             "name": "Quiver Dance",
-            "type": "BUG",
+            "type": 7,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6374,7 +6374,7 @@
         {
             "id": 637,
             "name": "Rage Powder",
-            "type": "BUG",
+            "type": 7,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6384,7 +6384,7 @@
         {
             "id": 638,
             "name": "Rain Dance",
-            "type": "WATER",
+            "type": 11,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6394,7 +6394,7 @@
         {
             "id": 639,
             "name": "Recover",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6404,7 +6404,7 @@
         {
             "id": 640,
             "name": "Recycle",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6414,7 +6414,7 @@
         {
             "id": 641,
             "name": "Reflect",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6424,7 +6424,7 @@
         {
             "id": 642,
             "name": "Reflect Type",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6434,7 +6434,7 @@
         {
             "id": 643,
             "name": "Rest",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6444,7 +6444,7 @@
         {
             "id": 644,
             "name": "Revival Blessing",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 1,
             "bp": "--",
@@ -6454,7 +6454,7 @@
         {
             "id": 645,
             "name": "Roar",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6464,7 +6464,7 @@
         {
             "id": 646,
             "name": "Rock Polish",
-            "type": "ROCK",
+            "type": 6,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6474,7 +6474,7 @@
         {
             "id": 647,
             "name": "Role Play",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6484,7 +6484,7 @@
         {
             "id": 648,
             "name": "Roost",
-            "type": "FLYING",
+            "type": 3,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6494,7 +6494,7 @@
         {
             "id": 649,
             "name": "Safeguard",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 25,
             "bp": "--",
@@ -6504,7 +6504,7 @@
         {
             "id": 650,
             "name": "Sand Attack",
-            "type": "GROUND",
+            "type": 5,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6514,7 +6514,7 @@
         {
             "id": 651,
             "name": "Sandstorm",
-            "type": "ROCK",
+            "type": 6,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6524,7 +6524,7 @@
         {
             "id": 652,
             "name": "Scary Face",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6534,7 +6534,7 @@
         {
             "id": 653,
             "name": "Screech",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -6544,7 +6544,7 @@
         {
             "id": 654,
             "name": "Shed Tail",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6554,7 +6554,7 @@
         {
             "id": 655,
             "name": "Shell Smash",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6564,7 +6564,7 @@
         {
             "id": 656,
             "name": "Shelter",
-            "type": "STEEL",
+            "type": 9,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6574,7 +6574,7 @@
         {
             "id": 657,
             "name": "Shift Gear",
-            "type": "STEEL",
+            "type": 9,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6584,7 +6584,7 @@
         {
             "id": 658,
             "name": "Shore Up",
-            "type": "GROUND",
+            "type": 5,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6594,7 +6594,7 @@
         {
             "id": 659,
             "name": "Silk Trap",
-            "type": "BUG",
+            "type": 7,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6604,7 +6604,7 @@
         {
             "id": 660,
             "name": "Simple Beam",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6614,7 +6614,7 @@
         {
             "id": 661,
             "name": "Sing",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6624,7 +6624,7 @@
         {
             "id": 662,
             "name": "Sketch",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 1,
             "bp": "--",
@@ -6634,7 +6634,7 @@
         {
             "id": 663,
             "name": "Skill Swap",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6644,7 +6644,7 @@
         {
             "id": 664,
             "name": "Slack Off",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6654,7 +6654,7 @@
         {
             "id": 665,
             "name": "Sleep Powder",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6664,7 +6664,7 @@
         {
             "id": 666,
             "name": "Sleep Talk",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6674,7 +6674,7 @@
         {
             "id": 667,
             "name": "Smokescreen",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6684,7 +6684,7 @@
         {
             "id": 668,
             "name": "Snowscape",
-            "type": "ICE",
+            "type": 15,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6694,7 +6694,7 @@
         {
             "id": 669,
             "name": "Soak",
-            "type": "WATER",
+            "type": 11,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6704,7 +6704,7 @@
         {
             "id": 670,
             "name": "Soft-Boiled",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6714,7 +6714,7 @@
         {
             "id": 671,
             "name": "Speed Swap",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6724,7 +6724,7 @@
         {
             "id": 672,
             "name": "Spicy Extract",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6734,7 +6734,7 @@
         {
             "id": 673,
             "name": "Spikes",
-            "type": "GROUND",
+            "type": 5,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6744,7 +6744,7 @@
         {
             "id": 674,
             "name": "Spiky Shield",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6754,7 +6754,7 @@
         {
             "id": 675,
             "name": "Spite",
-            "type": "GHOST",
+            "type": 8,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6764,7 +6764,7 @@
         {
             "id": 676,
             "name": "Splash",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -6774,7 +6774,7 @@
         {
             "id": 677,
             "name": "Spore",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6784,7 +6784,7 @@
         {
             "id": 678,
             "name": "Stealth Rock",
-            "type": "ROCK",
+            "type": 6,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6794,7 +6794,7 @@
         {
             "id": 679,
             "name": "Sticky Web",
-            "type": "BUG",
+            "type": 7,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6804,7 +6804,7 @@
         {
             "id": 680,
             "name": "Stockpile",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6814,7 +6814,7 @@
         {
             "id": 681,
             "name": "Strength Sap",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6824,7 +6824,7 @@
         {
             "id": 682,
             "name": "String Shot",
-            "type": "BUG",
+            "type": 7,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -6834,7 +6834,7 @@
         {
             "id": 683,
             "name": "Stuff Cheeks",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6844,7 +6844,7 @@
         {
             "id": 684,
             "name": "Stun Spore",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -6854,7 +6854,7 @@
         {
             "id": 685,
             "name": "Substitute",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6864,7 +6864,7 @@
         {
             "id": 686,
             "name": "Sunny Day",
-            "type": "FIRE",
+            "type": 10,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6874,7 +6874,7 @@
         {
             "id": 687,
             "name": "Supersonic",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6884,7 +6884,7 @@
         {
             "id": 688,
             "name": "Swagger",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6894,7 +6894,7 @@
         {
             "id": 689,
             "name": "Swallow",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6904,7 +6904,7 @@
         {
             "id": 690,
             "name": "Sweet Kiss",
-            "type": "FAIRY",
+            "type": 18,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6914,7 +6914,7 @@
         {
             "id": 691,
             "name": "Sweet Scent",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6924,7 +6924,7 @@
         {
             "id": 692,
             "name": "Switcheroo",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -6934,7 +6934,7 @@
         {
             "id": 693,
             "name": "Swords Dance",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -6944,7 +6944,7 @@
         {
             "id": 694,
             "name": "Synthesis",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -6954,7 +6954,7 @@
         {
             "id": 695,
             "name": "Tail Whip",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -6964,7 +6964,7 @@
         {
             "id": 696,
             "name": "Tailwind",
-            "type": "FLYING",
+            "type": 3,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6974,7 +6974,7 @@
         {
             "id": 697,
             "name": "Take Heart",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6984,7 +6984,7 @@
         {
             "id": 698,
             "name": "Tar Shot",
-            "type": "ROCK",
+            "type": 6,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -6994,7 +6994,7 @@
         {
             "id": 699,
             "name": "Taunt",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7004,7 +7004,7 @@
         {
             "id": 700,
             "name": "Tearful Look",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7014,7 +7014,7 @@
         {
             "id": 701,
             "name": "Teatime",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7024,7 +7024,7 @@
         {
             "id": 702,
             "name": "Teeter Dance",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7034,7 +7034,7 @@
         {
             "id": 703,
             "name": "Teleport",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7044,7 +7044,7 @@
         {
             "id": 704,
             "name": "Thunder Wave",
-            "type": "ELECTRIC",
+            "type": 13,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7054,7 +7054,7 @@
         {
             "id": 705,
             "name": "Tickle",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7064,7 +7064,7 @@
         {
             "id": 706,
             "name": "Tidy Up",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7074,7 +7074,7 @@
         {
             "id": 707,
             "name": "Topsy-Turvy",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7084,7 +7084,7 @@
         {
             "id": 708,
             "name": "Torment",
-            "type": "DARK",
+            "type": 17,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -7094,7 +7094,7 @@
         {
             "id": 709,
             "name": "Toxic",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7104,7 +7104,7 @@
         {
             "id": 710,
             "name": "Toxic Spikes",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7114,7 +7114,7 @@
         {
             "id": 711,
             "name": "Toxic Thread",
-            "type": "POISON",
+            "type": 4,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7124,7 +7124,7 @@
         {
             "id": 712,
             "name": "Transform",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7134,7 +7134,7 @@
         {
             "id": 713,
             "name": "Trick",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7144,7 +7144,7 @@
         {
             "id": 714,
             "name": "Trick Room",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 5,
             "bp": "--",
@@ -7154,7 +7154,7 @@
         {
             "id": 715,
             "name": "Trick-or-Treat",
-            "type": "GHOST",
+            "type": 8,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7164,7 +7164,7 @@
         {
             "id": 716,
             "name": "Victory Dance",
-            "type": "FIGHTING",
+            "type": 2,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7174,7 +7174,7 @@
         {
             "id": 717,
             "name": "Whirlwind",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 20,
             "bp": "--",
@@ -7184,7 +7184,7 @@
         {
             "id": 718,
             "name": "Wide Guard",
-            "type": "ROCK",
+            "type": 6,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7194,7 +7194,7 @@
         {
             "id": 719,
             "name": "Will-O-Wisp",
-            "type": "FIRE",
+            "type": 10,
             "category": "Status",
             "pp": 15,
             "bp": "--",
@@ -7204,7 +7204,7 @@
         {
             "id": 720,
             "name": "Wish",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7214,7 +7214,7 @@
         {
             "id": 721,
             "name": "Withdraw",
-            "type": "WATER",
+            "type": 11,
             "category": "Status",
             "pp": 40,
             "bp": "--",
@@ -7224,7 +7224,7 @@
         {
             "id": 722,
             "name": "Wonder Room",
-            "type": "PSYCHIC",
+            "type": 14,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7234,7 +7234,7 @@
         {
             "id": 723,
             "name": "Work Up",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 30,
             "bp": "--",
@@ -7244,7 +7244,7 @@
         {
             "id": 724,
             "name": "Worry Seed",
-            "type": "GRASS",
+            "type": 12,
             "category": "Status",
             "pp": 10,
             "bp": "--",
@@ -7254,7 +7254,7 @@
         {
             "id": 725,
             "name": "Yawn",
-            "type": "NORMAL",
+            "type": 1,
             "category": "Status",
             "pp": 10,
             "bp": "--",
