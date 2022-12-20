@@ -266,6 +266,22 @@ function capitalize(word) {
     .replace(/\w/, firstLetter => firstLetter.toUpperCase());
 }
 
+function preloadImages(srcs) {
+	if(!preloadImages.cache) {
+		preloadImages.cache = [];
+	}
+	
+	var img;
+	
+	for(var i = 0; i < srcs.length; i++) {
+		img = new Image();
+		img.src = srcs[i];
+		preloadImages.cache.push(img);
+	}
+}
+
+var imageSources = ['icons/spicy.png', 'icons/sweet.png', 'icons/salty.png', 'icons/bitter.png', 'icons/sour.png'];
+
 
 /*
 	Main workflow
@@ -274,11 +290,14 @@ function capitalize(word) {
 function populatePokemonList() {
 	Object.entries(raids.pokemon).sort().forEach((pokemon) => {
 		const [mon] = pokemon;
-		
+
 		$('#pokemonList').append($('<option>', {
 			value: mon,
 			text: mon
 		}));
+		
+		imageSources.push(`images/${pokemon[1].dex}.png`);
+		imageSources.push(`images/shiny/${pokemon[1].dex}.png`);
 	});
 }
 
@@ -307,6 +326,7 @@ function clearPokemonData() {
 $(function() {
 	populatePokemonList();
 	populateTeraTypeList();
+	preloadImages(imageSources);
 
 	$('#pokemonList').on('change', function() {
 		clearPokemonData();
