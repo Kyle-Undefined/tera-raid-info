@@ -4,10 +4,6 @@ import abilities from '../data/abilities.json' assert {type: 'json'};
 import moves from '../data/moves.json' assert {type: 'json'};
 import herbs from '../data/herbs.json' assert {type: 'json'};
 
-$.fn.cacheImages.defaults.storageDB = 'indexedDB';
-
-var cacheKeys = [];
-
 const teraTypes = {
 	"Normal":1,
 	"Fighting":2,
@@ -28,59 +24,6 @@ const teraTypes = {
 	"Dark":17,
 	"Fairy":18
 }
-
-var getCachedImages = function(key, storagePrefix) {
-	if(typeof storagePrefix === 'undefined'){ storagePrefix = 'cached'; }
-	
-	var cacheKeys = [];
-	
-	if($.fn.cacheImages.defaults.storageDB == 'localStorage') {
-		for (var i = 0; i < localStorage.length; i++) {
-			if(localStorage.key(i).substr(0, storagePrefix.length + 1) !== storagePrefix + ':' ){ continue; }
-
-			if(localStorage.key(i).lastIndexOf(key) > 0) {
-				cacheKeys.push(localStorage.key(i));
-			}
-		}
-	} else {
-		var request = window.cacheImagesDb.transaction("offlineImages", "readonly").objectStore("offlineImages").openCursor();
-		request.onsuccess = function(e) {
-			var cursor = e.target.result;
-			
-			if(cursor) {
-				if(cursor.value.key.substr(0, storagePrefix.length + 1) === storagePrefix + ':' ) {
-					if(cursor.value.key.lastIndexOf(key) > 0) {
-						cacheKeys.push(cursor.value.key.substr(storagePrefix.length + 1));
-					}
-				}
-				
-				cursor.continue();
-			}else{
-				showCachedImages(cacheKeys);
-			}
-		};
-	}
-	
-	return true;
-},
-showCachedImages = function(cacheKeys) {
-	if(cacheKeys.length === 0){ return true; }
-	
-	$('#pokemonImageNormal').append($('<img alt="Normal" title="Normal" />').cacheImages({ url: cacheKeys[0] }));
-	$('#pokemonImageShiny').append($('<img alt="Shiny" title="Shiny" />').cacheImages({ url: cacheKeys[1] }));	
-	
-	return true;
-}
-
-function cacheImages() {
-	Object.entries(raids.pokemon).forEach((pokemon) => {
-		const [mon] = pokemon;
-		
-		$.fn.cacheImages.fetchURL(`./images/${raids.pokemon[mon].dex}.png`, function(url, image){ });
-		$.fn.cacheImages.fetchURL(`./images/shiny/${raids.pokemon[mon].dex}.png`, function(url, image){ });
-	});
-}
-
 
 function populatePokemonList() {
 	Object.entries(raids.pokemon).sort().forEach((pokemon) => {
@@ -127,7 +70,8 @@ function getPokemonTypes(pokemon) {
 }
 
 function getPokemonImage(pokemon) {
-	getCachedImages(raids.pokemon[pokemon].dex);
+	$('#pokemonImageNormal').append($(`<img alt="Normal" title="Normal" src="./images/${raids.pokemon[pokemon].dex}.png" />`));
+	$('#pokemonImageShiny').append($(`<img alt="Shiny" title="Shiny" src="./images/shiny/${raids.pokemon[pokemon].dex}.png" />`));
 }
 
 function createAbilityDiv(ability) {
@@ -342,6 +286,5 @@ $(function() {
 	});
 });
 
-cacheImages();
 populatePokemonList();
 populateTeraTypeList();
