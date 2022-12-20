@@ -64,7 +64,6 @@ article.content {
 	grid-template-columns: 1fr;
 	gap: 10px 20px;
 	grid-template-areas:  "pkmn" "type" "stats" "ability" "moves"  "herbs" "adv" "weak" "tadv";
-	grid-template-areas:  "pkmn" "type" "stats" "ability" "moves"  "herbs" "adv" "weak" "tadv";
 }
 
 @media screen and (min-width: 768px) {
