@@ -92,6 +92,7 @@ article.content {
 #pokemon { grid-area: pkmn; }
 .pokemonImageWrapper { grid-area: image; }
 #pokemonTypes { display: flex; justify-content: center; }
+#pokemonTypes { display: flex; justify-content: center; }
 #pokemonStats { grid-area: stats; margin-bottom: 10px; }
 #pokemonAbility { grid-area: ability; }
 #pokemonMoves { grid-area: moves; }
@@ -116,6 +117,8 @@ article.content {
     grid-area: 1 / 1 / 2 / -1;
     text-align: center;
     margin-top: 3px;
+    font-size: 18px;
+	line-height: 24px;
 }
 #pokemonStats .stat {
     background-color: #333c4d;
@@ -262,6 +265,7 @@ article.content {
 
 
 
+
 .pokemonImageWrapper {
 	display: flex;
 	padding-top: 10px;
@@ -305,34 +309,27 @@ article.content {
     margin: 5px 5px 5px 0px;
     text-align: right;
     max-width: 38%;
-}
-
-.spicy {
-    background: url(../icons/spicy.png) no-repeat;
-    background-position: left;
-    border: none;
+    border: none !important;
 }
 .sweet {
     background: url(../icons/sweet.png) no-repeat;
     background-position: left;
-    border: none;
 }
 .salty {
     background: url(../icons/salty.png) no-repeat;
     background-position: left;
-    border: none;
 }
-
-.bitter {
-    background: url(../icons/bitter.png) no-repeat;
+.spicy {
+    background: url(../icons/spicy.png) no-repeat;
     background-position: left;
-    border: none;
 }
-
 .sour {
     background: url(../icons/sour.png) no-repeat;
     background-position: left;
-    border: none;
+}
+.bitter {
+    background: url(../icons/bitter.png) no-repeat;
+    background-position: left;
 }
 
 /* Type Changes */
