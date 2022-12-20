@@ -1,9 +1,16 @@
+/*
+	Imported Data
+*/
 import raids from '../data/raids.json' assert {type: 'json'};
 import types from '../data/types.json' assert {type: 'json'};
 import abilities from '../data/abilities.json' assert {type: 'json'};
 import moves from '../data/moves.json' assert {type: 'json'};
 import herbs from '../data/herbs.json' assert {type: 'json'};
 
+
+/*
+	Type Dropdown
+*/
 const teraTypes = {
 	"Normal":1,
 	"Fighting":2,
@@ -25,25 +32,10 @@ const teraTypes = {
 	"Fairy":18
 }
 
-function populatePokemonList() {
-	Object.entries(raids.pokemon).sort().forEach((pokemon) => {
-		const [mon] = pokemon;
-		
-		$('#pokemonList').append($('<option>', {
-			value: mon,
-			text: mon
-		}));
-	});
-}
 
-function populateTeraTypeList() {
-	Object.entries(teraTypes).sort().forEach(([key, value]) => {
-		$('#teraList').append($('<option>', {
-			value: value,
-			text: key
-		}));
-	});
-}
+/*
+	Display Creation
+*/
 
 function createTypeDiv(type) {
 	return `<div class="typeText ${type.toLowerCase()}">${type}</div>`;
@@ -60,6 +52,55 @@ function createStatsDisplay(stats) {
 	
 	return tableString;
 }
+
+function createTypeMatchupDiv(type, matchup) {
+	return `<div class="typeMatchupText ${type}">${capitalize(type)} - ${matchup}x</div>`;
+}
+
+function createMoveTypeAdvantagesDisplay(matchups) {
+	const display = [];
+	
+	Object.entries(matchups).sort((a,b) => b[1]-a[1]).forEach(([key, value]) => {
+		display.push(`${capitalize(key)}`);
+	});
+	
+	return display;
+}
+
+function createMoveDiv(move) {
+	var moveStr = `<div class="typeMatchupText ${types.dex[moves.dex[move].type].name.toLowerCase()}">${moves.dex[move].name}`;
+	moveStr += `<div class="moveStats">`;
+	moveStr += `<div class="type">${moves.dex[move].category}</div>`;
+	moveStr += `<div class="bp">Pwr: ${moves.dex[move].bp}</div>`;
+	moveStr += `<div class="pp">PP: ${moves.dex[move].pp}</div>`;
+	moveStr += `<div class="acc">Acc: ${moves.dex[move].acc}</div>`;
+	moveStr += `<div class="desc">${moves.dex[move].desc}</div>`;
+	if(moves.dex[move].category != 'Status') {
+		moveStr += `<div class="adv">Advantages: ${getMoveTypeAdvantages(moves.dex[move].type)}</div>`;
+	}
+	moveStr += '</div></div>';
+	
+	return moveStr;
+}
+
+function createHerbDiv(herb) {
+	return `<div class="herbPill ${herbs.dex[herb].name.toLowerCase()}">${herbs.dex[herb].name} - ${herbs.dex[herb].chance}%</div>`;
+}
+
+function createMatchupsDisplay(matchups) {
+	const display = [];
+	
+	Object.entries(matchups).sort((a,b) => b[1]-a[1]).forEach(([key, value]) => {
+		display.push(createTypeMatchupDiv(key, value));
+	});
+	
+	return display;
+}
+
+
+/*
+	Data Retrieval
+*/
 
 function getPokemonTypes(pokemon) {
 	for(var i = 0; i < raids.pokemon[pokemon].type.length; i++) {
@@ -90,35 +131,9 @@ function getPokemonStats(pokemon) {
 	$('#pokemonStatsWrapper').prepend(createStatsDisplay(raids.pokemon[pokemon].stats));
 }
 
-function createMoveTypeAdvantagesDisplay(matchups) {
-	const display = [];
-	
-	Object.entries(matchups).sort((a,b) => b[1]-a[1]).forEach(([key, value]) => {
-		display.push(`${capitalize(key)}`);
-	});
-	
-	return display;
-}
-
 function getMoveTypeAdvantages(type) {
 	var advantages = calculateTypeAdvantage(type);
 	return createMoveTypeAdvantagesDisplay(advantages).join(', ');
-}
-
-function createMoveDiv(move) {
-	var moveStr = `<div class="typeMatchupText ${types.dex[moves.dex[move].type].name.toLowerCase()}">${moves.dex[move].name}`;
-	moveStr += `<div class="moveStats">`;
-	moveStr += `<div class="type">${moves.dex[move].category}</div>`;
-	moveStr += `<div class="bp">Pwr: ${moves.dex[move].bp}</div>`;
-	moveStr += `<div class="pp">PP: ${moves.dex[move].pp}</div>`;
-	moveStr += `<div class="acc">Acc: ${moves.dex[move].acc}</div>`;
-	moveStr += `<div class="desc">${moves.dex[move].desc}</div>`;
-	if(moves.dex[move].category != 'Status') {
-		moveStr += `<div class="adv">Advantages: ${getMoveTypeAdvantages(moves.dex[move].type)}</div>`;
-	}
-	moveStr += '</div></div>';
-	
-	return moveStr;
 }
 
 function getPokemonMoves(pokemon) {
@@ -135,10 +150,6 @@ function getPokemonMoves(pokemon) {
 	}
 }
 
-function createHerbDiv(herb) {
-	return `<div class="herbPill ${herbs.dex[herb].name.toLowerCase()}">${herbs.dex[herb].name} - ${herbs.dex[herb].chance}%</div>`;
-}
-
 function getPokemonHerbs(pokemon) {
 	$('#pokemonHerbs').prepend('<h3>Herbs Dropped:</h3>');
 	
@@ -147,18 +158,10 @@ function getPokemonHerbs(pokemon) {
 	}
 }
 
-function clearPokemonData() {
-	$('#pokemonTypes').empty();
-	$('#pokemonImageNormal').empty();
-	$('#pokemonImageShiny').empty();
-	$('#pokemonAbility').empty();
-	$('#pokemonStatsWrapper').empty();
-	$('#pokemonMoves').empty();
-	$('#pokemonHerbs').empty();
-	$('#pokemonTypeAdvantages').empty();
-	$('#pokemonTeraWeaknesses').empty();
-	$('#pokemonTeraAdvantages').empty();
-}
+
+/*
+	Show Displays
+*/
 
 function displayTypesAdvantage(type) {
 	var advantages = calculateTypesAdvantage(type);
@@ -193,6 +196,10 @@ function displayTeraTypeAdvantages(type) {
 		$('#pokemonTeraAdvantages').append(display.join(''));
 	}
 }
+
+/*
+	Calculations
+*/
 
 function calculateTypeWeakness(type) {
 	let weaknesses = {};
@@ -248,19 +255,10 @@ function calculateTypeAdvantage(type) {
 	return advantages;
 }
 
-function createMatchupsDisplay(matchups) {
-	const display = [];
-	
-	Object.entries(matchups).sort((a,b) => b[1]-a[1]).forEach(([key, value]) => {
-		display.push(createTypeMatchupDiv(key, value));
-	});
-	
-	return display;
-}
 
-function createTypeMatchupDiv(type, matchup) {
-	return `<div class="typeMatchupText ${type}">${capitalize(type)} - ${matchup}x</div>`;
-}
+/*
+	Misc
+*/
 
 function capitalize(word) {
   return word
@@ -268,7 +266,48 @@ function capitalize(word) {
     .replace(/\w/, firstLetter => firstLetter.toUpperCase());
 }
 
+
+/*
+	Main workflow
+*/
+
+function populatePokemonList() {
+	Object.entries(raids.pokemon).sort().forEach((pokemon) => {
+		const [mon] = pokemon;
+		
+		$('#pokemonList').append($('<option>', {
+			value: mon,
+			text: mon
+		}));
+	});
+}
+
+function populateTeraTypeList() {
+	Object.entries(teraTypes).sort().forEach(([key, value]) => {
+		$('#teraList').append($('<option>', {
+			value: value,
+			text: key
+		}));
+	});
+}
+
+function clearPokemonData() {
+	$('#pokemonTypes').empty();
+	$('#pokemonImageNormal').empty();
+	$('#pokemonImageShiny').empty();
+	$('#pokemonAbility').empty();
+	$('#pokemonStatsWrapper').empty();
+	$('#pokemonMoves').empty();
+	$('#pokemonHerbs').empty();
+	$('#pokemonTypeAdvantages').empty();
+	$('#pokemonTeraWeaknesses').empty();
+	$('#pokemonTeraAdvantages').empty();
+}
+
 $(function() {
+	populatePokemonList();
+	populateTeraTypeList();
+
 	$('#pokemonList').on('change', function() {
 		clearPokemonData();
 		
@@ -303,6 +342,3 @@ $(function() {
 		}
 	});
 });
-
-populatePokemonList();
-populateTeraTypeList();
