@@ -139,7 +139,7 @@ function getMoveTypeAdvantages(type) {
 function getPokemonMoves(pokemon) {
 	$('#pokemonMoves').prepend('<h3>Moves:</h3>');
 	
-	for(var i = 0; i < raids.pokemon[pokemon].moves.length; i++) {
+	for(var i = 0; i < raids.pokemon[pokemon].moves.sort().length; i++) {
 		$('#pokemonMoves').append(createMoveDiv(raids.pokemon[pokemon].moves[i]));
 	}
 	
