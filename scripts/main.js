@@ -85,9 +85,15 @@ function createMoveDiv(move) {
 	moveStr += `<div class="pp">PP: ${moves.dex[move].pp}</div>`;
 	moveStr += `<div class="acc">Acc: ${moves.dex[move].acc}</div>`;
 	moveStr += `<div class="desc">${moves.dex[move].desc}</div>`;
+	
 	if(moves.dex[move].category != 'Status') {
-		moveStr += `<div class="adv">Advantages: ${getMoveTypeAdvantages(moves.dex[move].type)}</div>`;
+		var advantages = getMoveTypeAdvantages(moves.dex[move].type);
+		
+		if(advantages) {
+			moveStr += `<div class="adv">Advantages: ${advantages}</div>`;
+		}
 	}
+	
 	moveStr += '</div></div>';
 	
 	return moveStr;
