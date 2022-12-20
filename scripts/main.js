@@ -1,6 +1,7 @@
 /*
 	Imported Data
 */
+
 import raids from '../data/raids.json' assert {type: 'json'};
 import types from '../data/types.json' assert {type: 'json'};
 import abilities from '../data/abilities.json' assert {type: 'json'};
@@ -9,8 +10,17 @@ import herbs from '../data/herbs.json' assert {type: 'json'};
 
 
 /*
+	Globals
+*/
+
+const cacheVersion = 1;
+const cacheName = `tera-raid-info-${cacheVersion}`;
+
+
+/*
 	Type Dropdown
 */
+
 const teraTypes = {
 	"Normal":1,
 	"Fighting":2,
@@ -275,8 +285,6 @@ function capitalize(word) {
 */
 
 async function getImage(url) {
-	const cacheVersion = 1;
-	const cacheName = `tera-raid-info-${cacheVersion}`;
 	let cachedImage = await getCachedImage(cacheName, url);
 	
 	if (cachedImage) {
@@ -301,7 +309,7 @@ async function getCachedImage(cacheName, url) {
 	return await cachedResponse.url;
 }
 
-async function deleteCache(cacheName) {
+async function deleteCache() {
 	const keys = await caches.keys();
 	
 	for(const key of keys) {
