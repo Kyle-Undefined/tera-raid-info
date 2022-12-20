@@ -1,29 +1,33 @@
-import data from '../data/raids.json' assert {type: 'json'};
+import raids from '../data/raids.json' assert {type: 'json'};
+import types from '../data/types.json' assert {type: 'json'};
+import abilities from '../data/abilities.json' assert {type: 'json'};
+import moves from '../data/moves.json' assert {type: 'json'};
+import herbs from '../data/herbs.json' assert {type: 'json'};
 
 $.fn.cacheImages.defaults.storageDB = 'indexedDB';
 
 var cacheKeys = [];
 
-const teraTypes = [
-	"Bug",
-	"Dark",
-	"Dragon",
-	"Electric",
-	"Fairy",
-	"Fighting",
-	"Fire",
-	"Flying",
-	"Ghost",
-	"Grass",
-	"Ground",
-	"Ice",
-	"Normal",
-	"Poison",
-	"Psychic",
-	"Rock",
-	"Steel",
-	"Water"
-];
+const teraTypes = {
+	"Normal":1,
+	"Fighting":2,
+	"Flying":3,
+	"Poison":4,
+	"Ground":5,
+	"Rock":6,
+	"Bug":7,
+	"Ghost":8,
+	"Steel":9,
+	"Fire":10,
+	"Water":11,
+	"Grass":12,
+	"Electric":13,
+	"Psychic":14,
+	"Ice":15,
+	"Dragon":16,
+	"Dark":17,
+	"Fairy":18
+}
 
 var getCachedImages = function(key, storagePrefix) {
 	if(typeof storagePrefix === 'undefined'){ storagePrefix = 'cached'; }
@@ -69,17 +73,17 @@ showCachedImages = function(cacheKeys) {
 }
 
 function cacheImages() {
-	Object.entries(data.pokemon).forEach((pokemon) => {
+	Object.entries(raids.pokemon).forEach((pokemon) => {
 		const [mon] = pokemon;
 		
-		$.fn.cacheImages.fetchURL(`./img/${data.pokemon[mon].dex}.png`, function(url, image){ });
-		$.fn.cacheImages.fetchURL(`./img/shiny/${data.pokemon[mon].dex}.png`, function(url, image){ });
+		$.fn.cacheImages.fetchURL(`./images/${raids.pokemon[mon].dex}.png`, function(url, image){ });
+		$.fn.cacheImages.fetchURL(`./images/shiny/${raids.pokemon[mon].dex}.png`, function(url, image){ });
 	});
 }
 
 
 function populatePokemonList() {
-	Object.entries(data.pokemon).sort().forEach((pokemon) => {
+	Object.entries(raids.pokemon).sort().forEach((pokemon) => {
 		const [mon] = pokemon;
 		
 		$('#pokemonList').append($('<option>', {
@@ -90,65 +94,95 @@ function populatePokemonList() {
 }
 
 function populateTeraTypeList() {
-	for(var i = 0; i < teraTypes.length; i++) {
+	Object.entries(teraTypes).sort().forEach(([key, value]) => {
 		$('#teraList').append($('<option>', {
-			value: teraTypes[i],
-			text: teraTypes[i]
+			value: value,
+			text: key
 		}));
-	}
+	});
 }
 
 function createTypeDiv(type) {
 	return `<div class="typeText ${type.toLowerCase()}">${type}</div>`;
 }
 
-function createStatsTable(stats) {
-	var tableString = '<table><caption>Base Stats</caption>';
-	tableString += '<thead><tr><th scope="col">HP</th><th scope="col">Atk</th><th scope="col">Def</th><th scope="col">Sp. Atk</th><th scope="col">Sp. Def</th><th scope="col">Spd</th></tr></thead>';
-	tableString += '<tbody><tr>';
-	tableString += `<td scope="row" data-label="HP">${stats.hp}</td>`;
-	tableString += `<td scope="row" data-label="Atk">${stats.attack}</td>`;
-	tableString += `<td scope="row" data-label="Def">${stats.defense}</td>`;
-	tableString += `<td scope="row" data-label="Sp. Atk">${stats.spatk}</td>`;
-	tableString += `<td scope="row" data-label="Sp. Def">${stats.spdef}</td>`;
-	tableString += `<td scope="row" data-label="Spd">${stats.speed}</td>`;
-	tableString += '</tr></tbody>';
-	tableString += '</table>';
+function createStatsDisplay(stats) {
+	var tableString = '<div id="pokemonStats"><h3>Base Stats</h3>';
+	tableString += `<div class="stat hp"><p>HP</p><p data-label="HP">${stats.hp}</p></div>`;
+	tableString += `<div class="stat at"><p>Atk</p><p data-label="Atk">${stats.attack}</p></div>`;
+	tableString += `<div class="stat df"><p>Def</p><p data-label="Def">${stats.defense}</p></div>`;
+	tableString += `<div class="stat sa"><p>Sp.Atk</p><p data-label="Sp. Atk">${stats.spatk}</p></div>`;
+	tableString += `<div class="stat sd"><p>Sp.Def</p><p data-label="Sp. Def">${stats.spdef}</p></div>`;
+	tableString += `<div class="stat sp"><p>Spd</p><p data-label="Spd">${stats.speed}</p></div></div>`;
 	
 	return tableString;
 }
 
 function getPokemonTypes(pokemon) {
-	Object.entries(data.pokemon[pokemon].type).forEach((types) => {
-		const [type] = types;
-		$('#pokemonTypes').append(createTypeDiv(data.pokemon[pokemon].type[type]));
-	});
+	for(var i = 0; i < raids.pokemon[pokemon].type.length; i++) {
+		$('#pokemonTypes').append(
+			createTypeDiv(types.dex[raids.pokemon[pokemon].type[i]].name)
+		);
+	}
 }
 
 function getPokemonImage(pokemon) {
-	getCachedImages(data.pokemon[pokemon].dex);
+	getCachedImages(raids.pokemon[pokemon].dex);
+}
+
+function createAbilityDiv(ability) {
+	return `<div class="typeMatchupText" data-info="${abilities.dex[ability - 1].desc}">${abilities.dex[ability - 1].name}</div>`;
 }
 
 function getPokemonAbility(pokemon) {
-	$('#pokemonAbility').prepend(`Ability: <br/>${data.pokemon[pokemon].ability.join(", ")}`);
+	$('#pokemonAbility').prepend('<h3>Ability:</h3>');
+	
+	for(var i = 0; i < raids.pokemon[pokemon].ability.length; i++) {
+		$('#pokemonAbility').append(createAbilityDiv(raids.pokemon[pokemon].ability[i]));
+	}
 }
 
 function getPokemonStats(pokemon) {
-	$('#pokemonStats').prepend(createStatsTable(data.pokemon[pokemon].stats));
+	$('#pokemonStatsWrapper').prepend(createStatsDisplay(raids.pokemon[pokemon].stats));
+}
+
+function createMoveDiv(move) {
+	var moveStr = `<div class="typeMatchupText ${moves.dex[move].type.toLowerCase()}">${moves.dex[move].name}`;
+	moveStr += `<div class="moveStats">`;
+	moveStr += `<div class="type">${moves.dex[move].category}</div>`;
+	moveStr += `<div class="bp">Pwr: ${moves.dex[move].bp}</div>`;
+	moveStr += `<div class="pp">PP: ${moves.dex[move].pp}</div>`;
+	moveStr += `<div class="acc">Acc: ${moves.dex[move].acc}</div>`;
+	moveStr += `<div class="desc">${moves.dex[move].desc}</div>`;
+	moveStr += '</div></div>';
+	
+	return moveStr;
 }
 
 function getPokemonMoves(pokemon) {
-	$('#pokemonMoves').prepend(`Moves: <br/>${data.pokemon[pokemon].moves.join(", ")}`);
+	$('#pokemonMoves').prepend('<h3>Moves:</h3>');
+	
+	for(var i = 0; i < raids.pokemon[pokemon].moves.length; i++) {
+		$('#pokemonMoves').append(createMoveDiv(raids.pokemon[pokemon].moves[i]));
+	}
 	
 	if($('#teraList').val() != '') {		
 		if($('#pokemonMoves').is(':contains("Tera Blast")')) {
-			displayTeraTypeAdvantages($('#teraList').val().toLowerCase());
+			displayTeraTypeAdvantages($('#teraList').val());
 		}
 	}
 }
 
+function createHerbDiv(herb) {
+	return `<div class="herbPill ${herbs.dex[herb].name.toLowerCase()}">${herbs.dex[herb].name} - ${herbs.dex[herb].chance}%</div>`;
+}
+
 function getPokemonHerbs(pokemon) {
-	$('#pokemonHerbs').prepend(`Herbs Dropped: <br/>${data.pokemon[pokemon].herbs.join(", ")}`);
+	$('#pokemonHerbs').prepend('<h3>Herbs Dropped:</h3>');
+	
+	for(var i = 0; i < raids.pokemon[pokemon].herbs.length; i++) {
+		$('#pokemonHerbs').append(createHerbDiv(raids.pokemon[pokemon].herbs[i]));
+	}
 }
 
 function clearPokemonData() {
@@ -156,7 +190,7 @@ function clearPokemonData() {
 	$('#pokemonImageNormal').empty();
 	$('#pokemonImageShiny').empty();
 	$('#pokemonAbility').empty();
-	$('#pokemonStats').empty();
+	$('#pokemonStatsWrapper').empty();
 	$('#pokemonMoves').empty();
 	$('#pokemonHerbs').empty();
 	$('#pokemonTypeAdvantages').empty();
@@ -169,7 +203,7 @@ function displayTypeAdvantages(type) {
 	var display = createMatchupsDisplay(advantages);
 	
 	if(display.length > 0) {
-		$('#pokemonTypeAdvantages').prepend('<div>Type Advantages:</div>');
+		$('#pokemonTypeAdvantages').prepend('<h3>Type Advantages:</h3>');
 		$('#pokemonTypeAdvantages').append(display.join(''));
 	}
 }
@@ -181,7 +215,7 @@ function displayTypeWeaknesses(type) {
 	var display = createMatchupsDisplay(weaknesses);
 	
 	if(display.length > 0) {
-		$('#pokemonTeraWeaknesses').prepend('<div>Tera Weaknesses:</div>');
+		$('#pokemonTeraWeaknesses').prepend('<h3>Tera Weaknesses:</h3>');
 		$('#pokemonTeraWeaknesses').append(display.join(''));
 	}
 }
@@ -193,280 +227,14 @@ function displayTeraTypeAdvantages(type) {
 	var display = createMatchupsDisplay(advantages);
 	
 	if(display.length > 0) {
-		$('#pokemonTeraAdvantages').prepend('<div>Tera Advantages:</div>');
+		$('#pokemonTeraAdvantages').prepend('<h3>Tera Advantages:</h3>');
 		$('#pokemonTeraAdvantages').append(display.join(''));
 	}
 }
 
-$(function() {
-	$('#pokemonList').on('change', function() {
-		clearPokemonData();
-		
-		if ($(this).val() != '') {
-			getPokemonTypes($(this).val());	
-			getPokemonImage($(this).val());
-			getPokemonAbility($(this).val());
-			getPokemonStats($(this).val());
-			getPokemonMoves($(this).val());
-			getPokemonHerbs($(this).val());
-			displayTypeAdvantages(data.pokemon[$(this).val()].type);
-			
-			if($('#teraList').val() != '') {
-				displayTypeWeaknesses($('#teraList').val().toLowerCase());
-				
-				if($('#pokemonMoves').is(':contains("Tera Blast")')) {
-					displayTeraTypeAdvantages($('#teraList').val().toLowerCase());
-				}
-			}
-		}
-	});
-	
-	$('#teraList').on('change', function() {
-		$('#pokemonTeraWeaknesses').empty();
-		
-		if ($(this).val() != '' && $('#pokemonList').val() != '') {
-			displayTypeWeaknesses($(this).val().toLowerCase());
-		}
-		
-		if($('#pokemonMoves').is(':contains("Tera Blast")')) {
-			displayTeraTypeAdvantages($(this).val().toLowerCase());
-		}
-	});
-});
-
-cacheImages();
-populatePokemonList();
-populateTeraTypeList();
-
-/*
-
-Pokemon Type Matchup Calculator
-Data: https://pokeapi.co/api/v2/ & https://pokemondb.net/type
-
-*/
-
-let typeData = {
-	"normal": {
-		"attack": {
-			"double" : [],
-			"half": ["rock", "steel"],
-			"zero": ["ghost"]
-		},
-		"defense": {
-			"double" : ["fighting"],
-			"half": [],
-			"zero": ["ghost"]
-		}
-	},
-	"flying": {
-		"attack": {
-			"double" : ["fighting", "bug", "grass"],
-			"half": ["rock", "steel", "electric"],
-			"zero": []
-		},
-		"defense": {
-			"double" : ["rock", "electric", "ice"],
-			"half": ["fighting", "bug", "grass"],
-			"zero": ["ground"]
-		}
-	},
-	"poison": {
-		"attack": {
-			"double" : ["grass", "fairy"],
-			"half": ["poison", "ground", "rock", "fairy"],
-            "zero": ["steel"]
-		},
-        "defense": {
-            "half": ["fighting", "poison", "bug", "grass", "fairy"],
-            "double": ["ground", "psychic"],
-            "zero": []
-        }
-	},
-	"ground": {
-		"attack": {
-			"double" : ["poison", "rock", "steel", "fire", "electric"],
-			"half": ["bug", "grass"],
-			"zero": ["flying"]
-		},
-		"defense": {
-			"double" : ["water", "grass", "ice"],
-			"half": ["poison", "rock"],
-			"zero": ["electric"]
-		}
-	},
-	"rock": {
-		"attack": {
-			"double" : ["flying", "bug", "fire", "ice"],
-			"half": ["fighting", "ground", "steel"],
-			"zero": []
-		},
-		"defense": {
-			"double" : ["fighting", "ground", "steel", "water", "grass"],
-			"half": ["normal", "flying", "poison", "fire"],
-			"zero": []
-		}
-	},
-	"bug": {
-		"attack": {
-			"double" : ["grass", "psychic", "dark"],
-			"half": ["fighting", "flying", "poison", "ghost", "steel", "fire", "fairy"],
-			"zero": []
-		},
-		"defense": {
-			"double" : ["flying", "rock", "fire"],
-			"half": ["fighting", "ground", "grass"],
-			"zero": []
-		}
-	},
-	"steel": {
-		"attack": {
-			"double" : ["rock", "ice", "fairy"],
-			"half": ["steel", "fire", "water", "electric"],
-			"zero": []
-		},
-		"defense": {
-			"double" : ["fighting", "ground", "fire"],
-			"half": ["normal", "flying", "rock", "bug", "steel", "grass", "psychic", "ice", "dragon", "fairy"],
-			"zero": ["poison"]
-		}
-	},
-	"fire": {
-		"attack": {
-			"double" : ["bug", "steel", "grass", "ice"],
-			"half": ["rock", "fire", "water", "dragon"],
-			"zero": []
-		},
-		"defense": {
-			"double" : ["ground", "rock", "water"],
-			"half": ["bug", "steel", "fire", "grass", "ice", "fairy"],
-			"zero": []
-		}
-	},
-	"water": {
-		"attack": {
-			"double" : ["ground", "rock", "fire"],
-			"half": ["water", "grass", "dragon"],
-			"zero": []
-		},
-		"defense": {
-			"double" : ["grass", "electric"],
-			"half": ["steel", "fire", "water", "ice"],
-			"zero": []
-		}
-	},
-	"grass": {
-		"attack": {
-			"double" : ["ground", "rock", "water"],
-			"half": ["flying", "poison", "bug", "steel", "fire", "grass", "dragon" ],
-            "zero": []
-		},
-        "defense": {
-            "half": ["ground", "water", "grass", "electric"],
-            "double": ["flying", "poison", "bug", "fire", "ice"],
-            "zero": []
-        }
-	},
-	"electric": {
-		"attack": {
-			"double" : ["flying", "water"],
-			"half": ["grass", "electric", "dragon"],
-			"zero": ["ground"]
-		},
-		"defense": {
-			"double" : ["ground"],
-			"half": ["flying", "steel", "electric"],
-			"zero": []
-		}
-	},
-	"psychic": {
-		"attack": {
-			"double" : ["fighting", "poison"],
-			"half": ["steel", "psychic"],
-			"zero": ["dark"]
-		},
-		"defense": {
-			"double" : ["bug", "ghost", "dark"],
-			"half": ["fighting", "psychic"],
-			"zero": []
-		}
-	},
-	"ice": {
-		"attack": {
-			"double" : ["flying", "ground", "grass", "dragon"],
-			"half": ["steel", "fire", "water", "ice"],
-			"zero": []
-		},
-		"defense": {
-			"double" : ["fighting", "rock", "steel", "fire"],
-			"half": ["ice"],
-			"zero": []
-		}
-	},
-	"dragon": {
-		"attack": {
-			"double" : ["dragon"],
-			"half": ["steel"],
-			"zero": ["fairy"]
-		},
-		"defense": {
-			"double" : ["ice", "dragon", "fairy"],
-			"half": ["fire", "water", "grass", "electric"],
-			"zero": []
-		}
-	},
-	"dark": {
-		"attack": {
-			"double" : ["ghost", "psychic"],
-			"half": ["fighting", "dark", "fairy"],
-			"zero": []
-		},
-		"defense": {
-			"double" : ["fighting", "bug", "fairy"],
-			"half": ["ghost", "dark"],
-			"zero": ["psychic"]
-		}
-	},
-	"fairy": {
-		"attack": {
-			"double" : ["fighting", "dragon", "dark"],
-			"half": ["poison", "steel", "fire"],
-			"zero": []
-		},
-		"defense": {
-			"double" : ["poison", "steel"],
-			"half": ["fighting", "bug", "dark"],
-			"zero": ["dragon"]
-		}
-	},
-	"fighting": {
-		"attack": {
-			"double" : ["normal", "rock", "steel", "ice", "dark"],
-			"half": ["flying", "poison", "bug", "psychic", "fairy"],
-			"zero": ["ghost"]
-		},
-		"defense": {
-			"double" : ["flying", "psychic", "fairy"],
-			"half": ["rock", "bug", "dark"],
-			"zero": []
-		}
-	},
-	"ghost": {
-		"attack": {
-			"double" : ["ghost", "psychic"],
-			"half": ["dark"],
-			"zero": ["normal"]
-		},
-		"defense": {
-			"double" : ["ghost", "dark"],
-			"half": ["poison", "bug"],
-			"zero": ["normal", "fighting"]
-		}
-	}
-};
-
 function calculateTypeWeakness(type) {
 	let weaknesses = {};
-	let defense = typeData[type].defense;
+	let defense = types.dex[type].defense;
 	
 	Object.entries(defense).forEach(([key, value]) => {
 		switch(key) {
@@ -489,7 +257,7 @@ function calculateTypeAdvantage(type) {
 	let advantages = {};
 	
 	type.forEach(item => {
-		let attack = typeData[item.toLowerCase()].attack;
+		let attack = types.dex[item].attack;
 		
 		Object.entries(attack).forEach(([key, value]) => {
 			switch(key) {
@@ -505,7 +273,7 @@ function calculateTypeAdvantage(type) {
 
 function calculateTeraTypeAdvantage(type) {
 	let advantages = {};
-	let attack = typeData[type].attack;
+	let attack = types.dex[type].attack;
 	
 	Object.entries(attack).forEach(([key, value]) => {
 		switch(key) {
@@ -537,3 +305,43 @@ function capitalize(word) {
     .toLowerCase()
     .replace(/\w/, firstLetter => firstLetter.toUpperCase());
 }
+
+$(function() {
+	$('#pokemonList').on('change', function() {
+		clearPokemonData();
+		
+		if ($(this).val() != '') {
+			getPokemonTypes($(this).val());	
+			getPokemonImage($(this).val());
+			getPokemonAbility($(this).val());
+			getPokemonStats($(this).val());
+			getPokemonMoves($(this).val());
+			getPokemonHerbs($(this).val());
+			displayTypeAdvantages(raids.pokemon[$(this).val()].type);
+			
+			if($('#teraList').val() != '') {
+				displayTypeWeaknesses($('#teraList').val());
+				
+				if($('#pokemonMoves').is(':contains("Tera Blast")')) {
+					displayTeraTypeAdvantages($('#teraList').val());
+				}
+			}
+		}
+	});
+	
+	$('#teraList').on('change', function() {
+		$('#pokemonTeraWeaknesses').empty();
+		
+		if ($(this).val() != '' && $('#pokemonList').val() != '') {
+			displayTypeWeaknesses($(this).val());
+		}
+		
+		if($('#pokemonMoves').is(':contains("Tera Blast")')) {
+			displayTeraTypeAdvantages($(this).val());
+		}
+	});
+});
+
+cacheImages();
+populatePokemonList();
+populateTeraTypeList();
