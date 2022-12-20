@@ -7,9 +7,11 @@ Shows the following information:
 - Base Stats
 - Possible Abilities, with info on what it does when you hover/click
 - Move set used in the Tera Raid, color coded to the Type with more info on hover/click
-- Herbs the Pokemon can drop, and the chance to get one.
+- Herbs the Pokemon can drop, and the chance to get one
 - Type Advantages of the Pokemon
 - Type Weaknesses of the Tera Type
 - If the Move Set includes Tera Blast, then the Type Advantage of the Tera Type
 
 Coded by me, site designed by CronikCRS.
+
+![Preview](https://questionable.link/5Qp17_qAo.png)
