@@ -1,0 +1,29 @@
+{
+	"dex": [
+		{
+			"id": 0,
+			"name": "Spicy",
+			"chance": 13.64
+		},
+		{
+			"id": 1,
+			"name": "Sweet",
+			"chance": 13.64
+		},
+		{
+			"id": 2,
+			"name": "Salty",
+			"chance": 13.64
+		},
+		{
+			"id": 3,
+			"name": "Bitter",
+			"chance": 13.64
+		},
+		{
+			"id": 4,
+			"name": "Sour",
+			"chance": 13.64
+		}
+	]
+}
