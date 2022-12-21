@@ -67,6 +67,10 @@ function createTypeMatchupDiv(type, matchup) {
 	return `<div class="typeMatchupText ${type}">${capitalize(type)} - ${matchup}x</div>`;
 }
 
+function createAbilityDiv(ability) {
+	return `<div class="typeMatchupText" data-info="${abilities.dex[ability - 1].desc}">${abilities.dex[ability - 1].name}</div>`;
+}
+
 function createMoveTypeAdvantagesDisplay(matchups) {
 	const display = [];
 	
@@ -134,14 +138,10 @@ async function getPokemonImage(pokemon) {
 	$('#pokemonImageShiny').append($(`<img alt="Shiny" title="Shiny" src="${await getImage(shinyPath)}" />`));
 }
 
-function createAbilityDiv(ability) {
-	return `<div class="typeMatchupText" data-info="${abilities.dex[ability - 1].desc}">${abilities.dex[ability - 1].name}</div>`;
-}
-
 function getPokemonAbility(pokemon) {
 	$('#pokemonAbility').prepend('<h3>Ability:</h3>');
 	
-	for(var i = 0; i < getPokemonDataSource().pokemon[pokemon].ability.length; i++) {
+	for(var i = 0; i < getPokemonDataSource().pokemon[pokemon].ability.sort().length; i++) {
 		$('#pokemonAbility').append(createAbilityDiv(getPokemonDataSource().pokemon[pokemon].ability[i]));
 	}
 }
