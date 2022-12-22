@@ -382,11 +382,15 @@ function autoPopulateSelections() {
 		}
 		
 		if(build[1]) {
-			var name = capitalize(build[1].replace('%20', ' ').toLowerCase());
+			var name = capitalize(build[1].replaceAll('%20', ' ').toLowerCase());
 			var replacement = name.match(/(\(.*\))/);
 			
 			if(replacement) {
-				name = name.replace(replacement[0], capitalize(replacement[0]));
+				var words = replacement[0].split(' ');
+				
+				for(var i = 0; i < words.length; i++) {
+					name = name.replaceAll(words[i], capitalize(words[i]));
+				}
 			}
 			
 			$('#pokemonList').val(name);
