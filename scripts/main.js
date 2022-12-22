@@ -2,8 +2,8 @@
 	Imported Data
 */
 
-const fivestar = await fetchJSON('data/fivestar.json');
-const sixstar = await fetchJSON('data/sixstar.json');
+const fivestar = await fetchJSON('data/raids/fivestar.json');
+const sixstar = await fetchJSON('data/raids/sixstar.json');
 const types = await fetchJSON('data/types.json');
 const abilities = await fetchJSON('data/abilities.json');
 const moves = await fetchJSON('data/moves.json');
