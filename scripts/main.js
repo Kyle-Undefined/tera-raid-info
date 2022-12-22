@@ -2,12 +2,12 @@
 	Imported Data
 */
 
-const fivestar = await fetchJSON('data/raids/fivestar.json');
-const sixstar = await fetchJSON('data/raids/sixstar.json');
-const types = await fetchJSON('data/types.json');
-const abilities = await fetchJSON('data/abilities.json');
-const moves = await fetchJSON('data/moves.json');
-const herbs = await fetchJSON('data/herbs.json');
+const fivestar = await fetchJSON('/tera-raid-info/data/raids/fivestar.json');
+const sixstar = await fetchJSON('/tera-raid-info/data/raids/sixstar.json');
+const types = await fetchJSON('/tera-raid-info/data/types.json');
+const abilities = await fetchJSON('/tera-raid-info/data/abilities.json');
+const moves = await fetchJSON('/tera-raid-info/data/moves.json');
+const herbs = await fetchJSON('/tera-raid-info/data/herbs.json');
 
 
 /*
@@ -136,8 +136,8 @@ function getPokemonTypes(pokemon) {
 }
 
 async function getPokemonImage(pokemon) {
-	var normalPath = `./images/${getPokemonDataSource().pokemon[pokemon].dex}.png`;
-	var shinyPath = `./images/shiny/${getPokemonDataSource().pokemon[pokemon].dex}.png`;
+	var normalPath = `/tera-raid-info/images/${getPokemonDataSource().pokemon[pokemon].dex}.png`;
+	var shinyPath = `/tera-raid-info/images/shiny/${getPokemonDataSource().pokemon[pokemon].dex}.png`;
 	
 	$('#pokemonImageNormal').append($(`<img alt="Normal" title="Normal" src="${await getImage(normalPath)}" />`));
 	$('#pokemonImageShiny').append($(`<img alt="Shiny" title="Shiny" src="${await getImage(shinyPath)}" />`));
@@ -339,12 +339,12 @@ async function deleteCache() {
 }
 
 function cacheIcons() {
-	getImage('./icons/spicy.png');
-	getImage('./icons/sweet.png');
-	getImage('./icons/salty.png');
-	getImage('./icons/bitter.png');
-	getImage('./icons/sour.png');
-	getImage('./icons/favicon.ico');
+	getImage('/tera-raid-info/icons/spicy.png');
+	getImage('/tera-raid-info/icons/sweet.png');
+	getImage('/tera-raid-info/icons/salty.png');
+	getImage('/tera-raid-info/icons/bitter.png');
+	getImage('/tera-raid-info/icons/sour.png');
+	getImage('/tera-raid-info/icons/favicon.ico');
 }
 
 
