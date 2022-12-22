@@ -2,6 +2,7 @@
 	Imported Data
 */
 
+import raids5 from '../data/raids5.json' assert {type: 'json'};
 import raids6 from '../data/raids6.json' assert {type: 'json'};
 import types from '../data/types.json' assert {type: 'json'};
 import abilities from '../data/abilities.json' assert {type: 'json'};
@@ -345,6 +346,9 @@ function cacheIcons() {
 
 function getPokemonDataSource() {
 	switch($('#raidTier').val()) {
+		case '5':
+			return raids5;
+			break;
 		case '6':
 			return raids6;
 			break;
@@ -388,13 +392,18 @@ function clearPokemonData() {
 	$('#pokemonTeraAdvantages').empty();
 }
 
+function resetPokemonList() {
+	$('#pokemonList').empty('');
+	$('#pokemonList').append('<option value="">-- Pokemon --</option>');
+}
+
 $(function() {
 	cacheIcons();
 	populateTeraTypeList();
 
 	$('#raidTier').on('change', function() {
 		clearPokemonData();
-		$('#pokemonList').val('');
+		resetPokemonList();
 		populatePokemonList();
 	});
 	
@@ -431,6 +440,4 @@ $(function() {
 			displayTeraTypeAdvantages($(this).val());
 		}
 	});
-	
-	$('#raidTier').trigger('change');
 });

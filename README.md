@@ -1,7 +1,8 @@
-# Six Star Tera Raid Info
-Aggregate view of the [Serebii](https://www.serebii.net/) Six Star Tera Raid Info for Pokemon Scarlet & Violet.
+# Tera Raid Info
+Aggregate view of the [Serebii](https://www.serebii.net/) Tera Raid Info for Pokemon Scarlet & Violet.
 
 Shows the following information:
+- Tier 5 & 6 Raids
 - Pokemon Type(s)
 - Normal and Shiny images
 - Base Stats

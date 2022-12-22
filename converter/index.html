@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Data Converter</title>
+	<link href="../style/style.css" rel="stylesheet" />
+	<link href="../icons/favicon.ico" rel="icon" />
+</head>
+<body>
+	<header class="header">
+		<h1>Convert Serebii Data to JSON Values</h1>
+	</header>
+	
+	<article class="content">
+		<div>
+			<textarea id="moves" rows="4" cols="25">Moves</textarea>
+			<br/>
+			<label id="moveResults" />
+		</div>
+		<br/>
+		<div>
+			<textarea id="abilities" rows="4" cols="25">Abilities</textarea>
+			<br/>
+			<label id="abilityResults" />
+		</div>
+		<br />
+		<div>Basic JSON by Pokemon Name:</div>
+		<br />
+		<div>
+			<input type="text" id="pokemon" />
+		</div>
+	</article>
+	
+	<footer class="footer">Created by: <a href="https://github.com/kyle-undefined" target="_blank">Kyle Undefined</a></footer>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="module">
+		import types from '../data/types.json' assert {type: 'json'};
+		import abilities from '../data/abilities.json' assert {type: 'json'};
+		import moves from '../data/moves.json' assert {type: 'json'};
+		import pokedex from './pokedex.json' assert {type: 'json'};
+		
+		$(function() {
+			$('#moves').on('change', function() {
+				getMoveIDs($(this).val());
+			});
+			
+			$('#abilities').on('change', function() {
+				getAbilityIDs($(this).val());
+			});
+			
+			$('#types').on('change', function() {
+				getTypeIDs($(this).val());
+			});
+			
+			$('#pokemon').on('change', function() {
+				getPokemonData($(this).val());
+			});
+		});
+		
+		function getMoveIDs(input) {
+			if(input) {
+				var moveIds = [];
+				var moveList = input.replace(/\r/g, '').split(/\n/);
+				
+				Object.entries(moveList).forEach(([key, value]) => {
+					if(value != 'Additional Moves') {
+						Object.entries(moves.dex).forEach(([id]) => {
+							if(moves.dex[id].name == value) {
+								moveIds.push(moves.dex[id].id);
+							}
+						});
+					}
+				});
+				
+				$('#moveResults').text(moveIds.join(', '));
+			}
+		}
+		
+		function getAbilityIDs(input) {
+			if(input) {
+				var abilityIds = [];
+				var abilityList = input.split(' - ');
+				
+				Object.entries(abilityList).forEach(([key, value]) => {
+					Object.entries(abilities.dex).forEach(([id]) => {
+						if(abilities.dex[id].name == value) {
+							abilityIds.push(abilities.dex[id].id);
+						}
+					});
+				});
+				
+				$('#abilityResults').text(abilityIds.join(', '));
+			}
+		}
+		
+		function getTypeIDs(input) {
+			if(input) {
+				var typeIds = [];
+				
+				Object.entries(input).forEach(([key, value]) => {
+					Object.entries(types.dex).forEach(([id]) => {
+						if(types.dex[id].name.toLowerCase() == value) {
+							typeIds.push(id);
+						}
+					});
+				});
+				
+				return typeIds;
+			}
+		}
+		
+		function getPokemonData(input) {
+			if(input) {
+				Object.entries(pokedex).forEach(([key]) => {
+					if(pokedex[key].name == input){
+						var json = '';
+						json += '		"' + input + '":\n';
+						json += '		{\n';
+						json += '			"type": [' + getTypeIDs(pokedex[key].types).join(', ') + '],\n';
+						json += '			"ability": [' + '],\n';
+						json += '			"stats":\n';
+						json += '			{\n';
+						json += '				"hp": ' + pokedex[key].hp + ',\n';
+						json += '				"attack": ' + pokedex[key].attack + ',\n';
+						json += '				"defense": ' + pokedex[key].defense + ',\n';
+						json += '				"spatk": ' + pokedex[key].spatk + ',\n';
+						json += '				"spdef": ' + pokedex[key].spdef + ',\n';
+						json += '				"speed": ' + pokedex[key].speed + '\n';
+						json += '			},\n';
+						json += '			"moves": [' + '],\n';
+						json += '			"dex": "' + pokedex[key].num + '",\n';
+						json += '			"herbs": []\n';
+						json += '		},';
+						
+						console.log(json);
+					}
+				});
+			}
+		}
+	</script>
+</body>
+</html>
