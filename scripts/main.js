@@ -2,12 +2,12 @@
 	Imported Data
 */
 
-const fivestar = await import('../data/raids5.json', { assert: { type: 'json' } }).then((module) => module.default);
-const sixstar = await import('../data/raids6.json', { assert: { type: 'json' } }).then((module) => module.default);
-const types = await import('../data/types.json', { assert: { type: 'json' } }).then((module) => module.default);
-const abilities = await import('../data/abilities.json', { assert: { type: 'json' } }).then((module) => module.default);
-const moves = await import('../data/moves.json', { assert: { type: 'json' } }).then((module) => module.default);
-const herbs = await import('../data/herbs.json', { assert: { type: 'json' } }).then((module) => module.default);
+const fivestar = await fetchJSON('data/fivestar.json');
+const sixstar = await fetchJSON('data/sixstar.json');
+const types = await fetchJSON('data/types.json');
+const abilities = await fetchJSON('data/abilities.json');
+const moves = await fetchJSON('data/moves.json');
+const herbs = await fetchJSON('data/herbs.json');
 
 
 /*
@@ -343,6 +343,12 @@ function cacheIcons() {
 /*
 	Main workflow
 */
+
+async function fetchJSON(path) {
+	let response = await fetch(path);
+	let data = await response.json();
+	return data;
+}
 
 function getPokemonDataSource() {
 	switch($('#raidTier').val()) {
