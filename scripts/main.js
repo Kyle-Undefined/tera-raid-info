@@ -382,7 +382,14 @@ function autoPopulateSelections() {
 		}
 		
 		if(build[1]) {
-			$('#pokemonList').val(capitalize(build[1].toLowerCase()));
+			var name = capitalize(build[1].replace('%20', ' ').toLowerCase());
+			var replacement = name.match(/(\(.*\))/);
+			
+			if(replacement) {
+				name = name.replace(replacement[0], capitalize(replacement[0]));
+			}
+			
+			$('#pokemonList').val(name);
 			$('#pokemonList').trigger('change');
 		}
 		
