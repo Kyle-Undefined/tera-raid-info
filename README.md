@@ -15,4 +15,4 @@ Shows the following information:
 
 Coded by me, site designed by CronikCRS.
 
-![Preview](https://questionable.link/5Qp17_qAo.png)
+![Preview](https://questionable.link/5QBqOZtzR.png)
