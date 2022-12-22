@@ -359,8 +359,8 @@ async function fetchJSON(path) {
 }
 
 function autoPopulateSelections() {
-	if(location.hash) {
-		var build = location.hash.substring(2, location.hash.length).split('/');
+	if(location.href.replace(location.origin + '/tera-raid-info/', '')) {
+		var build = location.href.replace(location.origin + '/tera-raid-info/', '').split('/');
 		
 		if($.isNumeric(build[0])) {
 			$('#raidTier').val(build[0]);
@@ -368,13 +368,13 @@ function autoPopulateSelections() {
 		}
 		
 		if(build[1]) {
-			$('#pokemonList').val(build[1]);
+			$('#pokemonList').val(capitalize(build[1].toLowerCase()));
 			$('#pokemonList').trigger('change');
 		}
 		
 		if(build[2]) {
 			Object.entries(teraTypes).sort().forEach(([key, value]) => {
-				if(key == build[2]) {
+				if(key.toLowerCase() == build[2].toLowerCase()) {
 					$('#teraList').val(value);
 				}
 			});
