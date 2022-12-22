@@ -358,6 +358,32 @@ async function fetchJSON(path) {
 	return data;
 }
 
+function autoPopulateSelections() {
+	if(location.hash) {
+		var build = location.hash.substring(2, location.hash.length).split('/');
+		
+		if($.isNumeric(build[0])) {
+			$('#raidTier').val(build[0]);
+			$('#raidTier').trigger('change');
+		}
+		
+		if(build[1]) {
+			$('#pokemonList').val(build[1]);
+			$('#pokemonList').trigger('change');
+		}
+		
+		if(build[2]) {
+			Object.entries(teraTypes).sort().forEach(([key, value]) => {
+				if(key == build[2]) {
+					$('#teraList').val(value);
+				}
+			});
+			
+			$('#teraList').trigger('change');
+		}
+	}
+}
+
 function getPokemonDataSource() {
 	switch($('#raidTier').val()) {
 		case '5':
@@ -454,4 +480,6 @@ $(function() {
 			displayTeraTypeAdvantages($(this).val());
 		}
 	});
+	
+	autoPopulateSelections();
 });
