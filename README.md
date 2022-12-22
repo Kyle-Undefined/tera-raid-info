@@ -17,4 +17,4 @@ Also can link directly to a raid setup by passing it into the URL like so: [/6/G
 
 Coded by me, site designed by CronikCRS.
 
-![Preview](https://questionable.link/5QBqOZtzR.png)
+![Preview](https://questionable.link/5QFtWJx3U.png)
