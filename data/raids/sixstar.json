@@ -21,7 +21,8 @@
 		"Tauros":
 		{
 			"type": [2],
-			"ability": [22, 83, 291],
+			"ability": [22, 83],
+			"hiddenability": [291],
 			"stats":
 			{
 				"hp": 75,
@@ -38,7 +39,8 @@
 		"Tauros (Fire)":
 		{
 			"type": [2, 10],
-			"ability": [22, 83, 291],
+			"ability": [22, 83],
+			"hiddenability": [291],
 			"stats":
 			{
 				"hp": 75,
@@ -55,7 +57,8 @@
 		"Tauros (Water)":
 		{
 			"type": [2, 11],
-			"ability": [22, 83, 291],
+			"ability": [22, 83],
+			"hiddenability": [291],
 			"stats":
 			{
 				"hp": 75,
@@ -72,7 +75,8 @@
 		"Gyarados":
 		{
 			"type": [11, 3],
-			"ability": [22, 153],
+			"ability": [22],
+			"hiddenability": [153],
 			"stats":
 			{
 				"hp": 95,
@@ -89,7 +93,8 @@
 		"Ditto":
 		{
 			"type": [1],
-			"ability": [7, 150],
+			"ability": [7],
+			"hiddenability": [150],
 			"stats":
 			{
 				"hp": 48,
@@ -106,7 +111,8 @@
 		"Vaporeon":
 		{
 			"type": [11],
-			"ability": [11, 93],
+			"ability": [11],
+			"hiddenability": [93],
 			"stats":
 			{
 				"hp": 130,
@@ -123,7 +129,8 @@
 		"Jolteon":
 		{
 			"type": [13],
-			"ability": [10, 95],
+			"ability": [10],
+			"hiddenability": [95],
 			"stats":
 			{
 				"hp": 65,
@@ -140,7 +147,8 @@
 		"Flareon":
 		{
 			"type": [10],
-			"ability": [18, 62],
+			"ability": [18],
+			"hiddenability": [62],
 			"stats":
 			{
 				"hp": 65,
@@ -157,7 +165,8 @@
 		"Dragonite":
 		{
 			"type": [16, 3],
-			"ability": [39, 136],
+			"ability": [39],
+			"hiddenability": [136],
 			"stats":
 			{
 				"hp": 91,
@@ -174,7 +183,8 @@
 		"Espeon":
 		{
 			"type": [14],
-			"ability": [28, 156],
+			"ability": [28],
+			"hiddenability": [156],
 			"stats":
 			{
 				"hp": 65,
@@ -191,7 +201,8 @@
 		"Umbreon":
 		{
 			"type": [17],
-			"ability": [28, 39],
+			"ability": [28],
+			"hiddenability": [39],
 			"stats":
 			{
 				"hp": 95,
@@ -208,7 +219,8 @@
 		"Slowking":
 		{
 			"type": [11, 14],
-			"ability": [12, 20, 144],
+			"ability": [12, 20],
+			"hiddenability": [144],
 			"stats":
 			{
 				"hp": 95,
@@ -225,7 +237,8 @@
 		"Scizor":
 		{
 			"type": [7, 9],
-			"ability": [68, 101, 135],
+			"ability": [68, 101],
+			"hiddenability": [135],
 			"stats":
 			{
 				"hp": 70,
@@ -242,7 +255,8 @@
 		"Heracross":
 		{
 			"type": [7, 2],
-			"ability": [68, 62, 153],
+			"ability": [68, 62],
+			"hiddenability": [153],
 			"stats":
 			{
 				"hp": 80,
@@ -259,7 +273,8 @@
 		"Blissey":
 		{
 			"type": [1],
-			"ability": [30, 32, 131],
+			"ability": [30, 32],
+			"hiddenability": [131],
 			"stats":
 			{
 				"hp": 255,
@@ -276,7 +291,8 @@
 		"Tyranitar":
 		{
 			"type": [6, 17],
-			"ability": [45, 127],
+			"ability": [45],
+			"hiddenability": [127],
 			"stats":
 			{
 				"hp": 100,
@@ -293,7 +309,8 @@
 		"Pelipper":
 		{
 			"type": [11, 3],
-			"ability": [51, 2, 44],
+			"ability": [51, 2],
+			"hiddenability": [44],
 			"stats":
 			{
 				"hp": 60,
@@ -327,7 +344,8 @@
 		"Breloom":
 		{
 			"type": [12, 2],
-			"ability": [27, 90, 101],
+			"ability": [27, 90],
+			"hiddenability": [101],
 			"stats":
 			{
 				"hp": 60,
@@ -344,7 +362,8 @@
 		"Torkoal":
 		{
 			"type": [10],
-			"ability": [73, 70, 75],
+			"ability": [73, 70],
+			"hiddenability": [75],
 			"stats":
 			{
 				"hp": 70,
@@ -361,7 +380,8 @@
 		"Salamence":
 		{
 			"type": [16, 3],
-			"ability": [22, 153],
+			"ability": [22],
+			"hiddenability": [153],
 			"stats":
 			{
 				"hp": 95,
@@ -378,7 +398,8 @@
 		"Staraptor":
 		{
 			"type": [1, 3],
-			"ability": [22, 120],
+			"ability": [22],
+			"hiddenability": [120],
 			"stats":
 			{
 				"hp": 85,
@@ -395,7 +416,8 @@
 		"Garchomp":
 		{
 			"type": [16, 5],
-			"ability": [8, 24],
+			"ability": [8],
+			"hiddenability": [24],
 			"stats":
 			{
 				"hp": 108,
@@ -412,7 +434,8 @@
 		"Hippowdon":
 		{
 			"type": [5],
-			"ability": [45, 159],
+			"ability": [45],
+			"hiddenability": [159],
 			"stats":
 			{
 				"hp": 108,
@@ -429,7 +452,8 @@
 		"Magnezone":
 		{
 			"type": [13, 9],
-			"ability": [42, 5, 148],
+			"ability": [42, 5],
+			"hiddenability": [148],
 			"stats":
 			{
 				"hp": 70,
@@ -446,7 +470,8 @@
 		"Leafeon":
 		{
 			"type": [12],
-			"ability": [102, 34],
+			"ability": [102],
+			"hiddenability": [34],
 			"stats":
 			{
 				"hp": 65,
@@ -463,7 +488,8 @@
 		"Glaceon":
 		{
 			"type": [15],
-			"ability": [81, 115],
+			"ability": [81],
+			"hiddenability": [115],
 			"stats":
 			{
 				"hp": 65,
@@ -497,7 +523,8 @@
 		"Amoonguss":
 		{
 			"type": [12, 4],
-			"ability": [27, 144],
+			"ability": [27],
+			"hiddenability": [144],
 			"stats":
 			{
 				"hp": 114,
@@ -514,7 +541,8 @@
 		"Haxorus":
 		{
 			"type": [16],
-			"ability": [79, 104, 127],
+			"ability": [79, 104],
+			"hiddenability": [127],
 			"stats":
 			{
 				"hp": 76,
@@ -548,7 +576,8 @@
 		"Volcarona":
 		{
 			"type": [7, 10],
-			"ability": [49, 68],
+			"ability": [49],
+			"hiddenability": [68],
 			"stats":
 			{
 				"hp": 85,
@@ -565,7 +594,8 @@
 		"Talonflame":
 		{
 			"type": [10, 3],
-			"ability": [49, 177],
+			"ability": [49],
+			"hiddenability": [177],
 			"stats":
 			{
 				"hp": 78,
@@ -582,7 +612,8 @@
 		"Dragalge":
 		{
 			"type": [4, 16],
-			"ability": [38, 143, 91],
+			"ability": [38, 143],
+			"hiddenability": [91],
 			"stats":
 			{
 				"hp": 65,
@@ -616,7 +647,8 @@
 		"Sylveon":
 		{
 			"type": [18],
-			"ability": [56, 182],
+			"ability": [56],
+			"hiddenability": [182],
 			"stats":
 			{
 				"hp": 95,
@@ -633,7 +665,8 @@
 		"Goodra":
 		{
 			"type": [16],
-			"ability": [157, 93, 183],
+			"ability": [157, 93],
+			"hiddenability": [183],
 			"stats":
 			{
 				"hp": 90,
@@ -650,7 +683,8 @@
 		"Avalugg":
 		{
 			"type": [15],
-			"ability": [20, 115, 5],
+			"ability": [20, 115],
+			"hiddenability": [5],
 			"stats":
 			{
 				"hp": 95,
@@ -684,7 +718,8 @@
 		"Toxapex":
 		{
 			"type": [4, 11],
-			"ability": [196, 7, 144],
+			"ability": [196, 7],
+			"hiddenability": [144],
 			"stats":
 			{
 				"hp": 50,
@@ -718,7 +753,8 @@
 		"Corviknight":
 		{
 			"type": [3, 9],
-			"ability": [46, 127, 240],
+			"ability": [46, 127],
+			"hiddenability": [240],
 			"stats":
 			{
 				"hp": 98,
@@ -735,7 +771,8 @@
 		"Pincurchin":
 		{
 			"type": [13],
-			"ability": [31, 226],
+			"ability": [31],
+			"hiddenability": [226],
 			"stats":
 			{
 				"hp": 48,
@@ -752,7 +789,8 @@
 		"Frosmoth":
 		{
 			"type": [15, 7],
-			"ability": [19, 246],
+			"ability": [19],
+			"hiddenability": [246],
 			"stats":
 			{
 				"hp": 70,
@@ -769,7 +807,8 @@
 		"Dragapult":
 		{
 			"type": [16, 8],
-			"ability": [29, 151, 130],
+			"ability": [29, 151],
+			"hiddenability": [130],
 			"stats":
 			{
 				"hp": 88,
@@ -786,7 +825,8 @@
 		"Pawmot":
 		{
 			"type": [13, 2],
-			"ability": [10, 30, 89],
+			"ability": [10, 30],
+			"hiddenability": [89],
 			"stats":
 			{
 				"hp": 70,
@@ -803,7 +843,8 @@
 		"Maushold":
 		{
 			"type": [1],
-			"ability": [132, 167, 101],
+			"ability": [132, 167],
+			"hiddenability": [101],
 			"stats":
 			{
 				"hp": 74,
@@ -854,7 +895,8 @@
 		"Armarouge":
 		{
 			"type": [10, 14],
-			"ability": [18, 133],
+			"ability": [18],
+			"hiddenability": [133],
 			"stats":
 			{
 				"hp": 85,
@@ -871,7 +913,8 @@
 		"Ceruledge":
 		{
 			"type": [10, 8],
-			"ability": [18, 133],
+			"ability": [18],
+			"hiddenability": [133],
 			"stats":
 			{
 				"hp": 75,
@@ -888,7 +931,8 @@
 		"Kilowattrel":
 		{
 			"type": [13, 3],
-			"ability": [277, 10, 172],
+			"ability": [277, 10],
+			"hiddenability": [172],
 			"stats":
 			{
 				"hp": 70,
@@ -905,7 +949,8 @@
 		"Mabosstiff":
 		{
 			"type": [17],
-			"ability": [22, 275, 198],
+			"ability": [22, 275],
+			"hiddenability": [198],
 			"stats":
 			{
 				"hp": 80,
@@ -922,7 +967,8 @@
 		"Grafaiai":
 		{
 			"type": [4, 1],
-			"ability": [84, 143, 158],
+			"ability": [84, 143],
+			"hiddenability": [158],
 			"stats":
 			{
 				"hp": 63,
@@ -956,7 +1002,8 @@
 		"Klawf":
 		{
 			"type": [6],
-			"ability": [271, 75, 144],
+			"ability": [271, 75],
+			"hiddenability": [144],
 			"stats":
 			{
 				"hp": 70,
@@ -973,7 +1020,8 @@
 		"Tinkaton":
 		{
 			"type": [18, 9],
-			"ability": [104, 20, 124],
+			"ability": [104, 20],
+			"hiddenability": [124],
 			"stats":
 			{
 				"hp": 85,
@@ -990,7 +1038,8 @@
 		"Bombirdier":
 		{
 			"type": [3, 17],
-			"ability": [145, 51, 276],
+			"ability": [145, 51],
+			"hiddenability": [276],
 			"stats":
 			{
 				"hp": 70,
@@ -1007,7 +1056,8 @@
 		"Revavroom":
 		{
 			"type": [9, 4],
-			"ability": [142, 111],
+			"ability": [142],
+			"hiddenability": [111],
 			"stats":
 			{
 				"hp": 80,
@@ -1024,7 +1074,8 @@
 		"Cyclizar":
 		{
 			"type": [16, 1],
-			"ability": [61, 144],
+			"ability": [61],
+			"hiddenability": [144],
 			"stats":
 			{
 				"hp": 70,
@@ -1041,7 +1092,8 @@
 		"Orthworm":
 		{
 			"type": [9],
-			"ability": [297, 8],
+			"ability": [297],
+			"hiddenability": [8],
 			"stats":
 			{
 				"hp": 70,
@@ -1058,7 +1110,8 @@
 		"Glimmora":
 		{
 			"type": [6, 4],
-			"ability": [295, 212],
+			"ability": [295],
+			"hiddenability": [212],
 			"stats":
 			{
 				"hp": 83,
@@ -1075,7 +1128,8 @@
 		"Cetitan":
 		{
 			"type": [15],
-			"ability": [47, 202, 125],
+			"ability": [47, 202],
+			"hiddenability": [125],
 			"stats":
 			{
 				"hp": 170,
@@ -1092,7 +1146,8 @@
 		"Dondozo":
 		{
 			"type": [11],
-			"ability": [109, 12, 41],
+			"ability": [109, 12],
+			"hiddenability": [41],
 			"stats":
 			{
 				"hp": 150,
@@ -1109,7 +1164,8 @@
 		"Annihilape":
 		{
 			"type": [2, 8],
-			"ability": [72, 39, 128],
+			"ability": [72, 39],
+			"hiddenability": [128],
 			"stats":
 			{
 				"hp": 110,
@@ -1143,7 +1199,8 @@
 		"Farigiraf":
 		{
 			"type": [1, 14],
-			"ability": [291, 296, 157],
+			"ability": [291, 296],
+			"hiddenability": [157],
 			"stats":
 			{
 				"hp": 120,
@@ -1160,7 +1217,8 @@
 		"Kingambit":
 		{
 			"type": [17, 9],
-			"ability": [128, 293, 46],
+			"ability": [128, 293],
+			"hiddenability": [46],
 			"stats":
 			{
 				"hp": 100,

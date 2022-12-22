@@ -157,7 +157,8 @@
 		"Ditto":
 		{
 			"type": [1],
-			"ability": [7, 150],
+			"ability": [7],
+			"hiddenability": [150],
 			"stats":
 			{
 				"hp": 48,

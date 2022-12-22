@@ -72,6 +72,10 @@ function createAbilityDiv(ability) {
 	return `<div class="typeMatchupText" data-info="${abilities.dex[ability - 1].desc}">${abilities.dex[ability - 1].name}</div>`;
 }
 
+function createHiddenAbilityDiv(ability) {
+	return `<div class="typeMatchupText" data-info="${abilities.dex[ability - 1].desc}">${abilities.dex[ability - 1].name} (H)</div>`;
+}
+
 function createMoveTypeAdvantagesDisplay(matchups) {
 	const display = [];
 	
@@ -144,6 +148,10 @@ function getPokemonAbility(pokemon) {
 	
 	for(var i = 0; i < getPokemonDataSource().pokemon[pokemon].ability.sort().length; i++) {
 		$('#pokemonAbility').append(createAbilityDiv(getPokemonDataSource().pokemon[pokemon].ability[i]));
+	}
+	
+	if(getPokemonDataSource().pokemon[pokemon].hiddenability) {
+		$('#pokemonAbility').append(createHiddenAbilityDiv(getPokemonDataSource().pokemon[pokemon].hiddenability));
 	}
 }
 
