@@ -178,6 +178,18 @@ function getPokemonMoves(pokemon) {
 	}
 }
 
+function getPokemonMovesTypes(pokemon) {
+	var moveTypes = [];
+	
+	for(var i = 0; i < getPokemonDataSource().pokemon[pokemon].moves.sort().length; i++) {
+		if(moves.dex[getPokemonDataSource().pokemon[pokemon].moves[i]].category != 'Status') {
+			moveTypes.push(moves.dex[getPokemonDataSource().pokemon[pokemon].moves[i]].type);
+		}
+	}
+	
+	return moveTypes;
+}
+
 function getPokemonHerbs(pokemon) {
 	$('#pokemonHerbs').prepend('<h3>Herbs Dropped:</h3>');
 	
@@ -191,8 +203,10 @@ function getPokemonHerbs(pokemon) {
 	Show Displays
 */
 
-function displayTypesAdvantage(type) {
-	var advantages = calculateTypesAdvantage(type);
+function displayTypesAdvantage(type, pokemon) {
+	var moveTypes = getPokemonMovesTypes(pokemon);
+	var allTypes = [...new Set(moveTypes.concat(type))];
+	var advantages = calculateTypesAdvantage(allTypes.sort());
 	var display = createMatchupsDisplay(advantages);
 	
 	if(display.length > 0) {
@@ -457,7 +471,7 @@ $(function() {
 			getPokemonStats($(this).val());
 			getPokemonMoves($(this).val());
 			getPokemonHerbs($(this).val());
-			displayTypesAdvantage(getPokemonDataSource().pokemon[$(this).val()].type);
+			displayTypesAdvantage(getPokemonDataSource().pokemon[$(this).val()].type, $(this).val());
 			
 			if($('#teraList').val() != '') {
 				displayTypeWeaknesses($('#teraList').val());
