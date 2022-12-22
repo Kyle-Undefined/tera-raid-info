@@ -2,29 +2,12 @@
 	Imported Data
 */
 
-const fivestar = await import('../data/raids5.json', {
-	assert: { type: 'json' }
-});
-
-const sixstar = await import('../data/raids6.json', {
-	assert: { type: 'json' }
-});
-
-const types = await import('../data/types.json', {
-	assert: { type: 'json' }
-});
-
-const abilities = await import('../data/abilities.json', {
-	assert: { type: 'json' }
-});
-
-const moves = await import('../data/moves.json', {
-	assert: { type: 'json' }
-});
-
-const herbs = await import('../data/herbs.json', {
-	assert: { type: 'json' }
-});
+const fivestar = await import('../data/raids5.json', { assert: { type: 'json' } }).then((module) => module.default);
+const sixstar = await import('../data/raids6.json', { assert: { type: 'json' } }).then((module) => module.default);
+const types = await import('../data/types.json', { assert: { type: 'json' } }).then((module) => module.default);
+const abilities = await import('../data/abilities.json', { assert: { type: 'json' } }).then((module) => module.default);
+const moves = await import('../data/moves.json', { assert: { type: 'json' } }).then((module) => module.default);
+const herbs = await import('../data/herbs.json', { assert: { type: 'json' } }).then((module) => module.default);
 
 
 /*
@@ -86,7 +69,7 @@ function createTypeMatchupDiv(type, matchup) {
 }
 
 function createAbilityDiv(ability) {
-	return `<div class="typeMatchupText" data-info="${getAbilitiesDataSource().dex[ability - 1].desc}">${getAbilitiesDataSource().dex[ability - 1].name}</div>`;
+	return `<div class="typeMatchupText" data-info="${abilities.dex[ability - 1].desc}">${abilities.dex[ability - 1].name}</div>`;
 }
 
 function createMoveTypeAdvantagesDisplay(matchups) {
@@ -100,16 +83,16 @@ function createMoveTypeAdvantagesDisplay(matchups) {
 }
 
 function createMoveDiv(move) {
-	var moveStr = `<div class="typeMatchupText ${getTypesDataSource().dex[getMovesDataSource().dex[move].type].name.toLowerCase()}">${getMovesDataSource().dex[move].name}`;
+	var moveStr = `<div class="typeMatchupText ${types.dex[moves.dex[move].type].name.toLowerCase()}">${moves.dex[move].name}`;
 	moveStr += `<div class="moveStats">`;
-	moveStr += `<div class="type">${getMovesDataSource().dex[move].category}</div>`;
-	moveStr += `<div class="bp">Pwr: ${getMovesDataSource().dex[move].bp}</div>`;
-	moveStr += `<div class="pp">PP: ${getMovesDataSource().dex[move].pp}</div>`;
-	moveStr += `<div class="acc">Acc: ${getMovesDataSource().dex[move].acc}</div>`;
-	moveStr += `<div class="desc">${getMovesDataSource().dex[move].desc}</div>`;
+	moveStr += `<div class="type">${moves.dex[move].category}</div>`;
+	moveStr += `<div class="bp">Pwr: ${moves.dex[move].bp}</div>`;
+	moveStr += `<div class="pp">PP: ${moves.dex[move].pp}</div>`;
+	moveStr += `<div class="acc">Acc: ${moves.dex[move].acc}</div>`;
+	moveStr += `<div class="desc">${moves.dex[move].desc}</div>`;
 	
-	if(getMovesDataSource().dex[move].category != 'Status') {
-		var advantages = getMoveTypeAdvantages(getMovesDataSource().dex[move].type);
+	if(moves.dex[move].category != 'Status') {
+		var advantages = getMoveTypeAdvantages(moves.dex[move].type);
 		
 		if(advantages) {
 			moveStr += `<div class="adv">Advantages: ${advantages}</div>`;
@@ -122,7 +105,7 @@ function createMoveDiv(move) {
 }
 
 function createHerbDiv(herb) {
-	return `<div class="herbPill ${getHerbsDataSource().dex[herb].name.toLowerCase()}">${getHerbsDataSource().dex[herb].name} - ${getHerbsDataSource().dex[herb].chance}%</div>`;
+	return `<div class="herbPill ${herbs.dex[herb].name.toLowerCase()}">${herbs.dex[herb].name} - ${herbs.dex[herb].chance}%</div>`;
 }
 
 function createMatchupsDisplay(matchups) {
@@ -143,7 +126,7 @@ function createMatchupsDisplay(matchups) {
 function getPokemonTypes(pokemon) {
 	for(var i = 0; i < getPokemonDataSource().pokemon[pokemon].type.length; i++) {
 		$('#pokemonTypes').append(
-			createTypeDiv(getTypesDataSource().dex[getPokemonDataSource().pokemon[pokemon].type[i]].name)
+			createTypeDiv(types.dex[getPokemonDataSource().pokemon[pokemon].type[i]].name)
 		);
 	}
 }
@@ -240,7 +223,7 @@ function displayTeraTypeAdvantages(type) {
 
 function calculateTypeWeakness(type) {
 	let weaknesses = {};
-	let defense = getTypesDataSource().dex[type].defense;
+	let defense = types.dex[type].defense;
 	
 	Object.entries(defense).forEach(([key, value]) => {
 		switch(key) {
@@ -263,7 +246,7 @@ function calculateTypesAdvantage(type) {
 	let advantages = {};
 	
 	type.forEach(item => {
-		let attack = getTypesDataSource().dex[item].attack;
+		let attack = types.dex[item].attack;
 		
 		Object.entries(attack).forEach(([key, value]) => {
 			switch(key) {
@@ -279,7 +262,7 @@ function calculateTypesAdvantage(type) {
 
 function calculateTypeAdvantage(type) {
 	let advantages = {};
-	let attack = getTypesDataSource().dex[type].attack;
+	let attack = types.dex[type].attack;
 	
 	Object.entries(attack).forEach(([key, value]) => {
 		switch(key) {
@@ -364,30 +347,14 @@ function cacheIcons() {
 function getPokemonDataSource() {
 	switch($('#raidTier').val()) {
 		case '5':
-			return fivestar.default;
+			return fivestar;
 			break;
 		case '6':
-			return sixstar.default;
+			return sixstar;
 			break;
 		default:
 			break;
 	}
-}
-
-function getTypesDataSource() {
-	return types.default;
-}
-
-function getAbilitiesDataSource() {
-	return abilities.default;
-}
-
-function getMovesDataSource() {
-	return moves.default;
-}
-
-function getHerbsDataSource() {
-	return herbs.default;
 }
 
 function populatePokemonList() {
