@@ -284,6 +284,10 @@ function capitalize(word) {
     .replace(/\w/, firstLetter => firstLetter.toUpperCase());
 }
 
+function isFetchSupported() {
+	return 'fetch' in window;
+}
+
 
 /*
 	Cache Storage for Images
@@ -344,9 +348,16 @@ function cacheIcons() {
 */
 
 async function fetchJSON(path) {
-	let response = await fetch(path);
-	let data = await response.json();
-	return data;
+	if(isFetchSupported()) {
+		let response = await fetch(path);
+		let data = await response.json();
+		return data;
+	}
+	else {
+		return $.getJSON(path, function(data) {
+			return data;
+		});
+	}
 }
 
 function autoPopulateSelections() {
