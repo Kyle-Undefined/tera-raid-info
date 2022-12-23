@@ -13,8 +13,8 @@ Shows the following information:
 - Type Weaknesses of the Tera Type
 - If the Move Set includes Tera Blast, then the Type Advantage of the Tera Type
 
-Also can link directly to a raid setup by passing it into the URL like so: [/6/Gengar/Ghost](https://kyle-undefined.github.io/tera-raid-info/6/Gengar/Ghost)
+Can also share the raid by clicking on the Share icon: [Fairy Garchomp](https://kyle-undefined.github.io/tera-raid-info/6/Garchomp/Fairy)
 
 Coded by me, site designed by CronikCRS.
 
-![Preview](https://questionable.link/5QFtWJx3U.png)
+![Preview](https://questionable.link/5QKcrd6Bu.png)

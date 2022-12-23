@@ -329,6 +329,7 @@ async function deleteCache() {
 }
 
 function cacheIcons() {
+	getImage('/tera-raid-info/icons/share.png');
 	getImage('/tera-raid-info/icons/spicy.png');
 	getImage('/tera-raid-info/icons/sweet.png');
 	getImage('/tera-raid-info/icons/salty.png');
@@ -479,6 +480,30 @@ $(function() {
 		if($('#pokemonMoves').is(':contains("Tera Blast")')) {
 			displayTeraTypeAdvantages($(this).val());
 		}
+	});
+	
+	$('#shareRaid').on('click', function() {
+		var url = location.origin + '/tera-raid-info/';
+		
+		if($('#raidTier').val()) {
+			url += $('#raidTier').val();
+		}
+		
+		if($('#pokemonList').val()) {
+			url += '/' + $('#pokemonList').val();
+		}
+		
+		if($('#pokemonList').val() && $('#teraList').val()) {
+			url += '/' + $( "#teraList option:selected" ).text();
+		}
+		
+		navigator.clipboard.writeText(url);
+		
+		$('#shareText').text('Copied to Clipboard');
+	});
+	
+	$('#shareRaid').on('mouseout', function() {
+		$('#shareText').text('Share Raid');
 	});
 	
 	autoPopulateSelections();
