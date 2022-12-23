@@ -160,15 +160,30 @@ function getPokemonStats(pokemon) {
 }
 
 function getMoveTypeAdvantages(type) {
-	var advantages = calculateTypeAdvantage(type);
+	var advantages = calculateTypesAdvantage([type]);
 	return createMoveTypeAdvantagesDisplay(advantages).join(', ');
 }
 
 function getPokemonMoves(pokemon) {
+	var moveTypes = [];
+	
 	$('#pokemonMoves').prepend('<h3>Moves:</h3>');
 	
 	for(var i = 0; i < getPokemonDataSource().pokemon[pokemon].moves.sort().length; i++) {
 		$('#pokemonMoves').append(createMoveDiv(getPokemonDataSource().pokemon[pokemon].moves[i]));
+		
+		if(moves.dex[getPokemonDataSource().pokemon[pokemon].moves[i]].category != 'Status') {
+			moveTypes.push(moves.dex[getPokemonDataSource().pokemon[pokemon].moves[i]].type);
+		}
+	}
+	
+	var deduped = [...new Set(moveTypes)];
+	var advantages = calculateTypesAdvantage(deduped.sort());
+	var display = createMatchupsDisplay(advantages);
+	
+	if(display.length > 0) {
+		$('#pokemonTypeAdvantages').prepend('<h3>Type Advantages:</h3>');
+		$('#pokemonTypeAdvantages').append(display.join(''));
 	}
 	
 	if($('#teraList').val() != '') {		
@@ -176,18 +191,6 @@ function getPokemonMoves(pokemon) {
 			displayTeraTypeAdvantages($('#teraList').val());
 		}
 	}
-}
-
-function getPokemonMovesTypes(pokemon) {
-	var moveTypes = [];
-	
-	for(var i = 0; i < getPokemonDataSource().pokemon[pokemon].moves.sort().length; i++) {
-		if(moves.dex[getPokemonDataSource().pokemon[pokemon].moves[i]].category != 'Status') {
-			moveTypes.push(moves.dex[getPokemonDataSource().pokemon[pokemon].moves[i]].type);
-		}
-	}
-	
-	return moveTypes;
 }
 
 function getPokemonHerbs(pokemon) {
@@ -202,18 +205,6 @@ function getPokemonHerbs(pokemon) {
 /*
 	Show Displays
 */
-
-function displayTypesAdvantage(type, pokemon) {
-	var moveTypes = getPokemonMovesTypes(pokemon);
-	var allTypes = [...new Set(moveTypes.concat(type))];
-	var advantages = calculateTypesAdvantage(allTypes.sort());
-	var display = createMatchupsDisplay(advantages);
-	
-	if(display.length > 0) {
-		$('#pokemonTypeAdvantages').prepend('<h3>Type Advantages:</h3>');
-		$('#pokemonTypeAdvantages').append(display.join(''));
-	}
-}
 
 function displayTypeWeaknesses(type) {
 	$('#pokemonTeraWeaknesses').empty();
@@ -230,7 +221,7 @@ function displayTypeWeaknesses(type) {
 function displayTeraTypeAdvantages(type) {
 	$('#pokemonTeraAdvantages').empty();
 	
-	var advantages = calculateTypeAdvantage(type);
+	var advantages = calculateTypesAdvantage([type]);
 	var display = createMatchupsDisplay(advantages);
 	
 	if(display.length > 0) {
@@ -277,21 +268,6 @@ function calculateTypesAdvantage(type) {
 					break;
 			}
 		});
-	});
-	
-	return advantages;
-}
-
-function calculateTypeAdvantage(type) {
-	let advantages = {};
-	let attack = types.dex[type].attack;
-	
-	Object.entries(attack).forEach(([key, value]) => {
-		switch(key) {
-			case('double'):
-				value.forEach(i => { advantages[i] ? advantages[i] *= 2 : advantages[i] = 2 });
-				break;
-		}
 	});
 	
 	return advantages;
@@ -482,7 +458,6 @@ $(function() {
 			getPokemonStats($(this).val());
 			getPokemonMoves($(this).val());
 			getPokemonHerbs($(this).val());
-			displayTypesAdvantage(getPokemonDataSource().pokemon[$(this).val()].type, $(this).val());
 			
 			if($('#teraList').val() != '') {
 				displayTypeWeaknesses($('#teraList').val());
