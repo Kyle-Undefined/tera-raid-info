@@ -4,6 +4,7 @@
 
 const fivestar = await fetchJSON('/tera-raid-info/data/raids/fivestar.json');
 const sixstar = await fetchJSON('/tera-raid-info/data/raids/sixstar.json');
+const sevenstar = await fetchJSON('/tera-raid-info/data/raids/sevenstar.json');
 const types = await fetchJSON('/tera-raid-info/data/types.json');
 const abilities = await fetchJSON('/tera-raid-info/data/abilities.json');
 const moves = await fetchJSON('/tera-raid-info/data/moves.json');
@@ -405,6 +406,9 @@ function getPokemonDataSource() {
 		case '6':
 			return sixstar;
 			break;
+		case '7':
+			return sevenstar;
+			break;
 		default:
 			break;
 	}
@@ -463,14 +467,21 @@ $(function() {
 	$('#pokemonList').on('change', function() {
 		clearPokemonData();
 		
+
 		if ($(this).val() != '') {
-			getPokemonTypes($(this).val());	
+			getPokemonTypes($(this).val());
 			getPokemonImage($(this).val());
 			getPokemonAbility($(this).val());
 			getPokemonStats($(this).val());
 			getPokemonMoves($(this).val());
 			getPokemonHerbs($(this).val());
 			
+			if ($('#raidTier').val() == '7'){
+				$('#teraList').val(getPokemonDataSource().pokemon[$(this).val()].teratype);
+				$('#teraList').trigger('change');
+			}
+
+
 			if($('#teraList').val() != '') {
 				displayTypeWeaknesses($('#teraList').val());
 				

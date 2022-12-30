@@ -1,0 +1,43 @@
+{
+	"pokemon":
+	{
+		"Unrivaled Cinderace":
+		{
+			"type": [10],
+			"ability": [],
+			"hiddenability": [236],
+			"stats":
+			{
+				"hp": 80,
+				"attack": 116,
+				"defense": 75,
+				"spatk": 65,
+				"spdef": 75,
+				"speed": 119
+			},
+			"moves": [128, 219, 1, 142, 518],
+			"dex": "815",
+			"herbs": [],
+			"teratype": 2
+		},
+		"Unrivaled Charizard":
+		{
+			"type": [10, 3],
+			"ability": [],
+			"hiddenability": [94],
+			"stats":
+			{
+				"hp": 78,
+				"attack": 84,
+				"defense": 78,
+				"spatk": 109,
+				"spdef": 85,
+				"speed": 100
+			},
+			"moves": [349, 369, 389, 375, 431, 480, 686, 400],
+			"dex": "006",
+			"herbs": [],
+			"teratype": 16
+		}
+	}
+}
