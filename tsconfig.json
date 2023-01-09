@@ -6,7 +6,6 @@
     "module": "commonjs",
     "rootDir": "src",
     "resolveJsonModule": true,
-    "allowJs": true,
     "outDir": "./dist/",
     "sourceMap": true,
     "esModuleInterop": true,
@@ -15,6 +14,6 @@
     "noImplicitAny": true,
     "skipLibCheck": true
   },
-  "exclude": [ "node_modules", "dist", "scripts" ],
+  "exclude": [ "node_modules", "dist" ],
   "include": ["./src/**/*"]
 }

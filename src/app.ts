@@ -1,4 +1,3 @@
-import './public/css/style.css';
 import { Html, teraTypes } from './html';
 import * as common from './common';
 

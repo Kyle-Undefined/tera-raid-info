@@ -226,8 +226,8 @@ export class Html {
     viewPokemonImages(): void {
         const dex: string = data.getPokemonDexNumber();
 
-        this.updateDiv(pokemonImageNormal, `<img alt="Normal" title="Normal" src="./images/${ dex }.png" />`);
-        this.updateDiv(pokemonImageShiny, `<img alt="Shiny" title="Shiny" src="./images/shiny/${ dex }.png" />`);
+        this.updateDiv(pokemonImageNormal, `<img alt="Normal" title="Normal" src="./assets/pokemon/${ dex }.png" />`);
+        this.updateDiv(pokemonImageShiny, `<img alt="Shiny" title="Shiny" src="./assets/pokemon/shiny/${ dex }.png" />`);
     }
 
     viewPokemonMoves(): void {
