@@ -22,7 +22,7 @@
 		{
 			"type": [2],
 			"ability": [22, 83],
-			"hiddenability": [291],
+			"hiddenability": 291,
 			"stats":
 			{
 				"hp": 75,
@@ -40,7 +40,7 @@
 		{
 			"type": [2, 10],
 			"ability": [22, 83],
-			"hiddenability": [291],
+			"hiddenability": 291,
 			"stats":
 			{
 				"hp": 75,
@@ -58,7 +58,7 @@
 		{
 			"type": [2, 11],
 			"ability": [22, 83],
-			"hiddenability": [291],
+			"hiddenability": 291,
 			"stats":
 			{
 				"hp": 75,
@@ -76,7 +76,7 @@
 		{
 			"type": [11, 3],
 			"ability": [22],
-			"hiddenability": [153],
+			"hiddenability": 153,
 			"stats":
 			{
 				"hp": 95,
@@ -94,7 +94,7 @@
 		{
 			"type": [1],
 			"ability": [7],
-			"hiddenability": [150],
+			"hiddenability": 150,
 			"stats":
 			{
 				"hp": 48,
@@ -112,7 +112,7 @@
 		{
 			"type": [11],
 			"ability": [11],
-			"hiddenability": [93],
+			"hiddenability": 93,
 			"stats":
 			{
 				"hp": 130,
@@ -130,7 +130,7 @@
 		{
 			"type": [13],
 			"ability": [10],
-			"hiddenability": [95],
+			"hiddenability": 95,
 			"stats":
 			{
 				"hp": 65,
@@ -148,7 +148,7 @@
 		{
 			"type": [10],
 			"ability": [18],
-			"hiddenability": [62],
+			"hiddenability": 62,
 			"stats":
 			{
 				"hp": 65,
@@ -166,7 +166,7 @@
 		{
 			"type": [16, 3],
 			"ability": [39],
-			"hiddenability": [136],
+			"hiddenability": 136,
 			"stats":
 			{
 				"hp": 91,
@@ -184,7 +184,7 @@
 		{
 			"type": [14],
 			"ability": [28],
-			"hiddenability": [156],
+			"hiddenability": 156,
 			"stats":
 			{
 				"hp": 65,
@@ -202,7 +202,7 @@
 		{
 			"type": [17],
 			"ability": [28],
-			"hiddenability": [39],
+			"hiddenability": 39,
 			"stats":
 			{
 				"hp": 95,
@@ -220,7 +220,7 @@
 		{
 			"type": [11, 14],
 			"ability": [12, 20],
-			"hiddenability": [144],
+			"hiddenability": 144,
 			"stats":
 			{
 				"hp": 95,
@@ -238,7 +238,7 @@
 		{
 			"type": [7, 9],
 			"ability": [68, 101],
-			"hiddenability": [135],
+			"hiddenability": 135,
 			"stats":
 			{
 				"hp": 70,
@@ -256,7 +256,7 @@
 		{
 			"type": [7, 2],
 			"ability": [68, 62],
-			"hiddenability": [153],
+			"hiddenability": 153,
 			"stats":
 			{
 				"hp": 80,
@@ -274,7 +274,7 @@
 		{
 			"type": [1],
 			"ability": [30, 32],
-			"hiddenability": [131],
+			"hiddenability": 131,
 			"stats":
 			{
 				"hp": 255,
@@ -292,7 +292,7 @@
 		{
 			"type": [6, 17],
 			"ability": [45],
-			"hiddenability": [127],
+			"hiddenability": 127,
 			"stats":
 			{
 				"hp": 100,
@@ -310,7 +310,7 @@
 		{
 			"type": [11, 3],
 			"ability": [51, 2],
-			"hiddenability": [44],
+			"hiddenability": 44,
 			"stats":
 			{
 				"hp": 60,
@@ -345,7 +345,7 @@
 		{
 			"type": [12, 2],
 			"ability": [27, 90],
-			"hiddenability": [101],
+			"hiddenability": 101,
 			"stats":
 			{
 				"hp": 60,
@@ -363,7 +363,7 @@
 		{
 			"type": [10],
 			"ability": [73, 70],
-			"hiddenability": [75],
+			"hiddenability": 75,
 			"stats":
 			{
 				"hp": 70,
@@ -381,7 +381,7 @@
 		{
 			"type": [16, 3],
 			"ability": [22],
-			"hiddenability": [153],
+			"hiddenability": 153,
 			"stats":
 			{
 				"hp": 95,
@@ -399,7 +399,7 @@
 		{
 			"type": [1, 3],
 			"ability": [22],
-			"hiddenability": [120],
+			"hiddenability": 120,
 			"stats":
 			{
 				"hp": 85,
@@ -417,7 +417,7 @@
 		{
 			"type": [16, 5],
 			"ability": [8],
-			"hiddenability": [24],
+			"hiddenability": 24,
 			"stats":
 			{
 				"hp": 108,
@@ -435,7 +435,7 @@
 		{
 			"type": [5],
 			"ability": [45],
-			"hiddenability": [159],
+			"hiddenability": 159,
 			"stats":
 			{
 				"hp": 108,
@@ -453,7 +453,7 @@
 		{
 			"type": [13, 9],
 			"ability": [42, 5],
-			"hiddenability": [148],
+			"hiddenability": 148,
 			"stats":
 			{
 				"hp": 70,
@@ -471,7 +471,7 @@
 		{
 			"type": [12],
 			"ability": [102],
-			"hiddenability": [34],
+			"hiddenability": 34,
 			"stats":
 			{
 				"hp": 65,
@@ -489,7 +489,7 @@
 		{
 			"type": [15],
 			"ability": [81],
-			"hiddenability": [115],
+			"hiddenability": 115,
 			"stats":
 			{
 				"hp": 65,
@@ -524,7 +524,7 @@
 		{
 			"type": [12, 4],
 			"ability": [27],
-			"hiddenability": [144],
+			"hiddenability": 144,
 			"stats":
 			{
 				"hp": 114,
@@ -542,7 +542,7 @@
 		{
 			"type": [16],
 			"ability": [79, 104],
-			"hiddenability": [127],
+			"hiddenability": 127,
 			"stats":
 			{
 				"hp": 76,
@@ -577,7 +577,7 @@
 		{
 			"type": [7, 10],
 			"ability": [49],
-			"hiddenability": [68],
+			"hiddenability": 68,
 			"stats":
 			{
 				"hp": 85,
@@ -595,7 +595,7 @@
 		{
 			"type": [10, 3],
 			"ability": [49],
-			"hiddenability": [177],
+			"hiddenability": 177,
 			"stats":
 			{
 				"hp": 78,
@@ -613,7 +613,7 @@
 		{
 			"type": [4, 16],
 			"ability": [38, 143],
-			"hiddenability": [91],
+			"hiddenability": 91,
 			"stats":
 			{
 				"hp": 65,
@@ -648,7 +648,7 @@
 		{
 			"type": [18],
 			"ability": [56],
-			"hiddenability": [182],
+			"hiddenability": 182,
 			"stats":
 			{
 				"hp": 95,
@@ -666,7 +666,7 @@
 		{
 			"type": [16],
 			"ability": [157, 93],
-			"hiddenability": [183],
+			"hiddenability": 183,
 			"stats":
 			{
 				"hp": 90,
@@ -684,7 +684,7 @@
 		{
 			"type": [15],
 			"ability": [20, 115],
-			"hiddenability": [5],
+			"hiddenability": 5,
 			"stats":
 			{
 				"hp": 95,
@@ -719,7 +719,7 @@
 		{
 			"type": [4, 11],
 			"ability": [196, 7],
-			"hiddenability": [144],
+			"hiddenability": 144,
 			"stats":
 			{
 				"hp": 50,
@@ -754,7 +754,7 @@
 		{
 			"type": [3, 9],
 			"ability": [46, 127],
-			"hiddenability": [240],
+			"hiddenability": 240,
 			"stats":
 			{
 				"hp": 98,
@@ -772,7 +772,7 @@
 		{
 			"type": [13],
 			"ability": [31],
-			"hiddenability": [226],
+			"hiddenability": 226,
 			"stats":
 			{
 				"hp": 48,
@@ -790,7 +790,7 @@
 		{
 			"type": [15, 7],
 			"ability": [19],
-			"hiddenability": [246],
+			"hiddenability": 246,
 			"stats":
 			{
 				"hp": 70,
@@ -808,7 +808,7 @@
 		{
 			"type": [16, 8],
 			"ability": [29, 151],
-			"hiddenability": [130],
+			"hiddenability": 130,
 			"stats":
 			{
 				"hp": 88,
@@ -826,7 +826,7 @@
 		{
 			"type": [13, 2],
 			"ability": [10, 30],
-			"hiddenability": [89],
+			"hiddenability": 89,
 			"stats":
 			{
 				"hp": 70,
@@ -844,7 +844,7 @@
 		{
 			"type": [1],
 			"ability": [132, 167],
-			"hiddenability": [101],
+			"hiddenability": 101,
 			"stats":
 			{
 				"hp": 74,
@@ -896,7 +896,7 @@
 		{
 			"type": [10, 14],
 			"ability": [18],
-			"hiddenability": [133],
+			"hiddenability": 133,
 			"stats":
 			{
 				"hp": 85,
@@ -914,7 +914,7 @@
 		{
 			"type": [10, 8],
 			"ability": [18],
-			"hiddenability": [133],
+			"hiddenability": 133,
 			"stats":
 			{
 				"hp": 75,
@@ -932,7 +932,7 @@
 		{
 			"type": [13, 3],
 			"ability": [277, 10],
-			"hiddenability": [172],
+			"hiddenability": 172,
 			"stats":
 			{
 				"hp": 70,
@@ -950,7 +950,7 @@
 		{
 			"type": [17],
 			"ability": [22, 275],
-			"hiddenability": [198],
+			"hiddenability": 198,
 			"stats":
 			{
 				"hp": 80,
@@ -968,7 +968,7 @@
 		{
 			"type": [4, 1],
 			"ability": [84, 143],
-			"hiddenability": [158],
+			"hiddenability": 158,
 			"stats":
 			{
 				"hp": 63,
@@ -1003,7 +1003,7 @@
 		{
 			"type": [6],
 			"ability": [271, 75],
-			"hiddenability": [144],
+			"hiddenability": 144,
 			"stats":
 			{
 				"hp": 70,
@@ -1021,7 +1021,7 @@
 		{
 			"type": [18, 9],
 			"ability": [104, 20],
-			"hiddenability": [124],
+			"hiddenability": 124,
 			"stats":
 			{
 				"hp": 85,
@@ -1039,7 +1039,7 @@
 		{
 			"type": [3, 17],
 			"ability": [145, 51],
-			"hiddenability": [276],
+			"hiddenability": 276,
 			"stats":
 			{
 				"hp": 70,
@@ -1057,7 +1057,7 @@
 		{
 			"type": [9, 4],
 			"ability": [142],
-			"hiddenability": [111],
+			"hiddenability": 111,
 			"stats":
 			{
 				"hp": 80,
@@ -1075,7 +1075,7 @@
 		{
 			"type": [16, 1],
 			"ability": [61],
-			"hiddenability": [144],
+			"hiddenability": 144,
 			"stats":
 			{
 				"hp": 70,
@@ -1093,7 +1093,7 @@
 		{
 			"type": [9],
 			"ability": [297],
-			"hiddenability": [8],
+			"hiddenability": 8,
 			"stats":
 			{
 				"hp": 70,
@@ -1111,7 +1111,7 @@
 		{
 			"type": [6, 4],
 			"ability": [295],
-			"hiddenability": [212],
+			"hiddenability": 212,
 			"stats":
 			{
 				"hp": 83,
@@ -1129,7 +1129,7 @@
 		{
 			"type": [15],
 			"ability": [47, 202],
-			"hiddenability": [125],
+			"hiddenability": 125,
 			"stats":
 			{
 				"hp": 170,
@@ -1147,7 +1147,7 @@
 		{
 			"type": [11],
 			"ability": [109, 12],
-			"hiddenability": [41],
+			"hiddenability": 41,
 			"stats":
 			{
 				"hp": 150,
@@ -1165,7 +1165,7 @@
 		{
 			"type": [2, 8],
 			"ability": [72, 39],
-			"hiddenability": [128],
+			"hiddenability": 128,
 			"stats":
 			{
 				"hp": 110,
@@ -1200,7 +1200,7 @@
 		{
 			"type": [1, 14],
 			"ability": [291, 296],
-			"hiddenability": [157],
+			"hiddenability": 157,
 			"stats":
 			{
 				"hp": 120,
@@ -1218,7 +1218,7 @@
 		{
 			"type": [17, 9],
 			"ability": [128, 293],
-			"hiddenability": [46],
+			"hiddenability": 46,
 			"stats":
 			{
 				"hp": 100,

@@ -158,7 +158,7 @@
 		{
 			"type": [1],
 			"ability": [7],
-			"hiddenability": [150],
+			"hiddenability": 150,
 			"stats":
 			{
 				"hp": 48,

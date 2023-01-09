@@ -60,7 +60,7 @@ select {
 }
 
 .share {
-    background: url(/tera-raid-info/icons/share.png) no-repeat;
+    background: url(../icons/share.png) no-repeat;
     background-position: left;
 	height: 24px;
 	width: 24px;
@@ -361,23 +361,23 @@ article.content {
     border: none !important;
 }
 .sweet {
-    background: url(/tera-raid-info/icons/sweet.png) no-repeat;
+    background: url(../icons/sweet.png) no-repeat;
     background-position: left;
 }
 .salty {
-    background: url(/tera-raid-info/icons/salty.png) no-repeat;
+    background: url(../icons/salty.png) no-repeat;
     background-position: left;
 }
 .spicy {
-    background: url(/tera-raid-info/icons/spicy.png) no-repeat;
+    background: url(../icons/spicy.png) no-repeat;
     background-position: left;
 }
 .sour {
-    background: url(/tera-raid-info/icons/sour.png) no-repeat;
+    background: url(../icons/sour.png) no-repeat;
     background-position: left;
 }
 .bitter {
-    background: url(/tera-raid-info/icons/bitter.png) no-repeat;
+    background: url(../icons/bitter.png) no-repeat;
     background-position: left;
 }
 

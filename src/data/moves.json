@@ -1,5 +1,5 @@
 {
-    "dex" : [
+    "moveDex" : [
         {
             "id": 0,
             "name": "Accelerock",
@@ -578,7 +578,7 @@
             "pp": 5,
             "bp": 100,
             "acc": 95,
-            "Desc": "The user whips up a storm of diamonds to damage opposing Pokémon. This may also sharply boost the user's Defense stat."
+            "desc": "The user whips up a storm of diamonds to damage opposing Pokémon. This may also sharply boost the user's Defense stat."
         },
         {
             "id": 58,
@@ -928,7 +928,7 @@
             "pp": 5,
             "bp": "--",
             "acc": 30,
-            "Desc": "The user opens up a fissure in the ground and drops the target in. The target faints instantly if this attack hits."
+            "desc": "The user opens up a fissure in the ground and drops the target in. The target faints instantly if this attack hits."
         },
         {
             "id": 93,
@@ -1178,7 +1178,7 @@
             "pp": 5,
             "bp": "--",
             "acc": 30,
-            "Desc": "A vicious tearing attack with big pincers. The target faints instantly if this attack hits."
+            "desc": "A vicious tearing attack with big pincers. The target faints instantly if this attack hits."
         },
         {
             "id": 118,
@@ -1318,7 +1318,7 @@
             "pp": 5,
             "bp": "--",
             "acc": 30,
-            "Desc": "The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits."
+            "desc": "The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits."
         },
         {
             "id": 132,
