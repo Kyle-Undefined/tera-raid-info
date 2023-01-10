@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "dist/tera-raid-info",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "main": "src/app.ts",
             "polyfills": [
               "zone.js"
             ],
