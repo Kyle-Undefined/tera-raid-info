@@ -1,9 +1,9 @@
 export interface Herb {
-    herbDex: HerbDex[];
+	herbDex: HerbDex[];
 }
 
 export interface HerbDex {
-    id: number;
-    name: string;
-    chance: number;
+	id: number;
+	name: string;
+	chance: number;
 }

@@ -19,3 +19,8 @@ npm-debug.log*
 # Misc files
 .DS_Store
 notes/
+
+**/.git
+**/.svn
+**/.hg
+**/node_modules

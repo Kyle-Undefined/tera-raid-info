@@ -1,24 +1,24 @@
 export interface Move {
-    moveDex: MoveDex[];
+	moveDex: MoveDex[];
 }
 
 export interface MoveDex {
-    id: number;
-    name: string;
-    type: number;
-    category: Category;
-    pp: number;
-    bp: BpEnum | number;
-    acc: number;
-    desc: string;
+	id: number;
+	name: string;
+	type: number;
+	category: Category;
+	pp: number;
+	bp: BpEnum | number;
+	acc: number;
+	desc: string;
 }
 
 enum BpEnum {
-    Empty = "--",
+	Empty = '--',
 }
 
 export enum Category {
-    Physical = "Physical",
-    Special = "Special",
-    Status = "Status",
+	Physical = 'Physical',
+	Special = 'Special',
+	Status = 'Status',
 }

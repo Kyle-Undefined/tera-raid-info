@@ -1,9 +1,9 @@
 export interface Ability {
-    abilityDex: AbilityDex[];
+	abilityDex: AbilityDex[];
 }
 
 export interface AbilityDex {
-    id: number;
-    name: string;
-    desc: string;
+	id: number;
+	name: string;
+	desc: string;
 }
