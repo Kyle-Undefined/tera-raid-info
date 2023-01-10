@@ -1,3 +1,4 @@
+import './public/assets/style.css';
 import { Html, teraTypes } from './html';
 import * as common from './common';
 

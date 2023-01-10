@@ -60,7 +60,7 @@ select {
 }
 
 .share {
-    background: url(./icons/share.png) no-repeat;
+    background: url(share.png) no-repeat;
     background-position: left;
 	height: 24px;
 	width: 24px;
@@ -361,23 +361,23 @@ article.content {
     border: none !important;
 }
 .sweet {
-    background: url(./icons/sweet.png) no-repeat;
+    background: url(sweet.png) no-repeat;
     background-position: left;
 }
 .salty {
-    background: url(./icons/salty.png) no-repeat;
+    background: url(salty.png) no-repeat;
     background-position: left;
 }
 .spicy {
-    background: url(./icons/spicy.png) no-repeat;
+    background: url(spicy.png) no-repeat;
     background-position: left;
 }
 .sour {
-    background: url(./icons/sour.png) no-repeat;
+    background: url(sour.png) no-repeat;
     background-position: left;
 }
 .bitter {
-    background: url(./icons/bitter.png) no-repeat;
+    background: url(bitter.png) no-repeat;
     background-position: left;
 }
 
