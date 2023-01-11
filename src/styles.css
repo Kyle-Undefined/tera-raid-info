@@ -57,6 +57,7 @@ select {
 	border-color: hsl(220 20% 90%);
 	background-color: #29303d;
 	color: hsl(220 20% 90%);
+    margin-right: 5px;
 }
 
 .share {

@@ -14,10 +14,10 @@ describe('AppComponent', () => {
 		expect(app).toBeTruthy();
 	});
 
-	it(`should have as title 'tera-raid-info'`, () => {
+	it(`should have as title 'Tera Raid Info'`, () => {
 		const fixture = TestBed.createComponent(AppComponent);
 		const app = fixture.componentInstance;
-		expect(app.title).toEqual('tera-raid-info');
+		expect(app.title).toEqual('Tera Raid Info');
 	});
 
 	it('should render title', () => {
