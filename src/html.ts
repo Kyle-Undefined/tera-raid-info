@@ -184,14 +184,6 @@ export class Html {
 		}
 	}
 
-	handleRaidTierChange(): void {
-		data.bindData(raidTier.value);
-
-		this.clearDiv();
-		this.resetPokemonList();
-		this.populatePokemonList();
-	}
-
 	handleTeraListChange(): void {
 		if (raidTier.value && pokemonList.value) {
 			this.viewTypeWeaknesses(teraList.value);
@@ -199,21 +191,6 @@ export class Html {
 
 		if (pokemonMoves.textContent?.includes('Tera Blast')) {
 			this.viewTeraTypeAdvantages(teraList.value);
-		}
-	}
-
-	populatePokemonList(): void {
-		if (raidTier.value) {
-			Object.entries(data.dataSource.pokemon)
-				.sort()
-				.forEach((pokemon) => {
-					const [mon] = pokemon;
-					const option = document.createElement('option');
-
-					option.value = mon;
-					option.text = mon;
-					pokemonList.add(option);
-				});
 		}
 	}
 
@@ -227,11 +204,6 @@ export class Html {
 
 				teraList.add(option);
 			});
-	}
-
-	resetPokemonList(): void {
-		pokemonList.innerHTML = '';
-		pokemonList.innerHTML = '<option value="">-- Pokemon --</option>';
 	}
 
 	sortByCategory(a: number, b: number): number {

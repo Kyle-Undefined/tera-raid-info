@@ -15,19 +15,19 @@ export class StateService {
 	teraTypeValue = this.teraTypeValueSource.asObservable();
 	teraTypeName = this.teraTypeNameSource.asObservable();
 
-	changeRaidTier(raidTier: string): void {
+	public changeRaidTier(raidTier: string): void {
 		this.raidTierSource.next(raidTier);
 	}
 
-	changePokemon(pokemon: string): void {
+	public changePokemon(pokemon: string): void {
 		this.pokemonListSource.next(pokemon);
 	}
 
-	changeTeraTypeValue(teraType: string): void {
+	public changeTeraTypeValue(teraType: string): void {
 		this.teraTypeValueSource.next(teraType);
 	}
 
-	changeTeraTypeName(teraType: string): void {
+	public changeTeraTypeName(teraType: string): void {
 		this.teraTypeNameSource.next(teraType);
 	}
 }

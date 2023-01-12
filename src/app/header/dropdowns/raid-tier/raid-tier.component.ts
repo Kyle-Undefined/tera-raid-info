@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { StateService } from 'src/shared/services/state.service';
+import { StateService } from 'src/shared/services/state/state.service';
 
 @Component({
 	selector: 'app-raid-tier',
 	templateUrl: './raid-tier.component.html',
 })
 export class RaidTierComponent {
-	constructor(private state: StateService) {}
+	constructor(private stateService: StateService) {}
 
-	valueChanged(event: Event) {
-		this.state.changeRaidTier((event.target as HTMLSelectElement).value);
+	public valueChanged(event: Event) {
+		this.stateService.changeRaidTier((event.target as HTMLSelectElement).value);
 	}
 }

@@ -19,31 +19,6 @@ const moves: Move = moveData as Move;
 const herbs: Herb = herbData;
 
 export class Data {
-	private _data: Raid = emptyRaid();
-	private _pokemon: Pokemon = emptyPokemon();
-
-	get dataSource() {
-		return this._data;
-	}
-
-	bindData(tier: string): void {
-		switch (tier) {
-			case '5':
-				this._data = fiveStar;
-				break;
-			case '6':
-				this._data = sixStar;
-				break;
-			default:
-				this._data = emptyRaid();
-				break;
-		}
-	}
-
-	bindPokemon(pokemon: string): void {
-		this._pokemon = this._data.pokemon[pokemon];
-	}
-
 	getAbilityDexEntry(ability: number): AbilityDex {
 		return abilities.abilityDex[ability - 1];
 	}

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { StateService } from 'src/shared/services/state.service';
+import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
 @Component({
@@ -7,30 +7,30 @@ import * as common from 'src/shared/utils/common';
 	templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit, AfterViewInit {
-	constructor(private state: StateService) {}
+	constructor(private stateService: StateService) {}
 
-	raidTier = '';
-	pokemonList = '';
-	teraTypeName = '';
-	title = 'Tera Raid Info';
+	private raidTier = '';
+	private pokemonList = '';
+	private teraTypeName = '';
+	private title = 'Tera Raid Info';
 
-	ngOnInit(): void {
-		this.state.raidTier.subscribe((result) => {
+	public ngOnInit(): void {
+		this.stateService.raidTier.subscribe((result) => {
 			this.raidTier = result;
 		});
-		this.state.pokemonList.subscribe((result) => {
+		this.stateService.pokemonList.subscribe((result) => {
 			this.pokemonList = result;
 		});
-		this.state.teraTypeName.subscribe((result) => {
+		this.stateService.teraTypeName.subscribe((result) => {
 			this.teraTypeName = result;
 		});
 	}
 
-	ngAfterViewInit(): void {
+	public ngAfterViewInit(): void {
 		this.autoPopulateSelections();
 	}
 
-	autoPopulateSelections(): void {
+	private autoPopulateSelections(): void {
 		if (location.href.replace(location.origin + '/tera-raid-info/', '')) {
 			const build = location.href
 				.replace(location.origin + '/tera-raid-info/', '')
