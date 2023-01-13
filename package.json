@@ -6,8 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "ng build --configuration production --base-href /tera-raid-info/ && npm run postbuild",
-    "postbuild": "xcopy /s \".\/src\\404.html\" \".\/dist\" \/Y",
+    "build": "ng build --configuration production --base-href /tera-raid-info/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
