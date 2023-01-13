@@ -144,6 +144,7 @@ article.content {
 #pokemonAbility { grid-area: ability; }
 #pokemonMoves { grid-area: moves; }
 #pokemonHerbs { grid-area: herbs; }
+.pokemonTypesWrapper { grid-area: adv; }
 #pokemonTypeAdvantages { grid-area: adv; }
 #pokemonTeraAdvantages { grid-area: tadv; }
 #pokemonTeraWeaknesses { grid-area: weak; }
@@ -327,6 +328,14 @@ article.content {
 	max-inline-size: 100%;
 	block-size: auto;
 	max-height: 200px;
+}
+
+.imgNormal {
+    float: left;
+}
+
+.imgShiny {
+    float: right;
 }
 
 #pokemonTypes > * {

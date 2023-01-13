@@ -9,25 +9,16 @@
 </header>
 <article class="content">
 	<div id="pokemon">
-        <!-- make into component
-            <div class="pokemonImageWrapper">
-				<div id="pokemonImageNormal" class="imgNormal"></div>
-				<div id="pokemonImageShiny" class="imgShiny"></div>
-			</div>
-        -->
-        <!-- make into component
-            <div id="pokemonTypes"></div>
-        -->
+        <div class="pokemonImageWrapper">
+            <app-pokemon-images></app-pokemon-images>
+        </div>
+        <app-pokemon-types></app-pokemon-types>
     </div>
-    <!-- make into components
-        <div id="pokemonStatsWrapper"></div>		
-		<div id="pokemonAbility"></div>
-		<div id="pokemonMoves" class="pokemonMoves"></div>
-		<div id="pokemonHerbs" class="pokemonHerbs"></div>
-		<div id="pokemonTypeAdvantages" class="pokemonTypeMatchups"></div>
-		<div id="pokemonTeraWeaknesses" class="pokemonTypeMatchups"></div>
-		<div id="pokemonTeraAdvantages" class="pokemonTypeMatchups"></div>
-    -->
+    <app-pokemon-stats></app-pokemon-stats>
+    <app-pokemon-ability></app-pokemon-ability>
+    <app-pokemon-moves></app-pokemon-moves>
+    <app-pokemon-herbs id="pokemonHerbs"></app-pokemon-herbs>
+    <app-pokemon-type-matchups class="pokemonTypesWrapper"></app-pokemon-type-matchups>
 </article>
 <footer class="footer">
     Created by: <a href="https://github.com/kyle-undefined" target="_blank">Kyle Undefined</a> - 

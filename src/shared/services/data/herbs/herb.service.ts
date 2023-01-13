@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Herb } from 'src/shared/models/herbs';
+import { Herb, HerbDex } from 'src/shared/models/herbs';
 
 import herbData from 'src/assets/data/herbs.json';
 
@@ -11,5 +11,9 @@ export class HerbService {
 
 	public getHerbData(): Herb {
 		return this._herbData;
+	}
+
+	public getHerbDexData(herb: number): HerbDex {
+		return this._herbData.herbDex[herb];
 	}
 }

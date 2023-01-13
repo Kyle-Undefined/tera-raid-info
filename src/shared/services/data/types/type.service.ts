@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Type } from 'src/shared/models/types';
+import { Type, TypeDex } from 'src/shared/models/types';
 
 import typeData from 'src/assets/data/types.json';
 
@@ -11,5 +11,9 @@ export class TypeService {
 
 	public getTypeData(): Type {
 		return this._typeData;
+	}
+
+	public getTypeDexEntry(type: string): TypeDex {
+		return this._typeData.typeDex[type];
 	}
 }

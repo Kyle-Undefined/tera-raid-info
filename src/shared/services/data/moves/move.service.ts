@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Move } from 'src/shared/models/moves';
+import { Move, MoveDex } from 'src/shared/models/moves';
 
 import moveData from 'src/assets/data/moves.json';
 
@@ -9,7 +9,11 @@ import moveData from 'src/assets/data/moves.json';
 export class MoveService {
 	private _moveData: Move = moveData as Move;
 
-	public getMoveDex(): Move {
+	public getMoveData(): Move {
 		return this._moveData;
+	}
+
+	public getMoveDexData(move: number): MoveDex {
+		return this._moveData.moveDex[move];
 	}
 }

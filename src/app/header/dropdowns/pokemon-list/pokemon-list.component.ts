@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { DataService } from 'src/shared/services/data/data.service';
 import { StateService } from 'src/shared/services/state/state.service';
+import * as common from 'src/shared/utils/common';
 
 @Component({
 	selector: 'app-pokemon-list',
@@ -52,6 +53,9 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 	}
 
 	public valueChanged(event: Event) {
+		common.clearData();
+
+		this.dataService.getPokemonData((event.target as HTMLSelectElement).value);
 		this.stateService.changePokemon((event.target as HTMLSelectElement).value);
 	}
 }

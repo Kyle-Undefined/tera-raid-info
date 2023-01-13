@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AbilityService } from './ability.service';
+import { TypeCalcService } from './type-calc.service';
 
-describe('AbilityService', () => {
-	let service: AbilityService;
+describe('TypeCalcService', () => {
+	let service: TypeCalcService;
 
 	beforeEach(() => {
 		TestBed.configureTestingModule({});
-		service = TestBed.inject(AbilityService);
+		service = TestBed.inject(TypeCalcService);
 	});
 
 	it('should be created', () => {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Ability } from 'src/shared/models/abilities';
+import { Ability, AbilityDex } from 'src/shared/models/abilities';
 
 import abilityData from 'src/assets/data/abilities.json';
 
@@ -11,5 +11,9 @@ export class AbilityService {
 
 	public getAbilityData(): Ability {
 		return this._abilityData;
+	}
+
+	public getAbilityDexData(ability: number): AbilityDex {
+		return this._abilityData.abilityDex[ability];
 	}
 }

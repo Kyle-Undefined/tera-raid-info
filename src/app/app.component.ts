@@ -12,7 +12,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 	private raidTier = '';
 	private pokemonList = '';
 	private teraTypeName = '';
-	private title = 'Tera Raid Info';
+	public title = 'Tera Raid Info';
 
 	public ngOnInit(): void {
 		this.stateService.raidTier.subscribe((result) => {
