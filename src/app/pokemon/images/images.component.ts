@@ -26,12 +26,12 @@ export class ImagesComponent implements OnInit {
 
 		common.updateDiv(
 			document.getElementById('pokemonImageNormal') as HTMLDivElement,
-			`<img alt="Normal" title="Normal" src="/assets/pokemon/${dexNumber}.png" />`
+			`<img alt="Normal" title="Normal" src="./assets/pokemon/${dexNumber}.png" />`
 		);
 
 		common.updateDiv(
 			document.getElementById('pokemonImageShiny') as HTMLDivElement,
-			`<img alt="Shiny" title="Shiny" src="/assets/pokemon/shiny/${dexNumber}.png" />`
+			`<img alt="Shiny" title="Shiny" src="./assets/pokemon/shiny/${dexNumber}.png" />`
 		);
 	}
 }

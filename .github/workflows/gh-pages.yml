@@ -24,14 +24,7 @@ jobs:
           
       - run: npm run build
 
-      - name: Copy 404.thml
-        uses: chpoit/js-copy-github-action@master
-        with:
-          source: src/404.html
-          target: dist/404.html
-
       - name: Deploy 
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-          branch: main
