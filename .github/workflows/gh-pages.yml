@@ -1,0 +1,30 @@
+name: Angular GitHub CI/CD
+on:
+  push:
+    branches:
+      - main
+      
+permissions:
+  contents: write
+      
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.13.0'
+          cache: 'npm'
+
+      - run: npm ci
+          
+      - run: npm run build
+
+      - name: Deploy 
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
