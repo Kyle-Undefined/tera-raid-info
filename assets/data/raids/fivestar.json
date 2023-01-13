@@ -1,0 +1,1689 @@
+{
+	"pokemon":
+	{
+		"Raichu":
+		{
+			"type": [13],
+			"ability": [9],
+			"stats":
+			{
+				"hp": 60,
+				"attack": 90,
+				"defense": 55,
+				"spatk": 90,
+				"spdef": 80,
+				"speed": 110
+			},
+			"moves": [345, 143, 522, 192, 550, 704],
+			"dex": "026",
+			"herbs": [6]
+		},
+		"Arcanine":
+		{
+			"type": [10],
+			"ability": [22, 18],
+			"stats":
+			{
+				"hp": 90,
+				"attack": 110,
+				"defense": 80,
+				"spatk": 100,
+				"spdef": 80,
+				"speed": 95
+			},
+			"moves": [372, 52, 80, 87, 686, 592],
+			"dex": "059",
+			"herbs": [5]
+		},
+		"Slowbro":
+		{
+			"type": [11, 14],
+			"ability": [12, 20],
+			"stats":
+			{
+				"hp": 95,
+				"attack": 75,
+				"defense": 110,
+				"spatk": 100,
+				"spdef": 80,
+				"speed": 30
+			},
+			"moves": [308, 156, 725, 496, 537],
+			"dex": "080",
+			"herbs": [7]
+		},
+		"Cloyster":
+		{
+			"type": [11, 15],
+			"ability": [75, 92],
+			"stats":
+			{
+				"hp": 50,
+				"attack": 95,
+				"defense": 180,
+				"spatk": 85,
+				"spdef": 45,
+				"speed": 70
+			},
+			"moves": [141, 391, 138, 687, 655],
+			"dex": "091",
+			"herbs": [7]
+		},
+		"Gengar":
+		{
+			"type": [8, 4],
+			"ability": [130],
+			"stats":
+			{
+				"hp": 60,
+				"attack": 65,
+				"defense": 60,
+				"spatk": 130,
+				"spdef": 75,
+				"speed": 110
+			},
+			"moves": [455, 461, 528, 675, 583],
+			"dex": "094",
+			"herbs": [5, 6, 7, 8, 9]
+		},
+		"Scyther":
+		{
+			"type": [7, 3],
+			"ability": [68, 101],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 110,
+				"defense": 80,
+				"spatk": 55,
+				"spdef": 80,
+				"speed": 105
+			},
+			"moves": [2, 307, 253, 506, 561, 693],
+			"dex": "123",
+			"herbs": [5]
+		},
+		"Tauros (Fire)":
+		{
+			"type": [2, 10],
+			"ability": [22, 83],
+			"stats":
+			{
+				"hp": 75,
+				"attack": 110,
+				"defense": 105,
+				"spatk": 30,
+				"spdef": 70,
+				"speed": 100
+			},
+			"moves": [96, 43, 372, 123, 723, 686],
+			"dex": "128-b",
+			"herbs": [5]
+		},
+		"Tauros (Water)":
+		{
+			"type": [2, 10],
+			"ability": [22, 83],
+			"stats":
+			{
+				"hp": 75,
+				"attack": 110,
+				"defense": 105,
+				"spatk": 30,
+				"spdef": 70,
+				"speed": 100
+			},
+			"moves": [300, 43, 477, 123, 723, 638],
+			"dex": "128-a",
+			"herbs": [5]
+		},
+		"Gyarados":
+		{
+			"type": [11, 3],
+			"ability": [22],
+			"stats":
+			{
+				"hp": 95,
+				"attack": 125,
+				"defense": 79,
+				"spatk": 60,
+				"spdef": 100,
+				"speed": 81
+			},
+			"moves": [7, 489, 389, 52, 652, 699, 548, 638],
+			"dex": "130",
+			"herbs": [5]
+		},
+		"Ditto":
+		{
+			"type": [1],
+			"ability": [7],
+			"hiddenability": 150,
+			"stats":
+			{
+				"hp": 48,
+				"attack": 48,
+				"defense": 48,
+				"spatk": 48,
+				"spdef": 48,
+				"speed": 48
+			},
+			"moves": [712],
+			"dex": "132",
+			"herbs": [6]
+		},
+		"Eevee":
+		{
+			"type": [1],
+			"ability": [50, 91],
+			"stats":
+			{
+				"hp": 55,
+				"attack": 55,
+				"defense": 50,
+				"spatk": 45,
+				"spdef": 65,
+				"speed": 55
+			},
+			"moves": [480, 279, 455, 705, 725, 519],
+			"dex": "133",
+			"herbs": [8]
+		},
+		"Dragonite":
+		{
+			"type": [16, 3],
+			"ability": [39],
+			"stats":
+			{
+				"hp": 91,
+				"attack": 134,
+				"defense": 95,
+				"spatk": 100,
+				"spdef": 100,
+				"speed": 80
+			},
+			"moves": [69, 2, 80, 389, 649, 548, 638],
+			"dex": "149",
+			"herbs": [5]
+		},
+		"Slowking":
+		{
+			"type": [11, 14],
+			"ability": [12, 20],
+			"stats":
+			{
+				"hp": 95,
+				"attack": 75,
+				"defense": 80,
+				"spatk": 100,
+				"spdef": 110,
+				"speed": 30
+			},
+			"moves": [440, 477, 725, 496, 632, 519],
+			"dex": "199",
+			"herbs": [9]
+		},
+		"Scizor":
+		{
+			"type": [7, 9],
+			"ability": [68, 101],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 130,
+				"defense": 100,
+				"spatk": 55,
+				"spdef": 80,
+				"speed": 65
+			},
+			"moves": [142, 307, 39, 253, 587, 561],
+			"dex": "212",
+			"herbs": [5]
+		},
+		"Delibird":
+		{
+			"type": [15, 3],
+			"ability": [72, 55],
+			"stats":
+			{
+				"hp": 45,
+				"attack": 55,
+				"defense": 45,
+				"spatk": 65,
+				"spdef": 45,
+				"speed": 75
+			},
+			"moves": [215, 72, 137, 326, 668],
+			"dex": "225",
+			"herbs": [6]
+		},
+		"Houndoom":
+		{
+			"type": [17, 10],
+			"ability": [48, 18],
+			"stats":
+			{
+				"hp": 75,
+				"attack": 90,
+				"defense": 50,
+				"spatk": 110,
+				"spdef": 80,
+				"speed": 95
+			},
+			"moves": [372, 52, 699, 719, 686, 582],
+			"dex": "229",
+			"herbs": [8]
+		},
+		"Blissey":
+		{
+			"type": [1],
+			"ability": [30, 32],
+			"stats":
+			{
+				"hp": 255,
+				"attack": 10,
+				"defense": 10,
+				"spatk": 75,
+				"spdef": 135,
+				"speed": 55
+			},
+			"moves": [343, 393, 661, 243, 568],
+			"dex": "242",
+			"herbs": [5, 6, 7, 8, 9]
+		},
+		"Tyranitar":
+		{
+			"type": [6, 17],
+			"ability": [45],
+			"stats":
+			{
+				"hp": 100,
+				"attack": 134,
+				"defense": 110,
+				"spatk": 95,
+				"spdef": 100,
+				"speed": 61
+			},
+			"moves": [230, 52, 653, 342, 548, 651],
+			"dex": "248",
+			"herbs": [5]
+		},
+		"Gardevoir":
+		{
+			"type": [14, 18],
+			"ability": [28, 36],
+			"stats":
+			{
+				"hp": 68,
+				"attack": 65,
+				"defense": 65,
+				"spatk": 125,
+				"spdef": 115,
+				"speed": 80
+			},
+			"moves": [440, 417, 545, 350, 612, 519, 632],
+			"dex": "282",
+			"herbs": [8]
+		},
+		"Breloom":
+		{
+			"type": [12, 2],
+			"ability": [27, 90],
+			"stats":
+			{
+				"hp": 60,
+				"attack": 130,
+				"defense": 80,
+				"spatk": 60,
+				"spdef": 60,
+				"speed": 70
+			},
+			"moves": [242, 160, 724, 123, 567, 677],
+			"dex": "286",
+			"herbs": [5]
+		},
+		"Slaking":
+		{
+			"type": [1],
+			"ability": [54],
+			"stats":
+			{
+				"hp": 150,
+				"attack": 160,
+				"defense": 100,
+				"spatk": 95,
+				"spdef": 65,
+				"speed": 100
+			},
+			"moves": [81, 246, 202, 688, 552],
+			"dex": "289",
+			"herbs": [5]
+		},
+		"Hariyama":
+		{
+			"type": [2],
+			"ability": [47, 62],
+			"stats":
+			{
+				"hp": 144,
+				"attack": 120,
+				"defense": 60,
+				"spatk": 40,
+				"spdef": 60,
+				"speed": 50
+			},
+			"moves": [228, 35, 329, 126, 652, 699, 518],
+			"dex": "297",
+			"herbs": [5]
+		},
+		"Sableye":
+		{
+			"type": [17, 8],
+			"ability": [51, 100],
+			"stats":
+			{
+				"hp": 50,
+				"attack": 75,
+				"defense": 75,
+				"spatk": 65,
+				"spdef": 65,
+				"speed": 50
+			},
+			"moves": [246, 104, 719, 426, 559, 708],
+			"dex": "302",
+			"herbs": [6]
+		},
+		"Camerupt":
+		{
+			"type": [10, 5],
+			"ability": [40, 116],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 100,
+				"defense": 70,
+				"spatk": 105,
+				"spdef": 75,
+				"speed": 40
+			},
+			"moves": [372, 353, 725, 361, 686],
+			"dex": "323",
+			"herbs": [8]
+		},
+		"Altaria":
+		{
+			"type": [16, 3],
+			"ability": [30],
+			"stats":
+			{
+				"hp": 75,
+				"attack": 70,
+				"defense": 90,
+				"spatk": 70,
+				"spdef": 105,
+				"speed": 80
+			},
+			"moves": [349, 389, 661, 611, 649],
+			"dex": "334",
+			"herbs": [9]
+		},
+		"Glalie":
+		{
+			"type": [15],
+			"ability": [39, 115],
+			"stats":
+			{
+				"hp": 80,
+				"attack": 80,
+				"defense": 80,
+				"spatk": 80,
+				"spdef": 80,
+				"speed": 80
+			},
+			"moves": [376, 52, 123, 379, 668, 545],
+			"dex": "362",
+			"herbs": [5, 6, 7, 8, 9]
+		},
+		"Salamence":
+		{
+			"type": [16, 3],
+			"ability": [22],
+			"stats":
+			{
+				"hp": 95,
+				"attack": 135,
+				"defense": 80,
+				"spatk": 110,
+				"spdef": 80,
+				"speed": 100
+			},
+			"moves": [69, 2, 393, 346, 548, 561],
+			"dex": "373",
+			"herbs": [5]
+		},
+		"Staraptor":
+		{
+			"type": [1, 3],
+			"ability": [22],
+			"stats":
+			{
+				"hp": 85,
+				"attack": 120,
+				"defense": 70,
+				"spatk": 50,
+				"spdef": 60,
+				"speed": 100
+			},
+			"moves": [43, 33, 220, 65],
+			"dex": "398",
+			"herbs": [5]
+		},
+		"Luxray":
+		{
+			"type": [13],
+			"ability": [79, 22],
+			"stats":
+			{
+				"hp": 80,
+				"attack": 120,
+				"defense": 79,
+				"spatk": 95,
+				"spdef": 79,
+				"speed": 70
+			},
+			"moves": [52, 303, 345, 704, 550, 592],
+			"dex": "405",
+			"herbs": [5]
+		},
+		"Drifblim":
+		{
+			"type": [8, 3],
+			"ability": [106, 84],
+			"stats":
+			{
+				"hp": 150,
+				"attack": 80,
+				"defense": 44,
+				"spatk": 90,
+				"spdef": 54,
+				"speed": 80
+			},
+			"moves": [388, 315, 704, 455, 719],
+			"dex": "426",
+			"herbs": [5, 6, 7, 8, 9]
+		},
+		"Mismagius":
+		{
+			"type": [8],
+			"ability": [26],
+			"stats":
+			{
+				"hp": 60,
+				"attack": 60,
+				"defense": 60,
+				"spatk": 105,
+				"spdef": 105,
+				"speed": 105
+			},
+			"moves": [422, 455, 528, 699, 594, 615],
+			"dex": "429",
+			"herbs": [9]
+		},
+		"Honchkrow":
+		{
+			"type": [17, 3],
+			"ability": [15, 105],
+			"stats":
+			{
+				"hp": 100,
+				"attack": 125,
+				"defense": 52,
+				"spatk": 105,
+				"spdef": 52,
+				"speed": 71
+			},
+			"moves": [190, 389, 575, 304, 615],
+			"dex": "430",
+			"herbs": [5]
+		},
+		"Bronzong":
+		{
+			"type": [9, 14],
+			"ability": [26, 85],
+			"stats":
+			{
+				"hp": 67,
+				"attack": 89,
+				"defense": 116,
+				"spatk": 79,
+				"spdef": 116,
+				"speed": 33
+			},
+			"moves": [373, 364, 606, 196, 638, 519, 641],
+			"dex": "437",
+			"herbs": [7]
+		},
+		"Garchomp":
+		{
+			"type": [16, 5],
+			"ability": [8],
+			"stats":
+			{
+				"hp": 108,
+				"attack": 130,
+				"defense": 95,
+				"spatk": 80,
+				"spdef": 85,
+				"speed": 102
+			},
+			"moves": [77, 67, 142, 253, 651, 38],
+			"dex": "445",
+			"herbs": [5]
+		},
+		"Hippowdon":
+		{
+			"type": [5],
+			"ability": [45],
+			"stats":
+			{
+				"hp": 108,
+				"attack": 112,
+				"defense": 118,
+				"spatk": 68,
+				"spdef": 72,
+				"speed": 47
+			},
+			"moves": [77, 725, 230, 26, 680],
+			"dex": "450",
+			"herbs": [7]
+		},
+		"Abomasnow":
+		{
+			"type": [12, 15],
+			"ability": [117],
+			"stats":
+			{
+				"hp": 90,
+				"attack": 92,
+				"defense": 75,
+				"spatk": 92,
+				"spdef": 85,
+				"speed": 60
+			},
+			"moves": [360, 137, 138, 592, 326, 668, 512],
+			"dex": "460",
+			"herbs": [5]
+		},
+		"Weavile":
+		{
+			"type": [17, 15],
+			"ability": [46],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 120,
+				"defense": 65,
+				"spatk": 45,
+				"spdef": 85,
+				"speed": 125
+			},
+			"moves": [137, 190, 699, 81, 641, 693],
+			"dex": "461",
+			"herbs": [6]
+		},
+		"Magnezone":
+		{
+			"type": [13, 9],
+			"ability": [42, 5],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 70,
+				"defense": 115,
+				"spatk": 130,
+				"spdef": 90,
+				"speed": 60
+			},
+			"moves": [485, 373, 487, 704, 601, 550],
+			"dex": "462",
+			"herbs": [8]
+		},
+		"Gallade":
+		{
+			"type": [14, 2],
+			"ability": [80, 292],
+			"stats":
+			{
+				"hp": 68,
+				"attack": 125,
+				"defense": 65,
+				"spatk": 65,
+				"spdef": 115,
+				"speed": 80
+			},
+			"moves": [217, 35, 249, 107, 583, 545, 632],
+			"dex": "475",
+			"herbs": [5]
+		},
+		"Froslass":
+		{
+			"type": [15, 8],
+			"ability": [81],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 80,
+				"defense": 70,
+				"spatk": 80,
+				"spdef": 70,
+				"speed": 110
+			},
+			"moves": [379, 455, 652, 350, 668, 545, 512],
+			"dex": "478",
+			"herbs": [6]
+		},
+		"Rotom":
+		{
+			"type": [13, 8],
+			"ability": [26],
+			"stats":
+			{
+				"hp": 50,
+				"attack": 50,
+				"defense": 77,
+				"spatk": 95,
+				"spdef": 77,
+				"speed": 91
+			},
+			"moves": [345, 490, 388, 704, 521, 549],
+			"dex": "479",
+			"herbs": [8]
+		},
+		"Krookodile":
+		{
+			"type": [5, 17],
+			"ability": [22, 153],
+			"stats":
+			{
+				"hp": 95,
+				"attack": 117,
+				"defense": 80,
+				"spatk": 65,
+				"spdef": 70,
+				"speed": 92
+			},
+			"moves": [77, 52, 239, 47, 708, 581],
+			"dex": "553",
+			"herbs": [5]
+		},
+		"Zoroark":
+		{
+			"type": [17],
+			"ability": [149],
+			"stats":
+			{
+				"hp": 60,
+				"attack": 105,
+				"defense": 60,
+				"spatk": 120,
+				"spdef": 60,
+				"speed": 105
+			},
+			"moves": [425, 246, 699, 393, 708, 615],
+			"dex": "571",
+			"herbs": [8]
+		},
+		"Gothitelle":
+		{
+			"type": [14],
+			"ability": [119, 172],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 55,
+				"defense": 95,
+				"spatk": 95,
+				"spdef": 110,
+				"speed": 65
+			},
+			"moves": [440, 704, 485, 474, 519, 594],
+			"dex": "576",
+			"herbs": [9]
+		},
+		"Amoonguss":
+		{
+			"type": [12, 4],
+			"ability": [27],
+			"stats":
+			{
+				"hp": 114,
+				"attack": 85,
+				"defense": 70,
+				"spatk": 85,
+				"spdef": 80,
+				"speed": 30
+			},
+			"moves": [360, 461, 677, 339, 567],
+			"dex": "591",
+			"herbs": [5, 6, 7, 8, 9]
+		},
+		"Eelektross":
+		{
+			"type": [13],
+			"ability": [26],
+			"stats":
+			{
+				"hp": 85,
+				"attack": 115,
+				"defense": 80,
+				"spatk": 105,
+				"spdef": 80,
+				"speed": 50
+			},
+			"moves": [303, 372, 345, 53, 704, 526],
+			"dex": "604",
+			"herbs": [5, 6, 7, 8, 9]
+		},
+		"Haxorus":
+		{
+			"type": [16],
+			"ability": [79, 104],
+			"stats":
+			{
+				"hp": 76,
+				"attack": 147,
+				"defense": 90,
+				"spatk": 60,
+				"spdef": 70,
+				"speed": 97
+			},
+			"moves": [67, 52, 111, 90, 574, 548],
+			"dex": "612",
+			"herbs": [5]
+		},
+		"Braviary":
+		{
+			"type": [1, 3],
+			"ability": [51, 125],
+			"stats":
+			{
+				"hp": 100,
+				"attack": 123,
+				"defense": 75,
+				"spatk": 57,
+				"spdef": 75,
+				"speed": 80
+			},
+			"moves": [1, 53, 275, 315, 696, 581],
+			"dex": "628",
+			"herbs": [5]
+		},
+		"Hydreigon":
+		{
+			"type": [17, 16],
+			"ability": [26],
+			"stats":
+			{
+				"hp": 92,
+				"attack": 105,
+				"defense": 90,
+				"spatk": 125,
+				"spdef": 90,
+				"speed": 98
+			},
+			"moves": [342, 349, 652, 69, 699, 641, 615],
+			"dex": "635",
+			"herbs": [8]
+		},
+		"Volcarona":
+		{
+			"type": [7, 10],
+			"ability": [49],
+			"stats":
+			{
+				"hp": 85,
+				"attack": 60,
+				"defense": 65,
+				"spatk": 135,
+				"spdef": 105,
+				"speed": 100
+			},
+			"moves": [369, 331, 389, 719, 686, 636],
+			"dex": "637",
+			"herbs": [8]
+		},
+		"Talonflame":
+		{
+			"type": [10, 3],
+			"ability": [49],
+			"stats":
+			{
+				"hp": 78,
+				"attack": 81,
+				"defense": 71,
+				"spatk": 74,
+				"spdef": 69,
+				"speed": 126
+			},
+			"moves": [1, 96, 264, 387, 518],
+			"dex": "663",
+			"herbs": [6]
+		},
+		"Florges":
+		{
+			"type": [18],
+			"ability": [166],
+			"stats":
+			{
+				"hp": 78,
+				"attack": 65,
+				"defense": 68,
+				"spatk": 112,
+				"spdef": 154,
+				"speed": 75
+			},
+			"moves": [433, 417, 440, 649, 567, 519],
+			"dex": "671",
+			"herbs": [9]
+		},
+		"Dragalge":
+		{
+			"type": [4, 16],
+			"ability": [38, 143],
+			"stats":
+			{
+				"hp": 65,
+				"attack": 75,
+				"defense": 90,
+				"spatk": 97,
+				"spdef": 123,
+				"speed": 44
+			},
+			"moves": [349, 461, 496, 709, 312, 346],
+			"dex": "691",
+			"herbs": [9]
+		},
+		"Clawitzer":
+		{
+			"type": [11],
+			"ability": [178],
+			"stats":
+			{
+				"hp": 71,
+				"attack": 73,
+				"defense": 88,
+				"spatk": 120,
+				"spdef": 89,
+				"speed": 59
+			},
+			"moves": [496, 349, 320, 49, 638],
+			"dex": "693",
+			"herbs": [8]
+		},
+		"Goodra":
+		{
+			"type": [16],
+			"ability": [157, 93],
+			"stats":
+			{
+				"hp": 90,
+				"attack": 100,
+				"defense": 70,
+				"spatk": 110,
+				"spdef": 150,
+				"speed": 80
+			},
+			"moves": [496, 349, 461, 213, 638, 346, 503],
+			"dex": "706",
+			"herbs": [9]
+		},
+		"Avalugg":
+		{
+			"type": [15],
+			"ability": [20, 115],
+			"stats":
+			{
+				"hp": 95,
+				"attack": 117,
+				"defense": 184,
+				"spatk": 44,
+				"spdef": 46,
+				"speed": 28
+			},
+			"moves": [140, 65, 52, 135, 668, 587],
+			"dex": "713",
+			"herbs": [7]
+		},
+		"Noivern":
+		{
+			"type": [3, 16],
+			"ability": [119, 151],
+			"stats":
+			{
+				"hp": 85,
+				"attack": 70,
+				"defense": 80,
+				"spatk": 97,
+				"spdef": 80,
+				"speed": 123
+			},
+			"moves": [315, 349, 1, 328, 696],
+			"dex": "715",
+			"herbs": [6]
+		},
+		"Mudsdale":
+		{
+			"type": [5],
+			"ability": [20, 192],
+			"stats":
+			{
+				"hp": 100,
+				"attack": 125,
+				"defense": 100,
+				"spatk": 55,
+				"spdef": 85,
+				"speed": 35
+			},
+			"moves": [127, 25, 231, 126, 652, 587],
+			"dex": "750",
+			"herbs": [5]
+		},
+		"Tsareena":
+		{
+			"type": [12],
+			"ability": [102, 214],
+			"stats":
+			{
+				"hp": 72,
+				"attack": 120,
+				"defense": 98,
+				"spatk": 50,
+				"spdef": 98,
+				"speed": 72
+			},
+			"moves": [128, 213, 265, 293, 641, 567],
+			"dex": "763",
+			"herbs": [5]
+		},
+		"Oranguru":
+		{
+			"type": [1, 14],
+			"ability": [39, 140],
+			"stats":
+			{
+				"hp": 90,
+				"attack": 60,
+				"defense": 80,
+				"spatk": 90,
+				"spdef": 110,
+				"speed": 60
+			},
+			"moves": [81, 440, 474, 725, 519, 594],
+			"dex": "765",
+			"herbs": [8]
+		},
+		"Passimian":
+		{
+			"type": [2],
+			"ability": [222],
+			"stats":
+			{
+				"hp": 100,
+				"attack": 120,
+				"defense": 90,
+				"spatk": 40,
+				"spdef": 60,
+				"speed": 80
+			},
+			"moves": [228, 231, 81, 118, 699, 288, 518],
+			"dex": "766",
+			"herbs": [5]
+		},
+		"Mimikyu":
+		{
+			"type": [8, 18],
+			"ability": [209],
+			"stats":
+			{
+				"hp": 55,
+				"attack": 90,
+				"defense": 80,
+				"spatk": 50,
+				"spdef": 105,
+				"speed": 96
+			},
+			"moves": [202, 246, 719, 249, 594, 699],
+			"dex": "778",
+			"herbs": [9]
+		},
+		"Greedent":
+		{
+			"type": [1],
+			"ability": [167],
+			"stats":
+			{
+				"hp": 120,
+				"attack": 95,
+				"defense": 95,
+				"spatk": 55,
+				"spdef": 75,
+				"speed": 20
+			},
+			"moves": [26, 25, 40, 695, 680],
+			"dex": "820",
+			"herbs": [7]
+		},
+		"Corviknight":
+		{
+			"type": [3, 9],
+			"ability": [46, 127],
+			"stats":
+			{
+				"hp": 98,
+				"attack": 87,
+				"defense": 105,
+				"spatk": 53,
+				"spdef": 85,
+				"speed": 67
+			},
+			"moves": [264, 72, 699, 25, 587, 581],
+			"dex": "823",
+			"herbs": [7]
+		},
+		"Coalossal":
+		{
+			"type": [6, 10],
+			"ability": [243, 49],
+			"stats":
+			{
+				"hp": 110,
+				"attack": 80,
+				"defense": 120,
+				"spatk": 80,
+				"spdef": 90,
+				"speed": 30
+			},
+			"moves": [125, 268, 398, 316, 651, 698, 369],
+			"dex": "839",
+			"herbs": [7]
+		},
+		"Flapple":
+		{
+			"type": [12, 16],
+			"ability": [247, 82],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 110,
+				"defense": 80,
+				"spatk": 95,
+				"spdef": 60,
+				"speed": 70
+			},
+			"moves": [116, 347, 69, 288, 567, 587, 548],
+			"dex": "841",
+			"herbs": [5]
+		},
+		"Appletun":
+		{
+			"type": [12, 16],
+			"ability": [247, 82],
+			"stats":
+			{
+				"hp": 110,
+				"attack": 85,
+				"defense": 80,
+				"spatk": 100,
+				"spdef": 80,
+				"speed": 30
+			},
+			"moves": [317, 349, 382, 25, 570],
+			"dex": "842",
+			"herbs": [8]
+		},
+		"Toxtricity (Amped)":
+		{
+			"type": [13, 4],
+			"ability": [244, 57],
+			"stats":
+			{
+				"hp": 75,
+				"attack": 98,
+				"defense": 70,
+				"spatk": 114,
+				"spdef": 70,
+				"speed": 75
+			},
+			"moves": [430, 205, 192, 328, 550],
+			"dex": "849",
+			"herbs": [8]
+		},
+		"Toxtricity (Low Key)":
+		{
+			"type": [13, 4],
+			"ability": [244, 58],
+			"stats":
+			{
+				"hp": 75,
+				"attack": 98,
+				"defense": 70,
+				"spatk": 114,
+				"spdef": 70,
+				"speed": 75
+			},
+			"moves": [430, 205, 192, 328, 550],
+			"dex": "849-l",
+			"herbs": [8]
+		},
+		"Polteageist":
+		{
+			"type": [8],
+			"ability": [133],
+			"stats":
+			{
+				"hp": 60,
+				"attack": 65,
+				"defense": 65,
+				"spatk": 134,
+				"spdef": 114,
+				"speed": 70
+			},
+			"moves": [455, 411, 10, 719, 655],
+			"dex": "855",
+			"herbs": [8]
+		},
+		"Hatterene":
+		{
+			"type": [14, 18],
+			"ability": [131, 107],
+			"stats":
+			{
+				"hp": 57,
+				"attack": 90,
+				"defense": 95,
+				"spatk": 136,
+				"spdef": 103,
+				"speed": 29
+			},
+			"moves": [343, 440, 342, 522, 612, 519, 632],
+			"dex": "858",
+			"herbs": [9]
+		},
+		"Grimmsnarl":
+		{
+			"type": [17, 18],
+			"ability": [158, 119],
+			"stats":
+			{
+				"hp": 95,
+				"attack": 120,
+				"defense": 65,
+				"spatk": 95,
+				"spdef": 75,
+				"speed": 60
+			},
+			"moves": [261, 83, 652, 104, 594, 518],
+			"dex": "861",
+			"herbs": [5]
+		},
+		"Falinks":
+		{
+			"type": [2],
+			"ability": [4],
+			"stats":
+			{
+				"hp": 65,
+				"attack": 100,
+				"defense": 100,
+				"spatk": 70,
+				"spdef": 60,
+				"speed": 75
+			},
+			"moves": [182, 228, 123, 35, 616],
+			"dex": "870",
+			"herbs": [5]
+		},
+		"Pincurchin":
+		{
+			"type": [13],
+			"ability": [31],
+			"stats":
+			{
+				"hp": 48,
+				"attack": 101,
+				"defense": 95,
+				"spatk": 91,
+				"spdef": 85,
+				"speed": 15
+			},
+			"moves": [309, 482, 477, 205, 638, 550],
+			"dex": "871",
+			"herbs": [8]
+		},
+		"Indeedee (Male)":
+		{
+			"type": [14, 1],
+			"ability": [39, 28],
+			"stats":
+			{
+				"hp": 60,
+				"attack": 65,
+				"defense": 55,
+				"spatk": 105,
+				"spdef": 95,
+				"speed": 95
+			},
+			"moves": [440, 393, 455, 714, 623, 519],
+			"dex": "876",
+			"herbs": [5]
+		},
+		"Indeedee (Female)":
+		{
+			"type": [14, 1],
+			"ability": [20, 28],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 55,
+				"defense": 65,
+				"spatk": 95,
+				"spdef": 105,
+				"speed": 85
+			},
+			"moves": [440, 393, 455, 714, 623, 519],
+			"dex": "876-f",
+			"herbs": [5]
+		},
+		"Copperajah":
+		{
+			"type": [9],
+			"ability": [125],
+			"stats":
+			{
+				"hp": 122,
+				"attack": 130,
+				"defense": 69,
+				"spatk": 80,
+				"spdef": 69,
+				"speed": 30
+			},
+			"moves": [126, 270, 537, 127, 651, 587],
+			"dex": "879",
+			"herbs": [7]
+		},
+		"Dragapult":
+		{
+			"type": [16, 8],
+			"ability": [29, 151],
+			"stats":
+			{
+				"hp": 88,
+				"attack": 120,
+				"defense": 75,
+				"spatk": 100,
+				"spdef": 75,
+				"speed": 142
+			},
+			"moves": [455, 68, 485, 388, 641, 594],
+			"dex": "887",
+			"herbs": [6]
+		},
+		"Pawmot":
+		{
+			"type": [13, 2],
+			"ability": [10, 30],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 115,
+				"defense": 70,
+				"spatk": 70,
+				"spdef": 60,
+				"speed": 105
+			},
+			"moves": [303, 43, 192, 690, 64],
+			"dex": "923",
+			"herbs": [6]
+		},
+		"Arboliva":
+		{
+			"type": [12, 1],
+			"ability": [269],
+			"stats":
+			{
+				"hp": 78,
+				"attack": 69,
+				"defense": 90,
+				"spatk": 125,
+				"spdef": 109,
+				"speed": 39
+			},
+			"moves": [360, 393, 353, 522, 686, 570, 404],
+			"dex": "930",
+			"herbs": [8]
+		},
+		"Garganacl":
+		{
+			"type": [6],
+			"ability": [272, 5],
+			"stats":
+			{
+				"hp": 100,
+				"attack": 100,
+				"defense": 130,
+				"spatk": 45,
+				"spdef": 90,
+				"speed": 35
+			},
+			"moves": [238, 230, 120, 651],
+			"dex": "934",
+			"herbs": [7]
+		},
+		"Armarouge":
+		{
+			"type": [10, 14],
+			"ability": [18],
+			"stats":
+			{
+				"hp": 85,
+				"attack": 60,
+				"defense": 100,
+				"spatk": 125,
+				"spdef": 80,
+				"speed": 75
+			},
+			"moves": [318, 440, 426, 719, 686, 519],
+			"dex": "936",
+			"herbs": [8]
+		},
+		"Ceruledge":
+		{
+			"type": [10, 8],
+			"ability": [18],
+			"stats":
+			{
+				"hp": 75,
+				"attack": 125,
+				"defense": 80,
+				"spatk": 60,
+				"spdef": 100,
+				"speed": 85
+			},
+			"moves": [22, 246, 217, 719, 686, 693],
+			"dex": "937",
+			"herbs": [5]
+		},
+		"Mabosstiff":
+		{
+			"type": [17],
+			"ability": [22, 275],
+			"stats":
+			{
+				"hp": 80,
+				"attack": 120,
+				"defense": 90,
+				"spatk": 60,
+				"spdef": 70,
+				"speed": 85
+			},
+			"moves": [52, 202, 279, 688, 699],
+			"dex": "943",
+			"herbs": [5]
+		},
+		"Brambleghast":
+		{
+			"type": [12, 8],
+			"ability": [274],
+			"stats":
+			{
+				"hp": 55,
+				"attack": 115,
+				"defense": 70,
+				"spatk": 80,
+				"spdef": 70,
+				"speed": 90
+			},
+			"moves": [382, 455, 213, 401, 567],
+			"dex": "947",
+			"herbs": [5]
+		},
+		"Tinkaton":
+		{
+			"type": [18, 9],
+			"ability": [104, 20],
+			"stats":
+			{
+				"hp": 85,
+				"attack": 75,
+				"defense": 77,
+				"spatk": 70,
+				"spdef": 105,
+				"speed": 94
+			},
+			"moves": [112, 202, 36, 231, 612, 704, 522],
+			"dex": "959",
+			"herbs": [9]
+		},
+		"Bombirdier":
+		{
+			"type": [3, 17],
+			"ability": [145, 51],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 103,
+				"defense": 85,
+				"spatk": 60,
+				"spdef": 85,
+				"speed": 82
+			},
+			"moves": [230, 272, 33, 708, 146, 557],
+			"dex": "962",
+			"herbs": [5]
+		},
+		"Palafin":
+		{
+			"type": [11],
+			"ability": [278],
+			"stats":
+			{
+				"hp": 100,
+				"attack": 70,
+				"defense": 72,
+				"spatk": 53,
+				"spdef": 62,
+				"speed": 100
+			},
+			"moves": [156, 1, 522, 328, 638, 518],
+			"dex": "964",
+			"herbs": [5, 6, 7, 8, 9]
+		},
+		"Revavroom":
+		{
+			"type": [9, 4],
+			"ability": [142],
+			"stats":
+			{
+				"hp": 80,
+				"attack": 119,
+				"defense": 90,
+				"spatk": 54,
+				"spdef": 67,
+				"speed": 90
+			},
+			"moves": [260, 699, 118, 431, 652, 657],
+			"dex": "966",
+			"herbs": [5]
+		},
+		"Orthworm":
+		{
+			"type": [9],
+			"ability": [297],
+			"stats":
+			{
+				"hp": 70,
+				"attack": 85,
+				"defense": 145,
+				"spatk": 60,
+				"spdef": 55,
+				"speed": 65
+			},
+			"moves": [142, 77, 266, 306, 651, 526],
+			"dex": "968",
+			"herbs": [7]
+		},
+		"Glimmora":
+		{
+			"type": [6, 4],
+			"ability": [295],
+			"stats":
+			{
+				"hp": 83,
+				"attack": 55,
+				"defense": 90,
+				"spatk": 130,
+				"spdef": 81,
+				"speed": 86
+			},
+			"moves": [437, 461, 187, 316, 651, 480],
+			"dex": "970",
+			"herbs": [8]
+		},
+		"Cetitan":
+		{
+			"type": [15],
+			"ability": [47, 202],
+			"stats":
+			{
+				"hp": 170,
+				"attack": 113,
+				"defense": 65,
+				"spatk": 45,
+				"spdef": 55,
+				"speed": 73
+			},
+			"moves": [139, 156, 725, 554, 668],
+			"dex": "975",
+			"herbs": [5, 6, 7, 8, 9]
+		},
+		"Dondozo":
+		{
+			"type": [11],
+			"ability": [109, 12],
+			"stats":
+			{
+				"hp": 150,
+				"attack": 100,
+				"defense": 115,
+				"spatk": 65,
+				"spdef": 65,
+				"speed": 35
+			},
+			"moves": [193, 299, 126, 705, 638, 680],
+			"dex": "977",
+			"herbs": [5, 6, 7, 8, 9]
+		},
+		"Tatsugiri (Curly)":
+		{
+			"type": [16, 11],
+			"ability": [279],
+			"stats":
+			{
+				"hp": 68,
+				"attack": 50,
+				"defense": 60,
+				"spatk": 120,
+				"spdef": 95,
+				"speed": 82
+			},
+			"moves": [496, 349, 224, 47, 336],
+			"dex": "978",
+			"herbs": [8]
+		},
+		"Tatsugiri (Droopy)":
+		{
+			"type": [16, 11],
+			"ability": [279],
+			"stats":
+			{
+				"hp": 68,
+				"attack": 50,
+				"defense": 60,
+				"spatk": 120,
+				"spdef": 95,
+				"speed": 82
+			},
+			"moves": [496, 349, 224, 47, 336],
+			"dex": "978-d",
+			"herbs": [8]
+		},
+		"Tatsugiri (Stretchy)":
+		{
+			"type": [16, 11],
+			"ability": [279],
+			"stats":
+			{
+				"hp": 68,
+				"attack": 50,
+				"defense": 60,
+				"spatk": 120,
+				"spdef": 95,
+				"speed": 82
+			},
+			"moves": [496, 349, 224, 47, 336],
+			"dex": "978-s",
+			"herbs": [8]
+		},
+		"Annihilape":
+		{
+			"type": [2, 8],
+			"ability": [72, 39],
+			"stats":
+			{
+				"hp": 110,
+				"attack": 115,
+				"defense": 80,
+				"spatk": 50,
+				"spdef": 90,
+				"speed": 90
+			},
+			"moves": [246, 43, 194, 592, 699, 518],
+			"dex": "979",
+			"herbs": [5]
+		},
+		"Kingambit":
+		{
+			"type": [17, 9],
+			"ability": [128, 293],
+			"stats":
+			{
+				"hp": 100,
+				"attack": 135,
+				"defense": 120,
+				"spatk": 60,
+				"spdef": 85,
+				"speed": 50
+			},
+			"moves": [142, 190, 708, 253, 699, 183],
+			"dex": "983",
+			"herbs": [5]
+		},
+		"Baxcalibur":
+		{
+			"type": [16, 15],
+			"ability": [270],
+			"stats":
+			{
+				"hp": 115,
+				"attack": 145,
+				"defense": 92,
+				"spatk": 75,
+				"spdef": 86,
+				"speed": 87
+			},
+			"moves": [67, 140, 138, 25, 668],
+			"dex": "998",
+			"herbs": [5]
+		}
+	}
+}
