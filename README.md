@@ -1,5 +1,5 @@
 # Tera Raid Info
-Aggregate view of the [Serebii](https://www.serebii.net/) Tera Raid Info for Pokemon Scarlet & Violet.
+A first attempt at Angular and Typescript to aggregate the data of the [Serebii](https://www.serebii.net/) Tera Raid Info for Pokemon Scarlet & Violet.
 
 Shows the following information:
 - Tier 5 & 6 Raids
