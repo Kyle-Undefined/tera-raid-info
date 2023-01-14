@@ -14,8 +14,10 @@ export class TypesComponent implements OnInit {
 	) {}
 
 	public ngOnInit(): void {
-		this.stateService.pokemonList.subscribe(() => {
-			this.setTypes();
+		this.stateService.pokemonList.subscribe((result) => {
+			if (result) {
+				this.setTypes();
+			}
 		});
 	}
 

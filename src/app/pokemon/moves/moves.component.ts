@@ -37,13 +37,20 @@ export class MovesComponent implements OnInit {
 			.getPokemonMoves()
 			.sort((a, b) => {
 				if (
-					this.dataService.getMoveDexData(a).category == Category.Status ||
+					this.dataService.getMoveDexData(a).category != Category.Status &&
 					this.dataService.getMoveDexData(b).category == Category.Status
 				) {
-					return 1;
-				} else {
 					return -1;
 				}
+
+				if (
+					this.dataService.getMoveDexData(b).category != Category.Status &&
+					this.dataService.getMoveDexData(a).category == Category.Status
+				) {
+					return 1;
+				}
+
+				return 1;
 			})
 			.forEach((moveNumber) => {
 				const move: MoveDex = this.dataService.getMoveDexData(moveNumber);
