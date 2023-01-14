@@ -3,8 +3,8 @@
 
 <p align="center">
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/kyle-undefined/tera-raid-info?color=B9E550&style=for-the-badge" />
-<img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/kyle-undefined/tera-raid-info/gh-pages.yml?style=for-the-badge" />
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/kyle-undefined/tera-raid-info?color=lightblue&style=for-the-badge" />
+<a href="https://github.com/kyle-undefined/tera-raid-info/actions/workflows/gh-pages.yml" target="_blank"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/kyle-undefined/tera-raid-info/gh-pages.yml?style=for-the-badge" /></a>
+<a href="https://github.com/Kyle-Undefined/tera-raid-info/commits/main" target="_blank"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/kyle-undefined/tera-raid-info?color=lightblue&style=for-the-badge" /></a>
 <a href="https://github.com/Kyle-Undefined/tera-raid-info/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/kyle-undefined/tera-raid-info?color=00a0c1&style=for-the-badge" /></a>
 <br>
 <a href="https://kyle-undefined.github.io/tera-raid-info/" target="_blank"><img alt="View on GitHub Pages" src="https://img.shields.io/badge/Github%20Pages-00578E?style=for-the-badge&logo=github" /></a>
@@ -93,10 +93,10 @@ You can share the raid choices with others, by simply clicking the Share icon in
 
 ## Built With
 <p>
-<img alt="Angular Version" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/@angular/cli/main?color=37474f&label=Angular&logo=angular&style=for-the-badge" />
-<img alt="Typescript Version" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/typescript/main?color=3178c6&label=Typescript&logo=typescript&logoColor=white&style=for-the-badge" />
-<img alt="Node.js Version" src="https://img.shields.io/badge/Node-18.13.0-74ae62?style=for-the-badge&logo=node.js&logoColor=white" />
-<img alt="NPM Version" src="https://img.shields.io/badge/NPM-9.2.0-cc3838?style=for-the-badge&logo=npm&logoColor=white" />
+<a href="https://www.npmjs.com/package/@angular/cli" target="_blank"><img alt="Angular Version" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/@angular/cli/main?color=37474f&label=Angular&logo=angular&style=for-the-badge" /></a>
+<a href="https://www.npmjs.com/package/typescript" target="_blank"><img alt="Typescript Version" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/typescript/main?color=3178c6&label=Typescript&logo=typescript&logoColor=white&style=for-the-badge" /></a>
+<a href="https://nodejs.org/en/" target="_blank"><img alt="Node.js Version" src="https://img.shields.io/badge/Node-18.13.0-74ae62?style=for-the-badge&logo=node.js&logoColor=white" /></a>
+<a href="https://www.npmjs.com/package/npm" target="_blank"><img alt="NPM Version" src="https://img.shields.io/badge/NPM-9.2.0-cc3838?style=for-the-badge&logo=npm&logoColor=white" /></a>
 </p>
 
 ## Development
