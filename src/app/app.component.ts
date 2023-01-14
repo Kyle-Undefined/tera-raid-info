@@ -27,6 +27,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 	}
 
 	public ngAfterViewInit(): void {
+		this.deleteCache();
 		this.autoPopulateSelections();
 	}
 
@@ -84,5 +85,11 @@ export class AppComponent implements OnInit, AfterViewInit {
 				teraList.dispatchEvent(event);
 			}
 		}
+	}
+
+	private deleteCache() {
+		// in old version of code base, i was caching images
+		// no longer going with that approach so deleting cache
+		caches.delete('tera-raid-info-1');
 	}
 }
