@@ -37,19 +37,18 @@ export class TypeCalcService {
 
 	public advantage(types: string[]) {
 		const result = {} as Result;
+		let superEffectives: string[] = [];
 
 		types.forEach((type) => {
-			const attack = this.dataService.getTypeDexData(type).attack;
+			superEffectives = superEffectives.concat(
+				this.dataService.getTypeDexData(type).attack.double
+			);
+		});
 
-			Object.entries(attack).forEach(([key, value]) => {
-				switch (key) {
-					case 'double':
-						value.forEach((i: string) => {
-							result[i] ? (result[i] *= 2) : (result[i] = 2);
-						});
-						break;
-				}
-			});
+		superEffectives = [...new Set(superEffectives)];
+
+		superEffectives.forEach((i: string) => {
+			result[i] ? (result[i] *= 2) : (result[i] = 2);
 		});
 
 		return result;

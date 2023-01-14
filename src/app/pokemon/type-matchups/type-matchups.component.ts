@@ -88,7 +88,7 @@ export class TypeMatchupsComponent implements OnInit {
 		);
 		const display: string[] = common.createMatchups(weaknesses);
 
-		if (display) {
+		if (display.length) {
 			common.updateDiv(
 				document.getElementById('pokemonTeraWeaknesses') as HTMLDivElement,
 				'<h3>Tera Weaknesses:</h3>' + display.join('')

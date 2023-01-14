@@ -74,7 +74,7 @@ export class MovesComponent implements OnInit {
 		const advantages: Result = this.typeCalcService.advantage(types.sort());
 		const display: string[] = common.createMatchups(advantages);
 
-		if (display) {
+		if (display.length) {
 			common.updateDiv(
 				document.getElementById('pokemonTypeAdvantages') as HTMLDivElement,
 				'<h3>Type Advantages:</h3>' + display.join('')
@@ -105,7 +105,7 @@ export class MovesComponent implements OnInit {
 					display.push(`${common.capitalize(key)}`);
 				});
 
-			if (display) {
+			if (display.length) {
 				moveDisplay += `<div class="adv">Advantages: ${display.join(
 					', '
 				)}</div>`;
