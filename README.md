@@ -7,7 +7,7 @@
 <a href="https://github.com/Kyle-Undefined/tera-raid-info/commits/main" target="_blank"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/kyle-undefined/tera-raid-info?color=lightblue&style=for-the-badge" /></a>
 <a href="https://github.com/Kyle-Undefined/tera-raid-info/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/kyle-undefined/tera-raid-info?color=00a0c1&style=for-the-badge" /></a>
 <br>
-<a href="https://repos.kyleundefined.dev/tera-raid-info/" target="_blank"><img alt="View on GitHub Pages" src="https://img.shields.io/badge/Github%20Pages-00578E?style=for-the-badge&logo=github" /></a>
+<a href="https://kyleundefined.dev/tera-raid-info/" target="_blank"><img alt="View on GitHub Pages" src="https://img.shields.io/badge/Github%20Pages-00578E?style=for-the-badge&logo=github" /></a>
 </p>
 
 ## Features
