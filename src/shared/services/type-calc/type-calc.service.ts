@@ -1,54 +1,60 @@
 import { Injectable } from '@angular/core';
-import { Result } from 'src/shared/models/types';
-import { DataService } from '../data/data.service';
+import { Types } from 'src/shared/models/types';
+
+export type TypeCalcResult = {
+	name: string;
+	multiplier: number;
+};
 
 @Injectable({
 	providedIn: 'root',
 })
 export class TypeCalcService {
-	constructor(private dataService: DataService) {}
+	public advantages(typeName: string, nonEffectives = false): TypeCalcResult[] {
+		const result: TypeCalcResult[] = [];
 
-	public weakness(type: string): Result {
-		const result = {} as Result;
-		const defense = this.dataService.getTypeDexData(type).defense;
+		Types.filter((type) => {
+			return type.name.includes(typeName);
+		}).forEach((type) => {
+			const offense = type.matchup.offense;
 
-		Object.entries(defense).forEach(([key, value]) => {
-			switch (key) {
-				case 'double':
-					value.forEach((i: string) => {
-						result[i] ? (result[i] *= 2) : (result[i] = 2);
-					});
-					break;
-				case 'half':
-					value.forEach((i: string) => {
-						result[i] ? (result[i] *= 0.5) : (result[i] = 0.5);
-					});
-					break;
-				case 'zero':
-					value.forEach((i: string) => {
-						result[i] = 0;
-					});
-					break;
+			offense.double.forEach((type) => {
+				result.push({ name: type, multiplier: 2 });
+			});
+
+			if (nonEffectives) {
+				offense.resisted.forEach((type) => {
+					result.push({ name: type, multiplier: 0.5 });
+				});
+
+				offense.immune.forEach((type) => {
+					result.push({ name: type, multiplier: 0 });
+				});
 			}
 		});
 
 		return result;
 	}
 
-	public advantage(types: string[]) {
-		const result = {} as Result;
-		let superEffectives: string[] = [];
+	public weaknesses(typeName: string): TypeCalcResult[] {
+		const result: TypeCalcResult[] = [];
 
-		types.forEach((type) => {
-			superEffectives = superEffectives.concat(
-				this.dataService.getTypeDexData(type).attack.double
-			);
-		});
+		Types.filter((type) => {
+			return type.name.includes(typeName);
+		}).forEach((type) => {
+			const defense = type.matchup.defense;
 
-		superEffectives = [...new Set(superEffectives)];
+			defense.double.forEach((type) => {
+				result.push({ name: type, multiplier: 2 });
+			});
 
-		superEffectives.forEach((i: string) => {
-			result[i] ? (result[i] *= 2) : (result[i] = 2);
+			defense.resisted.forEach((type) => {
+				result.push({ name: type, multiplier: 0.5 });
+			});
+
+			defense.immune.forEach((type) => {
+				result.push({ name: type, multiplier: 0 });
+			});
 		});
 
 		return result;

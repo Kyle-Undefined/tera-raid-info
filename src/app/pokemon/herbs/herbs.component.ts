@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { HerbDex } from 'src/shared/models/herbs';
-import { DataService } from 'src/shared/services/data/data.service';
 import { StateService } from 'src/shared/services/state/state.service';
+import {
+	FiveStarRaids,
+	SixStarRaids,
+	HerbaMystica,
+} from 'src/shared/models/raids';
 import * as common from 'src/shared/utils/common';
 
 @Component({
@@ -9,34 +12,52 @@ import * as common from 'src/shared/utils/common';
 	templateUrl: './herbs.component.html',
 })
 export class HerbsComponent implements OnInit {
-	constructor(
-		private dataService: DataService,
-		private stateService: StateService
-	) {}
+	private raidTier = '';
+	private pokemonList = '';
+	private loaded = false;
+
+	constructor(private stateService: StateService) {}
 
 	public ngOnInit(): void {
+		this.stateService.raidTier.subscribe((result) => {
+			this.raidTier = result;
+		});
 		this.stateService.pokemonList.subscribe((result) => {
-			if (result) {
-				this.setHerbs();
-			}
+			this.pokemonList = result;
+		});
+		this.stateService.loaded.subscribe((result) => {
+			this.loaded = result;
+			this.setHerbs();
 		});
 	}
 
 	private setHerbs(): void {
-		common.updateDiv(
-			document.getElementById('pokemonHerbs') as HTMLDivElement,
-			'<h3>Herbs Dropped:</h3>'
-		);
-
-		this.dataService.getPokemonHerbs().forEach((herb) => {
+		if (this.loaded) {
 			common.updateDiv(
 				document.getElementById('pokemonHerbs') as HTMLDivElement,
-				this.createHerbDiv(this.dataService.getHerbDexData(herb))
+				'<h3>Herbs Dropped:</h3>'
 			);
-		});
+
+			const raidData = this.raidTier == '5' ? FiveStarRaids : SixStarRaids;
+
+			raidData
+				.filter((pokemon) => {
+					return pokemon.name == this.pokemonList;
+				})
+				.forEach((pokemon) => {
+					pokemon.info.herbs
+						.sort((a, b) => a.name.localeCompare(b.name))
+						.forEach((herb) => {
+							common.updateDiv(
+								document.getElementById('pokemonHerbs') as HTMLDivElement,
+								this.createHerbDiv(herb)
+							);
+						});
+				});
+		}
 	}
 
-	private createHerbDiv(herb: HerbDex): string {
+	private createHerbDiv(herb: HerbaMystica): string {
 		return `<div class="herbPill ${herb.name.toLowerCase()}">${herb.name} - ${
 			herb.chance
 		}%</div>`;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AbilityDex } from 'src/shared/models/abilities';
-import { DataService } from 'src/shared/services/data/data.service';
+import { Ability } from '@favware/graphql-pokemon';
+import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
@@ -9,48 +9,60 @@ import * as common from 'src/shared/utils/common';
 	templateUrl: './ability.component.html',
 })
 export class AbilityComponent implements OnInit {
+	private raidTier = '';
+	private pokemon = '';
+
 	constructor(
-		private dataService: DataService,
+		private graphqlService: GraphqlService,
 		private stateService: StateService
 	) {}
 
 	public ngOnInit(): void {
+		this.stateService.raidTier.subscribe((result) => {
+			this.raidTier = result;
+		});
 		this.stateService.pokemonList.subscribe((result) => {
 			if (result) {
+				this.pokemon = result;
 				this.setAbilities();
 			}
 		});
 	}
 
 	private setAbilities(): void {
-		common.updateDiv(
-			document.getElementById('pokemonAbility') as HTMLDivElement,
-			'<h3>Ability:</h3>'
-		);
+		const pokemonAbility = document.getElementById(
+			'pokemonAbility'
+		) as HTMLDivElement;
 
-		this.dataService.getPokemonAbilities().forEach((ability) => {
-			common.updateDiv(
-				document.getElementById('pokemonAbility') as HTMLDivElement,
-				this.createAbilityDiv(this.dataService.getAbilityDexData(ability))
-			);
+		this.graphqlService.getAbilities().subscribe((data) => {
+			common.updateDiv(pokemonAbility, '<h3>Ability:</h3>');
+
+			common.updateDiv(pokemonAbility, this.createAbilityDiv(data.first));
+
+			if (data.second) {
+				common.updateDiv(pokemonAbility, this.createAbilityDiv(data.second));
+			}
+
+			if (this.canShowHidden()) {
+				if (data.hidden) {
+					common.updateDiv(
+						pokemonAbility,
+						this.createAbilityDiv(data.hidden, true)
+					);
+				}
+			}
 		});
-
-		if (this.dataService.getPokemonHiddenAbility()) {
-			common.updateDiv(
-				document.getElementById('pokemonAbility') as HTMLDivElement,
-				this.createAbilityDiv(
-					this.dataService.getAbilityDexData(
-						this.dataService.getPokemonHiddenAbility()
-					),
-					true
-				)
-			);
-		}
 	}
 
-	private createAbilityDiv(ability: AbilityDex, hidden?: boolean): string {
-		return `<div class="typeMatchupText" data-info="${ability.desc}">${
+	private createAbilityDiv(ability: Ability, hidden?: boolean): string {
+		return `<div class="typeMatchupText" data-info="${ability.shortDesc}">${
 			ability.name
 		}${hidden ? ' (H)' : ''}</div>`;
+	}
+
+	private canShowHidden(): boolean {
+		return (
+			this.raidTier == '6' || (this.raidTier == '5' && this.pokemon == 'ditto')
+		);
 	}
 }

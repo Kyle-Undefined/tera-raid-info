@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/shared/services/data/data.service';
+import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
@@ -9,7 +9,7 @@ import * as common from 'src/shared/utils/common';
 })
 export class TypesComponent implements OnInit {
 	constructor(
-		private dataService: DataService,
+		private graphqlService: GraphqlService,
 		private stateService: StateService
 	) {}
 
@@ -22,11 +22,13 @@ export class TypesComponent implements OnInit {
 	}
 
 	private setTypes(): void {
-		this.dataService.getPokemonTypeNames().forEach((type) => {
-			common.updateDiv(
-				document.getElementById('pokemonTypes') as HTMLDivElement,
-				this.createTypeDisplay(type)
-			);
+		this.graphqlService.getTypes().subscribe((data) => {
+			data.forEach((type) => {
+				common.updateDiv(
+					document.getElementById('pokemonTypes') as HTMLDivElement,
+					this.createTypeDisplay(type.name)
+				);
+			});
 		});
 	}
 

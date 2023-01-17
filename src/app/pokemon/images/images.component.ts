@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/shared/services/data/data.service';
+import { FiveStarRaids, SixStarRaids } from 'src/shared/models/raids';
+import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
@@ -9,12 +10,19 @@ import * as common from 'src/shared/utils/common';
 })
 export class ImagesComponent implements OnInit {
 	constructor(
-		private dataService: DataService,
+		private grapghqlService: GraphqlService,
 		private stateService: StateService
 	) {}
 
+	private raidTier = '';
+	private pokemonList = '';
+
 	public ngOnInit(): void {
+		this.stateService.raidTier.subscribe((result) => {
+			this.raidTier = result;
+		});
 		this.stateService.pokemonList.subscribe((result) => {
+			this.pokemonList = result;
 			if (result) {
 				this.setImages();
 			}
@@ -22,16 +30,37 @@ export class ImagesComponent implements OnInit {
 	}
 
 	private setImages(): void {
-		const dexNumber: string = this.dataService.getPokemonDexNumber();
+		this.grapghqlService.getDexNumber().subscribe((data) => {
+			const raidData = this.raidTier == '5' ? FiveStarRaids : SixStarRaids;
+			let imageAlt = '';
 
-		common.updateDiv(
-			document.getElementById('pokemonImageNormal') as HTMLDivElement,
-			`<img alt="Normal" title="Normal" src="./assets/pokemon/${dexNumber}.png" />`
-		);
+			raidData
+				.filter((pokemon) => {
+					return pokemon.name == this.pokemonList;
+				})
+				.forEach((pokemon) => {
+					if (pokemon.imageAlt) {
+						imageAlt = pokemon.imageAlt;
+					}
+				});
 
-		common.updateDiv(
-			document.getElementById('pokemonImageShiny') as HTMLDivElement,
-			`<img alt="Shiny" title="Shiny" src="./assets/pokemon/shiny/${dexNumber}.png" />`
-		);
+			common.updateDiv(
+				document.getElementById('pokemonImageNormal') as HTMLDivElement,
+				`<img alt="Normal" title="Normal" src="./assets/pokemon/${common.padLeft(
+					data,
+					3,
+					'0'
+				)}${imageAlt}.png" />`
+			);
+
+			common.updateDiv(
+				document.getElementById('pokemonImageShiny') as HTMLDivElement,
+				`<img alt="Shiny" title="Shiny" src="./assets/pokemon/shiny/${common.padLeft(
+					data,
+					3,
+					'0'
+				)}${imageAlt}.png" />`
+			);
+		});
 	}
 }

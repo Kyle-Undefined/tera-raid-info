@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { StateService } from 'src/shared/services/state/state.service';
-import { DataService } from 'src/shared/services/data/data.service';
+import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { TypeCalcService } from 'src/shared/services/type-calc/type-calc.service';
 
 import { AppComponent } from './app.component';
@@ -35,8 +37,8 @@ import { TypeMatchupsComponent } from './pokemon/type-matchups/type-matchups.com
 		HerbsComponent,
 		TypeMatchupsComponent,
 	],
-	imports: [BrowserModule],
-	providers: [StateService, DataService, TypeCalcService],
+	imports: [BrowserModule, GraphQLModule, HttpClientModule],
+	providers: [StateService, GraphqlService, TypeCalcService],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Stats } from 'src/shared/models/raids';
-import { DataService } from 'src/shared/services/data/data.service';
+import { Stats } from '@favware/graphql-pokemon';
+import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
@@ -10,7 +10,7 @@ import * as common from 'src/shared/utils/common';
 })
 export class StatsComponent implements OnInit {
 	constructor(
-		private dataService: DataService,
+		private graphqlService: GraphqlService,
 		private stateService: StateService
 	) {}
 
@@ -23,10 +23,14 @@ export class StatsComponent implements OnInit {
 	}
 
 	private setStats(): void {
-		common.updateDiv(
-			document.getElementById('pokemonStatsWrapper') as HTMLDivElement,
-			this.createStatsDisplay(this.dataService.getPokemonStats())
-		);
+		this.graphqlService.getStats().subscribe((data) => {
+			common.updateDiv(
+				document.getElementById('pokemonStatsWrapper') as HTMLDivElement,
+				this.createStatsDisplay(data)
+			);
+
+			this.stateService.changeLoaded(true);
+		});
 	}
 
 	private createStatsDisplay(stats: Stats): string {
@@ -34,8 +38,8 @@ export class StatsComponent implements OnInit {
 		statDisplay += `<div class="stat hp"><p>HP</p><p data-label="HP">${stats.hp}</p></div>`;
 		statDisplay += `<div class="stat at"><p>Atk</p><p data-label="Atk">${stats.attack}</p></div>`;
 		statDisplay += `<div class="stat df"><p>Def</p><p data-label="Def">${stats.defense}</p></div>`;
-		statDisplay += `<div class="stat sa"><p>Sp.Atk</p><p data-label="Sp. Atk">${stats.spatk}</p></div>`;
-		statDisplay += `<div class="stat sd"><p>Sp.Def</p><p data-label="Sp. Def">${stats.spdef}</p></div>`;
+		statDisplay += `<div class="stat sa"><p>Sp.Atk</p><p data-label="Sp. Atk">${stats.specialattack}</p></div>`;
+		statDisplay += `<div class="stat sd"><p>Sp.Def</p><p data-label="Sp. Def">${stats.specialdefense}</p></div>`;
 		statDisplay += `<div class="stat sp"><p>Spd</p><p data-label="Spd">${stats.speed}</p></div></div>`;
 
 		return statDisplay;

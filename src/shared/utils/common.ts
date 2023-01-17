@@ -1,4 +1,4 @@
-import { Result } from '../models/types';
+import { TypeCalcResult } from '../services/type-calc/type-calc.service';
 
 export function capitalize(word: string): string {
 	return word
@@ -30,20 +30,12 @@ export function updateDiv(div: HTMLDivElement, html: string): void {
 	div.innerHTML += html;
 }
 
-export function createMatchups(matchups: Result): string[] {
-	const display: string[] = [];
-
-	Object.entries(matchups)
-		.sort((a, b) => b[1] - a[1])
-		.forEach(([key, value]) => {
-			display.push(createTypeMatchupDiv(key, value));
-		});
-
-	return display;
+export function createTypeMatchupDiv(type: TypeCalcResult): string {
+	return `<div class="typeMatchupText ${type.name}">${capitalize(
+		type.name
+	)} - ${type.multiplier}x</div>`;
 }
 
-export function createTypeMatchupDiv(type: string, matchup: number): string {
-	return `<div class="typeMatchupText ${type}">${capitalize(
-		type
-	)} - ${matchup}x</div>`;
+export function padLeft(num: number, length: number, char: string): string {
+	return String(num).padStart(length, char);
 }

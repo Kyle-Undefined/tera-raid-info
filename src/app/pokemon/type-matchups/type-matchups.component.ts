@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Result } from 'src/shared/models/types';
 import { StateService } from 'src/shared/services/state/state.service';
-import { TypeCalcService } from 'src/shared/services/type-calc/type-calc.service';
+import {
+	TypeCalcService,
+	TypeCalcResult,
+} from 'src/shared/services/type-calc/type-calc.service';
 import * as common from 'src/shared/utils/common';
 
 @Component({
@@ -16,8 +18,9 @@ export class TypeMatchupsComponent implements OnInit {
 
 	private raidTier = '';
 	private pokemonList = '';
-	private teraTypeValue = '';
+	private teraType = '';
 	private moveList = '';
+	private loaded = false;
 
 	public ngOnInit(): void {
 		this.stateService.raidTier.subscribe((result) => {
@@ -27,50 +30,63 @@ export class TypeMatchupsComponent implements OnInit {
 			this.pokemonList = result;
 			this.handleChange();
 		});
-		this.stateService.teraTypeValue.subscribe((result) => {
-			this.teraTypeValue = result;
+		this.stateService.teraType.subscribe((result) => {
+			this.teraType = result;
 			this.handleChange();
 		});
 		this.stateService.moveList.subscribe((result) => {
 			this.moveList = result;
 			this.handleChange();
 		});
+		this.stateService.loaded.subscribe((result) => {
+			this.loaded = result;
+			this.handleChange();
+		});
 	}
 
 	private handleChange(): void {
-		if (this.pokemonList) {
-			if (this.raidTier && this.teraTypeValue) {
-				this.setTypeWeaknesses();
+		common.clearData('pokemonTeraAdvantages');
+		common.clearData('pokemonTeraWeaknesses');
+
+		if (this.loaded) {
+			if (this.pokemonList) {
+				if (this.raidTier && this.teraType) {
+					this.setTypeWeaknesses();
+				}
+
+				if (this.moveList && this.teraType) {
+					if (this.moveList.includes('Tera Blast')) {
+						this.setTeraTypeAdvantages();
+					}
+				}
 			}
 
-			if (this.moveList && this.teraTypeValue) {
+			if (this.teraType) {
+				if (this.pokemonList && this.raidTier) {
+					this.setTypeWeaknesses();
+				}
+
 				if (this.moveList.includes('Tera Blast')) {
 					this.setTeraTypeAdvantages();
 				}
+			} else {
+				common.clearData('pokemonTeraAdvantages');
+				common.clearData('pokemonTeraWeaknesses');
 			}
-		}
-
-		if (this.teraTypeValue) {
-			if (this.pokemonList && this.raidTier) {
-				this.setTypeWeaknesses();
-			}
-
-			if (this.moveList.includes('Tera Blast')) {
-				this.setTeraTypeAdvantages();
-			}
-		} else {
-			common.clearData('pokemonTeraAdvantages');
-			common.clearData('pokemonTeraWeaknesses');
 		}
 	}
 
 	private setTeraTypeAdvantages(): void {
 		common.clearData('pokemonTeraAdvantages');
 
-		const advantages: Result = this.typeCalcService.advantage([
-			this.teraTypeValue,
-		]);
-		const display: string[] = common.createMatchups(advantages);
+		const display: string[] = [];
+		const advantages: TypeCalcResult[] = this.typeCalcService.advantages(
+			this.teraType
+		);
+
+		advantages.forEach((type) => {
+			display.push(common.createTypeMatchupDiv(type));
+		});
 
 		if (display.length) {
 			common.updateDiv(
@@ -83,10 +99,14 @@ export class TypeMatchupsComponent implements OnInit {
 	private setTypeWeaknesses(): void {
 		common.clearData('pokemonTeraWeaknesses');
 
-		const weaknesses: Result = this.typeCalcService.weakness(
-			this.teraTypeValue
+		const display: string[] = [];
+		const weaknesses: TypeCalcResult[] = this.typeCalcService.weaknesses(
+			this.teraType
 		);
-		const display: string[] = common.createMatchups(weaknesses);
+
+		weaknesses.forEach((type) => {
+			display.push(common.createTypeMatchupDiv(type));
+		});
 
 		if (display.length) {
 			common.updateDiv(

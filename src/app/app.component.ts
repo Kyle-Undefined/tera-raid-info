@@ -9,24 +9,16 @@ import * as common from 'src/shared/utils/common';
 export class AppComponent implements OnInit, AfterViewInit {
 	constructor(private stateService: StateService) {}
 
-	private raidTier = '';
-	private pokemonList = '';
-	private teraTypeName = '';
 	public title = 'Tera Raid Info';
 
 	public ngOnInit(): void {
-		this.stateService.raidTier.subscribe((result) => {
-			this.raidTier = result;
-		});
-		this.stateService.pokemonList.subscribe((result) => {
-			this.pokemonList = result;
-		});
-		this.stateService.teraTypeName.subscribe((result) => {
-			this.teraTypeName = result;
+		this.stateService.loaded.subscribe((result) => {
+			(document.getElementById('loaded') as HTMLDivElement).hidden = result;
 		});
 	}
 
 	public ngAfterViewInit(): void {
+		(document.getElementById('loaded') as HTMLDivElement).hidden = true;
 		this.deleteCache();
 		this.autoPopulateSelections();
 	}

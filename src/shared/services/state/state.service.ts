@@ -7,14 +7,14 @@ import { BehaviorSubject } from 'rxjs';
 export class StateService {
 	private raidTierSource = new BehaviorSubject<string>('');
 	private pokemonListSource = new BehaviorSubject<string>('');
-	private teraTypeValueSource = new BehaviorSubject<string>('');
-	private teraTypeNameSource = new BehaviorSubject<string>('');
+	private teraTypeSource = new BehaviorSubject<string>('');
+	private loadedSource = new BehaviorSubject<boolean>(false);
 	private moveListSource = new BehaviorSubject<string>('');
 
 	raidTier = this.raidTierSource.asObservable();
 	pokemonList = this.pokemonListSource.asObservable();
-	teraTypeValue = this.teraTypeValueSource.asObservable();
-	teraTypeName = this.teraTypeNameSource.asObservable();
+	teraType = this.teraTypeSource.asObservable();
+	loaded = this.loadedSource.asObservable();
 	moveList = this.moveListSource.asObservable();
 
 	public changeRaidTier(raidTier: string): void {
@@ -25,12 +25,12 @@ export class StateService {
 		this.pokemonListSource.next(pokemon);
 	}
 
-	public changeTeraTypeValue(teraType: string): void {
-		this.teraTypeValueSource.next(teraType);
+	public changeTeraType(teraType: string): void {
+		this.teraTypeSource.next(teraType);
 	}
 
-	public changeTeraTypeName(teraType: string): void {
-		this.teraTypeNameSource.next(teraType);
+	public changeLoaded(loaded: boolean): void {
+		this.loadedSource.next(loaded);
 	}
 
 	public changeMoveList(moves: string): void {
