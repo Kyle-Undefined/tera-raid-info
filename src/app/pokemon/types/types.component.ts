@@ -13,23 +13,26 @@ export class TypesComponent implements OnInit {
 		private stateService: StateService
 	) {}
 
+	private pokemonList = '';
+
 	public ngOnInit(): void {
 		this.stateService.pokemonList.subscribe((result) => {
-			if (result) {
-				this.setTypes();
-			}
+			this.pokemonList = result;
+			this.setTypes();
 		});
 	}
 
 	private setTypes(): void {
-		this.graphqlService.getTypes().subscribe((data) => {
-			data.forEach((type) => {
-				common.updateDiv(
-					document.getElementById('pokemonTypes') as HTMLDivElement,
-					this.createTypeDisplay(type.name)
-				);
+		if (this.pokemonList) {
+			this.graphqlService.getTypes().subscribe((data) => {
+				data.forEach((type) => {
+					common.updateDiv(
+						document.getElementById('pokemonTypes') as HTMLDivElement,
+						this.createTypeDisplay(type.name)
+					);
+				});
 			});
-		});
+		}
 	}
 
 	private createTypeDisplay(type: string): string {

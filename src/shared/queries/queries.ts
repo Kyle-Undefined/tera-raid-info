@@ -1,7 +1,28 @@
 import { gql } from 'apollo-angular';
 
 export const getPokemon = gql`
+	query GetPokemon($pokemon: PokemonEnum!) {
+		getPokemon(pokemon: $pokemon) {
+			...FullData
+		}
+	}
+
 	fragment GenerationalPokemonLearnsetFragment on GenerationalPokemonLearnset {
+		generation3 {
+			...PokemonLearnsetFragment
+		}
+		generation4 {
+			...PokemonLearnsetFragment
+		}
+		generation5 {
+			...PokemonLearnsetFragment
+		}
+		generation6 {
+			...PokemonLearnsetFragment
+		}
+		generation7 {
+			...PokemonLearnsetFragment
+		}
 		generation8 {
 			...PokemonLearnsetFragment
 		}
@@ -33,6 +54,7 @@ export const getPokemon = gql`
 
 	fragment LearnsetLevelUpMoveFragment on LearnsetLevelUpMove {
 		generation
+		level
 		move {
 			...MoveFragment
 		}
@@ -40,16 +62,16 @@ export const getPokemon = gql`
 
 	fragment MoveFragment on Move {
 		key
-		name
-		shortDesc
-		type
-		basePower
-		pp
-		category
 		accuracy
-		priority
-		target
+		basePower
+		category
 		desc
+		name
+		pp
+		priority
+		shortDesc
+		target
+		type
 	}
 
 	fragment LearnsetMoveFragment on LearnsetMove {
@@ -74,6 +96,7 @@ export const getPokemon = gql`
 	fragment AbilityFragment on Ability {
 		name
 		key
+		desc
 		shortDesc
 	}
 
@@ -92,8 +115,11 @@ export const getPokemon = gql`
 
 	fragment FullDataFragmentWithoutNested on Pokemon {
 		key
+		forme
 		num
+		otherFormes
 		shinySprite
+		species
 		sprite
 		types {
 			...PokemonTypeFragment
@@ -101,6 +127,7 @@ export const getPokemon = gql`
 		baseStats {
 			...StatsFragment
 		}
+		baseStatsTotal
 	}
 
 	fragment FullDataFragment on Pokemon {
@@ -115,11 +142,23 @@ export const getPokemon = gql`
 
 	fragment FullData on Pokemon {
 		...FullDataFragment
-	}
-
-	query GetPokemon($pokemon: PokemonEnum!) {
-		getPokemon(pokemon: $pokemon) {
-			...FullData
+		evolutions {
+			...FullDataFragment
+			evolutions {
+				...FullDataFragment
+			}
+			preevolutions {
+				...FullDataFragment
+			}
+		}
+		preevolutions {
+			...FullDataFragment
+			evolutions {
+				...FullDataFragment
+			}
+			preevolutions {
+				...FullDataFragment
+			}
 		}
 	}
 `;

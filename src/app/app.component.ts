@@ -12,13 +12,20 @@ export class AppComponent implements OnInit, AfterViewInit {
 	public title = 'Tera Raid Info';
 
 	public ngOnInit(): void {
-		this.stateService.loaded.subscribe((result) => {
-			(document.getElementById('loaded') as HTMLDivElement).hidden = result;
+		this.stateService.loading.subscribe((result) => {
+			(document.getElementById('dataLoading') as HTMLDivElement).hidden =
+				!result;
+
+			if (result == false) {
+				(
+					document.getElementById('pokemonContent') as HTMLDivElement
+				).style.display = '';
+			}
 		});
 	}
 
 	public ngAfterViewInit(): void {
-		(document.getElementById('loaded') as HTMLDivElement).hidden = true;
+		(document.getElementById('dataLoading') as HTMLDivElement).hidden = true;
 		this.deleteCache();
 		this.autoPopulateSelections();
 	}

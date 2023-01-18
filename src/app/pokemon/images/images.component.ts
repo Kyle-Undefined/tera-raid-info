@@ -23,44 +23,44 @@ export class ImagesComponent implements OnInit {
 		});
 		this.stateService.pokemonList.subscribe((result) => {
 			this.pokemonList = result;
-			if (result) {
-				this.setImages();
-			}
+			this.setImages();
 		});
 	}
 
 	private setImages(): void {
-		this.grapghqlService.getDexNumber().subscribe((data) => {
-			const raidData = this.raidTier == '5' ? FiveStarRaids : SixStarRaids;
-			let imageAlt = '';
+		if (this.pokemonList) {
+			this.grapghqlService.getDexNumber().subscribe((data) => {
+				const raidData = this.raidTier == '5' ? FiveStarRaids : SixStarRaids;
+				let imageAlt = '';
 
-			raidData
-				.filter((pokemon) => {
-					return pokemon.name == this.pokemonList;
-				})
-				.forEach((pokemon) => {
-					if (pokemon.imageAlt) {
-						imageAlt = pokemon.imageAlt;
-					}
-				});
+				raidData
+					.filter((pokemon) => {
+						return pokemon.name == this.pokemonList;
+					})
+					.forEach((pokemon) => {
+						if (pokemon.imageAlt) {
+							imageAlt = pokemon.imageAlt;
+						}
+					});
 
-			common.updateDiv(
-				document.getElementById('pokemonImageNormal') as HTMLDivElement,
-				`<img alt="Normal" title="Normal" src="./assets/pokemon/${common.padLeft(
-					data,
-					3,
-					'0'
-				)}${imageAlt}.png" />`
-			);
+				common.updateDiv(
+					document.getElementById('pokemonImageNormal') as HTMLDivElement,
+					`<img alt="Normal" title="Normal" src="./assets/pokemon/${common.padLeft(
+						data,
+						3,
+						'0'
+					)}${imageAlt}.png" />`
+				);
 
-			common.updateDiv(
-				document.getElementById('pokemonImageShiny') as HTMLDivElement,
-				`<img alt="Shiny" title="Shiny" src="./assets/pokemon/shiny/${common.padLeft(
-					data,
-					3,
-					'0'
-				)}${imageAlt}.png" />`
-			);
-		});
+				common.updateDiv(
+					document.getElementById('pokemonImageShiny') as HTMLDivElement,
+					`<img alt="Shiny" title="Shiny" src="./assets/pokemon/shiny/${common.padLeft(
+						data,
+						3,
+						'0'
+					)}${imageAlt}.png" />`
+				);
+			});
+		}
 	}
 }

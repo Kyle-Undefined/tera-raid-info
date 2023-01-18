@@ -8,6 +8,16 @@ export function createApollo(httpLink: HttpLink): ApolloClientOptions<unknown> {
 	return {
 		link: httpLink.create({ uri }),
 		cache: new InMemoryCache(),
+		defaultOptions: {
+			watchQuery: {
+				fetchPolicy: 'network-only',
+				errorPolicy: 'ignore',
+			},
+			query: {
+				fetchPolicy: 'network-only',
+				errorPolicy: 'all',
+			},
+		},
 	};
 }
 

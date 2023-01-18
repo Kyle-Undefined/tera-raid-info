@@ -8,14 +8,14 @@ export class StateService {
 	private raidTierSource = new BehaviorSubject<string>('');
 	private pokemonListSource = new BehaviorSubject<string>('');
 	private teraTypeSource = new BehaviorSubject<string>('');
-	private loadedSource = new BehaviorSubject<boolean>(false);
 	private moveListSource = new BehaviorSubject<string>('');
+	private loadingSource = new BehaviorSubject<boolean>(false);
 
 	raidTier = this.raidTierSource.asObservable();
 	pokemonList = this.pokemonListSource.asObservable();
 	teraType = this.teraTypeSource.asObservable();
-	loaded = this.loadedSource.asObservable();
 	moveList = this.moveListSource.asObservable();
+	loading = this.loadingSource.asObservable();
 
 	public changeRaidTier(raidTier: string): void {
 		this.raidTierSource.next(raidTier);
@@ -29,11 +29,11 @@ export class StateService {
 		this.teraTypeSource.next(teraType);
 	}
 
-	public changeLoaded(loaded: boolean): void {
-		this.loadedSource.next(loaded);
-	}
-
 	public changeMoveList(moves: string): void {
 		this.moveListSource.next(moves);
+	}
+
+	public changeLoading(loading: boolean): void {
+		this.loadingSource.next(loading);
 	}
 }

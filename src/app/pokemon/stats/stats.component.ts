@@ -28,8 +28,6 @@ export class StatsComponent implements OnInit {
 				document.getElementById('pokemonStatsWrapper') as HTMLDivElement,
 				this.createStatsDisplay(data)
 			);
-
-			this.stateService.changeLoaded(true);
 		});
 	}
 

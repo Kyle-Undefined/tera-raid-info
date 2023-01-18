@@ -28,7 +28,7 @@ h3 {
 	line-height: 20px;
 }
 
-header, article, footer {
+header, #pokemonContent, footer, #dataLoading {
 	background-color: #333c4d;
 	color: hsl(220 20% 90%);
 	border-radius: 5px;
@@ -106,7 +106,7 @@ select {
 	opacity: 1;
 }
 
-article.content {
+#pokemonContent.content {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 10px 20px;
@@ -123,7 +123,7 @@ article.content {
 		align-self: bottom;
 	}
 
-	article.content {
+	#pokemonContent.content {
 		grid-template-columns: 1fr 1fr;
 		grid-template-areas: 
 			"pkmn	stats"
@@ -463,4 +463,17 @@ article.content {
 .ghost {
     background-color: rgb(51, 84, 143) !important;
 	border-color: #4e6caa !important;
+}
+
+/* Loading Screen */
+/* Gif from - https://www.deviantart.com/termatior0/art/Pokeball-gif-662893232 */
+#dataLoading {
+    background-color: #333c4d;
+}
+
+#dataLoading img {
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

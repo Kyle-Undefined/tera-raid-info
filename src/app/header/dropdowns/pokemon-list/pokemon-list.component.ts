@@ -71,10 +71,16 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 
 		common.clearData();
 
-		this.graphqlService.getPokemon(
-			(pokemonForm ? pokemonForm : pokemon.toLowerCase()) as PokemonEnum
-		);
-		this.stateService.changePokemon(pokemon);
-		this.stateService.changeLoaded(false);
+		if (pokemon) {
+			this.graphqlService.getPokemon(
+				(pokemonForm ? pokemonForm : pokemon.toLowerCase()) as PokemonEnum
+			);
+			this.stateService.changePokemon(pokemon);
+
+			(
+				document.getElementById('pokemonContent') as HTMLDivElement
+			).style.display = 'none';
+			this.stateService.changeLoading(true);
+		}
 	}
 }

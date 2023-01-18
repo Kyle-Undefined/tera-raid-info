@@ -7,8 +7,8 @@
         <app-share-raid></app-share-raid>
     </div>
 </header>
-<article class="content">
-    <div id="loaded" hidden="true">Loading...</div>
+<div id="dataLoading" hidden="true"><img src="./assets/icons/pokeball.gif" /></div>
+<div id="pokemonContent" class="content" hidden="false">
 	<div id="pokemon">
         <div class="pokemonImageWrapper">
             <app-pokemon-images></app-pokemon-images>
@@ -20,7 +20,7 @@
     <app-pokemon-moves></app-pokemon-moves>
     <app-pokemon-herbs id="pokemonHerbs"></app-pokemon-herbs>
     <app-pokemon-type-matchups class="pokemonTypesWrapper"></app-pokemon-type-matchups>
-</article>
+</div>
 <footer class="footer">
     By: <a href="https://github.com/kyle-undefined" target="_blank">Kyle Undefined</a> - 
     Design: CronikCRS - 

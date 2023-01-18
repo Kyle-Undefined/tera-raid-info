@@ -22,7 +22,6 @@ export class MovesComponent implements OnInit {
 
 	private raidTier = '';
 	private pokemonList = '';
-	private loaded = false;
 
 	public ngOnInit(): void {
 		this.stateService.raidTier.subscribe((result) => {
@@ -30,9 +29,6 @@ export class MovesComponent implements OnInit {
 		});
 		this.stateService.pokemonList.subscribe((result) => {
 			this.pokemonList = result;
-		});
-		this.stateService.loaded.subscribe((result) => {
-			this.loaded = result;
 			this.setMoves();
 		});
 	}
@@ -69,9 +65,7 @@ export class MovesComponent implements OnInit {
 							});
 					}
 				});
-		}
 
-		if (this.loaded) {
 			this.graphqlService.getMoves().subscribe((data) => {
 				common.updateDiv(pokemonMoves, '<h3>Moves:</h3>');
 

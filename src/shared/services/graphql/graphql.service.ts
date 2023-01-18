@@ -29,11 +29,11 @@ export class GraphqlService {
 
 	public getPokemon(pokemon: PokemonEnum) {
 		this.pokemon = this.apollo
-			.watchQuery<GraphQLPokemonResponse<'getPokemon'>, QueryGetPokemonArgs>({
+			.query<GraphQLPokemonResponse<'getPokemon'>, QueryGetPokemonArgs>({
 				query: query.getPokemon,
 				variables: { pokemon },
 			})
-			.valueChanges.pipe(map((result) => result.data));
+			.pipe(map((result) => result.data));
 	}
 
 	public getAbilities(): Observable<Abilities> {
@@ -56,11 +56,11 @@ export class GraphqlService {
 		move: MovesEnum
 	): Observable<GraphQLPokemonResponse<'getMove'>> {
 		return this.apollo
-			.watchQuery<GraphQLPokemonResponse<'getMove'>, QueryGetMoveArgs>({
+			.query<GraphQLPokemonResponse<'getMove'>, QueryGetMoveArgs>({
 				query: query.getMove,
 				variables: { move },
 			})
-			.valueChanges.pipe(
+			.pipe(
 				map((result) => {
 					return result.data;
 				})

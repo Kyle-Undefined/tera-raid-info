@@ -20,7 +20,6 @@ export class TypeMatchupsComponent implements OnInit {
 	private pokemonList = '';
 	private teraType = '';
 	private moveList = '';
-	private loaded = false;
 
 	public ngOnInit(): void {
 		this.stateService.raidTier.subscribe((result) => {
@@ -38,17 +37,13 @@ export class TypeMatchupsComponent implements OnInit {
 			this.moveList = result;
 			this.handleChange();
 		});
-		this.stateService.loaded.subscribe((result) => {
-			this.loaded = result;
-			this.handleChange();
-		});
 	}
 
 	private handleChange(): void {
-		common.clearData('pokemonTeraAdvantages');
-		common.clearData('pokemonTeraWeaknesses');
+		if (this.pokemonList) {
+			common.clearData('pokemonTeraAdvantages');
+			common.clearData('pokemonTeraWeaknesses');
 
-		if (this.loaded) {
 			if (this.pokemonList) {
 				if (this.raidTier && this.teraType) {
 					this.setTypeWeaknesses();
@@ -73,6 +68,8 @@ export class TypeMatchupsComponent implements OnInit {
 				common.clearData('pokemonTeraAdvantages');
 				common.clearData('pokemonTeraWeaknesses');
 			}
+
+			this.stateService.changeLoading(false);
 		}
 	}
 

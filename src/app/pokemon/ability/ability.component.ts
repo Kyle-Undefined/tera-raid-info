@@ -10,7 +10,7 @@ import * as common from 'src/shared/utils/common';
 })
 export class AbilityComponent implements OnInit {
 	private raidTier = '';
-	private pokemon = '';
+	private pokemonList = '';
 
 	constructor(
 		private graphqlService: GraphqlService,
@@ -22,36 +22,36 @@ export class AbilityComponent implements OnInit {
 			this.raidTier = result;
 		});
 		this.stateService.pokemonList.subscribe((result) => {
-			if (result) {
-				this.pokemon = result;
-				this.setAbilities();
-			}
+			this.pokemonList = result;
+			this.setAbilities();
 		});
 	}
 
 	private setAbilities(): void {
-		const pokemonAbility = document.getElementById(
-			'pokemonAbility'
-		) as HTMLDivElement;
+		if (this.pokemonList) {
+			const pokemonAbility = document.getElementById(
+				'pokemonAbility'
+			) as HTMLDivElement;
 
-		this.graphqlService.getAbilities().subscribe((data) => {
-			common.updateDiv(pokemonAbility, '<h3>Ability:</h3>');
+			this.graphqlService.getAbilities().subscribe((data) => {
+				common.updateDiv(pokemonAbility, '<h3>Ability:</h3>');
 
-			common.updateDiv(pokemonAbility, this.createAbilityDiv(data.first));
+				common.updateDiv(pokemonAbility, this.createAbilityDiv(data.first));
 
-			if (data.second) {
-				common.updateDiv(pokemonAbility, this.createAbilityDiv(data.second));
-			}
-
-			if (this.canShowHidden()) {
-				if (data.hidden) {
-					common.updateDiv(
-						pokemonAbility,
-						this.createAbilityDiv(data.hidden, true)
-					);
+				if (data.second) {
+					common.updateDiv(pokemonAbility, this.createAbilityDiv(data.second));
 				}
-			}
-		});
+
+				if (this.canShowHidden()) {
+					if (data.hidden) {
+						common.updateDiv(
+							pokemonAbility,
+							this.createAbilityDiv(data.hidden, true)
+						);
+					}
+				}
+			});
+		}
 	}
 
 	private createAbilityDiv(ability: Ability, hidden?: boolean): string {
@@ -62,7 +62,8 @@ export class AbilityComponent implements OnInit {
 
 	private canShowHidden(): boolean {
 		return (
-			this.raidTier == '6' || (this.raidTier == '5' && this.pokemon == 'ditto')
+			this.raidTier == '6' ||
+			(this.raidTier == '5' && this.pokemonList == 'ditto')
 		);
 	}
 }

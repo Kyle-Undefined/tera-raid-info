@@ -14,7 +14,6 @@ import * as common from 'src/shared/utils/common';
 export class HerbsComponent implements OnInit {
 	private raidTier = '';
 	private pokemonList = '';
-	private loaded = false;
 
 	constructor(private stateService: StateService) {}
 
@@ -24,15 +23,12 @@ export class HerbsComponent implements OnInit {
 		});
 		this.stateService.pokemonList.subscribe((result) => {
 			this.pokemonList = result;
-		});
-		this.stateService.loaded.subscribe((result) => {
-			this.loaded = result;
 			this.setHerbs();
 		});
 	}
 
 	private setHerbs(): void {
-		if (this.loaded) {
+		if (this.pokemonList) {
 			common.updateDiv(
 				document.getElementById('pokemonHerbs') as HTMLDivElement,
 				'<h3>Herbs Dropped:</h3>'
