@@ -9,6 +9,8 @@ import type {
 	GenerationalPokemonLearnset,
 	MovesEnum,
 	QueryGetMoveArgs,
+	Pokemon,
+	Maybe,
 } from '@favware/graphql-pokemon';
 import { Apollo } from 'apollo-angular';
 import { Observable, map } from 'rxjs';
@@ -27,15 +29,6 @@ export class GraphqlService {
 
 	private pokemon!: Observable<GraphQLPokemonResponse<'getPokemon'>>;
 
-	public getPokemon(pokemon: PokemonEnum) {
-		this.pokemon = this.apollo
-			.query<GraphQLPokemonResponse<'getPokemon'>, QueryGetPokemonArgs>({
-				query: query.getPokemon,
-				variables: { pokemon },
-			})
-			.pipe(map((result) => result.data));
-	}
-
 	public getAbilities(): Observable<Abilities> {
 		return this.pokemon.pipe(
 			map((result) => {
@@ -48,6 +41,14 @@ export class GraphqlService {
 		return this.pokemon.pipe(
 			map((result) => {
 				return result.getPokemon.num;
+			})
+		);
+	}
+
+	public getEvolutions(): Observable<Maybe<readonly Pokemon[]> | undefined> {
+		return this.pokemon.pipe(
+			map((result) => {
+				return result.getPokemon.evolutions;
 			})
 		);
 	}
@@ -71,6 +72,23 @@ export class GraphqlService {
 		return this.pokemon.pipe(
 			map((result) => {
 				return result.getPokemon.learnsets as GenerationalPokemonLearnset;
+			})
+		);
+	}
+
+	public getPokemon(pokemon: PokemonEnum) {
+		this.pokemon = this.apollo
+			.query<GraphQLPokemonResponse<'getPokemon'>, QueryGetPokemonArgs>({
+				query: query.getPokemon,
+				variables: { pokemon },
+			})
+			.pipe(map((result) => result.data));
+	}
+
+	public getPreEvolutions(): Observable<Maybe<readonly Pokemon[]> | undefined> {
+		return this.pokemon.pipe(
+			map((result) => {
+				return result.getPokemon.preevolutions;
 			})
 		);
 	}

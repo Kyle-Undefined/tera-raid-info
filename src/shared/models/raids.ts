@@ -235,8 +235,13 @@ export const FiveStarRaids: Raid[] = [
 	{
 		name: 'Blissey',
 		info: {
-			moves: ['Dazzling Gleam', 'Hyper Voice', 'Sing'],
-			specialMoves: ['Seismic Toss', 'Gravity'],
+			moves: [
+				'Dazzling Gleam',
+				'Hyper Voice',
+				'Sing',
+				'Seismic Toss',
+				'Gravity',
+			],
 			herbs: [
 				{ name: 'Spicy', chance: 10.87 },
 				{ name: 'Sweet', chance: 10.87 },
@@ -478,8 +483,14 @@ export const FiveStarRaids: Raid[] = [
 	{
 		name: 'Weavile',
 		info: {
-			moves: ['Ice Punch', 'Night Slash', 'Taunt', 'Facade', 'Swords Dance'],
-			specialMoves: ['Reflect'],
+			moves: [
+				'Ice Punch',
+				'Night Slash',
+				'Taunt',
+				'Facade',
+				'Swords Dance',
+				'Reflect',
+			],
 			herbs: [{ name: 'Sweet', chance: 10.87 }],
 		},
 	},
@@ -543,8 +554,14 @@ export const FiveStarRaids: Raid[] = [
 	{
 		name: 'Krookodile',
 		info: {
-			moves: ['Earthquake', 'Crunch', 'Sand Tomb', 'Torment', 'Hone Claws'],
-			specialMoves: ['Counter'],
+			moves: [
+				'Earthquake',
+				'Crunch',
+				'Sand Tomb',
+				'Torment',
+				'Hone Claws',
+				'Counter',
+			],
 			herbs: [{ name: 'Spicy', chance: 10.87 }],
 		},
 	},
@@ -1448,8 +1465,8 @@ export const SixStarRaids: Raid[] = [
 				'Lava Plume',
 				'Will-O-Wisp',
 				'Sunny Day',
+				'Curse',
 			],
-			specialMoves: ['Curse'],
 			herbs: [{ name: 'Spicy', chance: 13.64 }],
 		},
 	},
@@ -1483,8 +1500,8 @@ export const SixStarRaids: Raid[] = [
 	{
 		name: 'Umbreon',
 		info: {
-			moves: ['Tera Blast', 'Dark Pulse', 'Foul Play', 'Calm Mind'],
-			specialMoves: ['Curse', 'Tickle'],
+			moves: ['Tera Blast', 'Dark Pulse', 'Foul Play', 'Calm Mind', 'Curse'],
+			specialMoves: ['Tickle'],
 			herbs: [{ name: 'Sour', chance: 13.64 }],
 		},
 	},
