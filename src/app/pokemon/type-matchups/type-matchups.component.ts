@@ -68,8 +68,6 @@ export class TypeMatchupsComponent implements OnInit {
 				common.clearData('pokemonTeraAdvantages');
 				common.clearData('pokemonTeraWeaknesses');
 			}
-
-			this.stateService.changeLoading(false);
 		}
 	}
 

@@ -6,11 +6,9 @@ import type {
 	Abilities,
 	Stats,
 	PokemonType,
-	GenerationalPokemonLearnset,
 	MovesEnum,
 	QueryGetMoveArgs,
-	Pokemon,
-	Maybe,
+	GenerationalPokemonLearnset,
 } from '@favware/graphql-pokemon';
 import { Apollo } from 'apollo-angular';
 import { Observable, map } from 'rxjs';
@@ -45,14 +43,6 @@ export class GraphqlService {
 		);
 	}
 
-	public getEvolutions(): Observable<Maybe<readonly Pokemon[]> | undefined> {
-		return this.pokemon.pipe(
-			map((result) => {
-				return result.getPokemon.evolutions;
-			})
-		);
-	}
-
 	public getMove(
 		move: MovesEnum
 	): Observable<GraphQLPokemonResponse<'getMove'>> {
@@ -83,14 +73,6 @@ export class GraphqlService {
 				variables: { pokemon },
 			})
 			.pipe(map((result) => result.data));
-	}
-
-	public getPreEvolutions(): Observable<Maybe<readonly Pokemon[]> | undefined> {
-		return this.pokemon.pipe(
-			map((result) => {
-				return result.getPokemon.preevolutions;
-			})
-		);
 	}
 
 	public getStats(): Observable<Stats> {
