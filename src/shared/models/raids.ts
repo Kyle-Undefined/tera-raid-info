@@ -2036,7 +2036,6 @@ export const SixStarRaids: Raid[] = [
 				'Play Rough',
 				'Knock Off',
 				'Thunder Wave',
-
 				'Sweet Kiss',
 			],
 			specialMoves: ['Misty Terrain'],

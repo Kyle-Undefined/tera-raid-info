@@ -77,7 +77,11 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 			);
 			this.stateService.changePokemon(pokemon);
 
-			this.doLoad();
+			(
+				document.getElementById('pokemonContent') as HTMLDivElement
+			).style.display = 'none';
+
+			this.stateService.changeLoading(true);
 		}
 	}
 

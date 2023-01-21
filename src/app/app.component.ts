@@ -1,12 +1,28 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
+	constructor(private stateService: StateService) {}
+
 	public title = 'Tera Raid Info';
+
+	public ngOnInit(): void {
+		this.stateService.loading.subscribe((result) => {
+			(document.getElementById('dataLoading') as HTMLDivElement).hidden =
+				!result;
+
+			if (result == false) {
+				(
+					document.getElementById('pokemonContent') as HTMLDivElement
+				).style.display = '';
+			}
+		});
+	}
 
 	public ngAfterViewInit(): void {
 		(document.getElementById('dataLoading') as HTMLDivElement).hidden = true;
