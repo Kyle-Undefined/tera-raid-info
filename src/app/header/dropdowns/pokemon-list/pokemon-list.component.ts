@@ -84,20 +84,4 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 			this.stateService.changeLoading(true);
 		}
 	}
-
-	private doLoad(): void {
-		(
-			document.getElementById('pokemonContent') as HTMLDivElement
-		).style.display = 'none';
-
-		(document.getElementById('dataLoading') as HTMLDivElement).hidden = false;
-
-		setTimeout(() => {
-			(
-				document.getElementById('pokemonContent') as HTMLDivElement
-			).style.display = '';
-
-			(document.getElementById('dataLoading') as HTMLDivElement).hidden = true;
-		}, Math.floor(Math.random() * (3000 - 2200) + 2200));
-	}
 }

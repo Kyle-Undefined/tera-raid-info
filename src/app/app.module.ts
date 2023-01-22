@@ -8,7 +8,6 @@ import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { TypeCalcService } from 'src/shared/services/type-calc/type-calc.service';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { RaidTierComponent } from './header/dropdowns/raid-tier/raid-tier.component';
 import { PokemonListComponent } from './header/dropdowns/pokemon-list/pokemon-list.component';
 import { TeraTypeComponent } from './header/dropdowns/tera-type/tera-type.component';
@@ -24,7 +23,6 @@ import { TypeMatchupsComponent } from './pokemon/type-matchups/type-matchups.com
 @NgModule({
 	declarations: [
 		AppComponent,
-		HeaderComponent,
 		RaidTierComponent,
 		PokemonListComponent,
 		TeraTypeComponent,

@@ -5,6 +5,7 @@ import { TeraTypeComponent } from './tera-type.component';
 describe('TeraTypeComponent', () => {
 	let component: TeraTypeComponent;
 	let fixture: ComponentFixture<TeraTypeComponent>;
+	let select: HTMLSelectElement;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
@@ -18,5 +19,10 @@ describe('TeraTypeComponent', () => {
 
 	it('should create', () => {
 		expect(component).toBeTruthy();
+	});
+
+	it('should create options', () => {
+		select = fixture.nativeElement;
+		expect(select.querySelector('select')?.options.length).toBeGreaterThan(1);
 	});
 });

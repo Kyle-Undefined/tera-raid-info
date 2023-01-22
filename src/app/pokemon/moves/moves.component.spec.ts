@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ApolloTestingModule } from 'apollo-angular/testing';
 import { MovesComponent } from './moves.component';
 
 describe('MovesComponent', () => {
@@ -9,6 +9,7 @@ describe('MovesComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			declarations: [MovesComponent],
+			imports: [ApolloTestingModule],
 		}).compileComponents();
 
 		fixture = TestBed.createComponent(MovesComponent);

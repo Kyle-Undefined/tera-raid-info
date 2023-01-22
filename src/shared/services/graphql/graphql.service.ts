@@ -66,13 +66,15 @@ export class GraphqlService {
 		);
 	}
 
-	public getPokemon(pokemon: PokemonEnum) {
+	public getPokemon(pokemon: PokemonEnum): Observable<unknown> {
 		this.pokemon = this.apollo
 			.query<GraphQLPokemonResponse<'getPokemon'>, QueryGetPokemonArgs>({
 				query: query.getPokemon,
 				variables: { pokemon },
 			})
 			.pipe(map((result) => result.data));
+
+		return this.pokemon;
 	}
 
 	public getStats(): Observable<Stats> {

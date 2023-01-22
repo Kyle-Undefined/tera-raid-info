@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ApolloTestingModule } from 'apollo-angular/testing';
 import { ImagesComponent } from './images.component';
 
 describe('ImagesComponent', () => {
@@ -9,6 +9,7 @@ describe('ImagesComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			declarations: [ImagesComponent],
+			imports: [ApolloTestingModule],
 		}).compileComponents();
 
 		fixture = TestBed.createComponent(ImagesComponent);
