@@ -4,7 +4,7 @@
 <p align="center">
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/kyle-undefined/tera-raid-info?color=B9E550&style=for-the-badge" />
 <a href="https://github.com/kyle-undefined/tera-raid-info/actions/workflows/gh-pages.yml" target="_blank"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/kyle-undefined/tera-raid-info/gh-pages.yml?style=for-the-badge" /></a>
-<a href='https://coveralls.io/github/Kyle-Undefined/tera-raid-info?branch=main'><img alt="Coveralls" src="https://img.shields.io/coverallsCoverage/github/kyle-undefined/tera-raid-info?style=for-the-badge"></a>
+<a href="https://coveralls.io/github/Kyle-Undefined/tera-raid-info?branch=main" target="_blank"><img alt="Coveralls" src="https://img.shields.io/coverallsCoverage/github/Kyle-Undefined/tera-raid-info?style=for-the-badge"></a>
 <a href="https://github.com/Kyle-Undefined/tera-raid-info/commits/main" target="_blank"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/kyle-undefined/tera-raid-info?color=lightblue&style=for-the-badge" /></a>
 <a href="https://github.com/Kyle-Undefined/tera-raid-info/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/kyle-undefined/tera-raid-info?color=00a0c1&style=for-the-badge" /></a>
 <br>
