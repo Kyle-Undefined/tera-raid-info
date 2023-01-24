@@ -14,10 +14,8 @@ import { Apollo } from 'apollo-angular';
 import { Observable, map } from 'rxjs';
 import * as query from 'src/shared/queries/queries';
 
-type GraphQLPokemonResponse<K extends keyof Omit<Query, '__typename'>> = Record<
-	K,
-	Omit<Query[K], '__typename'>
->;
+export type GraphQLPokemonResponse<K extends keyof Omit<Query, '__typename'>> =
+	Record<K, Omit<Query[K], '__typename'>>;
 
 @Injectable({
 	providedIn: 'root',
@@ -66,7 +64,9 @@ export class GraphqlService {
 		);
 	}
 
-	public getPokemon(pokemon: PokemonEnum): Observable<unknown> {
+	public getPokemon(
+		pokemon: PokemonEnum
+	): Observable<GraphQLPokemonResponse<'getPokemon'>> {
 		this.pokemon = this.apollo
 			.query<GraphQLPokemonResponse<'getPokemon'>, QueryGetPokemonArgs>({
 				query: query.getPokemon,
