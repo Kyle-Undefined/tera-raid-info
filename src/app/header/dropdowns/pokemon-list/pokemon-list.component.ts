@@ -59,9 +59,7 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 		this.pokemonList.innerHTML = '<option value="">-- Pokemon --</option>';
 	}
 
-	public valueChanged(event: Event) {
-		const pokemon = (event.target as HTMLSelectElement).value;
-
+	public valueChanged() {
 		const selectElement = document.getElementById(
 			'pokemonList'
 		) as HTMLSelectElement;
@@ -71,11 +69,12 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 
 		common.clearData();
 
-		if (pokemon) {
+		if (option.value) {
 			this.graphqlService.getPokemon(
-				(pokemonForm ? pokemonForm : pokemon.toLowerCase()) as PokemonEnum
+				(pokemonForm ? pokemonForm : option.value.toLowerCase()) as PokemonEnum
 			);
-			this.stateService.changePokemon(pokemon);
+
+			this.stateService.changePokemon(option.value);
 
 			(
 				document.getElementById('pokemonContent') as HTMLDivElement

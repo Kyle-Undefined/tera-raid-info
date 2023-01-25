@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, Inject } from '@angular/core';
 import { StateService } from 'src/shared/services/state/state.service';
+
 import * as common from 'src/shared/utils/common';
 
 @Component({
@@ -30,10 +31,13 @@ export class AppComponent implements AfterViewInit, OnInit {
 		this.autoPopulateSelections();
 	}
 
-	private autoPopulateSelections(): void {
-		if (location.href.replace(location.origin + '/tera-raid-info/', '')) {
-			const build = location.href
-				.replace(location.origin + '/tera-raid-info/', '')
+	public autoPopulateSelections(url?: string, origin?: string): void {
+		const href = url ? url : window.location.href;
+		const originString = origin ? origin : window.location.origin;
+
+		if (href.replace(originString + '/tera-raid-info/', '')) {
+			const build = href
+				.replace(originString + '/tera-raid-info/', '')
 				.split('/');
 			const event = new Event('change');
 

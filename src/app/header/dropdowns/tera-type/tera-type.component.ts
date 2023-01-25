@@ -20,7 +20,13 @@ export class TeraTypeComponent implements OnInit {
 		});
 	}
 
-	public valueChanged(event: Event) {
-		this.stateService.changeTeraType((event.target as HTMLSelectElement).value);
+	public valueChanged() {
+		const selectElement = document.getElementById(
+			'teraList'
+		) as HTMLSelectElement;
+		const selectedIndex = selectElement.selectedIndex;
+		const option = selectElement.options[selectedIndex];
+
+		this.stateService.changeTeraType(option.value);
 	}
 }

@@ -1,22 +1,26 @@
+import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { ApolloTestingModule } from 'apollo-angular/testing';
 import { StateService } from 'src/shared/services/state/state.service';
 
-import { TeraTypeComponent } from './tera-type.component';
+import { PokemonListComponent } from './pokemon-list.component';
 
-describe('TeraTypeComponent', () => {
-	let component: TeraTypeComponent;
-	let fixture: ComponentFixture<TeraTypeComponent>;
+describe('PokemonListComponent', () => {
+	let component: PokemonListComponent;
+	let fixture: ComponentFixture<PokemonListComponent>;
 	let service: StateService;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [TeraTypeComponent],
+			declarations: [PokemonListComponent],
 			providers: [StateService],
+			imports: [ApolloTestingModule],
+			schemas: [NO_ERRORS_SCHEMA],
 		}).compileComponents();
 
 		service = TestBed.inject(StateService);
-		fixture = TestBed.createComponent(TeraTypeComponent);
+		fixture = TestBed.createComponent(PokemonListComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});
@@ -27,34 +31,37 @@ describe('TeraTypeComponent', () => {
 
 	it('should create options', () => {
 		const select: HTMLSelectElement = fixture.nativeElement;
+		service.changeRaidTier('6');
 		expect(select.querySelector('select')?.options.length).toBeGreaterThan(1);
 	});
 
-	it('should call event', () => {
+	it('should call event with 5 star raid data', () => {
 		spyOn(component, 'valueChanged');
 
 		const element = fixture.debugElement;
 		const select = element.query(By.css('select')).nativeElement;
 
+		service.changeRaidTier('5');
 		select.value = select.options[1].value;
 		select.dispatchEvent(new Event('change'));
 		fixture.detectChanges();
 
 		expect(component.valueChanged).toHaveBeenCalled();
-		expect(select.value).toBe('Bug');
+		expect(select.value).toBe('Abomasnow');
 	});
 
-	it('should update state', () => {
+	it('should call event with 6 star raid data', () => {
+		spyOn(component, 'valueChanged');
+
 		const element = fixture.debugElement;
 		const select = element.query(By.css('select')).nativeElement;
 
-		select.value = select.options[17].value;
+		service.changeRaidTier('6');
+		select.value = select.options[1].value;
+		select.dispatchEvent(new Event('change'));
 		fixture.detectChanges();
 
-		component.valueChanged();
-
-		service.teraType.subscribe((result) => {
-			expect(result).toBe('Steel');
-		});
+		expect(component.valueChanged).toHaveBeenCalled();
+		expect(select.value).toBe('Amoonguss');
 	});
 });
