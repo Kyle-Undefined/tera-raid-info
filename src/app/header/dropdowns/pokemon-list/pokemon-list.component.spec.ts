@@ -1,4 +1,3 @@
-import { NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { ApolloTestingModule } from 'apollo-angular/testing';
@@ -16,7 +15,6 @@ describe('PokemonListComponent', () => {
 			declarations: [PokemonListComponent],
 			providers: [StateService],
 			imports: [ApolloTestingModule],
-			schemas: [NO_ERRORS_SCHEMA],
 		}).compileComponents();
 
 		service = TestBed.inject(StateService);

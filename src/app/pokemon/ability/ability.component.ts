@@ -63,7 +63,7 @@ export class AbilityComponent implements OnInit {
 	private canShowHidden(): boolean {
 		return (
 			this.raidTier == '6' ||
-			(this.raidTier == '5' && this.pokemonList == 'ditto')
+			(this.raidTier == '5' && this.pokemonList == 'Ditto')
 		);
 	}
 }

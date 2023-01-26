@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, Inject } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { StateService } from 'src/shared/services/state/state.service';
 
 import * as common from 'src/shared/utils/common';
