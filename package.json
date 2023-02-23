@@ -49,7 +49,7 @@
     "@angular-eslint/eslint-plugin-template": "15.2.1",
     "@angular-eslint/schematics": "15.2.1",
     "@angular-eslint/template-parser": "15.2.1",
-    "@angular/cli": "~15.1.0",
+    "@angular/cli": "~15.2.0",
     "@angular/compiler-cli": "^15.0.0",
     "@favware/graphql-pokemon": "^7.1.2",
     "@types/jasmine": "~4.3.0",
