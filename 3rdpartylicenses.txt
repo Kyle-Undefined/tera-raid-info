@@ -39,8 +39,6 @@ SOFTWARE.
 
 @apollo/client/errors
 
-@apollo/client/link/batch
-
 @apollo/client/link/core
 
 @apollo/client/link/http
