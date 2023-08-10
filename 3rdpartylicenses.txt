@@ -455,8 +455,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-ts-invariant/process
-
 zen-observable-ts
 MIT
 The MIT License (MIT)
