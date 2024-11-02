@@ -13,7 +13,7 @@ import { HttpLink } from 'apollo-angular/http';
 
 				return {
 					link: httpLink.create({
-						uri: 'https://graphqlpokemon.favware.tech/v7',
+						uri: 'https://graphqlpokemon.favware.tech/v8',
 					}),
 					cache,
 					defaultOptions: {
