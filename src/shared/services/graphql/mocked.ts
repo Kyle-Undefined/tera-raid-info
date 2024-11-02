@@ -173,6 +173,8 @@ export const MockedPokemonData: GraphQLPokemonResponse<'getPokemon'> = {
 				],
 			},
 		},
+		legendary: false,
+		mythical: false,
 	},
 };
 

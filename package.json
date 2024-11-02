@@ -1,6 +1,6 @@
 {
   "name": "tera-raid-info",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Aggregate view of the [Serebii](https://www.serebii.net/) Tera Raid Info for Pokemon Scarlet & Violet.",
   "main": "./src/main.ts",
   "scripts": {
