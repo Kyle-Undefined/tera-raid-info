@@ -110,7 +110,7 @@ select {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 10px 20px;
-	grid-template-areas:  "pkmn" "type" "stats" "ability" "moves"  "herbs" "adv" "weak" "tadv";
+	grid-template-areas:  "pkmn" "type" "stats" "ability" "moves"  "acts" "herbs" "adv" "weak" "tadv";
 }
 
 @media screen and (min-width: 768px) {
@@ -129,6 +129,7 @@ select {
 			"pkmn	stats"
 			"pkmn	ability"
 			"pkmn	moves"
+            "acts   acts"
 			"herbs	herbs"
 			"adv	adv"
 			"weak	weak"
@@ -144,6 +145,7 @@ select {
 #pokemonAbility { grid-area: ability; }
 #pokemonMoves { grid-area: moves; }
 #pokemonHerbs { grid-area: herbs; }
+#pokemonActions { grid-area: acts; }
 .pokemonTypesWrapper { grid-area: adv; }
 #pokemonTypeAdvantages { grid-area: adv; }
 #pokemonTeraAdvantages { grid-area: tadv; }
@@ -187,12 +189,14 @@ select {
 
 #pokemonAbility,
 #pokemonMoves,
+#pokemonActions,
 #pokemonHerbs {
     display: flex;
     flex-wrap: wrap;
 }
 #pokemonAbility h3,
 #pokemonMoves h3,
+#pokemonActions h3,
 #pokemonHerbs h3 {
     flex: 1 1 100%;
 }
@@ -354,6 +358,129 @@ select {
 .pokemonTypeMatchups > :first-child {
 	flex: 0 0 100%;
 }
+
+
+/* Actions Css */
+.actions {
+    color: #fff;
+    text-shadow: 0 1px 0 #000, 0 0 1px rgb(0 0 0 / 60%), 0 0 2px rgb(0 0 0 / 70%), 0 0 3px rgb(0 0 0 / 80%), 0 0 4px rgb(0 0 0 / 90%);
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px 10px;
+    margin: 5px 5px 5px 0px;
+    text-align: right;
+}
+.time-85 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 85%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 85%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 85%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 85%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 85%);
+    border-color: #00ccff;
+}
+.hp-85 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 85%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 85%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 85%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 85%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 85%);
+    border-color: #008040;
+}
+.time-75 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 75%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 75%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 75%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 75%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 75%);
+    border-color: #00ccff;
+}
+.hp-75 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 75%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 75%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 75%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 75%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 75%);
+    border-color: #008040;
+}
+.time-50 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 50%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 50%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 50%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 50%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 50%);
+    border-color: #00ccff;
+}
+.hp-50 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 50%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 50%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 50%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 50%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 50%);
+    border-color: #008040;
+}
+.time-35 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 35%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 35%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 35%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 35%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 35%);
+    border-color: #00ccff;
+}
+.hp-35 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 35%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 35%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 35%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 35%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 35%);
+    border-color: #008040;
+}
+#pokemonActions .actions {
+    flex: 0 1 auto;
+    position: relative;
+    margin-bottom: 0;
+}
+#pokemonActions .actions:after,
+#pokemonActions .actions:before {
+    display: none;
+    background-color: #ecf0f7;
+    border: 1px solid #29303d;
+    position: absolute;
+    z-index: 110;
+    color: #000;
+}
+#pokemonActions .actions:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 2px;
+    rotate: 45deg;
+    top: 27px;
+    left: 25px
+}
+#pokemonActions .actions:before {
+    content: attr(data-info);
+    top: 32px;
+    left: 0;
+    text-shadow: none;
+    background-color: #ecf0f7;
+    padding: 8px 10px;
+    border: 1px solid #29303d;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    z-index: 100;
+}
+#pokemonActions .actions:hover:before,
+#pokemonActions .actions:hover:after {
+    display: block;
+}
+
 
 
 /* Herb Css */

@@ -8,8 +8,20 @@ type Raid = {
 type RaidInfo = {
 	moves: string[];
 	specialMoves?: string[];
+	actions?: RaidAction[];
 	herbs: HerbaMystica[];
 };
+
+export type RaidAction = {
+	type: RaidActionType;
+	threshold: number;
+	action: string;
+};
+
+enum RaidActionType {
+	Time = 'Time',
+	HP = 'HP',
+}
 
 export type HerbaMystica = {
 	name: string;
@@ -27,6 +39,33 @@ export const FiveStarRaids: Raid[] = [
 				'Nuzzle',
 				'Electric Terrain',
 				'Thunder Wave',
+			],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 85,
+					action: 'Uses Electric Terrain',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Uses Thunder Wave',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 35,
+					action: 'Uses Electric Terrain',
+				},
 			],
 			herbs: [
 				{

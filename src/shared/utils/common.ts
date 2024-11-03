@@ -13,6 +13,7 @@ export function clearData(section?: string): void {
 		'pokemonImageShiny',
 		'pokemonAbility',
 		'pokemonStatsWrapper',
+		'pokemonActions',
 		'pokemonMoves',
 		'pokemonHerbs',
 		'pokemonTypeAdvantages',
