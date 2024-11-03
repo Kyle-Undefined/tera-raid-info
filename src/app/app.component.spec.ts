@@ -10,6 +10,7 @@ import { TypesComponent } from './pokemon/types/types.component';
 import { StatsComponent } from './pokemon/stats/stats.component';
 import { AbilityComponent } from './pokemon/ability/ability.component';
 import { MovesComponent } from './pokemon/moves/moves.component';
+import { ActionsComponent } from './pokemon/actions/actions.component';
 import { HerbsComponent } from './pokemon/herbs/herbs.component';
 import { TypeMatchupsComponent } from './pokemon/type-matchups/type-matchups.component';
 import { By } from '@angular/platform-browser';
@@ -41,6 +42,7 @@ describe('AppComponent', () => {
 				StatsComponent,
 				AbilityComponent,
 				MovesComponent,
+				ActionsComponent,
 				HerbsComponent,
 				TypeMatchupsComponent,
 			],
