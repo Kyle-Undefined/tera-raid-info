@@ -54,7 +54,7 @@ export class ActionsComponent implements OnInit {
 	}
 
 	private createActionDiv(action: RaidAction): string {
-		return `<div class="actions ${action.type.toLowerCase()}-${action.threshold.toString()}" data-info="${action.threshold.toString()}% ${action.type.toLowerCase()} Remaining">${
+		return `<div class="actions ${action.type.toLowerCase()}-${action.threshold.toString()}" data-info="${action.threshold.toString()}% ${action.type.toString()} Remaining">${
 			action.action
 		}</div>`;
 	}
