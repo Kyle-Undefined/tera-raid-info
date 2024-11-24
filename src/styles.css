@@ -380,6 +380,14 @@ select {
     background-image: linear-gradient(to right, #00ccff 0%, transparent 85%);
     border-color: #00ccff;
 }
+.time-80 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 80%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 80%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 80%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 80%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 80%);
+    border-color: #00ccff;
+}
 .hp-85 {
     background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 85%);
     background-image: -moz-linear-gradient(to right, #008040 0%, transparent 85%);
@@ -452,6 +460,14 @@ select {
     background-image: linear-gradient(to right, #008040 0%, transparent 45%);
     border-color: #008040;
 }
+.hp-40 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 40%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 40%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 40%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 40%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 40%);
+    border-color: #008040;
+}
 .time-35 {
     background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 35%);
     background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 35%);
@@ -499,6 +515,22 @@ select {
     background-image: -o-linear-gradient(to right, #008040 0%, transparent 25%);
     background-image: linear-gradient(to right, #008040 0%, transparent 25%);
     border-color: #008040;
+}
+.hp-20 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 20%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 20%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 20%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 20%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 20%);
+    border-color: #008040;
+}
+.time-15 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 15%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 15%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 15%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 15%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 15%);
+    border-color: #00ccff;
 }
 #pokemonActions .actions {
     flex: 0 1 auto;

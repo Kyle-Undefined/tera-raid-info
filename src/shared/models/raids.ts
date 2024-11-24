@@ -2868,7 +2868,7 @@ export const FiveStarRaids: Raid[] = [
 	{
 		name: 'Tauros (Water)',
 		formName: 'taurospaldeaaqua',
-		imageAlt: '-1',
+		imageAlt: '-a',
 		info: {
 			moves: [
 				'Wave Crash',

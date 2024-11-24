@@ -42,7 +42,7 @@ export class ActionsComponent implements OnInit {
 				})
 				.forEach((pokemon) => {
 					pokemon.info.actions
-						?.sort((a) => a.threshold)
+						?.sort((a, b) => b.threshold - a.threshold)
 						.forEach((action) => {
 							common.updateDiv(
 								document.getElementById('pokemonActions') as HTMLDivElement,
