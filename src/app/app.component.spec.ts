@@ -129,6 +129,20 @@ describe('AppComponent', () => {
 		expect(teraList.value).toBe('Steel');
 	});
 
+	it('should set actions', () => {
+		const element = fixture.debugElement;
+		const select = element.query(By.css('#pokemonList')).nativeElement;
+		const div = element.query(By.css('#pokemonActions')).nativeElement;
+
+		stateService.changeRaidTier('5');
+		select.value = select.options[3].value;
+		select.dispatchEvent(new Event('change'));
+		fixture.detectChanges();
+		expect(div.innerHTML).toBe(
+			'<h3>Actions:</h3><div class="actions time-85" data-info="85% Time Remaining">Uses Grassy Terrain</div><div class="actions hp-75" data-info="75% HP Remaining">Uses Spore</div><div class="actions hp-50" data-info="50% HP Remaining">Stats &amp; Status Reset</div><div class="actions hp-40" data-info="40% HP Remaining">Uses Spore</div><div class="actions hp-25" data-info="25% HP Remaining">Player Stats &amp; Status Reset</div>'
+		);
+	});
+
 	it('should set herbs', () => {
 		const element = fixture.debugElement;
 		const select = element.query(By.css('#pokemonList')).nativeElement;
