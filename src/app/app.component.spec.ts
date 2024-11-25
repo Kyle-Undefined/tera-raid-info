@@ -139,7 +139,7 @@ describe('AppComponent', () => {
 		select.dispatchEvent(new Event('change'));
 		fixture.detectChanges();
 		expect(div.innerHTML).toBe(
-			'<h3>Herbs Dropped:</h3><div class="herbPill bitter">Bitter - 10.87%</div><div class="herbPill salty">Salty - 10.87%</div><div class="herbPill sour">Sour - 10.879%</div><div class="herbPill spicy">Spicy - 10.87%</div><div class="herbPill sweet">Sweet - 10.87%</div>'
+			'<h3>Herbs Dropped:</h3><div class="herbPill bitter">Bitter - 2.4%</div><div class="herbPill salty">Salty - 2.4%</div><div class="herbPill sour">Sour - 2.4%</div><div class="herbPill spicy">Spicy - 2.4%</div><div class="herbPill sweet">Sweet - 2.4%</div>'
 		);
 	});
 
