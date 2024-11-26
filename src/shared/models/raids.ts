@@ -8,7 +8,7 @@ type Raid = {
 type RaidInfo = {
 	moves: string[];
 	specialMoves?: string[];
-	actions?: RaidAction[];
+	actions: RaidAction[];
 	herbs: HerbaMystica[];
 };
 
