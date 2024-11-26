@@ -33,43 +33,47 @@ describe('GraphqlService', () => {
 		expect(service).toBeTruthy();
 	});
 
-	it('getPokemon(pokemon: PokemonEnum) should return data', () => {
+	it('getPokemon(pokemon: PokemonEnum) should return data', (done) => {
 		service.getPokemon(pokemon).subscribe((result) => {
 			expect(result.getPokemon.num).toBe(94);
 			expect(result.getPokemon.key).toBe(PokemonEnum.Gengar);
 		});
 
+		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
 	});
 
-	it('getMove(move: MovesEnum) should return data', () => {
+	it('getMove(move: MovesEnum) should return data', (done) => {
 		service.getMove(move).subscribe((result) => {
 			expect(result.getMove.name).toBe('Disable');
 			expect(result.getMove.category).toBe('Status');
 		});
 
+		done();
 		controller.expectOne(query.getMove).flush({ data: MockedMoveData });
 	});
 
-	it('getAbilities() should return data', () => {
+	it('getAbilities() should return data', (done) => {
 		service.getPokemon(pokemon);
 		service.getAbilities().subscribe((result) => {
 			expect(result.first.name).toBe('Cursed Body');
 		});
 
+		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
 	});
 
-	it('getDexNumber() should return data', () => {
+	it('getDexNumber() should return data', (done) => {
 		service.getPokemon(pokemon);
 		service.getDexNumber().subscribe((result) => {
 			expect(result).toBe(94);
 		});
 
+		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
 	});
 
-	it('getMoves() should return data', () => {
+	it('getMoves() should return data', (done) => {
 		service.getPokemon(pokemon);
 		service.getMoves().subscribe((result) => {
 			expect(result.generation8.tmMoves).toBeDefined();
@@ -78,10 +82,11 @@ describe('GraphqlService', () => {
 			expect(result.generation8.dreamworldMoves?.length).toBe(0);
 		});
 
+		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
 	});
 
-	it('getStats() should return data', () => {
+	it('getStats() should return data', (done) => {
 		service.getPokemon(pokemon);
 		service.getStats().subscribe((result) => {
 			expect(result.attack).toBe(65);
@@ -89,16 +94,18 @@ describe('GraphqlService', () => {
 			expect(result.hp).not.toBe(80);
 		});
 
+		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
 	});
 
-	it('getTypes() should return data', () => {
+	it('getTypes() should return data', (done) => {
 		service.getPokemon(pokemon);
 		service.getTypes().subscribe((result) => {
 			expect(result[0].name).toBe('Ghost');
 			expect(result[1].name).toBe('Poison');
 		});
 
+		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
 	});
 });
