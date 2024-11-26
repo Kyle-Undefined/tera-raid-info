@@ -3188,628 +3188,73 @@ export const FiveStarRaids: Raid[] = [
 
 export const SixStarRaids: Raid[] = [
 	{
-		name: 'Gengar',
-		info: {
-			moves: [
-				'Shadow Ball',
-				'Sludge Bomb',
-				'Dazzling Gleam',
-				'Will-O-Wisp',
-				'Hypnosis',
-			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Tauros',
-		formName: 'taurospaldea',
-		imageAlt: '-p',
-		info: {
-			moves: [
-				'Close Combat',
-				'Thrash',
-				'Zen Headbutt',
-				'Raging Bull',
-				'Bulk Up',
-			],
-			specialMoves: ['Screech'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Tauros (Fire)',
-		formName: 'taurospaldeafire',
-		imageAlt: '-b',
-		info: {
-			moves: [
-				'Flare Blitz',
-				'Close Combat',
-				'Flamethrower',
-				'Headbutt',
-				'Sunny Day',
-				'Bulk Up',
-			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Tauros (Water)',
-		formName: 'taurospaldeawater',
-		imageAlt: '-a',
-		info: {
-			moves: [
-				'Wave Crash',
-				'Close Combat',
-				'Surf',
-				'Headbutt',
-				'Rain Dance',
-				'Bulk Up',
-			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Gyarados',
-		info: {
-			moves: [
-				'Aqua Tail',
-				'Crunch',
-				'Hurricane',
-				'Ice Fang',
-				'Taunt',
-				'Dragon Dance',
-			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Ditto',
-		info: { moves: ['Transform'], herbs: [{ name: 'Sweet', chance: 13.64 }] },
-	},
-	{
-		name: 'Vaporeon',
-		info: {
-			moves: ['Tera Blast', 'Surf', 'Hyper Voice', 'Rain Dance', 'Calm Mind'],
-			specialMoves: ['Yawn'],
-			herbs: [
-				{ name: 'Spicy', chance: 13.64 },
-				{ name: 'Sweet', chance: 13.64 },
-				{ name: 'Salty', chance: 13.64 },
-				{ name: 'Bitter', chance: 13.64 },
-				{ name: 'Sour', chance: 13.64 },
-			],
-		},
-	},
-	{
-		name: 'Jolteon',
-		info: {
-			moves: [
-				'Tera Blast',
-				'Thunderbolt',
-				'Shadow Ball',
-				'Thunder Wave',
-				'Electric Terrain',
-				'Calm Mind',
-			],
-			herbs: [{ name: 'Sweet', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Flareon',
-		info: {
-			moves: [
-				'Tera Blast',
-				'Flare Blitz',
-				'Lava Plume',
-				'Will-O-Wisp',
-				'Sunny Day',
-			],
-			specialMoves: ['Curse'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Dragonite',
-		info: {
-			moves: [
-				'Dragon Rush',
-				'Extreme Speed',
-				'Dragon Dance',
-				'Aqua Tail',
-				'Light Screen',
-			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Espeon',
-		info: {
-			moves: [
-				'Tera Blast',
-				'Psychic',
-				'Psyshock',
-				'Psychic Terrain',
-				'Calm Mind',
-			],
-			specialMoves: ['Tickle'],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Umbreon',
-		info: {
-			moves: ['Tera Blast', 'Dark Pulse', 'Foul Play', 'Calm Mind'],
-			specialMoves: ['Curse', 'Tickle'],
-			herbs: [{ name: 'Sour', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Slowking',
-		info: {
-			moves: [
-				'Surf',
-				'Psyshock',
-				'Trick Room',
-				'Flamethrower',
-				'Light Screen',
-				'Rain Dance',
-				'Calm Mind',
-			],
-			herbs: [{ name: 'Sour', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Scizor',
-		info: {
-			moves: [
-				'X-Scissor',
-				'Bullet Punch',
-				'Close Combat',
-				'Iron Head',
-				'Iron Defense',
-				'Focus Energy',
-			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Heracross',
-		info: {
-			moves: ['Megahorn', 'Close Combat', 'Thrash', 'Leer', 'Bulk Up'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Blissey',
-		info: {
-			moves: [
-				'Dazzling Gleam',
-				'Hyper Voice',
-				'Sing',
-				'Light Screen',
-				'Defense Curl',
-			],
-			herbs: [
-				{ name: 'Spicy', chance: 13.64 },
-				{ name: 'Sweet', chance: 13.64 },
-				{ name: 'Salty', chance: 13.64 },
-				{ name: 'Bitter', chance: 13.64 },
-				{ name: 'Sour', chance: 13.64 },
-			],
-		},
-	},
-	{
-		name: 'Tyranitar',
-		info: {
-			moves: ['Stone Edge', 'Crunch', 'Screech', 'Rock Blast', 'Iron Defense'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Pelipper',
-		info: {
-			moves: [
-				'Hurricane',
-				'Hydro Pump',
-				'Mist',
-				'Supersonic',
-				'Rain Dance',
-				'Agility',
-			],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Gardevoir',
-		info: {
-			moves: [
-				'Moonblast',
-				'Psychic',
-				'Calm Mind',
-				'Thunder Wave',
-				'Misty Terrain',
-				'Psychic Terrain',
-			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Breloom',
-		info: {
-			moves: ['Bullet Seed', 'Low Sweep', 'Aerial Ace', 'Grassy Terrain'],
-			specialMoves: ['Spore'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Torkoal',
-		info: {
-			moves: [
-				'Lava Plume',
-				'Yawn',
-				'Clear Smog',
-				'Body Slam',
-				'Sunny Day',
-				'Iron Defense',
-			],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Salamence',
-		info: {
-			moves: [
-				'Outrage',
-				'Dual Wingbeat',
-				'Flamethrower',
-				'Tera Blast',
-				'Dragon Dance',
-			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Staraptor',
-		info: {
-			moves: ['Close Combat', 'Brave Bird'],
-			specialMoves: ['Double-Edge', 'Feather Dance'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Garchomp',
-		info: {
-			moves: [
-				'Outrage',
-				'Earthquake',
-				'Flamethrower',
-				'Rock Slide',
-				'Swords Dance',
-			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Hippowdon',
-		info: {
-			moves: ['Earthquake', 'Ice Fang', 'Yawn', 'Rock Slide'],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Magnezone',
-		info: {
-			moves: [
-				'Thunder',
-				'Flash Cannon',
-				'Tri Attack',
-				'Thunder Wave',
-				'Rain Dance',
-				'Iron Defense',
-				'Electric Terrain',
-			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Leafeon',
-		info: {
-			moves: ['Tera Blast', 'Leaf Blade', 'Charm', 'Sunny Day', 'Swords Dance'],
-			specialMoves: ['Double Kick'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Glaceon',
-		info: {
-			moves: [
-				'Tera Blast',
-				'Ice Beam',
-				'Blizzard',
-				'Charm',
-				'Snowscape',
-				'Calm Mind',
-			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Gallade',
-		info: {
-			moves: [
-				'Psycho Cut',
-				'Close Combat',
-				'Will-O-Wisp',
-				'Aerial Ace',
-				'Hypnosis',
-				'Psychic Terrain',
-			],
-			specialMoves: ['Disable'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
 		name: 'Amoonguss',
 		info: {
 			moves: [
-				'Energy Ball',
-				'Foul Play',
-				'Spore',
-				'Sludge Bomb',
-				'Grassy Terrain',
-			],
-			herbs: [
-				{ name: 'Spicy', chance: 13.64 },
-				{ name: 'Sweet', chance: 13.64 },
-				{ name: 'Salty', chance: 13.64 },
-				{ name: 'Bitter', chance: 13.64 },
-				{ name: 'Sour', chance: 13.64 },
-			],
-		},
-	},
-	{
-		name: 'Haxorus',
-		info: {
-			moves: ['Outrage', 'Crunch', 'Giga Impact', 'Dragon Dance'],
-			specialMoves: ['First Impression'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Hydreigon',
-		info: {
-			moves: [
-				'Dark Pulse',
-				'Dragon Pulse',
+				'Outrage',
 				'Crunch',
-				'Taunt',
-				'Work Up',
-				'Nasty Plot',
+				'Giga Impact',
+				'First Impression',
+				'Dragon Dance',
 			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 90,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Dragon Dance' },
+			],
 		},
 	},
 	{
-		name: 'Volcarona',
+		name: 'Annihilape',
 		info: {
 			moves: [
-				'Bug Buzz',
-				'Flamethrower',
-				'Hurricane',
-				'Tailwind',
-				'Amnesia',
-				'Sunny Day',
-				'Light Screen',
-				'Quiver Dance',
-			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Talonflame',
-		info: {
-			moves: [
-				'Brave Bird',
-				'Flare Blitz',
-				'Flamethrower',
-				'Tera Blast',
-				'Sunny Day',
-				'Swords Dance',
-			],
-			herbs: [{ name: 'Sweet', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Dragalge',
-		info: {
-			moves: [
-				'Dragon Pulse',
-				'Sludge Bomb',
-				'Water Pulse',
-				'Toxic',
-				'Acid Spray',
-				'Draco Meteor',
-			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Clawitzer',
-		info: {
-			moves: [
-				'Water Pulse',
-				'Dragon Pulse',
-				'Aura Sphere',
-				'Crabhammer',
-				'Rain Dance',
-			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Sylveon',
-		info: {
-			moves: [
-				'Tera Blast',
-				'Hyper Voice',
-				'Moonblast',
-				'Misty Terrain',
-				'Calm Mind',
-			],
-			specialMoves: ['Yawn'],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Goodra',
-		info: {
-			moves: [
-				'Dragon Pulse',
-				'Surf',
-				'Sludge Bomb',
-				'Power Whip',
-				'Rain Dance',
-			],
-			herbs: [{ name: 'Sour', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Avalugg',
-		info: {
-			moves: [
-				'Icicle Crash',
-				'Heavy Slam',
-				'Snowscape',
-				'Ice Spinner',
-				'Iron Defense',
-			],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Lycanroc',
-		imageAlt: '-d',
-		info: {
-			moves: ['Accelerock', 'Rock Slide', 'Crunch', 'Taunt', 'Sandstorm'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Toxapex',
-		info: {
-			moves: [
-				'Water Pulse',
-				'Liquidation',
-				'Poison Jab',
-				'Pin Missile',
-				'Chilling Water',
-				'Toxic',
-			],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Mimikyu',
-		info: {
-			moves: [
-				'Play Rough',
-				'Shadow Claw',
-				'Shadow Sneak',
-				'Wood Hammer',
-				'Misty Terrain',
-				'Swords Dance',
-			],
-			herbs: [{ name: 'Sour', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Corviknight',
-		info: {
-			moves: [
-				'Iron Head',
-				'Drill Peck',
-				'Body Press',
-				'Hone Claws',
-				'Tailwind',
-			],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Pincurchin',
-		info: {
-			moves: [
-				'Zing Zap',
-				'Thunder',
-				'Surf',
-				'Poison Jab',
-				'Thunder Wave',
-				'Electric Terrain',
-			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Frosmoth',
-		info: {
-			moves: ['Blizzard', 'Bug Buzz', 'Hurricane', 'Snowscape'],
-			herbs: [{ name: 'Sour', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Dragapult',
-		info: {
-			moves: [
-				'Shadow Ball',
-				'Dragon Pulse',
-				'Thunderbolt',
-				'Flamethrower',
-				'Reflect',
-				'Light Screen',
-			],
-			herbs: [{ name: 'Sweet', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Pawmot',
-		info: {
-			moves: [
-				'Wild Charge',
 				'Close Combat',
-				'Double Shock',
-				'Nuzzle',
-				'Electric Terrain',
+				'Shadow Claw',
+				'Assurance',
+				'Focus Energy',
+				'Bulk Up',
+				'Rage Fist',
 			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Maushold',
-		imageAlt: '-f',
-		info: {
-			moves: ['Play Rough', 'Take Down', 'Low Kick', 'Charm', 'Tidy Up'],
-			herbs: [{ name: 'Sweet', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Dachsbun',
-		info: {
-			moves: ['Play Rough', 'Double-Edge', 'Bite', 'Baby-Doll Eyes'],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Garganacl',
-		info: {
-			moves: [
-				'Stone Edge',
-				'Heavy Slam',
-				'Salt Cure',
-				'Hammer Arm',
-				'Sandstorm',
-				'Rock Slide',
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Bulk Up' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 25, action: 'Uses Bulk Up' },
+				{ type: RaidActionType.Time, threshold: 5, action: 'Uses Rage Fist' },
 			],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
 		},
 	},
 	{
@@ -3823,7 +3268,194 @@ export const SixStarRaids: Raid[] = [
 				'Calm Mind',
 				'Sunny Day',
 			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 90, action: 'Uses Calm Mind' },
+				{
+					type: RaidActionType.Time,
+					threshold: 65,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Sunny Day' },
+			],
+		},
+	},
+	{
+		name: 'Avalugg',
+		info: {
+			moves: [
+				'Icicle Crash',
+				'Heavy Slam',
+				'Snowscape',
+				'Ice Spinner',
+				'Iron Defense',
+			],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 90, action: 'Uses Snowscape' },
+				{
+					type: RaidActionType.Time,
+					threshold: 75,
+					action: 'Uses Iron Defense',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 30,
+					action: 'Player Stats & Status Reset',
+				},
+			],
+		},
+	},
+	{
+		name: 'Baxcalibur',
+		info: {
+			moves: ['Icicle Spear', 'Dragon Rush', 'Snowscape', 'Body Press'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 80, action: 'Uses Snowscape' },
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 40, action: 'Uses Snowscape' },
+				{
+					type: RaidActionType.HP,
+					threshold: 20,
+					action: 'Player Stats & Status Reset',
+				},
+			],
+		},
+	},
+	{
+		name: 'Blissey',
+		info: {
+			moves: [
+				'Dazzling Gleam',
+				'Hyper Voice',
+				'Sing',
+				'Light Screen',
+				'Defense Curl',
+			],
+			herbs: [
+				{ name: 'Spicy', chance: 3.03 },
+				{ name: 'Sweet', chance: 3.03 },
+				{ name: 'Salty', chance: 3.03 },
+				{ name: 'Bitter', chance: 3.03 },
+				{ name: 'Sour', chance: 3.03 },
+			],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 95, action: 'Uses Defense Curl' },
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Defense Curl' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Sing' },
+				{
+					type: RaidActionType.HP,
+					threshold: 30,
+					action: 'Stats & Status Reset',
+				},
+			],
+		},
+	},
+	{
+		name: 'Bombirdier',
+		info: {
+			moves: ['Rock Slide', 'Acrobatics', 'Knock Off', 'Feather Dance'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 80, action: 'Uses Knock Off' },
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 30,
+					action: 'Uses Feather Dance',
+				},
+			],
+		},
+	},
+	{
+		name: 'Breloom',
+		info: {
+			moves: [
+				'Bullet Seed',
+				'Low Sweep',
+				'Spore',
+				'Aerial Ace',
+				'Grassy Terrain',
+			],
+			specialMoves: ['Spore'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 80,
+					action: 'Uses Grassy Terrain',
+				},
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Spore' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 45,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 20,
+					action: 'Player Stats & Status Reset',
+				},
+			],
 		},
 	},
 	{
@@ -3836,86 +3468,159 @@ export const SixStarRaids: Raid[] = [
 				'Will-O-Wisp',
 				'Sunny Day',
 			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Kilowattrel',
-		info: {
-			moves: ['Hurricane', 'Thunder', 'Uproar', 'Scary Face'],
-			specialMoves: ['Charge', 'Rain Dance'],
-			herbs: [{ name: 'Sweet', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Mabosstiff',
-		info: {
-			moves: ['Crunch', 'Reversal', 'Outrage', 'Take Down', 'Taunt'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Grafaiai',
-		info: {
-			moves: ['Knock Off', 'Gunk Shot', 'Take Down', 'Flatter'],
-			specialMoves: ['Toxic'],
-			herbs: [{ name: 'Sweet', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Toedscruel',
-		info: {
-			moves: ['Energy Ball', 'Earth Power', 'Spore', 'Hex', 'Grassy Terrain'],
-			herbs: [{ name: 'Sour', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Klawf',
-		info: {
-			moves: [
-				'Stone Edge',
-				'Rock Smash',
-				'X-Scissor',
-				'Sandstorm',
-				'Knock Off',
-				'Iron Defense',
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 85,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 65,
+					action: 'Uses Will-O-Wisp',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Sunny Day' },
 			],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
 		},
 	},
 	{
-		name: 'Tinkaton',
+		name: 'Cetitan',
 		info: {
 			moves: [
-				'Gigaton Hammer',
-				'Play Rough',
-				'Knock Off',
-				'Thunder Wave',
-				'Sweet Kiss',
+				'Ice Spinner',
+				'Body Slam',
+				'Snowscape',
+				'Stomping Tantrum',
+				'Yawn',
 			],
-			specialMoves: ['Misty Terrain'],
-			herbs: [{ name: 'Sour', chance: 13.64 }],
+			specialMoves: ['Yawn'],
+			herbs: [
+				{ name: 'Spicy', chance: 3.03 },
+				{ name: 'Sweet', chance: 3.03 },
+				{ name: 'Salty', chance: 3.03 },
+				{ name: 'Bitter', chance: 3.03 },
+				{ name: 'Sour', chance: 3.03 },
+			],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.Time, threshold: 75, action: 'Uses Snowscape' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Yawn' },
+			],
 		},
 	},
 	{
-		name: 'Bombirdier',
-		info: {
-			moves: ['Rock Slide', 'Acrobatics', 'Knock Off', 'Feather Dance'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Revavroom',
+		name: 'Clawitzer',
 		info: {
 			moves: [
-				'Gunk Shot',
-				'Overheat',
+				'Water Pulse',
+				'Dragon Pulse',
+				'Aura Sphere',
+				'Crabhammer',
+				'Rain Dance',
+			],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 85, action: 'Uses Rain Dance' },
+				{
+					type: RaidActionType.Time,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 45,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Water Pulse' },
+			],
+		},
+	},
+	{
+		name: 'Clodsire',
+		info: {
+			moves: ['Earthquake', 'Poison Jab', 'Megahorn', 'Yawn'],
+			herbs: [{ name: 'Sour', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Yawn' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Earthquake' },
+			],
+		},
+	},
+	{
+		name: 'Corviknight',
+		info: {
+			moves: [
 				'Iron Head',
-				'Taunt',
-				'Scary Face',
-				'Shift Gear',
+				'Drill Peck',
+				'Body Press',
+				'Hone Claws',
+				'Tailwind',
 			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 90,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Hone Claws' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Tailwind' },
+			],
 		},
 	},
 	{
@@ -3928,40 +3633,75 @@ export const SixStarRaids: Raid[] = [
 				'Knock Off',
 				'Shift Gear',
 			],
-			herbs: [{ name: 'Sweet', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Orthworm',
-		info: {
-			moves: ['Iron Head', 'Earthquake', 'Smack Down', 'Sandstorm', 'Coil'],
-			herbs: [{ name: 'Salty', chance: 13.64 }],
-		},
-	},
-	{
-		name: 'Glimmora',
-		info: {
-			moves: [
-				'Power Gem',
-				'Sludge Wave',
-				'Hyper Beam',
-				'Rock Polish',
-				'Sandstorm',
+			herbs: [{ name: 'Sweet', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.Time, threshold: 80, action: 'Uses Knock Off' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Shift Gear' },
 			],
-			herbs: [{ name: 'Bitter', chance: 13.64 }],
 		},
 	},
 	{
-		name: 'Cetitan',
+		name: 'Dachsbun',
 		info: {
-			moves: ['Ice Spinner', 'Body Slam', 'Snowscape', 'Stomping Tantrum'],
+			moves: ['Play Rough', 'Double-Edge', 'Bite', 'Baby-Doll Eyes'],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Play Rough' },
+			],
+		},
+	},
+	{
+		name: 'Ditto',
+		info: {
+			moves: ['Transform'],
 			specialMoves: ['Yawn'],
-			herbs: [
-				{ name: 'Spicy', chance: 13.64 },
-				{ name: 'Sweet', chance: 13.64 },
-				{ name: 'Salty', chance: 13.64 },
-				{ name: 'Bitter', chance: 13.64 },
-				{ name: 'Sour', chance: 13.64 },
+			herbs: [{ name: 'Sweet', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
 			],
 		},
 	},
@@ -3977,46 +3717,800 @@ export const SixStarRaids: Raid[] = [
 				'Curse',
 			],
 			herbs: [
-				{ name: 'Spicy', chance: 13.64 },
-				{ name: 'Sweet', chance: 13.64 },
-				{ name: 'Salty', chance: 13.64 },
-				{ name: 'Bitter', chance: 13.64 },
-				{ name: 'Sour', chance: 13.64 },
+				{ name: 'Spicy', chance: 3.03 },
+				{ name: 'Sweet', chance: 3.03 },
+				{ name: 'Salty', chance: 3.03 },
+				{ name: 'Bitter', chance: 3.03 },
+				{ name: 'Sour', chance: 3.03 },
+			],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Rain Dance' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Curse' },
 			],
 		},
 	},
 	{
-		name: 'Annihilape',
+		name: 'Dragalge',
 		info: {
 			moves: [
-				'Close Combat',
-				'Shadow Claw',
-				'Assurance',
-				'Focus Energy',
-				'Bulk Up',
-				'Rage Fist',
+				'Dragon Pulse',
+				'Sludge Bomb',
+				'Water Pulse',
+				'Toxic',
+				'Acid Spray',
+				'Draco Meteor',
 			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 85, action: 'Uses Acid Spray' },
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Draco Meteor' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 45,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Draco Meteor' },
+			],
 		},
 	},
 	{
-		name: 'Clodsire',
+		name: 'Dragapult',
 		info: {
-			moves: ['Earthquake', 'Poison Jab', 'Megahorn', 'Yawn'],
-			herbs: [{ name: 'Sour', chance: 13.64 }],
+			moves: [
+				'Shadow Ball',
+				'Dragon Pulse',
+				'Thunderbolt',
+				'Flamethrower',
+				'Reflect',
+				'Light Screen',
+			],
+			herbs: [{ name: 'Sweet', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 85, action: 'Uses Reflect' },
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 40,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Light Screen' },
+			],
+		},
+	},
+	{
+		name: 'Dragonite',
+		info: {
+			moves: [
+				'Dragon Rush',
+				'Extreme Speed',
+				'Dragon Dance',
+				'Aqua Tail',
+				'Light Screen',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 65,
+					action: 'Uses Light Screen',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 50,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Dragon Dance' },
+			],
+		},
+	},
+	{
+		name: 'Espeon',
+		info: {
+			moves: [
+				'Tera Blast',
+				'Psychic',
+				'Psyshock',
+				'Tickle',
+				'Psychic Terrain',
+				'Calm Mind',
+			],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 90,
+					action: 'Uses Psychic Terrain',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Calm Mind' },
+				{
+					type: RaidActionType.HP,
+					threshold: 20,
+					action: 'Uses Psychic Terrain',
+				},
+			],
 		},
 	},
 	{
 		name: 'Farigiraf',
 		info: {
-			moves: ['Twin Beam', 'Hyper Voice', 'Low Kick', 'Agility'],
+			moves: ['Twin Beam', 'Hyper Voice', 'Low Kick', 'Uproar', 'Agility'],
 			specialMoves: ['Uproar'],
 			herbs: [
-				{ name: 'Spicy', chance: 13.64 },
-				{ name: 'Sweet', chance: 13.64 },
-				{ name: 'Salty', chance: 13.64 },
-				{ name: 'Bitter', chance: 13.64 },
-				{ name: 'Sour', chance: 13.64 },
+				{ name: 'Spicy', chance: 3.03 },
+				{ name: 'Sweet', chance: 3.03 },
+				{ name: 'Salty', chance: 3.03 },
+				{ name: 'Bitter', chance: 3.03 },
+				{ name: 'Sour', chance: 3.03 },
+			],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 90, action: 'Uses Agility' },
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Uproar' },
+			],
+		},
+	},
+	{
+		name: 'Flareon',
+		info: {
+			moves: [
+				'Tera Blast',
+				'Flare Blitz',
+				'Lava Plume',
+				'Will-O-Wisp',
+				'Sunny Day',
+				'Curse',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Sunny Day' },
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Curse' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Sunny Day' },
+			],
+		},
+	},
+	{
+		name: 'Frosmoth',
+		info: {
+			moves: ['Blizzard', 'Bug Buzz', 'Hurricane', 'Snowscape'],
+			herbs: [{ name: 'Sour', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 80, action: 'Uses Snowscape' },
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+			],
+		},
+	},
+	{
+		name: 'Gallade',
+		info: {
+			moves: [
+				'Psycho Cut',
+				'Close Combat',
+				'Will-O-Wisp',
+				'Aerial Ace',
+				'Hypnosis',
+				'Disable',
+				'Psychic Terrain',
+			],
+			specialMoves: ['Disable'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 85, action: 'Uses Hypnosis' },
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Disable' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 25,
+					action: 'Uses Psychic Terrain',
+				},
+			],
+		},
+	},
+	{
+		name: 'Garchomp',
+		info: {
+			moves: [
+				'Outrage',
+				'Earthquake',
+				'Flamethrower',
+				'Rock Slide',
+				'Swords Dance',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 90,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Swords Dance' },
+				{
+					type: RaidActionType.HP,
+					threshold: 30,
+					action: 'Player Stats & Status Reset',
+				},
+			],
+		},
+	},
+	{
+		name: 'Gardevoir',
+		info: {
+			moves: [
+				'Moonblast',
+				'Psychic',
+				'Calm Mind',
+				'Thunder Wave',
+				'Misty Terrain',
+				'Psychic Terrain',
+			],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 85,
+					action: 'Uses Misty Terrain',
+				},
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Calm Mind' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 45,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 35,
+					action: 'Uses Psychic Terrain',
+				},
+			],
+		},
+	},
+	{
+		name: 'Garganacl',
+		info: {
+			moves: [
+				'Stone Edge',
+				'Heavy Slam',
+				'Salt Cure',
+				'Hammer Arm',
+				'Sandstorm',
+				'Rock Slide',
+			],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Sandstorm' },
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Rock Slide' },
+			],
+		},
+	},
+	{
+		name: 'Gengar',
+		info: {
+			moves: [
+				'Shadow Ball',
+				'Sludge Bomb',
+				'Dazzling Gleam',
+				'Will-O-Wisp',
+				'Hypnosis',
+			],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 85, action: 'Uses Hypnosis' },
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 45,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 25, action: 'Uses Hypnosis' },
+			],
+		},
+	},
+	{
+		name: 'Glaceon',
+		info: {
+			moves: [
+				'Tera Blast',
+				'Ice Beam',
+				'Blizzard',
+				'Charm',
+				'Snowscape',
+				'Calm Mind',
+			],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Snowscape' },
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Calm Mind' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Snowscape' },
+			],
+		},
+	},
+	{
+		name: 'Glimmora',
+		info: {
+			moves: [
+				'Power Gem',
+				'Sludge Wave',
+				'Hyper Beam',
+				'Rock Polish',
+				'Sandstorm',
+			],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Sandstorm' },
+				{
+					type: RaidActionType.Time,
+					threshold: 85,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 55,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 50,
+					action: 'Reduce Tera Orb Charge',
+				},
+			],
+		},
+	},
+	{
+		name: 'Goodra',
+		info: {
+			moves: [
+				'Dragon Pulse',
+				'Surf',
+				'Sludge Bomb',
+				'Power Whip',
+				'Rain Dance',
+			],
+			herbs: [{ name: 'Sour', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Rain Dance' },
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Rain Dance' },
+			],
+		},
+	},
+	{
+		name: 'Grafaiai',
+		info: {
+			moves: ['Knock Off', 'Gunk Shot', 'Take Down', 'Flatter', 'Toxic'],
+			specialMoves: ['Toxic'],
+			herbs: [{ name: 'Sweet', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Toxic' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Gunk Shot' },
+			],
+		},
+	},
+	{
+		name: 'Gyarados',
+		info: {
+			moves: [
+				'Aqua Tail',
+				'Crunch',
+				'Hurricane',
+				'Ice Fang',
+				'Taunt',
+				'Dragon Dance',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 90,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 40, action: 'Uses Taunt' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Dragon Dance' },
+			],
+		},
+	},
+	{
+		name: 'Haxorus',
+		info: {
+			moves: [
+				'Outrage',
+				'Crunch',
+				'Giga Impact',
+				'First Impression',
+				'Dragon Dance',
+			],
+			specialMoves: ['First Impression'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 90,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Dragon Dance' },
+			],
+		},
+	},
+	{
+		name: 'Heracross',
+		info: {
+			moves: ['Megahorn', 'Close Combat', 'Thrash', 'Leer', 'Bulk Up'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Bulk Up' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+			],
+		},
+	},
+	{
+		name: 'Hippowdon',
+		info: {
+			moves: ['Earthquake', 'Ice Fang', 'Yawn', 'Rock Slide'],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 90, action: 'Uses Yawn' },
+				{
+					type: RaidActionType.HP,
+					threshold: 60,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Yawn' },
+			],
+		},
+	},
+	{
+		name: 'Hydreigon',
+		info: {
+			moves: [
+				'Dark Pulse',
+				'Dragon Pulse',
+				'Crunch',
+				'Taunt',
+				'Work Up',
+				'Nasty Plot',
+			],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 85, action: 'Uses Taunt' },
+				{ type: RaidActionType.Time, threshold: 75, action: 'Uses Work Up' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 25,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.Time, threshold: 20, action: 'Uses Nasty Plot' },
+			],
+		},
+	},
+	{
+		name: 'Jolteon',
+		info: {
+			moves: [
+				'Tera Blast',
+				'Thunderbolt',
+				'Shadow Ball',
+				'Thunder Wave',
+				'Electric Terrain',
+				'Calm Mind',
+			],
+			herbs: [{ name: 'Sweet', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 90,
+					action: 'Uses Electric Terrain',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Calm Mind' },
+				{
+					type: RaidActionType.HP,
+					threshold: 20,
+					action: 'Uses Electric Terrain',
+				},
+			],
+		},
+	},
+	{
+		name: 'Kilowattrel',
+		info: {
+			moves: [
+				'Hurricane',
+				'Thunder',
+				'Uproar',
+				'Scary Face',
+				'Charge',
+				'Rain Dance',
+			],
+			specialMoves: ['Charge', 'Rain Dance'],
+			herbs: [{ name: 'Sweet', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Charge' },
+				{
+					type: RaidActionType.Time,
+					threshold: 85,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Rain Dance' },
 			],
 		},
 	},
@@ -4030,15 +4524,1024 @@ export const SixStarRaids: Raid[] = [
 				'Thunder Wave',
 				'Swords Dance',
 			],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 85,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 65,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Swords Dance' },
+			],
 		},
 	},
 	{
-		name: 'Baxcalibur',
+		name: 'Klawf',
 		info: {
-			moves: ['Snowscape', 'Body Press'],
-			specialMoves: ['Icicle Spear', 'Dragon Rush'],
-			herbs: [{ name: 'Spicy', chance: 13.64 }],
+			moves: [
+				'Stone Edge',
+				'Rock Smash',
+				'X-Scissor',
+				'Sandstorm',
+				'Knock Off',
+				'Iron Defense',
+			],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 80, action: 'Uses Knock Off' },
+				{
+					type: RaidActionType.HP,
+					threshold: 49,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Iron Defense' },
+			],
+		},
+	},
+	{
+		name: 'Leafeon',
+		info: {
+			moves: [
+				'Tera Blast',
+				'Leaf Blade',
+				'Double Kick',
+				'Charm',
+				'Sunny Day',
+				'Swords Dance',
+			],
+			specialMoves: ['Double Kick'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Sunny Day' },
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Swords Dance' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Swords Dance' },
+			],
+		},
+	},
+	{
+		name: 'Lycanroc',
+		imageAlt: '-d',
+		info: {
+			moves: ['Accelerock', 'Rock Slide', 'Crunch', 'Taunt', 'Sandstorm'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 80, action: 'Uses Sandstorm' },
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Rock Slide' },
+			],
+		},
+	},
+	{
+		name: 'Mabosstiff',
+		info: {
+			moves: ['Crunch', 'Reversal', 'Outrage', 'Take Down', 'Taunt'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 80, action: 'Uses Taunt' },
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 20,
+					action: 'Player Stats & Status Reset',
+				},
+			],
+		},
+	},
+	{
+		name: 'Magnezone',
+		info: {
+			moves: [
+				'Thunder',
+				'Flash Cannon',
+				'Tri Attack',
+				'Thunder Wave',
+				'Rain Dance',
+				'Iron Defense',
+				'Electric Terrain',
+			],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 80, action: 'Uses Rain Dance' },
+				{
+					type: RaidActionType.Time,
+					threshold: 75,
+					action: 'Uses Iron Defense',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Thunder Wave' },
+				{
+					type: RaidActionType.Time,
+					threshold: 20,
+					action: 'Uses Electric Terrain',
+				},
+			],
+		},
+	},
+	{
+		name: 'Maushold',
+		imageAlt: '-f',
+		info: {
+			moves: ['Play Rough', 'Take Down', 'Low Kick', 'Charm', 'Tidy Up'],
+			herbs: [{ name: 'Sweet', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.Time, threshold: 75, action: 'Uses Charm' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Tidy Up' },
+			],
+		},
+	},
+	{
+		name: 'Mimikyu',
+		info: {
+			moves: [
+				'Play Rough',
+				'Shadow Claw',
+				'Shadow Sneak',
+				'Wood Hammer',
+				'Misty Terrain',
+				'Swords Dance',
+			],
+			herbs: [{ name: 'Sour', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 90,
+					action: 'Uses Misty Terrain',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 75,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Swords Dance' },
+			],
+		},
+	},
+	{
+		name: 'Orthworm',
+		info: {
+			moves: ['Iron Head', 'Earthquake', 'Smack Down', 'Sandstorm', 'Coil'],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 95, action: 'Uses Coil' },
+				{ type: RaidActionType.HP, threshold: 80, action: 'Uses Sandstorm' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Sandstorm' },
+			],
+		},
+	},
+	{
+		name: 'Pawmot',
+		info: {
+			moves: [
+				'Wild Charge',
+				'Close Combat',
+				'Double Shock',
+				'Nuzzle',
+				'Electric Terrain',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 80,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 30,
+					action: 'Uses Electric Terrain',
+				},
+			],
+		},
+	},
+	{
+		name: 'Pelipper',
+		info: {
+			moves: [
+				'Hurricane',
+				'Hydro Pump',
+				'Mist',
+				'Supersonic',
+				'Rain Dance',
+				'Agility',
+			],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Rain Dance' },
+				{
+					type: RaidActionType.Time,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Agility' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Rain Dance' },
+			],
+		},
+	},
+	{
+		name: 'Pincurchin',
+		info: {
+			moves: [
+				'Zing Zap',
+				'Thunder',
+				'Surf',
+				'Poison Jab',
+				'Thunder Wave',
+				'Electric Terrain',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 90,
+					action: 'Uses Thunder Wave',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 65,
+					action: 'Uses Electric Terrain',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 20,
+					action: 'Uses Electric Terrain',
+				},
+			],
+		},
+	},
+	{
+		name: 'Revavroom',
+		info: {
+			moves: [
+				'Gunk Shot',
+				'Overheat',
+				'Iron Head',
+				'Taunt',
+				'Scary Face',
+				'Shift Gear',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.Time, threshold: 85, action: 'Uses Scary Face' },
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 40, action: 'Uses Shift Gear' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Shift Gear' },
+			],
+		},
+	},
+	{
+		name: 'Salamence',
+		info: {
+			moves: [
+				'Outrage',
+				'Dual Wingbeat',
+				'Flamethrower',
+				'Tera Blast',
+				'Dragon Dance',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 90,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Dragon Dance' },
+				{
+					type: RaidActionType.HP,
+					threshold: 30,
+					action: 'Stats & Status Reset',
+				},
+			],
+		},
+	},
+	{
+		name: 'Scizor',
+		info: {
+			moves: [
+				'X-Scissor',
+				'Bullet Punch',
+				'Close Combat',
+				'Iron Head',
+				'Iron Defense',
+				'Focus Energy',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 85,
+					action: 'Uses Iron Defense',
+				},
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Focus Energy' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+			],
+		},
+	},
+	{
+		name: 'Slowking',
+		info: {
+			moves: [
+				'Surf',
+				'Psyshock',
+				'Trick Room',
+				'Flamethrower',
+				'Light Screen',
+				'Rain Dance',
+				'Calm Mind',
+			],
+			herbs: [{ name: 'Sour', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Uses Light Screen',
+				},
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Rain Dance' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Calm Mind' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Trick Room' },
+			],
+		},
+	},
+	{
+		name: 'Staraptor',
+		info: {
+			moves: ['Close Combat', 'Brave Bird', 'Double-Edge', 'Feather Dance'],
+			specialMoves: ['Double-Edge', 'Feather Dance'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 85,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 25, action: 'Uses Brave Bird' },
+			],
+		},
+	},
+	{
+		name: 'Sylveon',
+		info: {
+			moves: [
+				'Tera Blast',
+				'Hyper Voice',
+				'Moonblast',
+				'Yawn',
+				'Misty Terrain',
+				'Calm Mind',
+			],
+			specialMoves: ['Yawn'],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 90,
+					action: 'Uses Misty Terrain',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Calm Mind' },
+				{
+					type: RaidActionType.HP,
+					threshold: 20,
+					action: 'Uses Misty Terrain',
+				},
+			],
+		},
+	},
+	{
+		name: 'Talonflame',
+		info: {
+			moves: [
+				'Brave Bird',
+				'Flare Blitz',
+				'Flamethrower',
+				'Tera Blast',
+				'Sunny Day',
+				'Swords Dance',
+			],
+			herbs: [{ name: 'Sweet', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Sunny Day' },
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Swords Dance' },
+			],
+		},
+	},
+	{
+		name: 'Tauros',
+		formName: 'taurospaldeacombat',
+		imageAlt: '-p',
+		info: {
+			moves: [
+				'Close Combat',
+				'Thrash',
+				'Zen Headbutt',
+				'Raging Bull',
+				'Bulk Up',
+				'Screech',
+			],
+			specialMoves: ['Screech'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 95,
+					action: 'Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Bulk Up' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 25, action: 'Uses Screech' },
+			],
+		},
+	},
+	{
+		name: 'Tauros (Fire)',
+		formName: 'taurospaldeablaze',
+		imageAlt: '-b',
+		info: {
+			moves: [
+				'Flare Blitz',
+				'Close Combat',
+				'Flamethrower',
+				'Headbutt',
+				'Sunny Day',
+				'Bulk Up',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Sunny Day' },
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Bulk Up' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Sunny Day' },
+			],
+		},
+	},
+	{
+		name: 'Tauros (Water)',
+		formName: 'taurospaldeaaqua',
+		imageAlt: '-a',
+		info: {
+			moves: [
+				'Wave Crash',
+				'Close Combat',
+				'Surf',
+				'Headbutt',
+				'Rain Dance',
+				'Bulk Up',
+			],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Rain Dance' },
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Bulk Up' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Rain Dance' },
+			],
+		},
+	},
+	{
+		name: 'Tinkaton',
+		info: {
+			moves: [
+				'Gigaton Hammer',
+				'Play Rough',
+				'Knock Off',
+				'Thunder Wave',
+				'Misty Terrain',
+				'Sweet Kiss',
+			],
+			specialMoves: ['Misty Terrain'],
+			herbs: [{ name: 'Sour', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.Time,
+					threshold: 90,
+					action: 'Uses Misty Terrain',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 75,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Sweet Kiss' },
+				{ type: RaidActionType.HP, threshold: 15, action: 'Uses Sweet Kiss' },
+			],
+		},
+	},
+	{
+		name: 'Toedscruel',
+		info: {
+			moves: ['Energy Ball', 'Earth Power', 'Spore', 'Hex', 'Grassy Terrain'],
+			herbs: [{ name: 'Sour', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 90,
+					action: 'Uses Grassy Terrain',
+				},
+				{ type: RaidActionType.Time, threshold: 75, action: 'Uses Spore' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 25, action: 'Uses Spore' },
+			],
+		},
+	},
+	{
+		name: 'Torkoal',
+		info: {
+			moves: [
+				'Lava Plume',
+				'Yawn',
+				'Clear Smog',
+				'Body Slam',
+				'Sunny Day',
+				'Iron Defense',
+			],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Sunny Day' },
+				{
+					type: RaidActionType.Time,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Yawn' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Iron Defense' },
+			],
+		},
+	},
+	{
+		name: 'Toxapex',
+		info: {
+			moves: [
+				'Water Pulse',
+				'Liquidation',
+				'Poison Jab',
+				'Pin Missile',
+				'Chilling Water',
+				'Toxic',
+			],
+			herbs: [{ name: 'Salty', chance: 3.03 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 95,
+					action: 'Uses Chilling Water',
+				},
+				{ type: RaidActionType.Time, threshold: 75, action: 'Uses Toxic' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 20,
+					action: 'Uses Chilling Water',
+				},
+			],
+		},
+	},
+	{
+		name: 'Tyranitar',
+		info: {
+			moves: ['Stone Edge', 'Crunch', 'Screech', 'Rock Blast', 'Iron Defense'],
+			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			actions: [
+				{
+					type: RaidActionType.HP,
+					threshold: 90,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 75,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Crunch' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Iron Defense' },
+			],
+		},
+	},
+	{
+		name: 'Umbreon',
+		info: {
+			moves: [
+				'Tera Blast',
+				'Dark Pulse',
+				'Foul Play',
+				'Tickle',
+				'Calm Mind',
+				'Curse',
+			],
+			herbs: [{ name: 'Sour', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Calm Mind' },
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Curse' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Calm Mind' },
+			],
+		},
+	},
+	{
+		name: 'Vaporeon',
+		info: {
+			moves: [
+				'Tera Blast',
+				'Surf',
+				'Hyper Voice',
+				'Yawn',
+				'Rain Dance',
+				'Calm Mind',
+			],
+			herbs: [
+				{ name: 'Spicy', chance: 3.03 },
+				{ name: 'Sweet', chance: 3.03 },
+				{ name: 'Salty', chance: 3.03 },
+				{ name: 'Bitter', chance: 3.03 },
+				{ name: 'Sour', chance: 3.03 },
+			],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Rain Dance' },
+				{
+					type: RaidActionType.Time,
+					threshold: 70,
+					action: 'Reduce Tera Orb Charge',
+				},
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Calm Mind' },
+				{ type: RaidActionType.HP, threshold: 20, action: 'Uses Rain Dance' },
+			],
+		},
+	},
+	{
+		name: 'Volcarona',
+		info: {
+			moves: [
+				'Bug Buzz',
+				'Flamethrower',
+				'Hurricane',
+				'Tailwind',
+				'Amnesia',
+				'Sunny Day',
+				'Light Screen',
+				'Quiver Dance',
+			],
+			herbs: [{ name: 'Bitter', chance: 3.03 }],
+			actions: [
+				{ type: RaidActionType.HP, threshold: 85, action: 'Uses Amnesia' },
+				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Sunny Day' },
+				{
+					type: RaidActionType.HP,
+					threshold: 50,
+					action: 'Stats & Status Reset',
+				},
+				{
+					type: RaidActionType.Time,
+					threshold: 60,
+					action: 'Player Stats & Status Reset',
+				},
+				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Light Screen' },
+				{
+					type: RaidActionType.Time,
+					threshold: 20,
+					action: 'Uses Quiver Dance',
+				},
+			],
 		},
 	},
 ];
