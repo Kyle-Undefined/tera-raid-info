@@ -665,28 +665,30 @@ export const FiveStarRaids: Raid[] = [
 		name: 'Cloyster',
 		info: {
 			moves: [
-				'Flamethrower',
-				'Crunch',
-				'Extreme Speed',
-				'Fire Fang',
-				'Sunny Day',
-				'Leer',
+				'Icicle Spear',
+				'Hydro Pump',
+				'Ice Shard',
+				'Supersonic',
+				'Shell Smash',
 			],
-			herbs: [{ name: 'Spicy', chance: 2.4 }],
+			herbs: [{ name: 'Salty', chance: 2.4 }],
 			actions: [
-				{ type: RaidActionType.Time, threshold: 85, action: 'Uses Sunny Day' },
-				{ type: RaidActionType.HP, threshold: 75, action: 'Uses Leer' },
+				{
+					type: RaidActionType.Time,
+					threshold: 85,
+					action: 'Reduce Tera Orb Charge',
+				},
 				{
 					type: RaidActionType.HP,
 					threshold: 50,
 					action: 'Stats & Status Reset',
 				},
+				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Shell Smash' },
 				{
 					type: RaidActionType.HP,
-					threshold: 50,
-					action: 'Reduce Tera Orb Charge',
+					threshold: 30,
+					action: 'Stats & Status Reset',
 				},
-				{ type: RaidActionType.HP, threshold: 35, action: 'Uses Sunny Day' },
 			],
 		},
 	},
@@ -2190,7 +2192,13 @@ export const FiveStarRaids: Raid[] = [
 				'Bulk Up',
 			],
 			specialMoves: ['Boomburst'],
-			herbs: [{ name: 'Spicy', chance: 2.4 }],
+			herbs: [
+				{ name: 'Spicy', chance: 2.4 },
+				{ name: 'Sweet', chance: 2.4 },
+				{ name: 'Salty', chance: 2.4 },
+				{ name: 'Bitter', chance: 2.4 },
+				{ name: 'Sour', chance: 2.4 },
+			],
 			actions: [
 				{
 					type: RaidActionType.Time,
@@ -3191,18 +3199,24 @@ export const SixStarRaids: Raid[] = [
 		name: 'Amoonguss',
 		info: {
 			moves: [
-				'Outrage',
-				'Crunch',
-				'Giga Impact',
-				'First Impression',
-				'Dragon Dance',
+				'Energy Ball',
+				'Foul Play',
+				'Spore',
+				'Sludge Bomb',
+				'Grassy Terrain',
 			],
-			herbs: [{ name: 'Spicy', chance: 3.05 }],
+			herbs: [
+				{ name: 'Spicy', chance: 3.03 },
+				{ name: 'Sweet', chance: 3.03 },
+				{ name: 'Salty', chance: 3.03 },
+				{ name: 'Bitter', chance: 3.03 },
+				{ name: 'Sour', chance: 3.03 },
+			],
 			actions: [
 				{
 					type: RaidActionType.Time,
 					threshold: 90,
-					action: 'Stats & Status Reset',
+					action: 'Uses Grassy Terrain',
 				},
 				{
 					type: RaidActionType.Time,
@@ -3219,7 +3233,11 @@ export const SixStarRaids: Raid[] = [
 					threshold: 60,
 					action: 'Player Stats & Status Reset',
 				},
-				{ type: RaidActionType.HP, threshold: 30, action: 'Uses Dragon Dance' },
+				{
+					type: RaidActionType.HP,
+					threshold: 20,
+					action: 'Uses Grassy Terrain',
+				},
 			],
 		},
 	},
@@ -3689,7 +3707,6 @@ export const SixStarRaids: Raid[] = [
 		name: 'Ditto',
 		info: {
 			moves: ['Transform'],
-			specialMoves: ['Yawn'],
 			herbs: [{ name: 'Sweet', chance: 3.03 }],
 			actions: [
 				{
@@ -3858,6 +3875,7 @@ export const SixStarRaids: Raid[] = [
 				'Psychic Terrain',
 				'Calm Mind',
 			],
+			specialMoves: ['Tickle'],
 			herbs: [{ name: 'Bitter', chance: 3.03 }],
 			actions: [
 				{
@@ -5437,14 +5455,8 @@ export const SixStarRaids: Raid[] = [
 	{
 		name: 'Umbreon',
 		info: {
-			moves: [
-				'Tera Blast',
-				'Dark Pulse',
-				'Foul Play',
-				'Tickle',
-				'Calm Mind',
-				'Curse',
-			],
+			moves: ['Tera Blast', 'Dark Pulse', 'Foul Play', 'Calm Mind'],
+			specialMoves: ['Curse', 'Tickle'],
 			herbs: [{ name: 'Sour', chance: 3.03 }],
 			actions: [
 				{ type: RaidActionType.HP, threshold: 90, action: 'Uses Calm Mind' },
@@ -5471,14 +5483,8 @@ export const SixStarRaids: Raid[] = [
 	{
 		name: 'Vaporeon',
 		info: {
-			moves: [
-				'Tera Blast',
-				'Surf',
-				'Hyper Voice',
-				'Yawn',
-				'Rain Dance',
-				'Calm Mind',
-			],
+			moves: ['Tera Blast', 'Surf', 'Hyper Voice', 'Rain Dance', 'Calm Mind'],
+			specialMoves: ['Yawn'],
 			herbs: [
 				{ name: 'Spicy', chance: 3.03 },
 				{ name: 'Sweet', chance: 3.03 },

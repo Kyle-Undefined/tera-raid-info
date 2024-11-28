@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Move, MovesEnum } from '@favware/graphql-pokemon';
+import { firstValueFrom, interval } from 'rxjs';
 import { FiveStarRaids, SixStarRaids } from 'src/shared/models/raids';
 import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { StateService } from 'src/shared/services/state/state.service';
@@ -19,6 +20,8 @@ export class MovesComponent implements OnInit {
 		private typeCalcService: TypeCalcService,
 		private graphqlService: GraphqlService
 	) {}
+
+	sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 	private raidTier = '';
 	private pokemonList = '';
@@ -51,22 +54,22 @@ export class MovesComponent implements OnInit {
 					if (pokemon.info.specialMoves) {
 						pokemon.info.specialMoves
 							.sort((a, b) => a.localeCompare(b))
-							.forEach((moveName) => {
-								this.graphqlService
-									.getMove(
+							.forEach(async (moveName) => {
+								const moveData = await firstValueFrom(
+									this.graphqlService.getMove(
 										moveName
 											.toLowerCase()
 											.replaceAll(' ', '')
 											.replaceAll('-', '') as MovesEnum
 									)
-									.subscribe((data) => {
-										moves.push(data.getMove);
-									});
+								);
+								moves.push(moveData.getMove);
 							});
 					}
 				});
 
-			this.graphqlService.getMoves().subscribe((data) => {
+			this.graphqlService.getMoves().subscribe(async (data) => {
+				await this.sleep(500);
 				common.updateDiv(pokemonMoves, '<h3>Moves:</h3>');
 
 				raidData
