@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Move, MovesEnum } from '@favware/graphql-pokemon';
-import { firstValueFrom, interval } from 'rxjs';
 import { FiveStarRaids, SixStarRaids } from 'src/shared/models/raids';
 import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { StateService } from 'src/shared/services/state/state.service';
@@ -21,8 +20,6 @@ export class MovesComponent implements OnInit {
 		private graphqlService: GraphqlService
 	) {}
 
-	sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
 	private raidTier = '';
 	private pokemonList = '';
 
@@ -42,6 +39,7 @@ export class MovesComponent implements OnInit {
 		) as HTMLDivElement;
 		const raidData = this.raidTier == '5' ? FiveStarRaids : SixStarRaids;
 		const moves: Move[] = [];
+		const rawMoves: string[] = [];
 		const moveList: string[] = [];
 		let types: string[] = [];
 
@@ -54,103 +52,37 @@ export class MovesComponent implements OnInit {
 					if (pokemon.info.specialMoves) {
 						pokemon.info.specialMoves
 							.sort((a, b) => a.localeCompare(b))
-							.forEach(async (moveName) => {
-								const moveData = await firstValueFrom(
-									this.graphqlService.getMove(
+							.forEach((moveName) => {
+								rawMoves.push(moveName);
+
+								this.graphqlService
+									.getMove(
 										moveName
 											.toLowerCase()
 											.replaceAll(' ', '')
 											.replaceAll('-', '') as MovesEnum
 									)
-								);
-								moves.push(moveData.getMove);
+									.subscribe((data) => {
+										moves.push(data.getMove);
+									});
 							});
 					}
+
+					pokemon.info.moves.forEach((moveName) => {
+						rawMoves.push(moveName);
+					});
 				});
 
-			this.graphqlService.getMoves().subscribe(async (data) => {
-				await this.sleep(500);
+			this.graphqlService.getMoves().subscribe((data) => {
 				common.updateDiv(pokemonMoves, '<h3>Moves:</h3>');
 
-				raidData
-					.filter((pokemon) => {
-						return pokemon.name == this.pokemonList;
-					})
-					.forEach((pokemon) => {
-						pokemon.info.moves
-							.sort((a, b) => a.localeCompare(b))
-							.forEach((moveName) => {
-								if (data.generation8.dreamworldMoves) {
-									data.generation8.dreamworldMoves
-										.filter((learnset) => {
-											return learnset.move.name == moveName;
-										})
-										.forEach((move) => {
-											moves.push(move.move);
-										});
-								}
-
-								if (data.generation8.eggMoves) {
-									data.generation8.eggMoves
-										.filter((learnset) => {
-											return learnset.move.name == moveName;
-										})
-										.forEach((move) => {
-											moves.push(move.move);
-										});
-								}
-
-								if (data.generation8.eventMoves) {
-									data.generation8.eventMoves
-										.filter((learnset) => {
-											return learnset.move.name == moveName;
-										})
-										.forEach((move) => {
-											moves.push(move.move);
-										});
-								}
-
-								if (data.generation8.levelUpMoves) {
-									data.generation8.levelUpMoves
-										.filter((learnset) => {
-											return learnset.move.name == moveName;
-										})
-										.forEach((move) => {
-											moves.push(move.move);
-										});
-								}
-
-								if (data.generation8.tmMoves) {
-									data.generation8.tmMoves
-										.filter((learnset) => {
-											return learnset.move.name == moveName;
-										})
-										.forEach((move) => {
-											moves.push(move.move);
-										});
-								}
-
-								if (data.generation8.tutorMoves) {
-									data.generation8.tutorMoves
-										.filter((learnset) => {
-											return learnset.move.name == moveName;
-										})
-										.forEach((move) => {
-											moves.push(move.move);
-										});
-								}
-
-								if (data.generation8.virtualTransferMoves) {
-									data.generation8.virtualTransferMoves
-										.filter((learnset) => {
-											return learnset.move.name == moveName;
-										})
-										.forEach((move) => {
-											moves.push(move.move);
-										});
-								}
-							});
-					});
+				rawMoves.forEach((moveName) => {
+					moves.push(
+						...data.filter((move) => {
+							return move.name == moveName;
+						})
+					);
+				});
 
 				const uniqueMoves = [...new Map(moves.map((m) => [m.key, m])).values()];
 

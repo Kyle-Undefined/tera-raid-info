@@ -2,6 +2,7 @@ type Raid = {
 	name: string;
 	formName?: string;
 	imageAlt?: string;
+	region: RaidRegion;
 	info: RaidInfo;
 };
 
@@ -18,6 +19,12 @@ export type RaidAction = {
 	action: string;
 };
 
+export enum RaidRegion {
+	Paldea = 'Paldea',
+	Kitakami = 'Kitakami',
+	Terarium = 'Terarium',
+}
+
 enum RaidActionType {
 	Time = 'Time',
 	HP = 'HP',
@@ -31,6 +38,7 @@ export type HerbaMystica = {
 export const FiveStarRaids: Raid[] = [
 	{
 		name: 'Abomasnow',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Energy Ball',
@@ -61,6 +69,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Altaria',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dragon Pulse',
@@ -86,6 +95,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Amoonguss',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Energy Ball',
@@ -124,6 +134,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Annihilape',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Shadow Claw',
@@ -157,6 +168,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Appletun',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Apple Acid',
@@ -190,6 +202,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Arboliva',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Energy Ball',
@@ -220,6 +233,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Arcanine',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Flamethrower',
@@ -249,6 +263,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Armarouge',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Armor Cannon',
@@ -282,6 +297,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Avalugg',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Icicle Crash',
@@ -311,6 +327,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Baxcalibur',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dragon Claw',
@@ -343,6 +360,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Blissey',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dazzling Gleam',
@@ -381,6 +399,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Bombirdier',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Rock Slide',
@@ -418,6 +437,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Brambleghast',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Giga Drain',
@@ -458,6 +478,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Braviary',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Acrobatics',
@@ -491,6 +512,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Breloom',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Seed Bomb',
@@ -529,6 +551,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Bronzong',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Flash Cannon',
@@ -559,6 +582,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Camerupt',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Flamethrower', 'Earth Power', 'Yawn', 'Eruption', 'Sunny Day'],
 			herbs: [{ name: 'Bitter', chance: 2.4 }],
@@ -585,6 +609,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Ceruledge',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Bitter Blade',
@@ -618,6 +643,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Cetitan',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Ice Spinner', 'Liquidation', 'Yawn', 'Entrainment', 'Snowscape'],
 			specialMoves: ['Yawn', 'Entrainment'],
@@ -641,6 +667,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Clawitzer',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Water Pulse',
@@ -663,6 +690,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Cloyster',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Icicle Spear',
@@ -694,6 +722,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Coalossal',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Heat Crash',
@@ -724,6 +753,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Copperajah',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Heavy Slam',
@@ -758,6 +788,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Corviknight',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Steel Wing',
@@ -791,6 +822,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Delibird',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Present', 'Drill Peck', 'Ice Punch', 'Blizzard', 'Snowscape'],
 			herbs: [{ name: 'Sweet', chance: 2.36 }],
@@ -813,6 +845,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Ditto',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Transform'],
 			herbs: [{ name: 'Sweet', chance: 2.36 }],
@@ -827,6 +860,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Dondozo',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Order Up',
@@ -867,6 +901,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Dragalge',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dragon Pulse',
@@ -896,6 +931,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Dragapult',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Shadow Ball',
@@ -929,6 +965,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Dragonite',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dragon Rush',
@@ -959,6 +996,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Drifblim',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Hex', 'Air Slash', 'Thunder Wave', 'Shadow Ball', 'Will-O-Wisp'],
 			herbs: [
@@ -994,6 +1032,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Eelektross',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Wild Charge',
@@ -1026,6 +1065,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Eevee',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Tera Blast',
@@ -1054,6 +1094,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Falinks',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Megahorn', 'Reversal', 'Headbutt', 'Brick Break', 'No Retreat'],
 			herbs: [{ name: 'Spicy', chance: 2.4 }],
@@ -1069,6 +1110,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Flapple',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Grav Apple',
@@ -1103,6 +1145,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Florges',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Petal Dance',
@@ -1140,6 +1183,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Froslass',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Frost Breath',
@@ -1167,6 +1211,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Gallade',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Psycho Cut',
@@ -1202,6 +1247,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Garchomp',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Earthquake',
@@ -1231,6 +1277,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Gardevoir',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Psychic',
@@ -1270,6 +1317,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Garganacl',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Salt Cure', 'Rock Slide', 'Hammer Arm', 'Sandstorm'],
 			herbs: [{ name: 'Salty', chance: 2.4 }],
@@ -1296,6 +1344,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Gengar',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Shadow Ball', 'Sludge Bomb', 'Confuse Ray', 'Spite', 'Hypnosis'],
 			herbs: [
@@ -1328,6 +1377,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Glalie',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Freeze-Dry',
@@ -1364,6 +1414,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Glimmora',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Power Gem',
@@ -1397,6 +1448,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Goodra',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Water Pulse',
@@ -1428,6 +1480,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Gothitelle',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Psychic',
@@ -1457,6 +1510,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Greedent',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Body Slam',
@@ -1489,6 +1543,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Grimmsnarl',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Spirit Break',
@@ -1516,6 +1571,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Gyarados',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Aqua Tail',
@@ -1543,6 +1599,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Hariyama',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Reversal',
@@ -1573,6 +1630,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Hatterene',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dazzling Gleam',
@@ -1607,6 +1665,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Haxorus',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dragon Claw',
@@ -1641,6 +1700,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Hippowdon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Earthquake', 'Yawn', 'Rock Slide', 'Body Slam', 'Stockpile'],
 			specialMoves: ['Stockpile'],
@@ -1668,6 +1728,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Honchkrow',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Night Slash', 'Hurricane', 'Haze', 'Wing Attack', 'Nasty Plot'],
 			herbs: [{ name: 'Spicy', chance: 2.4 }],
@@ -1698,6 +1759,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Houndoom',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Flamethrower',
@@ -1727,6 +1789,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Hydreigon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dark Pulse',
@@ -1758,6 +1821,7 @@ export const FiveStarRaids: Raid[] = [
 	{
 		name: 'Indeedee (Male)',
 		formName: 'indeedee',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Psychic',
@@ -1789,6 +1853,7 @@ export const FiveStarRaids: Raid[] = [
 		name: 'Indeedee (Female)',
 		formName: 'indeedee',
 		imageAlt: '-f',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Psychic',
@@ -1818,6 +1883,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Kingambit',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Iron Head',
@@ -1851,6 +1917,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Krookodile',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Earthquake',
@@ -1885,6 +1952,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Luxray',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Crunch',
@@ -1922,6 +1990,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Mabosstiff',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Crunch', 'Play Rough', 'Take Down', 'Swagger', 'Taunt'],
 			herbs: [{ name: 'Spicy', chance: 2.4 }],
@@ -1952,6 +2021,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Magnezone',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Thunderbolt',
@@ -1993,6 +2063,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Mimikyu',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Play Rough',
@@ -2026,6 +2097,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Mismagius',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Mystical Fire',
@@ -2064,6 +2136,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Mudsdale',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'High Horsepower',
@@ -2096,6 +2169,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Noivern',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Air Slash',
@@ -2128,6 +2202,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Oranguru',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Facade',
@@ -2153,6 +2228,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Orthworm',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Iron Head',
@@ -2182,6 +2258,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Palafin',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Liquidation',
@@ -2222,6 +2299,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Passimian',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Reversal',
@@ -2252,6 +2330,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Pawmot',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Wild Charge',
@@ -2285,6 +2364,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Pincurchin',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Zing Zap',
@@ -2312,6 +2392,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Polteageist',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Shadow Ball',
@@ -2338,6 +2419,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Raichu',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Discharge',
@@ -2375,6 +2457,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Revavroom',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Spin Out',
@@ -2404,6 +2487,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Rotom',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Discharge',
@@ -2441,6 +2525,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Sableye',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Shadow Claw',
@@ -2474,6 +2559,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Salamence',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dragon Rush',
@@ -2508,6 +2594,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Scizor',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Iron Head',
@@ -2540,6 +2627,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Scyther',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Aerial Ace',
@@ -2572,6 +2660,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Slaking',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Facade', 'Shadow Claw', 'Play Rough', 'Swagger', 'Encore'],
 			herbs: [{ name: 'Spicy', chance: 2.4 }],
@@ -2597,6 +2686,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Slowbro',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Zen Headbutt', 'Liquidation', 'Yawn', 'Water Pulse', 'Curse'],
 			herbs: [{ name: 'Salty', chance: 2.4 }],
@@ -2619,6 +2709,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Slowking',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Psychic',
@@ -2652,6 +2743,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Staraptor',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Close Combat', 'Brave Bird', 'Quick Attack', 'Double-Edge'],
 			specialMoves: ['Double-Edge'],
@@ -2683,6 +2775,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Talonflame',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Acrobatics',
@@ -2716,6 +2809,7 @@ export const FiveStarRaids: Raid[] = [
 	{
 		name: 'Tatsugiri (Curly)',
 		formName: 'tatsugiri',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Water Pulse',
@@ -2758,6 +2852,7 @@ export const FiveStarRaids: Raid[] = [
 		name: 'Tatsugiri (Droopy)',
 		formName: 'tatsugiri',
 		imageAlt: '-d',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Water Pulse',
@@ -2800,6 +2895,7 @@ export const FiveStarRaids: Raid[] = [
 		name: 'Tatsugiri (Stretchy)',
 		formName: 'tatsugiri',
 		imageAlt: '-s',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Water Pulse',
@@ -2842,6 +2938,7 @@ export const FiveStarRaids: Raid[] = [
 		name: 'Tauros (Fire)',
 		formName: 'taurospaldeablaze',
 		imageAlt: '-b',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Flare Blitz',
@@ -2877,6 +2974,7 @@ export const FiveStarRaids: Raid[] = [
 		name: 'Tauros (Water)',
 		formName: 'taurospaldeaaqua',
 		imageAlt: '-a',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Wave Crash',
@@ -2910,6 +3008,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Tinkaton',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Gigaton Hammer',
@@ -2946,6 +3045,7 @@ export const FiveStarRaids: Raid[] = [
 	{
 		name: 'Toxtricity (Amped)',
 		formName: 'toxtricity',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Overdrive',
@@ -2988,6 +3088,7 @@ export const FiveStarRaids: Raid[] = [
 		name: 'Toxtricity (Low Key)',
 		formName: 'toxtricity',
 		imageAlt: '-l',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Overdrive',
@@ -3028,6 +3129,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Tsareena',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'High Jump Kick',
@@ -3065,6 +3167,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Tyranitar',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Rock Slide',
@@ -3098,6 +3201,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Volcarona',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Fire Blast',
@@ -3127,6 +3231,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Weavile',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Ice Punch',
@@ -3161,6 +3266,7 @@ export const FiveStarRaids: Raid[] = [
 	},
 	{
 		name: 'Zoroark',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Night Daze',
@@ -3197,6 +3303,7 @@ export const FiveStarRaids: Raid[] = [
 export const SixStarRaids: Raid[] = [
 	{
 		name: 'Amoonguss',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Energy Ball',
@@ -3243,6 +3350,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Annihilape',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Close Combat',
@@ -3277,6 +3385,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Armarouge',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Armor Cannon',
@@ -3310,6 +3419,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Avalugg',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Icicle Crash',
@@ -3346,6 +3456,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Baxcalibur',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Icicle Spear', 'Dragon Rush', 'Snowscape', 'Body Press'],
 			herbs: [{ name: 'Spicy', chance: 3.05 }],
@@ -3372,6 +3483,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Blissey',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dazzling Gleam',
@@ -3411,6 +3523,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Bombirdier',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Rock Slide', 'Acrobatics', 'Knock Off', 'Feather Dance'],
 			herbs: [{ name: 'Spicy', chance: 3.05 }],
@@ -3441,6 +3554,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Breloom',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Bullet Seed',
@@ -3478,6 +3592,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Ceruledge',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Bitter Blade',
@@ -3514,6 +3629,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Cetitan',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Ice Spinner',
@@ -3553,6 +3669,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Clawitzer',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Water Pulse',
@@ -3585,6 +3702,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Clodsire',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Earthquake', 'Poison Jab', 'Megahorn', 'Yawn'],
 			herbs: [{ name: 'Sour', chance: 3.03 }],
@@ -3611,6 +3729,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Corviknight',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Iron Head',
@@ -3643,6 +3762,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Cyclizar',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Double-Edge',
@@ -3675,6 +3795,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Dachsbun',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Play Rough', 'Double-Edge', 'Bite', 'Baby-Doll Eyes'],
 			herbs: [{ name: 'Salty', chance: 3.03 }],
@@ -3705,6 +3826,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Ditto',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Transform'],
 			herbs: [{ name: 'Sweet', chance: 3.03 }],
@@ -3724,6 +3846,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Dondozo',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Wave Crash',
@@ -3763,6 +3886,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Dragalge',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dragon Pulse',
@@ -3792,6 +3916,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Dragapult',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Shadow Ball',
@@ -3825,6 +3950,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Dragonite',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dragon Rush',
@@ -3866,6 +3992,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Espeon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Tera Blast',
@@ -3909,6 +4036,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Farigiraf',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Twin Beam', 'Hyper Voice', 'Low Kick', 'Uproar', 'Agility'],
 			specialMoves: ['Uproar'],
@@ -3932,6 +4060,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Flareon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Tera Blast',
@@ -3966,6 +4095,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Frosmoth',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Blizzard', 'Bug Buzz', 'Hurricane', 'Snowscape'],
 			herbs: [{ name: 'Sour', chance: 3.03 }],
@@ -3991,6 +4121,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Gallade',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Psycho Cut',
@@ -4026,6 +4157,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Garchomp',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Outrage',
@@ -4067,6 +4199,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Gardevoir',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Moonblast',
@@ -4104,6 +4237,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Garganacl',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Stone Edge',
@@ -4137,6 +4271,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Gengar',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Shadow Ball',
@@ -4169,6 +4304,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Glaceon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Tera Blast',
@@ -4203,6 +4339,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Glimmora',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Power Gem',
@@ -4244,6 +4381,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Goodra',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dragon Pulse',
@@ -4276,6 +4414,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Grafaiai',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Knock Off', 'Gunk Shot', 'Take Down', 'Flatter', 'Toxic'],
 			specialMoves: ['Toxic'],
@@ -4303,6 +4442,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Gyarados',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Aqua Tail',
@@ -4341,6 +4481,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Haxorus',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Outrage',
@@ -4378,6 +4519,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Heracross',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Megahorn', 'Close Combat', 'Thrash', 'Leer', 'Bulk Up'],
 			herbs: [{ name: 'Spicy', chance: 3.05 }],
@@ -4398,6 +4540,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Hippowdon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Earthquake', 'Ice Fang', 'Yawn', 'Rock Slide'],
 			herbs: [{ name: 'Salty', chance: 3.03 }],
@@ -4424,6 +4567,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Hydreigon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Dark Pulse',
@@ -4458,6 +4602,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Jolteon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Tera Blast',
@@ -4500,6 +4645,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Kilowattrel',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Hurricane',
@@ -4534,6 +4680,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Kingambit',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Iron Head',
@@ -4570,6 +4717,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Klawf',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Stone Edge',
@@ -4603,6 +4751,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Leafeon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Tera Blast',
@@ -4639,6 +4788,7 @@ export const SixStarRaids: Raid[] = [
 	{
 		name: 'Lycanroc',
 		imageAlt: '-d',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Accelerock', 'Rock Slide', 'Crunch', 'Taunt', 'Sandstorm'],
 			herbs: [{ name: 'Spicy', chance: 3.05 }],
@@ -4665,6 +4815,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Mabosstiff',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Crunch', 'Reversal', 'Outrage', 'Take Down', 'Taunt'],
 			herbs: [{ name: 'Spicy', chance: 3.05 }],
@@ -4695,6 +4846,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Magnezone',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Thunder',
@@ -4735,6 +4887,7 @@ export const SixStarRaids: Raid[] = [
 	{
 		name: 'Maushold',
 		imageAlt: '-f',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Play Rough', 'Take Down', 'Low Kick', 'Charm', 'Tidy Up'],
 			herbs: [{ name: 'Sweet', chance: 3.03 }],
@@ -4761,6 +4914,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Mimikyu',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Play Rough',
@@ -4798,6 +4952,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Orthworm',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Iron Head', 'Earthquake', 'Smack Down', 'Sandstorm', 'Coil'],
 			herbs: [{ name: 'Salty', chance: 3.03 }],
@@ -4820,6 +4975,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Pawmot',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Wild Charge',
@@ -4860,6 +5016,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Pelipper',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Hurricane',
@@ -4894,6 +5051,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Pincurchin',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Zing Zap',
@@ -4935,6 +5093,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Revavroom',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Gunk Shot',
@@ -4964,6 +5123,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Salamence',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Outrage',
@@ -5005,6 +5165,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Scizor',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'X-Scissor',
@@ -5037,6 +5198,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Slowking',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Surf',
@@ -5072,6 +5234,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Staraptor',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Close Combat', 'Brave Bird', 'Double-Edge', 'Feather Dance'],
 			specialMoves: ['Double-Edge', 'Feather Dance'],
@@ -5103,6 +5266,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Sylveon',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Tera Blast',
@@ -5146,6 +5310,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Talonflame',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Brave Bird',
@@ -5181,6 +5346,7 @@ export const SixStarRaids: Raid[] = [
 		name: 'Tauros',
 		formName: 'taurospaldeacombat',
 		imageAlt: '-p',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Close Combat',
@@ -5217,6 +5383,7 @@ export const SixStarRaids: Raid[] = [
 		name: 'Tauros (Fire)',
 		formName: 'taurospaldeablaze',
 		imageAlt: '-b',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Flare Blitz',
@@ -5253,6 +5420,7 @@ export const SixStarRaids: Raid[] = [
 		name: 'Tauros (Water)',
 		formName: 'taurospaldeaaqua',
 		imageAlt: '-a',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Wave Crash',
@@ -5287,6 +5455,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Tinkaton',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Gigaton Hammer',
@@ -5326,6 +5495,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Toedscruel',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Energy Ball', 'Earth Power', 'Spore', 'Hex', 'Grassy Terrain'],
 			herbs: [{ name: 'Sour', chance: 3.03 }],
@@ -5352,6 +5522,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Torkoal',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Lava Plume',
@@ -5386,6 +5557,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Toxapex',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Water Pulse',
@@ -5423,6 +5595,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Tyranitar',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: ['Stone Edge', 'Crunch', 'Screech', 'Rock Blast', 'Iron Defense'],
 			herbs: [{ name: 'Spicy', chance: 3.05 }],
@@ -5454,8 +5627,16 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Umbreon',
+		region: RaidRegion.Paldea,
 		info: {
-			moves: ['Tera Blast', 'Dark Pulse', 'Foul Play', 'Calm Mind'],
+			moves: [
+				'Tera Blast',
+				'Dark Pulse',
+				'Foul Play',
+				'Tickle',
+				'Calm Mind',
+				'Curse',
+			],
 			specialMoves: ['Curse', 'Tickle'],
 			herbs: [{ name: 'Sour', chance: 3.03 }],
 			actions: [
@@ -5482,8 +5663,16 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Vaporeon',
+		region: RaidRegion.Paldea,
 		info: {
-			moves: ['Tera Blast', 'Surf', 'Hyper Voice', 'Rain Dance', 'Calm Mind'],
+			moves: [
+				'Tera Blast',
+				'Surf',
+				'Hyper Voice',
+				'Yawn',
+				'Rain Dance',
+				'Calm Mind',
+			],
 			specialMoves: ['Yawn'],
 			herbs: [
 				{ name: 'Spicy', chance: 3.03 },
@@ -5516,6 +5705,7 @@ export const SixStarRaids: Raid[] = [
 	},
 	{
 		name: 'Volcarona',
+		region: RaidRegion.Paldea,
 		info: {
 			moves: [
 				'Bug Buzz',

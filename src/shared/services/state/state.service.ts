@@ -6,12 +6,14 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StateService {
 	private raidTierSource = new BehaviorSubject<string>('');
+	private regionSource = new BehaviorSubject<string>('');
 	private pokemonListSource = new BehaviorSubject<string>('');
 	private teraTypeSource = new BehaviorSubject<string>('');
 	private moveListSource = new BehaviorSubject<string>('');
 	private loadingSource = new BehaviorSubject<boolean>(false);
 
 	raidTier = this.raidTierSource.asObservable();
+	regionList = this.regionSource.asObservable();
 	pokemonList = this.pokemonListSource.asObservable();
 	teraType = this.teraTypeSource.asObservable();
 	moveList = this.moveListSource.asObservable();
@@ -19,6 +21,10 @@ export class StateService {
 
 	public changeRaidTier(raidTier: string): void {
 		this.raidTierSource.next(raidTier);
+	}
+
+	public changeRegionList(region: string): void {
+		this.regionSource.next(region);
 	}
 
 	public changePokemon(pokemon: string): void {

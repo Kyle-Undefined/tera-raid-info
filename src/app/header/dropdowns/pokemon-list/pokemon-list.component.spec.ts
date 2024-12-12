@@ -20,6 +20,7 @@ describe('PokemonListComponent', () => {
 		service = TestBed.inject(StateService);
 		fixture = TestBed.createComponent(PokemonListComponent);
 		component = fixture.componentInstance;
+		service.changeRegionList('Paldea');
 		fixture.detectChanges();
 	});
 

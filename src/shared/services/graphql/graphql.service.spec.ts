@@ -39,8 +39,8 @@ describe('GraphqlService', () => {
 			expect(result.getPokemon.key).toBe(PokemonEnum.Gengar);
 		});
 
-		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
+		done();
 	});
 
 	it('getMove(move: MovesEnum) should return data', (done) => {
@@ -49,8 +49,8 @@ describe('GraphqlService', () => {
 			expect(result.getMove.category).toBe('Status');
 		});
 
-		done();
 		controller.expectOne(query.getMove).flush({ data: MockedMoveData });
+		done();
 	});
 
 	it('getAbilities() should return data', (done) => {
@@ -59,8 +59,8 @@ describe('GraphqlService', () => {
 			expect(result.first.name).toBe('Cursed Body');
 		});
 
-		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
+		done();
 	});
 
 	it('getDexNumber() should return data', (done) => {
@@ -69,21 +69,19 @@ describe('GraphqlService', () => {
 			expect(result).toBe(94);
 		});
 
-		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
+		done();
 	});
 
 	it('getMoves() should return data', (done) => {
 		service.getPokemon(pokemon);
 		service.getMoves().subscribe((result) => {
-			expect(result.generation8.tmMoves).toBeDefined();
-			expect(result.generation8.levelUpMoves).toBeDefined();
-			expect(result.generation3).toBeUndefined();
-			expect(result.generation8.dreamworldMoves?.length).toBe(0);
+			expect(result).toBeDefined();
+			expect(result.length).toBeGreaterThan(0);
 		});
 
-		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
+		done();
 	});
 
 	it('getStats() should return data', (done) => {
@@ -94,8 +92,8 @@ describe('GraphqlService', () => {
 			expect(result.hp).not.toBe(80);
 		});
 
-		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
+		done();
 	});
 
 	it('getTypes() should return data', (done) => {
@@ -105,7 +103,7 @@ describe('GraphqlService', () => {
 			expect(result[1].name).toBe('Poison');
 		});
 
-		done();
 		controller.expectOne(query.getPokemon).flush({ data: MockedPokemonData });
+		done();
 	});
 });

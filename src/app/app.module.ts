@@ -9,6 +9,7 @@ import { TypeCalcService } from 'src/shared/services/type-calc/type-calc.service
 
 import { AppComponent } from './app.component';
 import { RaidTierComponent } from './header/dropdowns/raid-tier/raid-tier.component';
+import { RegionComponent } from './header/dropdowns/region/region.component';
 import { PokemonListComponent } from './header/dropdowns/pokemon-list/pokemon-list.component';
 import { TeraTypeComponent } from './header/dropdowns/tera-type/tera-type.component';
 import { ShareRaidComponent } from './header/icons/share-raid/share-raid.component';
@@ -25,6 +26,7 @@ import { TypeMatchupsComponent } from './pokemon/type-matchups/type-matchups.com
 	declarations: [
 		AppComponent,
 		RaidTierComponent,
+		RegionComponent,
 		PokemonListComponent,
 		TeraTypeComponent,
 		ShareRaidComponent,

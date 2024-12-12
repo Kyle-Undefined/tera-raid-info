@@ -37,53 +37,3477 @@ export const getPokemon = gql`
 				speed
 			}
 			learnsets {
-				generation8 {
+				generation3 {
 					dreamworldMoves {
-						...LearnsetMoveFragment
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
 					}
 					eggMoves {
-						...LearnsetMoveFragment
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
 					}
 					eventMoves {
-						...LearnsetMoveFragment
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
 					}
 					tmMoves {
-						...LearnsetMoveFragment
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
 					}
 					tutorMoves {
-						...LearnsetMoveFragment
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
 					}
 					virtualTransferMoves {
-						...LearnsetMoveFragment
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
 					}
 					levelUpMoves {
 						generation
+						level
 						move {
-							...MoveFragment
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+				}
+				generation4 {
+					dreamworldMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eggMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eventMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tmMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tutorMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					virtualTransferMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					levelUpMoves {
+						generation
+						level
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+				}
+				generation5 {
+					dreamworldMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eggMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eventMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tmMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tutorMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					virtualTransferMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					levelUpMoves {
+						generation
+						level
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+				}
+				generation6 {
+					dreamworldMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eggMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eventMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tmMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tutorMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					virtualTransferMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					levelUpMoves {
+						generation
+						level
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+				}
+				generation7 {
+					dreamworldMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eggMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eventMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tmMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tutorMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					virtualTransferMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					levelUpMoves {
+						generation
+						level
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+				}
+				generation8 {
+					dreamworldMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eggMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					eventMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tmMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					tutorMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					virtualTransferMoves {
+						generation
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
+						}
+					}
+					levelUpMoves {
+						generation
+						level
+						move {
+							key
+							accuracy
+							basePower
+							category
+							desc
+							name
+							pp
+							priority
+							shortDesc
+							target
+							type
 						}
 					}
 				}
 			}
-		}
-	}
-
-	fragment MoveFragment on Move {
-		key
-		accuracy
-		basePower
-		category
-		desc
-		name
-		pp
-		priority
-		shortDesc
-		target
-		type
-	}
-	fragment LearnsetMoveFragment on LearnsetMove {
-		generation
-		move {
-			...MoveFragment
+			evolutions {
+				key
+				learnsets {
+					generation3 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation4 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation5 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation6 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation7 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation8 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+				}
+				evolutions {
+					key
+					learnsets {
+						generation3 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation4 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation5 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation6 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation7 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation8 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+					}
+				}
+			}
+			preevolutions {
+				key
+				learnsets {
+					generation3 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation4 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation5 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation6 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation7 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+					generation8 {
+						dreamworldMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eggMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						eventMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tmMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						tutorMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						virtualTransferMoves {
+							generation
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+						levelUpMoves {
+							generation
+							level
+							move {
+								key
+								accuracy
+								basePower
+								category
+								desc
+								name
+								pp
+								priority
+								shortDesc
+								target
+								type
+							}
+						}
+					}
+				}
+				preevolutions {
+					key
+					learnsets {
+						generation3 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation4 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation5 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation6 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation7 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+						generation8 {
+							dreamworldMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eggMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							eventMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tmMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							tutorMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							virtualTransferMoves {
+								generation
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+							levelUpMoves {
+								generation
+								level
+								move {
+									key
+									accuracy
+									basePower
+									category
+									desc
+									name
+									pp
+									priority
+									shortDesc
+									target
+									type
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 `;

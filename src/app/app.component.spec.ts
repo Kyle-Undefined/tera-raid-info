@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { ApolloTestingModule } from 'apollo-angular/testing';
 import { RaidTierComponent } from './header/dropdowns/raid-tier/raid-tier.component';
+import { RegionComponent } from './header/dropdowns/region/region.component';
 import { PokemonListComponent } from './header/dropdowns/pokemon-list/pokemon-list.component';
 import { TeraTypeComponent } from './header/dropdowns/tera-type/tera-type.component';
 import { ShareRaidComponent } from './header/icons/share-raid/share-raid.component';
@@ -35,6 +36,7 @@ describe('AppComponent', () => {
 				AppComponent,
 				RaidTierComponent,
 				PokemonListComponent,
+				RegionComponent,
 				TeraTypeComponent,
 				ShareRaidComponent,
 				ImagesComponent,
@@ -54,6 +56,7 @@ describe('AppComponent', () => {
 		graphqlService = TestBed.inject(GraphqlService);
 		fixture = TestBed.createComponent(AppComponent);
 		component = fixture.componentInstance;
+		stateService.changeRegionList('Paldea');
 		fixture.detectChanges();
 	});
 

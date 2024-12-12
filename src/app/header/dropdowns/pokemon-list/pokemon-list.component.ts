@@ -19,9 +19,18 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 		private graphqlService: GraphqlService
 	) {}
 
+	private raidTier = '';
+	private region = '';
+
 	public ngOnInit(): void {
 		this.stateService.raidTier.subscribe((result) => {
-			this.populatePokemonList(result);
+			this.raidTier = result;
+			this.populatePokemonList();
+		});
+
+		this.stateService.regionList.subscribe((result) => {
+			this.region = result;
+			this.populatePokemonList();
 		});
 	}
 
@@ -31,14 +40,15 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 		) as HTMLSelectElement;
 	}
 
-	private populatePokemonList(raidTier: string): void {
+	private populatePokemonList(): void {
 		if (this.pokemonList) {
 			this.resetPokemonList();
 
-			const raidData = raidTier == '5' ? FiveStarRaids : SixStarRaids;
+			const raidData = this.raidTier == '5' ? FiveStarRaids : SixStarRaids;
 
 			raidData
 				.sort((a, b) => a.name.localeCompare(b.name))
+				.filter((pokemon) => pokemon.region.toString() == this.region)
 				.forEach((pokemon) => {
 					const option = document.createElement('option') as HTMLOptionElement;
 
