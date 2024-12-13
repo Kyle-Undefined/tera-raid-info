@@ -14,7 +14,7 @@ body {
 	font-family: "Gill Sans", sans-serif;
 	background-color: #29303d;
 	color: hsl(220 20% 90%);
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 20px;
 }
 
@@ -373,6 +373,14 @@ select {
     text-align: right;
 }
 /* Time */
+.time-100 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 100%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 100%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 100%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 100%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 100%);
+    border-color: #00ccff;
+}
 .time-95 {
     background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 95%);
     background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 95%);
@@ -437,6 +445,14 @@ select {
     background-image: linear-gradient(to right, #00ccff 0%, transparent 60%);
     border-color: #00ccff;
 }
+.time-55 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 55%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 55%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 55%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 55%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 55%);
+    border-color: #00ccff;
+}
 .time-50 {
     background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 50%);
     background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 50%);
@@ -451,6 +467,14 @@ select {
     background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 45%);
     background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 45%);
     background-image: linear-gradient(to right, #00ccff 0%, transparent 45%);
+    border-color: #00ccff;
+}
+.time-40 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 40%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 40%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 40%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 40%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 40%);
     border-color: #00ccff;
 }
 .time-35 {
@@ -493,6 +517,14 @@ select {
     background-image: linear-gradient(to right, #00ccff 0%, transparent 15%);
     border-color: #00ccff;
 }
+.time-10 {
+    background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 10%);
+    background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 10%);
+    background-image: -ms-linear-gradient(to right, #00ccff 0%, transparent 10%);
+    background-image: -o-linear-gradient(to right, #00ccff 0%, transparent 10%);
+    background-image: linear-gradient(to right, #00ccff 0%, transparent 10%);
+    border-color: #00ccff;
+}
 .time-5 {
     background-image: -webkit-linear-gradient(to right, #00ccff 0%, transparent 5%);
     background-image: -moz-linear-gradient(to right, #00ccff 0%, transparent 5%);
@@ -503,6 +535,14 @@ select {
 }
 
 /* Hp */
+.hp-100 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 100%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 100%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 100%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 100%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 100%);
+    border-color: #008040;
+}
 .hp-95 {
     background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 95%);
     background-image: -moz-linear-gradient(to right, #008040 0%, transparent 95%);
@@ -549,6 +589,14 @@ select {
     background-image: -ms-linear-gradient(to right, #008040 0%, transparent 70%);
     background-image: -o-linear-gradient(to right, #008040 0%, transparent 70%);
     background-image: linear-gradient(to right, #008040 0%, transparent 70%);
+    border-color: #008040;
+}
+.hp-65 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 65%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 65%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 65%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 65%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 65%);
     border-color: #008040;
 }
 .hp-60 {
@@ -637,6 +685,22 @@ select {
     background-image: -ms-linear-gradient(to right, #008040 0%, transparent 15%);
     background-image: -o-linear-gradient(to right, #008040 0%, transparent 15%);
     background-image: linear-gradient(to right, #008040 0%, transparent 15%);
+    border-color: #008040;
+}
+.hp-10 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 10%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 10%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 10%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 10%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 10%);
+    border-color: #008040;
+}
+.hp-5 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 5%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 5%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 5%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 5%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 5%);
     border-color: #008040;
 }
 
