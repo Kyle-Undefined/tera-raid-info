@@ -4,6 +4,7 @@ import {
 	FiveStarRaids,
 	SixStarRaids,
 	HerbaMystica,
+	RaidRegion,
 } from 'src/shared/models/raids';
 import * as common from 'src/shared/utils/common';
 
@@ -14,6 +15,7 @@ import * as common from 'src/shared/utils/common';
 export class HerbsComponent implements OnInit {
 	private raidTier = '';
 	private pokemonList = '';
+	private region = '';
 
 	constructor(private stateService: StateService) {}
 
@@ -24,6 +26,9 @@ export class HerbsComponent implements OnInit {
 		this.stateService.pokemonList.subscribe((result) => {
 			this.pokemonList = result;
 			this.setHerbs();
+		});
+		this.stateService.regionList.subscribe((result) => {
+			this.region = result;
 		});
 	}
 
@@ -38,7 +43,10 @@ export class HerbsComponent implements OnInit {
 
 			raidData
 				.filter((pokemon) => {
-					return pokemon.name == this.pokemonList;
+					return (
+						pokemon.name == this.pokemonList &&
+						pokemon.region == RaidRegion[this.region as keyof typeof RaidRegion]
+					);
 				})
 				.forEach((pokemon) => {
 					pokemon.info.herbs

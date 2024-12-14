@@ -4,6 +4,7 @@ import {
 	FiveStarRaids,
 	SixStarRaids,
 	RaidAction,
+	RaidRegion,
 } from 'src/shared/models/raids';
 import * as common from 'src/shared/utils/common';
 
@@ -14,6 +15,7 @@ import * as common from 'src/shared/utils/common';
 export class ActionsComponent implements OnInit {
 	private raidTier = '';
 	private pokemonList = '';
+	private region = '';
 
 	constructor(private stateService: StateService) {}
 
@@ -24,6 +26,9 @@ export class ActionsComponent implements OnInit {
 		this.stateService.pokemonList.subscribe((result) => {
 			this.pokemonList = result;
 			this.setActions();
+		});
+		this.stateService.regionList.subscribe((result) => {
+			this.region = result;
 		});
 	}
 
@@ -38,7 +43,10 @@ export class ActionsComponent implements OnInit {
 
 			raidData
 				.filter((pokemon) => {
-					return pokemon.name == this.pokemonList;
+					return (
+						pokemon.name == this.pokemonList &&
+						pokemon.region == RaidRegion[this.region as keyof typeof RaidRegion]
+					);
 				})
 				.forEach((pokemon) => {
 					pokemon.info.actions

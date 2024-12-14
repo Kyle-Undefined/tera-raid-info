@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FiveStarRaids, SixStarRaids } from 'src/shared/models/raids';
+import {
+	FiveStarRaids,
+	RaidRegion,
+	SixStarRaids,
+} from 'src/shared/models/raids';
 import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
@@ -16,6 +20,7 @@ export class ImagesComponent implements OnInit {
 
 	private raidTier = '';
 	private pokemonList = '';
+	private region = '';
 
 	public ngOnInit(): void {
 		this.stateService.raidTier.subscribe((result) => {
@@ -24,6 +29,9 @@ export class ImagesComponent implements OnInit {
 		this.stateService.pokemonList.subscribe((result) => {
 			this.pokemonList = result;
 			this.setImages();
+		});
+		this.stateService.regionList.subscribe((result) => {
+			this.region = result;
 		});
 	}
 
@@ -35,7 +43,11 @@ export class ImagesComponent implements OnInit {
 
 				raidData
 					.filter((pokemon) => {
-						return pokemon.name == this.pokemonList;
+						return (
+							pokemon.name == this.pokemonList &&
+							pokemon.region ==
+								RaidRegion[this.region as keyof typeof RaidRegion]
+						);
 					})
 					.forEach((pokemon) => {
 						if (pokemon.imageAlt) {

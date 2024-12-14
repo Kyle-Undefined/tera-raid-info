@@ -599,6 +599,14 @@ select {
     background-image: linear-gradient(to right, #008040 0%, transparent 80%);
     border-color: #008040;
 }
+.hp-79 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 79%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 79%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 79%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 79%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 79%);
+    border-color: #008040;
+}
 .hp-75 {
     background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 75%);
     background-image: -moz-linear-gradient(to right, #008040 0%, transparent 75%);
@@ -663,6 +671,14 @@ select {
     background-image: linear-gradient(to right, #008040 0%, transparent 45%);
     border-color: #008040;
 }
+.hp-44 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 44%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 44%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 44%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 44%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 44%);
+    border-color: #008040;
+}
 .hp-41 {
     background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 41%);
     background-image: -moz-linear-gradient(to right, #008040 0%, transparent 41%);
@@ -687,6 +703,14 @@ select {
     background-image: linear-gradient(to right, #008040 0%, transparent 35%);
     border-color: #008040;
 }
+.hp-33 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 33%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 33%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 33%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 33%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 33%);
+    border-color: #008040;
+}
 .hp-30 {
     background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 30%);
     background-image: -moz-linear-gradient(to right, #008040 0%, transparent 30%);
@@ -709,6 +733,14 @@ select {
     background-image: -ms-linear-gradient(to right, #008040 0%, transparent 25%);
     background-image: -o-linear-gradient(to right, #008040 0%, transparent 25%);
     background-image: linear-gradient(to right, #008040 0%, transparent 25%);
+    border-color: #008040;
+}
+.hp-24 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 24%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 24%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 24%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 24%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 24%);
     border-color: #008040;
 }
 .hp-20 {

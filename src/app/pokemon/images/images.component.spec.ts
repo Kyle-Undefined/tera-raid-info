@@ -23,6 +23,7 @@ describe('ImagesComponent', () => {
 		graphqlService = TestBed.inject(GraphqlService);
 		fixture = TestBed.createComponent(ImagesComponent);
 		component = fixture.componentInstance;
+		stateService.changeRegionList('Paldea');
 		fixture.detectChanges();
 	});
 
