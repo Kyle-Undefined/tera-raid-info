@@ -551,6 +551,14 @@ select {
     background-image: linear-gradient(to right, #008040 0%, transparent 100%);
     border-color: #008040;
 }
+.hp-99 {
+    background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 99%);
+    background-image: -moz-linear-gradient(to right, #008040 0%, transparent 99%);
+    background-image: -ms-linear-gradient(to right, #008040 0%, transparent 99%);
+    background-image: -o-linear-gradient(to right, #008040 0%, transparent 99%);
+    background-image: linear-gradient(to right, #008040 0%, transparent 99%);
+    border-color: #008040;
+}
 .hp-95 {
     background-image: -webkit-linear-gradient(to right, #008040 0%, transparent 95%);
     background-image: -moz-linear-gradient(to right, #008040 0%, transparent 95%);
