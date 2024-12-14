@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit, OnInit {
 	public title = 'Tera Raid Info';
 
 	public ngOnInit(): void {
+		this.stateService.changeRegionList('Paldea');
 		this.stateService.loading.subscribe((result) => {
 			(document.getElementById('dataLoading') as HTMLDivElement).hidden =
 				!result;
@@ -34,58 +35,77 @@ export class AppComponent implements AfterViewInit, OnInit {
 	public autoPopulateSelections(url?: string, origin?: string): void {
 		const href = url ? url : window.location.href;
 		const originString = origin ? origin : window.location.origin;
+		const baseUri = href.replace(originString, '');
 
-		if (href.replace(originString + '/tera-raid-info/', '')) {
-			const build = href
-				.replace(originString + '/tera-raid-info/', '')
-				.split('/');
-			const event = new Event('change');
+		if (baseUri.length > 1) {
+			if (href.replace(originString + '/tera-raid-info/', '')) {
+				const build = href
+					.replace(originString + '/tera-raid-info/', '')
+					.split('/');
+				const event = new Event('change');
 
-			if (Number(build[0])) {
-				const raidTier = document.getElementById(
-					'raidTier'
-				) as HTMLSelectElement;
+				if (Number(build[0])) {
+					const raidTier = document.getElementById(
+						'raidTier'
+					) as HTMLSelectElement;
 
-				raidTier.value = build[0];
-				raidTier.dispatchEvent(event);
-			}
-
-			if (build[1]) {
-				let name: string = common.capitalize(
-					build[1].replaceAll('%20', ' ').toLowerCase()
-				);
-				const replacement = name.match(/(\(.*\))/);
-
-				if (replacement) {
-					const words = replacement[0].split(' ');
-
-					for (let i = 0; i < words.length; i++) {
-						name = name.replaceAll(words[i], common.capitalize(words[i]));
-					}
+					raidTier.value = build[0];
+					raidTier.dispatchEvent(event);
 				}
 
-				const pokemonList = document.getElementById(
-					'pokemonList'
-				) as HTMLSelectElement;
+				if (build[1]) {
+					const regionList = document.getElementById(
+						'regionList'
+					) as HTMLSelectElement;
 
-				pokemonList.value = name;
-				pokemonList.dispatchEvent(event);
-			}
+					for (let i = 0; i < regionList.length; i++) {
+						const tera = regionList[i] as HTMLOptionElement;
 
-			if (build[2]) {
-				const teraList = document.getElementById(
-					'teraList'
-				) as HTMLSelectElement;
-
-				for (let i = 0; i < teraList.length; i++) {
-					const tera = teraList[i] as HTMLOptionElement;
-
-					if (tera.text == build[2]) {
-						teraList.selectedIndex = tera.index;
+						if (tera.text == build[1]) {
+							regionList.selectedIndex = tera.index;
+						}
 					}
+
+					regionList.dispatchEvent(event);
 				}
 
-				teraList.dispatchEvent(event);
+				if (build[2]) {
+					let name: string = common.capitalize(
+						build[2].replaceAll('%20', ' ').toLowerCase()
+					);
+					const replacement = name.match(/(\(.*\))/);
+
+					if (replacement) {
+						const words = replacement[0].split(' ');
+
+						for (let i = 0; i < words.length; i++) {
+							name = name.replaceAll(words[i], common.capitalize(words[i]));
+						}
+					}
+
+					const pokemonList = document.getElementById(
+						'pokemonList'
+					) as HTMLSelectElement;
+
+					pokemonList.value = name;
+					pokemonList.dispatchEvent(event);
+				}
+
+				if (build[3]) {
+					const teraList = document.getElementById(
+						'teraList'
+					) as HTMLSelectElement;
+
+					for (let i = 0; i < teraList.length; i++) {
+						const tera = teraList[i] as HTMLOptionElement;
+
+						if (tera.text == build[3]) {
+							teraList.selectedIndex = tera.index;
+						}
+					}
+
+					teraList.dispatchEvent(event);
+				}
 			}
 		}
 	}

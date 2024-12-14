@@ -100,16 +100,18 @@ describe('AppComponent', () => {
 		const element = fixture.debugElement;
 
 		const raidTier = element.query(By.css('#raidTier')).nativeElement;
+		const regionList = element.query(By.css('#regionList')).nativeElement;
 		const pokemonList = element.query(By.css('#pokemonList')).nativeElement;
 		const teraList = element.query(By.css('#teraList')).nativeElement;
 
 		component.autoPopulateSelections(
-			'http://localhost/tera-raid-info/5/Abomasnow/Electric',
+			'http://localhost/tera-raid-info/5/Paldea/Abomasnow/Electric',
 			'http://localhost'
 		);
 		fixture.detectChanges();
 
 		expect(raidTier.value).toBe('5');
+		expect(regionList.value).toBe('Paldea');
 		expect(pokemonList.value).toBe('Abomasnow');
 		expect(teraList.value).toBe('Electric');
 	});
@@ -118,16 +120,18 @@ describe('AppComponent', () => {
 		const element = fixture.debugElement;
 
 		const raidTier = element.query(By.css('#raidTier')).nativeElement;
+		const regionList = element.query(By.css('#regionList')).nativeElement;
 		const pokemonList = element.query(By.css('#pokemonList')).nativeElement;
 		const teraList = element.query(By.css('#teraList')).nativeElement;
 
 		component.autoPopulateSelections(
-			'http://localhost/tera-raid-info/6/Tauros%20(Fire)/Steel',
+			'http://localhost/tera-raid-info/6/Paldea/Tauros%20(Fire)/Steel',
 			'http://localhost'
 		);
 		fixture.detectChanges();
 
 		expect(raidTier.value).toBe('6');
+		expect(regionList.value).toBe('Paldea');
 		expect(pokemonList.value).toBe('Tauros (Fire)');
 		expect(teraList.value).toBe('Steel');
 	});

@@ -2,7 +2,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PokemonEnum } from '@favware/graphql-pokemon';
 import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { StateService } from 'src/shared/services/state/state.service';
-import { FiveStarRaids, SixStarRaids } from 'src/shared/models/raids';
+import {
+	FiveStarRaids,
+	RaidRegion,
+	SixStarRaids,
+} from 'src/shared/models/raids';
 import * as common from 'src/shared/utils/common';
 
 @Component({
@@ -48,7 +52,10 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 
 			raidData
 				.sort((a, b) => a.name.localeCompare(b.name))
-				.filter((pokemon) => pokemon.region.toString() == this.region)
+				.filter(
+					(pokemon) =>
+						pokemon.region == RaidRegion[this.region as keyof typeof RaidRegion]
+				)
 				.forEach((pokemon) => {
 					const option = document.createElement('option') as HTMLOptionElement;
 
@@ -75,22 +82,27 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 		) as HTMLSelectElement;
 		const selectedIndex = selectElement.selectedIndex;
 		const option = selectElement.options[selectedIndex];
-		const pokemonForm = option.id;
 
-		common.clearData();
+		if (option) {
+			const pokemonForm = option.id;
 
-		if (option.value) {
-			this.graphqlService.getPokemon(
-				(pokemonForm ? pokemonForm : option.value.toLowerCase()) as PokemonEnum
-			);
+			common.clearData();
 
-			this.stateService.changePokemon(option.value);
+			if (option.value) {
+				this.graphqlService.getPokemon(
+					(pokemonForm
+						? pokemonForm
+						: option.value.toLowerCase()) as PokemonEnum
+				);
 
-			(
-				document.getElementById('pokemonContent') as HTMLDivElement
-			).style.display = 'none';
+				this.stateService.changePokemon(option.value);
 
-			this.stateService.changeLoading(true);
+				(
+					document.getElementById('pokemonContent') as HTMLDivElement
+				).style.display = 'none';
+
+				this.stateService.changeLoading(true);
+			}
 		}
 	}
 }

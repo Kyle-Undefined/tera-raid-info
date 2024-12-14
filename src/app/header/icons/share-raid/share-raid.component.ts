@@ -11,6 +11,7 @@ export class ShareRaidComponent implements OnInit {
 	private raidTier = '';
 	private pokemonList = '';
 	private teraType = '';
+	private region = '';
 
 	public ngOnInit(): void {
 		this.stateService.raidTier.subscribe((result) => {
@@ -22,12 +23,16 @@ export class ShareRaidComponent implements OnInit {
 		this.stateService.teraType.subscribe((result) => {
 			this.teraType = result;
 		});
+		this.stateService.regionList.subscribe((result) => {
+			this.region = result;
+		});
 	}
 
 	public shareRaid(): void {
 		let url: string = location.origin + '/tera-raid-info/';
 
 		url += this.raidTier;
+		url += '/' + this.region;
 		url += '/' + this.pokemonList;
 		url += '/' + this.teraType;
 
