@@ -43,13 +43,13 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.0.5",
+    "@angular-devkit/build-angular": "^19.0.0",
     "@angular-eslint/builder": "15.2.1",
     "@angular-eslint/eslint-plugin": "15.2.1",
     "@angular-eslint/eslint-plugin-template": "15.2.1",
     "@angular-eslint/schematics": "15.2.1",
     "@angular-eslint/template-parser": "15.2.1",
-    "@angular/cli": "~15.2.0",
+    "@angular/cli": "~19.1.0",
     "@angular/compiler-cli": "^15.0.0",
     "@favware/graphql-pokemon": "^8.6.1",
     "@types/jasmine": "~4.6.0",
