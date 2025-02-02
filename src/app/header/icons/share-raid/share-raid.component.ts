@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { StateService } from 'src/shared/services/state/state.service';
 
 @Component({
-	selector: 'app-share-raid',
-	templateUrl: './share-raid.component.html',
+    selector: 'app-share-raid',
+    templateUrl: './share-raid.component.html',
+    standalone: false
 })
 export class ShareRaidComponent implements OnInit {
 	constructor(private stateService: StateService) {}

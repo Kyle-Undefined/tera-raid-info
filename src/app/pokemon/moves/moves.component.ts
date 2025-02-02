@@ -14,8 +14,9 @@ import {
 import * as common from 'src/shared/utils/common';
 
 @Component({
-	selector: 'app-pokemon-moves',
-	templateUrl: './moves.component.html',
+    selector: 'app-pokemon-moves',
+    templateUrl: './moves.component.html',
+    standalone: false
 })
 export class MovesComponent implements OnInit {
 	constructor(

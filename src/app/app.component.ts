@@ -4,8 +4,9 @@ import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
 @Component({
-	selector: 'app-root',
-	templateUrl: './app.component.html',
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    standalone: false
 })
 export class AppComponent implements AfterViewInit, OnInit {
 	constructor(private stateService: StateService) {}

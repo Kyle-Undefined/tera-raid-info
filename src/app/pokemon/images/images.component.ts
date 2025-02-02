@@ -9,8 +9,9 @@ import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
 @Component({
-	selector: 'app-pokemon-images',
-	templateUrl: './images.component.html',
+    selector: 'app-pokemon-images',
+    templateUrl: './images.component.html',
+    standalone: false
 })
 export class ImagesComponent implements OnInit {
 	constructor(

@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { StateService } from 'src/shared/services/state/state.service';
 
 @Component({
-	selector: 'app-raid-tier',
-	templateUrl: './raid-tier.component.html',
+    selector: 'app-raid-tier',
+    templateUrl: './raid-tier.component.html',
+    standalone: false
 })
 export class RaidTierComponent {
 	constructor(private stateService: StateService) {}

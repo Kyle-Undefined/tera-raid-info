@@ -9,8 +9,9 @@ import {
 import * as common from 'src/shared/utils/common';
 
 @Component({
-	selector: 'app-pokemon-herbs',
-	templateUrl: './herbs.component.html',
+    selector: 'app-pokemon-herbs',
+    templateUrl: './herbs.component.html',
+    standalone: false
 })
 export class HerbsComponent implements OnInit {
 	private raidTier = '';

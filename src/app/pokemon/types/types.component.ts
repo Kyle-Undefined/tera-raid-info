@@ -4,8 +4,9 @@ import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
 @Component({
-	selector: 'app-pokemon-types',
-	templateUrl: './types.component.html',
+    selector: 'app-pokemon-types',
+    templateUrl: './types.component.html',
+    standalone: false
 })
 export class TypesComponent implements OnInit {
 	constructor(

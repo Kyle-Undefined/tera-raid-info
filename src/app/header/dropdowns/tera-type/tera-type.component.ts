@@ -3,8 +3,9 @@ import { StateService } from 'src/shared/services/state/state.service';
 import { Types } from 'src/shared/models/types';
 
 @Component({
-	selector: 'app-tera-type',
-	templateUrl: './tera-type.component.html',
+    selector: 'app-tera-type',
+    templateUrl: './tera-type.component.html',
+    standalone: false
 })
 export class TeraTypeComponent implements OnInit {
 	constructor(private stateService: StateService) {}

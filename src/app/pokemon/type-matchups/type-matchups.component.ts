@@ -7,8 +7,9 @@ import {
 import * as common from 'src/shared/utils/common';
 
 @Component({
-	selector: 'app-pokemon-type-matchups',
-	templateUrl: './type-matchups.component.html',
+    selector: 'app-pokemon-type-matchups',
+    templateUrl: './type-matchups.component.html',
+    standalone: false
 })
 export class TypeMatchupsComponent implements OnInit {
 	constructor(

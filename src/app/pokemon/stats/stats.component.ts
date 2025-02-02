@@ -5,8 +5,9 @@ import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
 @Component({
-	selector: 'app-pokemon-stats',
-	templateUrl: './stats.component.html',
+    selector: 'app-pokemon-stats',
+    templateUrl: './stats.component.html',
+    standalone: false
 })
 export class StatsComponent implements OnInit {
 	constructor(

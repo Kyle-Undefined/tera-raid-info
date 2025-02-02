@@ -3,8 +3,9 @@ import { StateService } from 'src/shared/services/state/state.service';
 import { RaidRegion } from 'src/shared/models/raids';
 
 @Component({
-	selector: 'app-region',
-	templateUrl: './region.component.html',
+    selector: 'app-region',
+    templateUrl: './region.component.html',
+    standalone: false
 })
 export class RegionComponent implements OnInit {
 	constructor(private stateService: StateService) {}

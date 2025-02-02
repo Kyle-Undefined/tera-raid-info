@@ -5,8 +5,9 @@ import { StateService } from 'src/shared/services/state/state.service';
 import * as common from 'src/shared/utils/common';
 
 @Component({
-	selector: 'app-pokemon-ability',
-	templateUrl: './ability.component.html',
+    selector: 'app-pokemon-ability',
+    templateUrl: './ability.component.html',
+    standalone: false
 })
 export class AbilityComponent implements OnInit {
 	private raidTier = '';

@@ -10,8 +10,9 @@ import {
 import * as common from 'src/shared/utils/common';
 
 @Component({
-	selector: 'app-pokemon-list',
-	templateUrl: './pokemon-list.component.html',
+    selector: 'app-pokemon-list',
+    templateUrl: './pokemon-list.component.html',
+    standalone: false
 })
 export class PokemonListComponent implements OnInit, AfterViewInit {
 	private pokemonList = document.getElementById(
