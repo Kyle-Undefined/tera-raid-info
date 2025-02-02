@@ -95,7 +95,7 @@ You can share the raid choices with others, by simply clicking the Share icon in
 <p>
 <a href="https://www.npmjs.com/package/@angular/cli" target="_blank"><img alt="Angular Version" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/@angular/cli/main?color=37474f&label=Angular&logo=angular&style=for-the-badge" /></a>
 <a href="https://www.npmjs.com/package/typescript" target="_blank"><img alt="Typescript Version" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/typescript/main?color=3178c6&label=Typescript&logo=typescript&logoColor=white&style=for-the-badge" /></a>
-<a href="https://nodejs.org/en/" target="_blank"><img alt="Node.js Version" src="https://img.shields.io/badge/Node-18.13.0-74ae62?style=for-the-badge&logo=node.js&logoColor=white" /></a>
+<a href="https://nodejs.org/en/" target="_blank"><img alt="Node.js Version" src="https://img.shields.io/badge/Node-20.11.1-74ae62?style=for-the-badge&logo=node.js&logoColor=white" /></a>
 <a href="https://www.npmjs.com/package/npm" target="_blank"><img alt="NPM Version" src="https://img.shields.io/badge/NPM-9.2.0-cc3838?style=for-the-badge&logo=npm&logoColor=white" /></a>
 <a href="https://github.com/favware/graphql-pokemon" target="_blank"><img alt="@favware/graphql-pokemon" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/@favware/graphql-pokemon/main?color=4623d5&label=@favware/graphql-pokemon&logo=graphql&style=for-the-badge" /></a>
 </p>
