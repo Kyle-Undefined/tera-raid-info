@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { GraphQLModule } from './graphql.module';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { StateService } from 'src/shared/services/state/state.service';
 import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
@@ -22,25 +22,21 @@ import { ActionsComponent } from './pokemon/actions/actions.component';
 import { HerbsComponent } from './pokemon/herbs/herbs.component';
 import { TypeMatchupsComponent } from './pokemon/type-matchups/type-matchups.component';
 
-@NgModule({
-	declarations: [
-		AppComponent,
-		RaidTierComponent,
-		RegionComponent,
-		PokemonListComponent,
-		TeraTypeComponent,
-		ShareRaidComponent,
-		ImagesComponent,
-		TypesComponent,
-		StatsComponent,
-		AbilityComponent,
-		MovesComponent,
-		ActionsComponent,
-		HerbsComponent,
-		TypeMatchupsComponent,
-	],
-	imports: [BrowserModule, GraphQLModule, HttpClientModule],
-	providers: [StateService, GraphqlService, TypeCalcService],
-	bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        RaidTierComponent,
+        RegionComponent,
+        PokemonListComponent,
+        TeraTypeComponent,
+        ShareRaidComponent,
+        ImagesComponent,
+        TypesComponent,
+        StatsComponent,
+        AbilityComponent,
+        MovesComponent,
+        ActionsComponent,
+        HerbsComponent,
+        TypeMatchupsComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule, GraphQLModule], providers: [StateService, GraphqlService, TypeCalcService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
