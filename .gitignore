@@ -22,7 +22,6 @@ yarn-error.log
 
 # Visual Studio Code
 .vscode/*
-.nix/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -37,6 +36,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+.nx/*
 
 # System files
 .DS_Store
