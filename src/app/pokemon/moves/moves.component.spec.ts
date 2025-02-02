@@ -8,8 +8,7 @@ describe('MovesComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [MovesComponent],
-			imports: [ApolloTestingModule],
+			imports: [ApolloTestingModule, MovesComponent],
 		}).compileComponents();
 
 		fixture = TestBed.createComponent(MovesComponent);

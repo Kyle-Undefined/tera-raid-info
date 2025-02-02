@@ -18,9 +18,8 @@ describe('AbilityComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [AbilityComponent],
 			providers: [StateService, GraphqlService],
-			imports: [ApolloTestingModule],
+			imports: [ApolloTestingModule, AbilityComponent],
 		}).compileComponents();
 
 		stateService = TestBed.inject(StateService);

@@ -2,18 +2,14 @@
   "name": "tera-raid-info",
   "version": "3.0.0",
   "description": "Aggregate view of the [Serebii](https://www.serebii.net/) Tera Raid Info for Pokemon Scarlet & Violet.",
-  "main": "./src/main.ts",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href /tera-raid-info/ && cp ./src/404.html ./dist",
-    "lint": "ng lint",
+    "build:prod": "ng build --configuration production --base-href /tera-raid-info/",
+    "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
-    "version:major": "npm --no-git-tag-version version major",
-    "version:minor": "npm --no-git-tag-version version minor",
-    "version:patch": "npm --no-git-tag-version version patch"
+    "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
   },
   "repository": {
     "type": "git",
@@ -56,6 +52,7 @@
     "@types/node": "^22.13.0",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
+    "@typescript-eslint/utils": "^8.22.0",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "jasmine-core": "~5.1.0",

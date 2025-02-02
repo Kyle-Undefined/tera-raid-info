@@ -1,12 +1,44 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 import { StateService } from 'src/shared/services/state/state.service';
+import { RaidTierComponent } from './header/dropdowns/raid-tier/raid-tier.component';
+import { RegionComponent } from './header/dropdowns/region/region.component';
+import { PokemonListComponent } from './header/dropdowns/pokemon-list/pokemon-list.component';
+import { TeraTypeComponent } from './header/dropdowns/tera-type/tera-type.component';
+import { ShareRaidComponent } from './header/icons/share-raid/share-raid.component';
+import { ImagesComponent } from './pokemon/images/images.component';
+import { TypesComponent } from './pokemon/types/types.component';
+import { AbilityComponent } from './pokemon/ability/ability.component';
+import { StatsComponent } from './pokemon/stats/stats.component';
+import { MovesComponent } from './pokemon/moves/moves.component';
+import { ActionsComponent } from './pokemon/actions/actions.component';
+import { HerbsComponent } from './pokemon/herbs/herbs.component';
+import { TypeMatchupsComponent } from './pokemon/type-matchups/type-matchups.component';
 
 import * as common from 'src/shared/utils/common';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    standalone: false
+  	standalone: true,
+	imports: [
+		CommonModule,
+		RouterOutlet,
+		RaidTierComponent,
+		RegionComponent,
+		PokemonListComponent,
+		TeraTypeComponent,
+		ShareRaidComponent,
+		ImagesComponent,
+		TypesComponent,
+		AbilityComponent,
+		StatsComponent,
+		MovesComponent,
+		ActionsComponent,
+		HerbsComponent,
+		TypeMatchupsComponent,
+	]
 })
 export class AppComponent implements AfterViewInit, OnInit {
 	constructor(private stateService: StateService) {}

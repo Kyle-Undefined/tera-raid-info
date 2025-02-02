@@ -12,7 +12,7 @@ import * as common from 'src/shared/utils/common';
 @Component({
     selector: 'app-pokemon-list',
     templateUrl: './pokemon-list.component.html',
-    standalone: false
+    standalone: true,
 })
 export class PokemonListComponent implements OnInit, AfterViewInit {
 	private pokemonList = document.getElementById(

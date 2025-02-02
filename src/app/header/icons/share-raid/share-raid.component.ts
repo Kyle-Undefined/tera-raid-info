@@ -4,7 +4,7 @@ import { StateService } from 'src/shared/services/state/state.service';
 @Component({
     selector: 'app-share-raid',
     templateUrl: './share-raid.component.html',
-    standalone: false
+    standalone: true,
 })
 export class ShareRaidComponent implements OnInit {
 	constructor(private stateService: StateService) {}

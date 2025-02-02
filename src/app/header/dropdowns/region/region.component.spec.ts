@@ -11,7 +11,7 @@ describe('RegionComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [RegionComponent],
+			imports: [RegionComponent],
 			providers: [StateService],
 		}).compileComponents();
 

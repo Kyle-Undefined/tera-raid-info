@@ -4,7 +4,7 @@ import { StateService } from 'src/shared/services/state/state.service';
 @Component({
     selector: 'app-raid-tier',
     templateUrl: './raid-tier.component.html',
-    standalone: false
+    standalone: true,
 })
 export class RaidTierComponent {
 	constructor(private stateService: StateService) {}

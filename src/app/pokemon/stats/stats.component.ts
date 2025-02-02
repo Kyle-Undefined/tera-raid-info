@@ -7,7 +7,7 @@ import * as common from 'src/shared/utils/common';
 @Component({
     selector: 'app-pokemon-stats',
     templateUrl: './stats.component.html',
-    standalone: false
+    standalone: true,
 })
 export class StatsComponent implements OnInit {
 	constructor(

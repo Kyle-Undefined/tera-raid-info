@@ -7,7 +7,7 @@ import * as common from 'src/shared/utils/common';
 @Component({
     selector: 'app-pokemon-ability',
     templateUrl: './ability.component.html',
-    standalone: false
+    standalone: true,
 })
 export class AbilityComponent implements OnInit {
 	private raidTier = '';

@@ -9,7 +9,7 @@ describe('ShareRaidComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ShareRaidComponent],
+			imports: [ShareRaidComponent],
 		}).compileComponents();
 
 		fixture = TestBed.createComponent(ShareRaidComponent);

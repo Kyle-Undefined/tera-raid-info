@@ -14,9 +14,14 @@ describe('ImagesComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ImagesComponent],
-			providers: [StateService, GraphqlService],
-			imports: [ApolloTestingModule],
+		imports: [
+			ImagesComponent,
+			ApolloTestingModule
+		],
+		providers: [
+			StateService,
+			GraphqlService
+		]
 		}).compileComponents();
 
 		stateService = TestBed.inject(StateService);

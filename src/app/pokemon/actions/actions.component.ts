@@ -11,7 +11,7 @@ import * as common from 'src/shared/utils/common';
 @Component({
     selector: 'app-pokemon-actions',
     templateUrl: './actions.component.html',
-    standalone: false
+    standalone: true,
 })
 export class ActionsComponent implements OnInit {
 	private raidTier = '';

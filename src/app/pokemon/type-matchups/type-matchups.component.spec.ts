@@ -8,7 +8,7 @@ describe('TypeMatchupsComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [TypeMatchupsComponent],
+			imports: [TypeMatchupsComponent],
 		}).compileComponents();
 
 		fixture = TestBed.createComponent(TypeMatchupsComponent);

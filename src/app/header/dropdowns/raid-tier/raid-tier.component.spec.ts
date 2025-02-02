@@ -11,7 +11,7 @@ describe('RaidTierComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [RaidTierComponent],
+			imports: [RaidTierComponent],
 			providers: [StateService],
 		}).compileComponents();
 

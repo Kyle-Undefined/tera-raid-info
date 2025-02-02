@@ -6,7 +6,7 @@ import * as common from 'src/shared/utils/common';
 @Component({
     selector: 'app-pokemon-types',
     templateUrl: './types.component.html',
-    standalone: false
+    standalone: true,
 })
 export class TypesComponent implements OnInit {
 	constructor(

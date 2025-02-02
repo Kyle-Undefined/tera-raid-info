@@ -32,7 +32,7 @@ describe('AppComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [
+			imports: [
 				AppComponent,
 				RaidTierComponent,
 				PokemonListComponent,
@@ -47,9 +47,9 @@ describe('AppComponent', () => {
 				ActionsComponent,
 				HerbsComponent,
 				TypeMatchupsComponent,
+				ApolloTestingModule,
 			],
 			providers: [StateService, GraphqlService],
-			imports: [ApolloTestingModule],
 		}).compileComponents();
 
 		stateService = TestBed.inject(StateService);

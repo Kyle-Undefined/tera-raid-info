@@ -11,7 +11,7 @@ describe('TeraTypeComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [TeraTypeComponent],
+			imports: [TeraTypeComponent],
 			providers: [StateService],
 		}).compileComponents();
 

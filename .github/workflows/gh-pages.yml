@@ -42,4 +42,4 @@ jobs:
         if: success()
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/browser
+          folder: dist

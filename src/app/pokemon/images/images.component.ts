@@ -11,7 +11,7 @@ import * as common from 'src/shared/utils/common';
 @Component({
     selector: 'app-pokemon-images',
     templateUrl: './images.component.html',
-    standalone: false
+    standalone: true,
 })
 export class ImagesComponent implements OnInit {
 	constructor(

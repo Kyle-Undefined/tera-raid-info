@@ -12,9 +12,8 @@ describe('PokemonListComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [PokemonListComponent],
 			providers: [StateService],
-			imports: [ApolloTestingModule],
+			imports: [ApolloTestingModule, PokemonListComponent],
 		}).compileComponents();
 
 		service = TestBed.inject(StateService);

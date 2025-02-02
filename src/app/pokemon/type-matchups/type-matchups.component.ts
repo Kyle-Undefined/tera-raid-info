@@ -9,7 +9,7 @@ import * as common from 'src/shared/utils/common';
 @Component({
     selector: 'app-pokemon-type-matchups',
     templateUrl: './type-matchups.component.html',
-    standalone: false
+    standalone: true,
 })
 export class TypeMatchupsComponent implements OnInit {
 	constructor(
