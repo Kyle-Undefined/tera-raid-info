@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
 import { StateService } from 'src/shared/services/state/state.service';
 import { RaidTierComponent } from './header/dropdowns/raid-tier/raid-tier.component';
 import { RegionComponent } from './header/dropdowns/region/region.component';
@@ -24,7 +23,6 @@ import * as common from 'src/shared/utils/common';
   	standalone: true,
 	imports: [
 		CommonModule,
-		RouterOutlet,
 		RaidTierComponent,
 		RegionComponent,
 		PokemonListComponent,
