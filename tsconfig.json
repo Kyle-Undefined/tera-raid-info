@@ -23,9 +23,9 @@
       "ES2022",
       "dom"
     ],
-    "types": [
-      "jasmine"
-    ]
+    "paths": {
+      "src/*": ["src/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -23,6 +23,15 @@ import {
 	moveResponse,
 	movesResponse,
 } from 'src/shared/services/graphql/mocked';
+import { beforeEach, it, expect, vi, describe } from 'vitest'
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
+
+Object.defineProperty(window, 'caches', {
+	value: {
+		delete: vi.fn().mockResolvedValue(true)
+	},
+	writable: true
+});
 
 describe('AppComponent', () => {
 	let component: AppComponent;
@@ -31,6 +40,9 @@ describe('AppComponent', () => {
 	let graphqlService: GraphqlService;
 
 	beforeEach(async () => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
+
 		await TestBed.configureTestingModule({
 			imports: [
 				AppComponent,
@@ -196,8 +208,8 @@ describe('AppComponent', () => {
 	});
 
 	it('should set special moves', () => {
-		spyOn(graphqlService, 'getMove').and.returnValue(of(moveResponse));
-		spyOn(graphqlService, 'getMoves').and.returnValue(of(movesResponse));
+		vi.spyOn(graphqlService, 'getMove').mockReturnValue(of(moveResponse));
+		vi.spyOn(graphqlService, 'getMoves').mockReturnValue(of(movesResponse));
 
 		const element = fixture.debugElement;
 		const div = element.query(By.css('#pokemonMoves')).nativeElement;
@@ -213,7 +225,7 @@ describe('AppComponent', () => {
 	});
 
 	it('should set moves', () => {
-		spyOn(graphqlService, 'getMoves').and.returnValue(of(movesResponse));
+		vi.spyOn(graphqlService, 'getMoves').mockReturnValue(of(movesResponse));
 
 		const element = fixture.debugElement;
 		const div = element.query(By.css('#pokemonMoves')).nativeElement;

@@ -98,9 +98,10 @@ export class PokemonListComponent implements OnInit, AfterViewInit {
 
 				this.stateService.changePokemon(option.value);
 
-				(
-					document.getElementById('pokemonContent') as HTMLDivElement
-				).style.display = 'none';
+				const pokemonContentDiv = document.getElementById('pokemonContent') as HTMLDivElement;
+				if (pokemonContentDiv) {
+					pokemonContentDiv.style.display = 'none';
+				}
 
 				this.stateService.changeLoading(true);
 			}

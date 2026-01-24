@@ -1,11 +1,14 @@
 import { TestBed } from '@angular/core/testing';
-
 import { StateService } from './state.service';
+import { beforeEach, it, expect, describe } from 'vitest'
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 describe('StateService', () => {
 	let service: StateService;
 
 	beforeEach(() => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
 		TestBed.configureTestingModule({});
 		service = TestBed.inject(StateService);
 	});

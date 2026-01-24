@@ -1,8 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { StateService } from 'src/shared/services/state/state.service';
-
+import { beforeEach, it, expect, vi, describe } from 'vitest'
 import { RegionComponent } from './region.component';
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 describe('RegionComponent', () => {
 	let component: RegionComponent;
@@ -10,6 +11,9 @@ describe('RegionComponent', () => {
 	let service: StateService;
 
 	beforeEach(async () => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
+		
 		await TestBed.configureTestingModule({
 			imports: [RegionComponent],
 			providers: [StateService],
@@ -33,7 +37,7 @@ describe('RegionComponent', () => {
 	});
 
 	it('should call event', () => {
-		spyOn(component, 'valueChanged');
+		vi.spyOn(component, 'valueChanged');
 
 		const element = fixture.debugElement;
 		const select = element.query(By.css('select')).nativeElement;

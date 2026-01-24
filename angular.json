@@ -66,27 +66,6 @@
             "buildTarget": "tera-raid-info:build"
           }
         },
-        "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "codeCoverage": true,
-            "karmaConfig": "karma.conf.js",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/404.html"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
-          }
-        },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {

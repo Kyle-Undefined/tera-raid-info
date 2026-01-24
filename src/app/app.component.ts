@@ -144,6 +144,8 @@ export class AppComponent implements AfterViewInit, OnInit {
 	private deleteCache() {
 		// in old version of code base, i was caching images
 		// no longer going with that approach so deleting cache
-		caches.delete('tera-raid-info-1');
+		if (typeof caches !== 'undefined') {
+			caches.delete('tera-raid-info-1');
+		}
 	}
 }

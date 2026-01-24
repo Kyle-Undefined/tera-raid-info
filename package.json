@@ -8,8 +8,10 @@
     "build": "ng build",
     "build:prod": "ng build --configuration production --base-href /tera-raid-info/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
+    "test": "vitest",
+    "test:headless": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,7 @@
     "zone.js": "~0.16.0"
   },
   "devDependencies": {
+    "@analogjs/vite-plugin-angular": "^2.2.2",
     "@angular-eslint/builder": "^21.1.0",
     "@angular-eslint/eslint-plugin": "^21.1.0",
     "@angular-eslint/eslint-plugin-template": "^21.1.0",
@@ -48,19 +51,16 @@
     "@angular/cli": "^21.1.1",
     "@angular/compiler-cli": "^21.1.1",
     "@favware/graphql-pokemon": "^8.7.3",
-    "@types/jasmine": "^6.0.0",
     "@types/node": "^25.0.10",
     "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "^8.33.1",
     "@typescript-eslint/utils": "^8.33.1",
+    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/ui": "^4.0.18",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.0.1",
-    "jasmine-core": "~5.13.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.9.3"
+    "jsdom": "^27.4.0",
+    "typescript": "~5.9.3",
+    "vitest": "^4.0.18"
   }
 }

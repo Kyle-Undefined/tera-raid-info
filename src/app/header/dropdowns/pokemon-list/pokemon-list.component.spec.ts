@@ -2,8 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { ApolloTestingModule } from 'apollo-angular/testing';
 import { StateService } from 'src/shared/services/state/state.service';
-
+import { beforeEach, it, expect, vi, describe } from 'vitest'
 import { PokemonListComponent } from './pokemon-list.component';
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 describe('PokemonListComponent', () => {
 	let component: PokemonListComponent;
@@ -11,6 +12,9 @@ describe('PokemonListComponent', () => {
 	let service: StateService;
 
 	beforeEach(async () => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
+
 		await TestBed.configureTestingModule({
 			providers: [StateService],
 			imports: [ApolloTestingModule, PokemonListComponent],
@@ -34,7 +38,7 @@ describe('PokemonListComponent', () => {
 	});
 
 	it('should call event with 5 star raid data', () => {
-		spyOn(component, 'valueChanged');
+		vi.spyOn(component, 'valueChanged');
 
 		const element = fixture.debugElement;
 		const select = element.query(By.css('select')).nativeElement;
@@ -49,7 +53,7 @@ describe('PokemonListComponent', () => {
 	});
 
 	it('should call event with 6 star raid data', () => {
-		spyOn(component, 'valueChanged');
+		vi.spyOn(component, 'valueChanged');
 
 		const element = fixture.debugElement;
 		const select = element.query(By.css('select')).nativeElement;

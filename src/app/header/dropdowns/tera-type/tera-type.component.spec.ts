@@ -1,8 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { StateService } from 'src/shared/services/state/state.service';
-
+import { beforeEach, it, expect, vi, describe } from 'vitest'
 import { TeraTypeComponent } from './tera-type.component';
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 describe('TeraTypeComponent', () => {
 	let component: TeraTypeComponent;
@@ -10,6 +11,9 @@ describe('TeraTypeComponent', () => {
 	let service: StateService;
 
 	beforeEach(async () => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
+		
 		await TestBed.configureTestingModule({
 			imports: [TeraTypeComponent],
 			providers: [StateService],
@@ -31,7 +35,7 @@ describe('TeraTypeComponent', () => {
 	});
 
 	it('should call event', () => {
-		spyOn(component, 'valueChanged');
+		vi.spyOn(component, 'valueChanged');
 
 		const element = fixture.debugElement;
 		const select = element.query(By.css('select')).nativeElement;

@@ -9,6 +9,8 @@ import {
 } from 'src/shared/services/graphql/mocked';
 import { StateService } from 'src/shared/services/state/state.service';
 import { AbilityComponent } from './ability.component';
+import { beforeEach, it, expect, vi, describe } from 'vitest'
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 describe('AbilityComponent', () => {
 	let component: AbilityComponent;
@@ -17,6 +19,9 @@ describe('AbilityComponent', () => {
 	let graphqlService: GraphqlService;
 
 	beforeEach(async () => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
+		
 		await TestBed.configureTestingModule({
 			providers: [StateService, GraphqlService],
 			imports: [ApolloTestingModule, AbilityComponent],
@@ -34,7 +39,7 @@ describe('AbilityComponent', () => {
 	});
 
 	it('should set abilities for 6 star Annihilape', () => {
-		spyOn(graphqlService, 'getAbilities').and.returnValue(
+		vi.spyOn(graphqlService, 'getAbilities').mockReturnValue(
 			of(abilitiesSixStarResponse)
 		);
 
@@ -51,7 +56,7 @@ describe('AbilityComponent', () => {
 	});
 
 	it('should set abilities for 5 star Ditto', () => {
-		spyOn(graphqlService, 'getAbilities').and.returnValue(
+		vi.spyOn(graphqlService, 'getAbilities').mockReturnValue(
 			of(abilitiesFiveStarResponse)
 		);
 

@@ -1,9 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { TypeCalcResult } from '../services/type-calc/type-calc.service';
 import * as common from './common';
+import { beforeEach, it, expect, describe } from 'vitest'
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 describe('common', () => {
 	beforeEach(() => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
 		TestBed.configureTestingModule({});
 	});
 

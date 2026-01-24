@@ -23,7 +23,9 @@ export function clearData(section?: string): void {
 
 	(section ? [section] : sections).forEach((entry) => {
 		const div = document.getElementById(entry) as HTMLDivElement;
-		div.innerHTML = '';
+		if (div) {
+			div.innerHTML = '';
+		}
 	});
 }
 

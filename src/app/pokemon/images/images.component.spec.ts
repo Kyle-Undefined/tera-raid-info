@@ -5,6 +5,8 @@ import { of } from 'rxjs';
 import { By } from '@angular/platform-browser';
 import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { StateService } from 'src/shared/services/state/state.service';
+import { beforeEach, it, expect, vi, describe } from 'vitest'
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 describe('ImagesComponent', () => {
 	let component: ImagesComponent;
@@ -13,6 +15,9 @@ describe('ImagesComponent', () => {
 	let graphqlService: GraphqlService;
 
 	beforeEach(async () => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
+		
 		await TestBed.configureTestingModule({
 		imports: [
 			ImagesComponent,
@@ -37,7 +42,7 @@ describe('ImagesComponent', () => {
 	});
 
 	it('should set images for 5 Star Toxtricity (Amped)', () => {
-		spyOn(graphqlService, 'getDexNumber').and.returnValue(of(849));
+		vi.spyOn(graphqlService, 'getDexNumber').mockReturnValue(of(849));
 
 		const element = fixture.debugElement;
 		const normalImage = element.query(
@@ -60,7 +65,7 @@ describe('ImagesComponent', () => {
 	});
 
 	it('should set images for 6 Star Tauros (Fire)', () => {
-		spyOn(graphqlService, 'getDexNumber').and.returnValue(of(128));
+		vi.spyOn(graphqlService, 'getDexNumber').mockReturnValue(of(128));
 
 		const element = fixture.debugElement;
 		const normalImage = element.query(

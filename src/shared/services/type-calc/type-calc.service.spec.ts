@@ -1,11 +1,14 @@
 import { TestBed } from '@angular/core/testing';
-
 import { TypeCalcResult, TypeCalcService } from './type-calc.service';
+import { beforeEach, it, expect, describe } from 'vitest'
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 describe('TypeCalcService', () => {
 	let service: TypeCalcService;
 
 	beforeEach(() => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
 		TestBed.configureTestingModule({});
 		service = TestBed.inject(TypeCalcService);
 	});
@@ -16,7 +19,7 @@ describe('TypeCalcService', () => {
 
 	it('should calculate Steel Type Advantages', () => {
 		const advantages: TypeCalcResult[] = service.advantages('Steel');
-		expect(advantages).toHaveSize(3);
+		expect(advantages).toHaveLength(3);
 
 		advantages.forEach((type) => {
 			expect(type.multiplier).toEqual(2);
@@ -29,7 +32,7 @@ describe('TypeCalcService', () => {
 
 	it('should calculate Steel Type Advantages with non effectives', () => {
 		const advantages: TypeCalcResult[] = service.advantages('Steel', true);
-		expect(advantages).toHaveSize(7);
+		expect(advantages).toHaveLength(7);
 
 		expect(advantages[0].name).toEqual('fairy');
 		expect(advantages[0].multiplier).toEqual(2);
@@ -50,7 +53,7 @@ describe('TypeCalcService', () => {
 
 	it('should calculate Steel Type Weaknesses', () => {
 		const weaknesses: TypeCalcResult[] = service.weaknesses('Steel');
-		expect(weaknesses).toHaveSize(14);
+		expect(weaknesses).toHaveLength(14);
 
 		expect(weaknesses[0].name).toEqual('fighting');
 		expect(weaknesses[0].multiplier).toEqual(2);
@@ -86,12 +89,12 @@ describe('TypeCalcService', () => {
 
 	it('should calculate Normal Type Advantages', () => {
 		const advantages: TypeCalcResult[] = service.advantages('Normal');
-		expect(advantages).toHaveSize(0);
+		expect(advantages).toHaveLength(0);
 	});
 
 	it('should calculate Normal Type Advantages with non effectives', () => {
 		const advantages: TypeCalcResult[] = service.advantages('Normal', true);
-		expect(advantages).toHaveSize(3);
+		expect(advantages).toHaveLength(3);
 
 		expect(advantages[0].name).toEqual('rock');
 		expect(advantages[0].multiplier).toEqual(0.5);
@@ -104,7 +107,7 @@ describe('TypeCalcService', () => {
 
 	it('should calculate Normal Type Weaknesses', () => {
 		const weaknesses: TypeCalcResult[] = service.weaknesses('Normal');
-		expect(weaknesses).toHaveSize(2);
+		expect(weaknesses).toHaveLength(2);
 
 		expect(weaknesses[0].name).toEqual('fighting');
 		expect(weaknesses[0].multiplier).toEqual(2);

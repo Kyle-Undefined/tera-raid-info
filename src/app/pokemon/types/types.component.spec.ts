@@ -7,6 +7,8 @@ import { StateService } from 'src/shared/services/state/state.service';
 import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
 import { of } from 'rxjs';
 import { typeResponse } from 'src/shared/services/graphql/mocked';
+import { beforeEach, it, expect, vi, describe } from 'vitest'
+import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 describe('TypesComponent', () => {
 	let component: TypesComponent;
@@ -15,6 +17,9 @@ describe('TypesComponent', () => {
 	let graphqlService: GraphqlService;
 
 	beforeEach(async () => {
+		TestBed.resetTestEnvironment();
+  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
+		
 		await TestBed.configureTestingModule({
 			providers: [StateService, GraphqlService],
 			imports: [ApolloTestingModule, TypesComponent],
@@ -41,7 +46,7 @@ describe('TypesComponent', () => {
 	});
 
 	it('should set types', () => {
-		spyOn(graphqlService, 'getTypes').and.returnValue(of(typeResponse));
+		vi.spyOn(graphqlService, 'getTypes').mockReturnValue(of(typeResponse));
 
 		const element = fixture.debugElement;
 		const div = element.query(By.css('#pokemonTypes')).nativeElement;
