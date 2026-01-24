@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '22.x'
+          node-version: '24.x'
           cache: 'npm'
 
       - name: Install dependencies
@@ -40,6 +40,6 @@ jobs:
 
       - name: Deploy 
         if: success()
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v6
         with:
-          folder: dist
+          folder: dist/browser
