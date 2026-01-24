@@ -14,7 +14,7 @@ import type {
 	Maybe,
 } from '@favware/graphql-pokemon';
 import { Apollo } from 'apollo-angular';
-import { Observable, map } from 'rxjs';
+import { Observable, map, filter } from 'rxjs';
 import * as query from 'src/shared/queries/queries';
 
 export type GraphQLPokemonResponse<K extends keyof Omit<Query, '__typename'>> =
@@ -53,9 +53,8 @@ export class GraphqlService {
 				variables: { move },
 			})
 			.pipe(
-				map((result) => {
-					return result.data;
-				})
+				map((result) => result.data),
+				filter((data): data is GraphQLPokemonResponse<'getMove'> => data !== undefined)
 			);
 	}
 
@@ -125,7 +124,10 @@ export class GraphqlService {
 				query: query.getPokemon,
 				variables: { pokemon },
 			})
-			.pipe(map((result) => result.data));
+			.pipe(
+				map((result) => result.data),
+				filter((data): data is GraphQLPokemonResponse<'getPokemon'> => data !== undefined)
+			);
 
 		return this.pokemon;
 	}
