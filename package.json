@@ -4,7 +4,7 @@
   "description": "Aggregate view of the [Serebii](https://www.serebii.net/) Tera Raid Info for Pokemon Scarlet & Violet.",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production --base-href /tera-raid-info/",
     "watch": "ng build --watch --configuration development",
