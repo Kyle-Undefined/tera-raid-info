@@ -65,24 +65,11 @@
           "options": {
             "buildTarget": "tera-raid-info:build"
           }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
-          }
         }
       }
     }
   },
-  "cli": {
-    "schematicCollections": [
-      "@angular-eslint/schematics"
-    ]
-  },
+  "cli": {},
   "schematics": {
     "@schematics/angular:component": {
       "type": "component"

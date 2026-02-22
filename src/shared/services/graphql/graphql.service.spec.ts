@@ -7,7 +7,7 @@ import {
 import { GraphqlService } from './graphql.service';
 import { MockedPokemonData, MockedMoveData } from './mocked';
 import * as query from 'src/shared/queries/queries';
-import { beforeEach, it, expect, vi, describe, afterEach } from 'vitest'
+import { beforeEach, it, expect, describe, afterEach } from 'vitest'
 import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
 
 const pokemon = PokemonEnum.Gengar;

@@ -11,7 +11,7 @@
 
 body {
 	margin: clamp(20px, 1vw, 40px);
-	font-family: "Gill Sans", sans-serif;
+	font-family: "Nunito Sans", sans-serif;
 	background-color: #29303d;
 	color: hsl(220 20% 90%);
 	font-size: 15px;
