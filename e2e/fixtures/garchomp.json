@@ -1,0 +1,197 @@
+{
+  "data": {
+    "getPokemon": {
+      "abilities": {
+        "first": {
+          "name": "Sand Veil",
+          "key": "sandveil",
+          "desc": "If Sandstorm is active, the accuracy of moves used against this Pok\u00e9mon is multiplied by 0.8. This Pok\u00e9mon takes no damage from Sandstorm.",
+          "shortDesc": "If Sandstorm is active, this Pok\u00e9mon's evasiveness is 1.25\u00d7; immunity to Sandstorm."
+        },
+        "second": null,
+        "hidden": {
+          "name": "Rough Skin",
+          "key": "roughskin",
+          "desc": "Pok\u00e9mon making contact with this Pok\u00e9mon lose 1/8 of their maximum HP, rounded down.",
+          "shortDesc": "Pok\u00e9mon making contact with this Pok\u00e9mon lose 1/8 of their max HP."
+        }
+      },
+      "key": "garchomp",
+      "num": 445,
+      "types": [
+        {
+          "name": "Dragon"
+        },
+        {
+          "name": "Ground"
+        }
+      ],
+      "baseStats": {
+        "hp": 108,
+        "attack": 130,
+        "defense": 95,
+        "specialattack": 80,
+        "specialdefense": 85,
+        "speed": 102
+      },
+      "learnsets": {
+        "generation8": {
+          "levelUpMoves": [
+            {
+              "move": {
+                "key": "dragonclaw",
+                "accuracy": 100,
+                "basePower": "80",
+                "category": "Physical",
+                "desc": "No additional effect.",
+                "name": "Dragon Claw",
+                "pp": 15,
+                "priority": 0,
+                "shortDesc": "No additional effect.",
+                "target": "Normal",
+                "type": "Dragon"
+              }
+            },
+            {
+              "move": {
+                "key": "earthquake",
+                "accuracy": 100,
+                "basePower": "100",
+                "category": "Physical",
+                "desc": "Damage doubles if the target is using Dig.",
+                "name": "Earthquake",
+                "pp": 10,
+                "priority": 0,
+                "shortDesc": "Hits adjacent Pok\u00e9mon. Double damage on Dig.",
+                "target": "All Adjacent",
+                "type": "Ground"
+              }
+            },
+            {
+              "move": {
+                "key": "flamethrower",
+                "accuracy": 100,
+                "basePower": "90",
+                "category": "Special",
+                "desc": "Has a 10% chance to burn the target.",
+                "name": "Flamethrower",
+                "pp": 15,
+                "priority": 0,
+                "shortDesc": "10% chance to burn the target.",
+                "target": "Normal",
+                "type": "Fire"
+              }
+            },
+            {
+              "move": {
+                "key": "rockslide",
+                "accuracy": 90,
+                "basePower": "75",
+                "category": "Physical",
+                "desc": "Has a 30% chance to make the target flinch.",
+                "name": "Rock Slide",
+                "pp": 10,
+                "priority": 0,
+                "shortDesc": "30% chance to make the foe(s) flinch.",
+                "target": "Adjacent Foes",
+                "type": "Rock"
+              }
+            },
+            {
+              "move": {
+                "key": "sandstorm",
+                "accuracy": 100,
+                "basePower": "0",
+                "category": "Status",
+                "desc": "For 5 turns, the weather becomes Sandstorm. At the end of each turn except the last, all active Pok\u00e9mon lose 1/16 of their maximum HP, rounded down, unless they are a Ground, Rock, or Steel type, or have the Magic Guard, Overcoat, Sand Force, Sand Rush, or Sand Veil Abilities. During the effect, the Special Defense of Rock-type Pok\u00e9mon is multiplied by 1.5 when taking damage from a special attack. Lasts for 8 turns if the user is holding Smooth Rock. Fails if the current weather is Sandstorm.",
+                "name": "Sandstorm",
+                "pp": 10,
+                "priority": 0,
+                "shortDesc": "For 5 turns, a sandstorm rages. Rock: 1.5\u00d7 SpD.",
+                "target": "All",
+                "type": "Rock"
+              }
+            },
+            {
+              "move": {
+                "key": "swordsdance",
+                "accuracy": 100,
+                "basePower": "0",
+                "category": "Status",
+                "desc": "Raises the user's Attack by 2 stages.",
+                "name": "Swords Dance",
+                "pp": 20,
+                "priority": 0,
+                "shortDesc": "Raises the user's Attack by 2.",
+                "target": "Self",
+                "type": "Normal"
+              }
+            },
+            {
+              "move": {
+                "key": "ironhead",
+                "accuracy": 100,
+                "basePower": "80",
+                "category": "Physical",
+                "desc": "Has a 30% chance to make the target flinch.",
+                "name": "Iron Head",
+                "pp": 15,
+                "priority": 0,
+                "shortDesc": "30% chance to make the target flinch.",
+                "target": "Normal",
+                "type": "Steel"
+              }
+            },
+            {
+              "move": {
+                "key": "outrage",
+                "accuracy": 100,
+                "basePower": "120",
+                "category": "Physical",
+                "desc": "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pok\u00e9mon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
+                "name": "Outrage",
+                "pp": 10,
+                "priority": 0,
+                "shortDesc": "Lasts 2-3 turns. Confuses the user afterwards.",
+                "target": "Random",
+                "type": "Dragon"
+              }
+            },
+            {
+              "move": {
+                "key": "slash",
+                "accuracy": 100,
+                "basePower": "70",
+                "category": "Physical",
+                "desc": "Has a higher chance for a critical hit.",
+                "name": "Slash",
+                "pp": 20,
+                "priority": 0,
+                "shortDesc": "High critical hit ratio.",
+                "target": "Normal",
+                "type": "Normal"
+              }
+            },
+            {
+              "move": {
+                "key": "bulldoze",
+                "accuracy": 100,
+                "basePower": "60",
+                "category": "Physical",
+                "desc": "Has a 100% chance to lower the target's Speed by 1 stage.",
+                "name": "Bulldoze",
+                "pp": 20,
+                "priority": 0,
+                "shortDesc": "100% chance lower adjacent Pkmn Speed by 1.",
+                "target": "All Adjacent",
+                "type": "Ground"
+              }
+            }
+          ]
+        }
+      },
+      "evolutions": [],
+      "preevolutions": []
+    }
+  }
+}

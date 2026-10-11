@@ -1,6 +1,11 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
 import { StateService } from 'src/shared/services/state/state.service';
+import {
+	RaidDataService,
+	raidsFor,
+} from 'src/shared/services/raid-data/raid-data.service';
+import { RaidRegion } from 'src/shared/models/raids';
+import { Types } from 'src/shared/models/types';
 import { RaidTierComponent } from './header/dropdowns/raid-tier/raid-tier.component';
 import { RegionComponent } from './header/dropdowns/region/region.component';
 import { PokemonListComponent } from './header/dropdowns/pokemon-list/pokemon-list.component';
@@ -15,14 +20,11 @@ import { ActionsComponent } from './pokemon/actions/actions.component';
 import { HerbsComponent } from './pokemon/herbs/herbs.component';
 import { TypeMatchupsComponent } from './pokemon/type-matchups/type-matchups.component';
 
-import * as common from 'src/shared/utils/common';
-
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-  	standalone: true,
+	selector: 'app-root',
+	standalone: true,
+	templateUrl: './app.component.html',
 	imports: [
-		CommonModule,
 		RaidTierComponent,
 		RegionComponent,
 		PokemonListComponent,
@@ -36,116 +38,52 @@ import * as common from 'src/shared/utils/common';
 		ActionsComponent,
 		HerbsComponent,
 		TypeMatchupsComponent,
-	]
+	],
 })
-export class AppComponent implements AfterViewInit, OnInit {
-	constructor(private stateService: StateService) {}
-
-	public title = 'Tera Raid Info';
-
-	public ngOnInit(): void {
-		this.stateService.changeRegionList('Paldea');
-		this.stateService.loading.subscribe((result) => {
-			(document.getElementById('dataLoading') as HTMLDivElement).hidden =
-				!result;
-
-			if (result == false) {
-				(
-					document.getElementById('pokemonContent') as HTMLDivElement
-				).style.display = '';
-			}
-		});
-	}
-
-	public ngAfterViewInit(): void {
-		(document.getElementById('dataLoading') as HTMLDivElement).hidden = true;
-		this.deleteCache();
+export class AppComponent implements OnInit {
+	readonly title = 'Tera Raid Info';
+	readonly state = inject(StateService);
+	readonly data = inject(RaidDataService);
+	ngOnInit(): void {
 		this.autoPopulateSelections();
 	}
-
-	public autoPopulateSelections(url?: string, origin?: string): void {
-		const href = url ? url : window.location.href;
-		const originString = origin ? origin : window.location.origin;
-		const baseUri = href.replace(originString, '');
-
-		if (baseUri.length > 1) {
-			if (href.replace(originString + '/tera-raid-info/', '')) {
-				const build = href
-					.replace(originString + '/tera-raid-info/', '')
-					.split('/');
-				const event = new Event('change');
-
-				if (Number(build[0])) {
-					const raidTier = document.getElementById(
-						'raidTier'
-					) as HTMLSelectElement;
-
-					raidTier.value = build[0];
-					raidTier.dispatchEvent(event);
-				}
-
-				if (build[1]) {
-					const regionList = document.getElementById(
-						'regionList'
-					) as HTMLSelectElement;
-
-					for (let i = 0; i < regionList.length; i++) {
-						const tera = regionList[i] as HTMLOptionElement;
-
-						if (tera.text == build[1]) {
-							regionList.selectedIndex = tera.index;
-						}
-					}
-
-					regionList.dispatchEvent(event);
-				}
-
-				if (build[2]) {
-					let name: string = common.capitalize(
-						build[2].replaceAll('%20', ' ').toLowerCase()
-					);
-					const replacement = name.match(/(\(.*\))/);
-
-					if (replacement) {
-						const words = replacement[0].split(' ');
-
-						for (let i = 0; i < words.length; i++) {
-							name = name.replaceAll(words[i], common.capitalize(words[i]));
-						}
-					}
-
-					const pokemonList = document.getElementById(
-						'pokemonList'
-					) as HTMLSelectElement;
-
-					pokemonList.value = name;
-					pokemonList.dispatchEvent(event);
-				}
-
-				if (build[3]) {
-					const teraList = document.getElementById(
-						'teraList'
-					) as HTMLSelectElement;
-
-					for (let i = 0; i < teraList.length; i++) {
-						const tera = teraList[i] as HTMLOptionElement;
-
-						if (tera.text == build[3]) {
-							teraList.selectedIndex = tera.index;
-						}
-					}
-
-					teraList.dispatchEvent(event);
-				}
-			}
-		}
+	home(): void {
+		this.state.changePokemon('');
+		this.state.changeTeraType('');
+		history.replaceState(null, '', new URL(document.baseURI).pathname);
 	}
-
-	private deleteCache() {
-		// in old version of code base, i was caching images
-		// no longer going with that approach so deleting cache
-		if (typeof caches !== 'undefined') {
-			caches.delete('tera-raid-info-1');
+	autoPopulateSelections(
+		url = window.location.href,
+		origin = window.location.origin
+	): void {
+		let parts: string[];
+		try {
+			const target = new URL(url, origin);
+			const base = new URL(document.baseURI).pathname;
+			let path = target.pathname;
+			// Accept existing GitHub Pages links as well as local development links.
+			if (path.startsWith('/tera-raid-info/'))
+				path = path.slice('/tera-raid-info/'.length);
+			else if (path.startsWith(base)) path = path.slice(base.length);
+			parts = path.split('/').map(decodeURIComponent);
+		} catch {
+			return;
 		}
+		const [tier, rawRegion, rawPokemon, rawTera] = parts;
+		if (tier !== '5' && tier !== '6') return;
+		const region = Object.values(RaidRegion).find(
+			(value) => value.toLowerCase() === rawRegion?.toLowerCase()
+		);
+		if (!region) return;
+		this.state.changeRaidTier(tier);
+		this.state.changeRegionList(region);
+		const raid = raidsFor(tier, region).find(
+			(value) => value.name.toLowerCase() === rawPokemon?.toLowerCase()
+		);
+		if (raid) this.state.changePokemon(raid.name);
+		const tera = Types.find(
+			(value) => value.name.toLowerCase() === rawTera?.toLowerCase()
+		);
+		if (tera) this.state.changeTeraType(tera.name);
 	}
 }

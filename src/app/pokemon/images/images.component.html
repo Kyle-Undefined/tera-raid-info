@@ -1,2 +1,22 @@
-<div id="pokemonImageNormal" class="imgNormal"></div>
-<div id="pokemonImageShiny" class="imgShiny"></div>
+@if (data.view(); as view) {
+	<div class="tri-art grid grid-cols-2 gap-3">
+		<figure id="pokemonImageNormal">
+			<img
+				[src]="'./assets/pokemon/' + imageName() + '.png'"
+				[alt]="view.raid.name + ' normal'"
+				width="190"
+				height="190"
+			/>
+			<figcaption>Normal</figcaption>
+		</figure>
+		<figure id="pokemonImageShiny">
+			<img
+				[src]="'./assets/pokemon/shiny/' + imageName() + '.png'"
+				[alt]="view.raid.name + ' shiny'"
+				width="190"
+				height="190"
+			/>
+			<figcaption>Shiny</figcaption>
+		</figure>
+	</div>
+}

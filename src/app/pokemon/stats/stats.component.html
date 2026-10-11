@@ -1,1 +1,11 @@
-<div id="pokemonStatsWrapper"></div>	
+<section id="pokemonStatsWrapper" aria-labelledby="stats-heading">
+	<h3 id="stats-heading">Base stats</h3>
+	<dl class="tri-stats" id="pokemonStats">
+		@for (stat of stats(); track stat.label) {
+			<div class="tri-stat">
+				<dt>{{ stat.label }}</dt>
+				<dd>{{ stat.value }}</dd>
+			</div>
+		}
+	</dl>
+</section>

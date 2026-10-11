@@ -1,116 +1,60 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { RaidDataService } from 'src/shared/services/raid-data/raid-data.service';
 import { StateService } from 'src/shared/services/state/state.service';
-import {
-	TypeCalcService,
-	TypeCalcResult,
-} from 'src/shared/services/type-calc/type-calc.service';
-import * as common from 'src/shared/utils/common';
-
+import { TypeCalcService } from 'src/shared/services/type-calc/type-calc.service';
 @Component({
-    selector: 'app-pokemon-type-matchups',
-    templateUrl: './type-matchups.component.html',
-    standalone: true,
+	selector: 'app-pokemon-type-matchups',
+	standalone: true,
+	templateUrl: './type-matchups.component.html',
 })
-export class TypeMatchupsComponent implements OnInit {
-	constructor(
-		private stateService: StateService,
-		private typeCalcService: TypeCalcService
-	) {}
-
-	private raidTier = '';
-	private pokemonList = '';
-	private teraType = '';
-	private moveList = '';
-
-	public ngOnInit(): void {
-		this.stateService.raidTier.subscribe((result) => {
-			this.raidTier = result;
-		});
-		this.stateService.pokemonList.subscribe((result) => {
-			this.pokemonList = result;
-			this.handleChange();
-		});
-		this.stateService.teraType.subscribe((result) => {
-			this.teraType = result;
-			this.handleChange();
-		});
-		this.stateService.moveList.subscribe((result) => {
-			this.moveList = result;
-			this.handleChange();
-		});
-	}
-
-	private handleChange(): void {
-		if (this.pokemonList) {
-			common.clearData('pokemonTeraAdvantages');
-			common.clearData('pokemonTeraWeaknesses');
-
-			if (this.pokemonList) {
-				if (this.raidTier && this.teraType) {
-					this.setTypeWeaknesses();
-				}
-
-				if (this.moveList && this.teraType) {
-					if (this.moveList.includes('Tera Blast')) {
-						this.setTeraTypeAdvantages();
-					}
-				}
-			}
-
-			if (this.teraType) {
-				if (this.pokemonList && this.raidTier) {
-					this.setTypeWeaknesses();
-				}
-
-				if (this.moveList.includes('Tera Blast')) {
-					this.setTeraTypeAdvantages();
-				}
-			} else {
-				common.clearData('pokemonTeraAdvantages');
-				common.clearData('pokemonTeraWeaknesses');
-			}
-
-			this.stateService.changeLoading(false);
-		}
-	}
-
-	private setTeraTypeAdvantages(): void {
-		common.clearData('pokemonTeraAdvantages');
-
-		const display: string[] = [];
-		const advantages: TypeCalcResult[] = this.typeCalcService.advantages(
-			this.teraType
-		);
-
-		advantages.forEach((type) => {
-			display.push(common.createTypeMatchupDiv(type));
-		});
-
-		if (display.length) {
-			common.updateDiv(
-				document.getElementById('pokemonTeraAdvantages') as HTMLDivElement,
-				'<h3>Tera Advantages:</h3>' + display.join('')
-			);
-		}
-	}
-
-	private setTypeWeaknesses(): void {
-		common.clearData('pokemonTeraWeaknesses');
-
-		const display: string[] = [];
-		const weaknesses: TypeCalcResult[] = this.typeCalcService.weaknesses(
-			this.teraType
-		);
-
-		weaknesses.forEach((type) => {
-			display.push(common.createTypeMatchupDiv(type));
-		});
-
-		if (display.length) {
-			common.updateDiv(
-				document.getElementById('pokemonTeraWeaknesses') as HTMLDivElement,
-				'<h3>Tera Weaknesses:</h3>' + display.join('')
-			);
-		}
+export class TypeMatchupsComponent {
+	readonly data = inject(RaidDataService);
+	readonly state = inject(StateService);
+	readonly typeCalc = inject(TypeCalcService);
+	readonly offense = computed(() => {
+		const moves = this.data.view()?.moves ?? [];
+		const types = [
+			...new Set(
+				moves
+					.filter(
+						(move) => move.category !== 'Status' && move.name !== 'Tera Blast'
+					)
+					.map((move) => move.type)
+			),
+		];
+		if (
+			moves.some((move) => move.name === 'Tera Blast') &&
+			this.state.selection().tera
+		)
+			types.push(this.state.selection().tera);
+		return [
+			...new Map(
+				types
+					.flatMap((type) => this.typeCalc.advantages(type))
+					.map((type) => [type.name, type])
+			).values(),
+		].sort((a, b) => a.name.localeCompare(b.name));
+	});
+	readonly teraMatchups = computed(() =>
+		this.typeCalc.weaknesses(this.state.selection().tera)
+	);
+	readonly groups = computed(() =>
+		[
+			{
+				label: 'Weak to · 2×',
+				types: this.teraMatchups().filter((type) => type.multiplier === 2),
+			},
+			{
+				label: 'Resists · ½×',
+				types: this.teraMatchups().filter((type) => type.multiplier === 0.5),
+			},
+			{
+				label: 'Immune · 0×',
+				types: this.teraMatchups().filter((type) => type.multiplier === 0),
+			},
+		].filter((group) => group.types.length)
+	);
+	title(name: string): string {
+		return name.charAt(0).toUpperCase() + name.slice(1);
 	}
 }

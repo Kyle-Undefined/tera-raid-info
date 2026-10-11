@@ -1,3 +1,20 @@
-<div id="shareRaid" class="share" (click)="shareRaid()" (mouseout)="shareRaidMouseOut()">
-    <div id="shareText" class="shareText">Share Raid</div>
-</div>
+<button
+	type="button"
+	class="tri-primary"
+	[disabled]="!state.selection().pokemon"
+	(click)="shareRaid()"
+>
+	Share raid
+</button>
+@if (status()) {
+	<span class="tri-share-result" role="status">{{ status() }}</span>
+}
+@if (fallbackUrl()) {
+	<input
+		#link
+		aria-label="Raid link"
+		readonly
+		[value]="fallbackUrl()"
+		(focus)="link.select()"
+	/>
+}

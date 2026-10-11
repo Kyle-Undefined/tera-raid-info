@@ -1,33 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, inject, viewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { StateService } from 'src/shared/services/state/state.service';
 import { Types } from 'src/shared/models/types';
-
 @Component({
-    selector: 'app-tera-type',
-    templateUrl: './tera-type.component.html',
-    standalone: true,
+	selector: 'app-tera-type',
+	standalone: true,
+	imports: [FormsModule],
+	templateUrl: './tera-type.component.html',
 })
-export class TeraTypeComponent implements OnInit {
-	constructor(private stateService: StateService) {}
-
-	public ngOnInit(): void {
-		Types.forEach((type) => {
-			const option = document.createElement('option') as HTMLOptionElement;
-
-			option.value = type.name;
-			option.text = type.name;
-
-			(document.getElementById('teraList') as HTMLSelectElement).add(option);
-		});
-	}
-
-	public valueChanged() {
-		const selectElement = document.getElementById(
-			'teraList'
-		) as HTMLSelectElement;
-		const selectedIndex = selectElement.selectedIndex;
-		const option = selectElement.options[selectedIndex];
-
-		this.stateService.changeTeraType(option.value);
+export class TeraTypeComponent {
+	readonly state = inject(StateService);
+	readonly select = viewChild<ElementRef<HTMLSelectElement>>('select');
+	readonly options = Types.map((type) => type.name);
+	valueChanged(value = this.select()?.nativeElement.value ?? ''): void {
+		this.state.changeTeraType(value);
 	}
 }

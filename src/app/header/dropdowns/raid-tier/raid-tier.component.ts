@@ -1,21 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, inject, viewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { StateService } from 'src/shared/services/state/state.service';
 
 @Component({
-    selector: 'app-raid-tier',
-    templateUrl: './raid-tier.component.html',
-    standalone: true,
+	selector: 'app-raid-tier',
+	standalone: true,
+	imports: [FormsModule],
+	templateUrl: './raid-tier.component.html',
 })
 export class RaidTierComponent {
-	constructor(private stateService: StateService) {}
-
-	public valueChanged() {
-		const selectElement = document.getElementById(
-			'raidTier'
-		) as HTMLSelectElement;
-		const selectedIndex = selectElement.selectedIndex;
-		const option = selectElement.options[selectedIndex];
-
-		this.stateService.changeRaidTier(option.value);
+	readonly state = inject(StateService);
+	readonly select = viewChild<ElementRef<HTMLSelectElement>>('select');
+	readonly options = ['5', '6'];
+	valueChanged(value = this.select()?.nativeElement.value ?? ''): void {
+		this.state.changeRaidTier(value);
 	}
 }

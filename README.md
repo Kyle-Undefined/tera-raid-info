@@ -81,12 +81,10 @@ If the raid Pokémon move set includes the Tera Blast move, then the Super Effec
 <summary>Raid Sharing</summary>
 <br>
 
-You can share the raid choices with others, by simply clicking the Share icon in the header and it will automatically copy to your clipboard. This will set the Raid Tier, Pokémon and Tera Type to auto load for others who click the link. For example, <a href="https://kyle-undefined.github.io/tera-raid-info/6/Garchomp/Fairy" target="_blank">6 Star Fairy Garchomp</a>.
+You can share the raid choices with others, by simply clicking the Share raid button in the header and it will automatically copy to your clipboard. This will set the Raid Tier, Pokémon and Tera Type to auto load for others who click the link. For example, <a href="https://kyle-undefined.github.io/tera-raid-info/6/Paldea/Garchomp/Fairy" target="_blank">6 Star Fairy Garchomp</a>.
 
 </details>
 
-## Preview
-![Preview](https://questionable.link/5QKcrd6Bu.png)
 
 ## Contributors
 - <a href="https://github.com/thatmatthallett" target="_blank">CronikCRS</a>
@@ -95,18 +93,44 @@ You can share the raid choices with others, by simply clicking the Share icon in
 <p>
 <a href="https://www.npmjs.com/package/@angular/cli" target="_blank"><img alt="Angular Version" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/@angular/cli/main?color=37474f&label=Angular&logo=angular&style=for-the-badge" /></a>
 <a href="https://www.npmjs.com/package/typescript" target="_blank"><img alt="Typescript Version" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/typescript/main?color=3178c6&label=Typescript&logo=typescript&logoColor=white&style=for-the-badge" /></a>
-<a href="https://nodejs.org/en/" target="_blank"><img alt="Node.js Version" src="https://img.shields.io/badge/Node-22.13.1-74ae62?style=for-the-badge&logo=node.js&logoColor=white" /></a>
-<a href="https://www.npmjs.com/package/npm" target="_blank"><img alt="NPM Version" src="https://img.shields.io/badge/NPM-11.1.0-cc3838?style=for-the-badge&logo=npm&logoColor=white" /></a>
+<a href="https://nodejs.org/en/" target="_blank"><img alt="Node.js Version" src="https://img.shields.io/badge/Node-24.21.0-74ae62?style=for-the-badge&logo=node.js&logoColor=white" /></a>
+<a href="https://www.npmjs.com/package/npm" target="_blank"><img alt="NPM Version" src="https://img.shields.io/badge/NPM-11.19.0-cc3838?style=for-the-badge&logo=npm&logoColor=white" /></a>
 <a href="https://github.com/favware/graphql-pokemon" target="_blank"><img alt="@favware/graphql-pokemon" src="https://img.shields.io/github/package-json/dependency-version/kyle-undefined/tera-raid-info/dev/@favware/graphql-pokemon/main?color=4623d5&label=@favware/graphql-pokemon&logo=graphql&style=for-the-badge" /></a>
 </p>
 
 ## Development
-Setup a local development environment:
-- `git clone https://github.com/Kyle-Undefined/tera-raid-info.git`
-- `npm install`
-- `npm run start`
 
-Have fun! 🎉
+Use Node **24.21.0** (the current Node 24 LTS release) and npm **11.19.0**. The Node version is recorded in `.node-version` and `.nvmrc`.
+
+```sh
+git clone https://github.com/Kyle-Undefined/tera-raid-info.git
+cd tera-raid-info
+nvm install
+npm install --global npm@11.19.0
+npm ci
+npm run dev
+```
+
+The homepage starts with the selectors and a “Choose your raid” prompt. Selecting a Pokémon loads its raid details. Hover or focus an ability or move to inspect it; click or tap to keep its details open. Close or Escape dismisses the details. Artwork stays anchored, and raid actions read left to right, then down, by descending remaining percentage. Time and HP thresholds are independent triggers. Raid actions can be collapsed.
+
+```sh
+npm run lint
+npm run typecheck
+npm run test:coverage
+npm run build:prod
+npx --no-install playwright install --with-deps chromium firefox webkit
+npm run test:e2e
+```
+
+Browser tests serve the production build at `/tera-raid-info/` and check Chromium desktop, tablet and mobile, Firefox, and WebKit. API responses are intercepted with a recorded fixture so CI does not depend on the public GraphQL service being available. Shared links use `/tera-raid-info/<tier>/<region>/<pokemon>/<tera>` and the existing GitHub Pages 404 redirect.
+
+## Manual dependency updates
+
+Renovate is explicitly disabled in `renovate.json`. Direct dependencies use exact versions, `.npmrc` keeps new installs exact, and `package-lock.json` locks the full dependency tree. No automated update PRs are configured. The disablement takes effect when this configuration reaches the default branch.
+
+Review `npm outdated` and `npm audit`, then install selected versions with `npm install --save-exact <package>@<version>` (add `--save-dev` for development tools). Keep Angular packages aligned and check [Angular's compatibility table](https://angular.dev/reference/versions) before upgrading Node or TypeScript. Angular 22 requires TypeScript 6.0, so TypeScript 7 is deliberately deferred. After updates, run all checks above and commit both manifests. Review npm's install-script allowlist when transitive packages change.
+
+The workflow validates pull requests and `codex/**` branches with read-only repository permissions. Only a successful push to `main` can deploy the validated artifact; pull requests cannot deploy. Actions are pinned to commit SHAs and need manual updates too.
 
 ## Disclaimer
 This is an unofficial, non-commercial, fan-made app and is NOT affiliated, endorsed or supported by Nintendo, Game Freak and The Pokémon Company in any way. Many images used in this app are copyrighted and are supported under fair use. Pokémon and Pokémon character names are trademarks of Nintendo. No copyright infringement intended.

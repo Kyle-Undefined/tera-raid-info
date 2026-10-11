@@ -57,3 +57,5 @@ Thumbs.db
 
 # Coverage reports
 /coverage
+/playwright-report
+/test-results

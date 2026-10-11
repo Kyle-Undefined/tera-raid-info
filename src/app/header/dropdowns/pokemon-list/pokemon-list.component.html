@@ -1,3 +1,12 @@
-<select id="pokemonList" (change)="valueChanged()">
-    <option value="">-- Pokemon --</option>
+<label for="pokemonList">Pokémon</label>
+<select
+	#select
+	id="pokemonList"
+	[ngModel]="state.selection().pokemon"
+	(ngModelChange)="valueChanged($event)"
+>
+	<option value="">Choose Pokémon</option>
+	@for (option of options(); track option) {
+		<option [value]="option">{{ option }}</option>
+	}
 </select>

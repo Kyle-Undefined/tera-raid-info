@@ -1,3 +1,12 @@
-<select id="regionList" (change)="valueChanged()">
-    <option value="">-- Region --</option>
+<label for="regionList">Region</label>
+<select
+	#select
+	id="regionList"
+	[ngModel]="state.selection().region"
+	(ngModelChange)="valueChanged($event)"
+>
+	<option value="">Choose region</option>
+	@for (option of options; track option) {
+		<option [value]="option">{{ option }}</option>
+	}
 </select>

@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, combineLatest, map } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class StateService {
-	private raidTierSource = new BehaviorSubject<string>('');
-	private regionSource = new BehaviorSubject<string>('');
+	private raidTierSource = new BehaviorSubject<string>('6');
+	private regionSource = new BehaviorSubject<string>('Paldea');
 	private pokemonListSource = new BehaviorSubject<string>('');
 	private teraTypeSource = new BehaviorSubject<string>('');
 	private moveListSource = new BehaviorSubject<string>('');
@@ -18,12 +19,23 @@ export class StateService {
 	teraType = this.teraTypeSource.asObservable();
 	moveList = this.moveListSource.asObservable();
 	loading = this.loadingSource.asObservable();
+	selection$ = combineLatest([
+		this.raidTier,
+		this.regionList,
+		this.pokemonList,
+		this.teraType,
+	]).pipe(
+		map(([tier, region, pokemon, tera]) => ({ tier, region, pokemon, tera }))
+	);
+	selection = toSignal(this.selection$, { requireSync: true });
 
 	public changeRaidTier(raidTier: string): void {
+		if (raidTier !== this.raidTierSource.value) this.changePokemon('');
 		this.raidTierSource.next(raidTier);
 	}
 
 	public changeRegionList(region: string): void {
+		if (region !== this.regionSource.value) this.changePokemon('');
 		this.regionSource.next(region);
 	}
 

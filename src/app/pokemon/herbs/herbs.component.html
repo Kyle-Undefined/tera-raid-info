@@ -1,1 +1,14 @@
-<div class="pokemonHerbs"></div>
+@if (data.view(); as view) {
+	<section class="tri-block" id="pokemonHerbs" aria-labelledby="herbs-heading">
+		<h3 id="herbs-heading">Herba Mystica</h3>
+		<div class="tri-chips">
+			@for (herb of view.raid.info.herbs; track herb.name) {
+				<span class="tri-tag tri-herbs"
+					>{{ herb.name }} <strong>{{ herb.chance }}%</strong></span
+				>
+			} @empty {
+				<p class="tri-muted">No Herba Mystica drops.</p>
+			}
+		</div>
+	</section>
+}

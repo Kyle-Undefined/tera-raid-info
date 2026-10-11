@@ -1,3 +1,41 @@
-<div id="pokemonTypeAdvantages" class="pokemonTypeMatchups"></div>
-<div id="pokemonTeraWeaknesses" class="pokemonTypeMatchups"></div>
-<div id="pokemonTeraAdvantages" class="pokemonTypeMatchups"></div>
+<section
+	class="tri-block"
+	id="pokemonTypeAdvantages"
+	aria-labelledby="advantages-heading"
+>
+	<h3 id="advantages-heading">Move advantages</h3>
+	<div class="tri-chips">
+		@for (type of offense(); track type.name) {
+			<span class="tri-tag" [attr.data-type]="title(type.name)"
+				>{{ title(type.name) }} 2×</span
+			>
+		} @empty {
+			<span class="tri-muted">No super effective move types.</span>
+		}
+	</div>
+</section>
+<section
+	class="tri-block"
+	id="pokemonTeraWeaknesses"
+	aria-labelledby="tera-heading"
+>
+	<h3 id="tera-heading">Tera matchups</h3>
+	@if (state.selection().tera) {
+		@for (group of groups(); track group.label) {
+			<div class="tri-match-row">
+				<span>{{ group.label }}</span>
+				<div class="tri-tagset">
+					@for (type of group.types; track type.name) {
+						<span class="tri-tag" [attr.data-type]="title(type.name)">{{
+							title(type.name)
+						}}</span>
+					}
+				</div>
+			</div>
+		}
+	} @else {
+		<p class="tri-muted">
+			Choose a Tera type to see weaknesses, resistances, and immunities.
+		</p>
+	}
+</section>

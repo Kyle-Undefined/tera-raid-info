@@ -1,15 +1,14 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./out-tsc/spec",
-    "types": [
-      "vitest/globals"
-    ]
-  },
-  "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts",
-    "src/**/*.d.ts"
-  ]
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "./out-tsc/spec",
+		"types": ["vitest/globals", "node"]
+	},
+	"include": [
+		"src/**/*.spec.ts",
+		"src/**/*.test.ts",
+		"src/**/*.d.ts",
+		"e2e/**/*.ts",
+		"playwright.config.ts"
+	]
 }

@@ -1,1 +1,51 @@
-<div id="pokemonMoves" class="pokemonMoves"></div>
+<section
+	id="pokemonMoves"
+	aria-labelledby="moves-heading"
+	(keydown.escape)="close()"
+>
+	<h3 id="moves-heading">Moves</h3>
+	<div class="tri-chips">
+		@for (move of data.view()?.moves ?? []; track move.key) {
+			<button
+				type="button"
+				class="tri-info-btn"
+				[attr.data-type]="move.type"
+				[attr.aria-pressed]="pinned() === move"
+				aria-controls="move-detail"
+				(pointerenter)="preview.set(move)"
+				(pointerleave)="preview.set(null)"
+				(focus)="preview.set(move)"
+				(blur)="preview.set(null)"
+				(click)="toggle(move)"
+			>
+				{{ move.name }}
+			</button>
+		}
+	</div>
+	@if (inspected(); as move) {
+		<div id="move-detail" class="tri-inspect">
+			<div class="tri-inspect-top">
+				<strong>{{ move.name }}</strong
+				><button
+					type="button"
+					(click)="close()"
+					aria-label="Close move details"
+				>
+					Close
+				</button>
+			</div>
+			<div class="tri-inspect-meta">
+				<span>{{ move.type }} · {{ move.category }}</span
+				><span>Power {{ move.basePower === '0' ? '—' : move.basePower }}</span
+				><span>Accuracy {{ move.accuracy }}</span
+				><span>PP {{ move.pp }}</span>
+			</div>
+			<p>
+				{{ move.desc === 'No additional effect.' ? move.shortDesc : move.desc }}
+			</p>
+			@if (advantages(move); as types) {
+				<p class="tri-muted mt-2">Super effective against: {{ types }}</p>
+			}
+		</div>
+	}
+</section>

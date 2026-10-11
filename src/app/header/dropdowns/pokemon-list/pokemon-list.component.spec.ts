@@ -2,9 +2,12 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { ApolloTestingModule } from 'apollo-angular/testing';
 import { StateService } from 'src/shared/services/state/state.service';
-import { beforeEach, it, expect, vi, describe } from 'vitest'
+import { beforeEach, it, expect, vi, describe } from 'vitest';
 import { PokemonListComponent } from './pokemon-list.component';
-import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
+import {
+	BrowserTestingModule,
+	platformBrowserTesting,
+} from '@angular/platform-browser/testing';
 
 describe('PokemonListComponent', () => {
 	let component: PokemonListComponent;
@@ -13,7 +16,7 @@ describe('PokemonListComponent', () => {
 
 	beforeEach(async () => {
 		TestBed.resetTestEnvironment();
-  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
+		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
 
 		await TestBed.configureTestingModule({
 			providers: [StateService],
@@ -44,6 +47,7 @@ describe('PokemonListComponent', () => {
 		const select = element.query(By.css('select')).nativeElement;
 
 		service.changeRaidTier('5');
+		fixture.detectChanges();
 		select.value = select.options[1].value;
 		select.dispatchEvent(new Event('change'));
 		fixture.detectChanges();

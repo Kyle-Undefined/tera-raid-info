@@ -1,1 +1,16 @@
-<div class="pokemonActions"></div>
+<section class="tri-block" id="pokemonActions">
+	<details open>
+		<summary>
+			Raid actions <span class="tri-muted">({{ actions().length }})</span>
+		</summary>
+		<ol class="tri-actions">
+			@for (action of actions(); track $index) {
+				<li class="tri-action">
+					<span class="tri-threshold" [class.tri-time]="action.type === 'Time'"
+						>{{ action.threshold }}% {{ action.type }}</span
+					><span>{{ action.action }}</span>
+				</li>
+			}
+		</ol>
+	</details>
+</section>

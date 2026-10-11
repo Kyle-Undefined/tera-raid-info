@@ -14,7 +14,7 @@ export class TypeCalcService {
 		const result: TypeCalcResult[] = [];
 
 		Types.filter((type) => {
-			return type.name.includes(typeName);
+			return type.name.toLowerCase() === typeName.toLowerCase();
 		}).forEach((type) => {
 			const offense = type.matchup.offense;
 
@@ -40,7 +40,7 @@ export class TypeCalcService {
 		const result: TypeCalcResult[] = [];
 
 		Types.filter((type) => {
-			return type.name.includes(typeName);
+			return type.name.toLowerCase() === typeName.toLowerCase();
 		}).forEach((type) => {
 			const defense = type.matchup.defense;
 

@@ -1,68 +1,49 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { ShareRaidComponent } from './share-raid.component';
+import { TestBed } from '@angular/core/testing';
+import {
+	BrowserTestingModule,
+	platformBrowserTesting,
+} from '@angular/platform-browser/testing';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { StateService } from 'src/shared/services/state/state.service';
-import { beforeEach, it, expect, vi, describe } from 'vitest';
-import { BrowserTestingModule, platformBrowserTesting } from '@angular/platform-browser/testing';
-
-Object.assign(navigator, {
-	clipboard: {
-		writeText: vi.fn(() => Promise.resolve()),
-	},
-});
-
-Object.assign(global, {
-	location: {
-		origin: 'http://localhost',
-	},
-});
-
+import { ShareRaidComponent } from './share-raid.component';
 describe('ShareRaidComponent', () => {
 	let component: ShareRaidComponent;
-	let fixture: ComponentFixture<ShareRaidComponent>;
-
-	beforeEach(async () => {
+	let state: StateService;
+	const writeText = vi.fn();
+	beforeEach(() => {
 		TestBed.resetTestEnvironment();
-  		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
-
-		await TestBed.configureTestingModule({
-			imports: [ShareRaidComponent],
-			providers: [StateService],
-		}).compileComponents();
-
-		fixture = TestBed.createComponent(ShareRaidComponent);
-		component = fixture.componentInstance;
-		fixture.detectChanges();
+		TestBed.initTestEnvironment(BrowserTestingModule, platformBrowserTesting());
+		TestBed.configureTestingModule({ imports: [ShareRaidComponent] });
+		state = TestBed.inject(StateService);
+		component = TestBed.createComponent(ShareRaidComponent).componentInstance;
+		Object.defineProperty(navigator, 'clipboard', {
+			configurable: true,
+			value: { writeText },
+		});
+		writeText.mockReset().mockResolvedValue(undefined);
+		const base = document.createElement('base');
+		base.href = 'https://example.test/tera-raid-info/';
+		document.head.querySelector('base')?.remove();
+		document.head.append(base);
 	});
-
-	it('should create', () => {
-		expect(component).toBeTruthy();
+	it('does not share an empty selection', async () => {
+		await component.shareRaid();
+		expect(writeText).not.toHaveBeenCalled();
 	});
-
-	it('should generate raid link', () => {
-		const element = fixture.debugElement;
-		const div: HTMLDivElement = element.query(
-			By.css('#shareText')
-		).nativeElement;
-
-		vi.spyOn(document, 'getElementById').mockReturnValue(div);
-
-		const clipboardSpy = vi.spyOn(navigator.clipboard, 'writeText');
-		component.shareRaid();
-		expect(clipboardSpy).toHaveBeenCalled();
-		expect(div.innerText).toBe('Copied to Clipboard');
+	it('encodes forms and includes the tier, region and Tera type', async () => {
+		state.changePokemon('Tauros (Fire)');
+		state.changeTeraType('Fairy');
+		await component.shareRaid();
+		expect(writeText).toHaveBeenCalledWith(
+			'https://example.test/tera-raid-info/6/Paldea/Tauros%20(Fire)/Fairy'
+		);
+		expect(component.status()).toBe('Raid link copied');
 	});
-
-	it('should update div text on mouseout', () => {
-		const element = fixture.debugElement;
-		const div: HTMLDivElement = element.query(
-			By.css('#shareText')
-		).nativeElement;
-
-		vi.spyOn(document, 'getElementById').mockReturnValue(div);
-
-		component.shareRaidMouseOut();
-		fixture.detectChanges();
-		expect(div.innerText).toBe('Share Raid');
+	it('provides a copyable link when clipboard access fails', async () => {
+		state.changePokemon('Garchomp');
+		writeText.mockRejectedValue(new Error('denied'));
+		await component.shareRaid();
+		expect(component.fallbackUrl()).toContain('/6/Paldea/Garchomp/');
+		expect(component.status()).toBe('Copy this raid link');
 	});
 });

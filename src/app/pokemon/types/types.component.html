@@ -1,1 +1,11 @@
-<div id="pokemonTypes"></div>
+@if (data.view(); as view) {
+	<div
+		id="pokemonTypes"
+		class="tri-tagset justify-center mt-3"
+		aria-label="Pokémon types"
+	>
+		@for (type of view.pokemon.types; track type.name) {
+			<span class="tri-tag" [attr.data-type]="type.name">{{ type.name }}</span>
+		}
+	</div>
+}

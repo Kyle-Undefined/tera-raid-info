@@ -1,4 +1,4 @@
-type Raid = {
+export type Raid = {
 	name: string;
 	formName?: string;
 	imageAlt?: string;

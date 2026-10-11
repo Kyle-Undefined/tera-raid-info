@@ -1,31 +1,116 @@
-<header class="header">
-    <h1>Tera Raid Info</h1>
-    <div class="dropdowns">
-        <app-raid-tier></app-raid-tier>
-        <app-region></app-region>
-        <app-pokemon-list></app-pokemon-list>
-        <app-tera-type></app-tera-type>
-        <app-share-raid></app-share-raid>
-    </div>
-</header>
-<div id="dataLoading" hidden="true"><img src="./assets/icons/pokeball.gif" /></div>
-<div id="pokemonContent" class="content" hidden="false">
-	<div id="pokemon">
-        <div class="pokemonImageWrapper">
-            <app-pokemon-images></app-pokemon-images>
-        </div>
-        <app-pokemon-types></app-pokemon-types>
-    </div>
-    <app-pokemon-stats></app-pokemon-stats>
-    <app-pokemon-ability></app-pokemon-ability>
-    <app-pokemon-moves></app-pokemon-moves>
-    <app-pokemon-actions id="pokemonActions"></app-pokemon-actions>
-    <app-pokemon-herbs id="pokemonHerbs"></app-pokemon-herbs>
-    <app-pokemon-type-matchups class="pokemonTypesWrapper"></app-pokemon-type-matchups>
+<div class="tri-product mx-auto w-full max-w-5xl">
+	<header>
+		<div class="tri-top">
+			<div class="tri-brand">
+				<span class="tri-brand-mark" aria-hidden="true">◇</span>
+				<div>
+					<h1>Tera Raid Info</h1>
+					<small>Scarlet &amp; Violet · Raid companion</small>
+				</div>
+			</div>
+			<div class="tri-top-actions">
+				<button type="button" class="tri-link" (click)="home()">Home</button
+				><app-share-raid></app-share-raid>
+			</div>
+		</div>
+		<nav class="tri-filter" aria-label="Choose your raid">
+			<app-raid-tier></app-raid-tier><app-region></app-region
+			><app-pokemon-list></app-pokemon-list><app-tera-type></app-tera-type>
+		</nav>
+	</header>
+	<main>
+		@if (!state.selection().pokemon) {
+			<section class="tri-home">
+				<h2>Choose your raid</h2>
+				<p>
+					Select a raid tier, region, and Pokémon above to see its moves,
+					abilities, actions, and matchups.
+				</p>
+			</section>
+		} @else if (data.loading()) {
+			<div id="dataLoading" class="tri-home" role="status">
+				<img src="./assets/icons/pokeball.gif" alt="" width="64" height="64" />
+				<p>Loading raid…</p>
+			</div>
+		} @else if (data.error()) {
+			<section class="tri-home" role="alert">
+				<h2>{{ data.error() }}</h2>
+				<button type="button" class="tri-primary" (click)="data.retry()">
+					Try again
+				</button>
+			</section>
+		} @else if (data.view(); as view) {
+			<article
+				id="pokemonContent"
+				class="tri-detail"
+				aria-labelledby="pokemon-name"
+			>
+				<div class="tri-identity">
+					<div>
+						<p class="tri-context">
+							{{ view.tier }} ★ raid · {{ view.region }}
+						</p>
+						<h2 id="pokemon-name">{{ view.raid.name }}</h2>
+					</div>
+					@if (state.selection().tera; as tera) {
+						<div class="tri-tagset">
+							<span class="tri-tera-label">Tera type</span
+							><span class="tri-tag" [attr.data-type]="tera">{{ tera }}</span>
+						</div>
+					}
+				</div>
+				<div class="tri-main">
+					<div class="tri-art-column" id="pokemon">
+						<app-pokemon-images></app-pokemon-images
+						><app-pokemon-types></app-pokemon-types>
+					</div>
+					<div class="tri-summary">
+						<app-pokemon-stats></app-pokemon-stats
+						><app-pokemon-ability></app-pokemon-ability
+						><app-pokemon-moves></app-pokemon-moves>
+					</div>
+				</div>
+				<app-pokemon-actions></app-pokemon-actions
+				><app-pokemon-herbs></app-pokemon-herbs
+				><app-pokemon-type-matchups></app-pokemon-type-matchups>
+			</article>
+		}
+	</main>
+	<footer class="tri-footer">
+		<span
+			>By
+			<a
+				href="https://github.com/kyle-undefined"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Kyle Undefined</a
+			>
+			· Original design CronikCRS</span
+		>
+		<span
+			>Images:
+			<a
+				href="https://www.serebii.net/"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Serebii</a
+			>
+			&amp;
+			<a
+				href="https://www.flaticon.com/authors/creatype"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Creatype</a
+			></span
+		>
+		<span
+			>Data:
+			<a
+				href="https://github.com/favware/graphql-pokemon"
+				target="_blank"
+				rel="noopener noreferrer"
+				>GraphQL-Pokemon</a
+			></span
+		>
+	</footer>
 </div>
-<footer class="footer">
-    By: <a href="https://github.com/kyle-undefined" target="_blank">Kyle Undefined</a> - 
-    Design: CronikCRS - 
-    Images: <a href="https://www.serebii.net/" target="_blank">Serebii</a> & <a href="https://www.flaticon.com/authors/creatype" target="_blank">Creatype</a> - 
-    Data: <a href="https://github.com/favware/graphql-pokemon" target="_blank">GraphQL-Pokemon</a>
-</footer>

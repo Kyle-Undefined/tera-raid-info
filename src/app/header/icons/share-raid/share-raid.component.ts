@@ -1,50 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { StateService } from 'src/shared/services/state/state.service';
-
 @Component({
-    selector: 'app-share-raid',
-    templateUrl: './share-raid.component.html',
-    standalone: true,
+	selector: 'app-share-raid',
+	standalone: true,
+	templateUrl: './share-raid.component.html',
 })
-export class ShareRaidComponent implements OnInit {
-	constructor(private stateService: StateService) {}
-
-	private raidTier = '';
-	private pokemonList = '';
-	private teraType = '';
-	private region = '';
-
-	public ngOnInit(): void {
-		this.stateService.raidTier.subscribe((result) => {
-			this.raidTier = result;
-		});
-		this.stateService.pokemonList.subscribe((result) => {
-			this.pokemonList = result;
-		});
-		this.stateService.teraType.subscribe((result) => {
-			this.teraType = result;
-		});
-		this.stateService.regionList.subscribe((result) => {
-			this.region = result;
+export class ShareRaidComponent {
+	readonly state = inject(StateService);
+	readonly status = signal('');
+	readonly fallbackUrl = signal('');
+	constructor() {
+		effect(() => {
+			this.state.selection();
+			this.status.set('');
+			this.fallbackUrl.set('');
 		});
 	}
-
-	public shareRaid(): void {
-		let url: string = location.origin + '/tera-raid-info/';
-
-		url += this.raidTier;
-		url += '/' + this.region;
-		url += '/' + this.pokemonList;
-		url += '/' + this.teraType;
-
-		navigator.clipboard.writeText(url);
-
-		const div = document.getElementById('shareText') as HTMLDivElement;
-		div.innerText = 'Copied to Clipboard';
-	}
-
-	public shareRaidMouseOut(): void {
-		const div = document.getElementById('shareText') as HTMLDivElement;
-		div.innerText = 'Share Raid';
+	async shareRaid(): Promise<void> {
+		const selection = this.state.selection();
+		if (!selection.pokemon) return;
+		const base = new URL(document.baseURI);
+		const path = [
+			selection.tier,
+			selection.region,
+			selection.pokemon,
+			selection.tera,
+		]
+			.map(encodeURIComponent)
+			.join('/');
+		const url = new URL(path, base).href;
+		try {
+			await navigator.clipboard.writeText(url);
+			this.fallbackUrl.set('');
+			this.status.set('Raid link copied');
+		} catch {
+			this.fallbackUrl.set(url);
+			this.status.set('Copy this raid link');
+		}
 	}
 }

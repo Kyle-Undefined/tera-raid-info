@@ -1,1 +1,39 @@
-<div id="pokemonAbility"></div>
+<section
+	id="pokemonAbility"
+	aria-labelledby="abilities-heading"
+	(keydown.escape)="close()"
+>
+	<h3 id="abilities-heading">Abilities</h3>
+	<div class="tri-chips">
+		@for (entry of abilities(); track entry.ability.name) {
+			<button
+				type="button"
+				class="tri-info-btn"
+				[attr.aria-pressed]="pinned() === entry.ability"
+				aria-controls="ability-detail"
+				(pointerenter)="preview.set(entry.ability)"
+				(pointerleave)="preview.set(null)"
+				(focus)="preview.set(entry.ability)"
+				(blur)="preview.set(null)"
+				(click)="toggle(entry.ability)"
+			>
+				{{ entry.ability.name }}{{ entry.hidden ? ' (H)' : '' }}
+			</button>
+		}
+	</div>
+	@if (inspected(); as ability) {
+		<div id="ability-detail" class="tri-inspect">
+			<div class="tri-inspect-top">
+				<strong>{{ ability.name }}</strong
+				><button
+					type="button"
+					(click)="close()"
+					aria-label="Close ability details"
+				>
+					Close
+				</button>
+			</div>
+			<p>{{ ability.shortDesc }}</p>
+		</div>
+	}
+</section>

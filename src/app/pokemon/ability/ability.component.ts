@@ -1,70 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-import { Ability } from '@favware/graphql-pokemon';
-import { GraphqlService } from 'src/shared/services/graphql/graphql.service';
-import { StateService } from 'src/shared/services/state/state.service';
-import * as common from 'src/shared/utils/common';
-
+import { Component, computed, effect, inject, signal } from '@angular/core';
+import { RaidDataService } from 'src/shared/services/raid-data/raid-data.service';
+import type { Ability } from '@favware/graphql-pokemon';
 @Component({
-    selector: 'app-pokemon-ability',
-    templateUrl: './ability.component.html',
-    standalone: true,
+	selector: 'app-pokemon-ability',
+	standalone: true,
+	templateUrl: './ability.component.html',
 })
-export class AbilityComponent implements OnInit {
-	private raidTier = '';
-	private pokemonList = '';
-
-	constructor(
-		private graphqlService: GraphqlService,
-		private stateService: StateService
-	) {}
-
-	public ngOnInit(): void {
-		this.stateService.raidTier.subscribe((result) => {
-			this.raidTier = result;
+export class AbilityComponent {
+	readonly data = inject(RaidDataService);
+	readonly abilities = computed(() => {
+		const view = this.data.view();
+		if (!view) return [];
+		const { first, second, hidden } = view.pokemon.abilities;
+		return [
+			first && { ability: first, hidden: false },
+			second && { ability: second, hidden: false },
+			(view.tier === '6' || view.raid.name === 'Ditto') &&
+				hidden && { ability: hidden, hidden: true },
+		].filter(Boolean) as { ability: Ability; hidden: boolean }[];
+	});
+	readonly preview = signal<Ability | null>(null);
+	readonly pinned = signal<Ability | null>(null);
+	readonly inspected = computed(() => this.pinned() ?? this.preview());
+	constructor() {
+		effect(() => {
+			this.data.view();
+			this.close();
 		});
-		this.stateService.pokemonList.subscribe((result) => {
-			this.pokemonList = result;
-			this.setAbilities();
-		});
 	}
-
-	private setAbilities(): void {
-		if (this.pokemonList) {
-			const pokemonAbility = document.getElementById(
-				'pokemonAbility'
-			) as HTMLDivElement;
-
-			this.graphqlService.getAbilities().subscribe((data) => {
-				common.updateDiv(pokemonAbility, '<h3>Ability:</h3>');
-
-				common.updateDiv(pokemonAbility, this.createAbilityDiv(data.first));
-
-				if (data.second) {
-					common.updateDiv(pokemonAbility, this.createAbilityDiv(data.second));
-				}
-
-				if (this.canShowHidden()) {
-					if (data.hidden) {
-						common.updateDiv(
-							pokemonAbility,
-							this.createAbilityDiv(data.hidden, true)
-						);
-					}
-				}
-			});
-		}
+	toggle(ability: Ability): void {
+		this.preview.set(null);
+		this.pinned.set(this.pinned() === ability ? null : ability);
 	}
-
-	private createAbilityDiv(ability: Ability, hidden?: boolean): string {
-		return `<div class="typeMatchupText" data-info="${ability.shortDesc}">${
-			ability.name
-		}${hidden ? ' (H)' : ''}</div>`;
-	}
-
-	private canShowHidden(): boolean {
-		return (
-			this.raidTier == '6' ||
-			(this.raidTier == '5' && this.pokemonList == 'Ditto')
-		);
+	close(): void {
+		this.pinned.set(null);
+		this.preview.set(null);
 	}
 }

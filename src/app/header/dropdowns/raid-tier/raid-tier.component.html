@@ -1,5 +1,12 @@
-<select id="raidTier" (change)="valueChanged()">
-    <option value="">-- Tier --</option>
-    <option value="5">5 Star</option>
-    <option value="6">6 Star</option>
+<label for="raidTier">Raid tier</label>
+<select
+	#select
+	id="raidTier"
+	[ngModel]="state.selection().tier"
+	(ngModelChange)="valueChanged($event)"
+>
+	<option value="">Choose raid tier</option>
+	@for (option of options; track option) {
+		<option [value]="option">{{ option + ' ★' }}</option>
+	}
 </select>
