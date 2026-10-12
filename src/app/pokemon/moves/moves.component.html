@@ -12,9 +12,9 @@
 				[attr.data-type]="move.type"
 				[attr.aria-pressed]="pinned() === move"
 				aria-controls="move-detail"
-				(pointerenter)="preview.set(move)"
+				(pointerenter)="previewPointer(move, $event)"
 				(pointerleave)="preview.set(null)"
-				(focus)="preview.set(move)"
+				(focus)="previewFocus(move, $event)"
 				(blur)="preview.set(null)"
 				(click)="toggle(move)"
 			>
@@ -28,6 +28,7 @@
 				<strong>{{ move.name }}</strong
 				><button
 					type="button"
+					[attr.tabindex]="pinned() ? 0 : -1"
 					(click)="close()"
 					aria-label="Close move details"
 				>

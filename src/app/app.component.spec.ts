@@ -148,7 +148,9 @@ describe('Familiar raid view', () => {
 	it('supports preview, pinned ability details, closing, and Escape', () => {
 		choose();
 		const button = el('#pokemonAbility button');
-		button.dispatchEvent(new Event('pointerenter'));
+		button.dispatchEvent(
+			new PointerEvent('pointerenter', { pointerType: 'mouse' })
+		);
 		fixture.detectChanges();
 		expect(el('#ability-detail').textContent).toContain('Vital Spirit');
 		button.click();
@@ -167,11 +169,13 @@ describe('Familiar raid view', () => {
 		fixture.detectChanges();
 		expect(el('#ability-detail')).toBeNull();
 	});
-	it('supports keyboard previews and move details without replacing artwork', () => {
+	it('inspects and pins move details without replacing artwork', () => {
 		choose();
 		const image = el('#pokemonImageNormal img');
 		const button = el('#pokemonMoves button');
-		button.dispatchEvent(new Event('focus'));
+		button.dispatchEvent(
+			new PointerEvent('pointerenter', { pointerType: 'mouse' })
+		);
 		fixture.detectChanges();
 		expect(el('#move-detail').textContent).toContain('PP');
 		button.click();

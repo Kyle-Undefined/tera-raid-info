@@ -19,9 +19,17 @@ export class MovesComponent {
 			this.close();
 		});
 	}
+	previewPointer(move: Move, event: PointerEvent): void {
+		// Touch contact must not open a hover preview before its click completes.
+		if (event.pointerType === 'mouse') this.preview.set(move);
+	}
+	previewFocus(move: Move, event: FocusEvent): void {
+		if ((event.target as HTMLElement).matches(':focus-visible'))
+			this.preview.set(move);
+	}
 	toggle(move: Move): void {
-		this.preview.set(null);
 		this.pinned.set(this.pinned() === move ? null : move);
+		this.preview.set(null);
 	}
 	close(): void {
 		this.pinned.set(null);

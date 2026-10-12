@@ -41,15 +41,15 @@ export class TypeMatchupsComponent {
 	readonly groups = computed(() =>
 		[
 			{
-				label: 'Weak to · 2×',
+				label: 'Weak to',
 				types: this.teraMatchups().filter((type) => type.multiplier === 2),
 			},
 			{
-				label: 'Resists · ½×',
+				label: 'Resists',
 				types: this.teraMatchups().filter((type) => type.multiplier === 0.5),
 			},
 			{
-				label: 'Immune · 0×',
+				label: 'Immune to',
 				types: this.teraMatchups().filter((type) => type.multiplier === 0),
 			},
 		].filter((group) => group.types.length)

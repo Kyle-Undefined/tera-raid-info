@@ -10,6 +10,7 @@ const types = {
 	'.png': 'image/png',
 	'.gif': 'image/gif',
 	'.ico': 'image/x-icon',
+	'.svg': 'image/svg+xml',
 };
 http
 	.createServer((req, res) => {

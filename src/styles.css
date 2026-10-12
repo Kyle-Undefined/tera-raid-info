@@ -90,7 +90,7 @@ app-pokemon-type-matchups {
 		border-color 0.15s,
 		transform 0.15s;
 }
-.tri-product button:hover,
+.tri-product button:not(.tri-info-btn):hover,
 .tri-product select:hover {
 	background: #3d4960;
 	border-color: var(--tri-highlight);
@@ -338,13 +338,18 @@ app-pokemon-type-matchups {
 	min-height: 36px;
 	font-size: 13px;
 }
-.tri-product .tri-info-btn:hover {
-	background: color-mix(
-		in srgb,
-		var(--tri-type-color, #8797ad) 40%,
-		var(--tri-inset)
-	);
-	border-color: var(--tri-highlight);
+@media (hover: hover) {
+	.tri-product .tri-info-btn:hover {
+		background: color-mix(
+			in srgb,
+			var(--tri-type-color, #8797ad) 40%,
+			var(--tri-inset)
+		);
+		border-color: var(--tri-highlight);
+	}
+}
+.tri-product .tri-info-btn:active {
+	transform: none;
 }
 .tri-product .tri-info-btn[aria-pressed='true'] {
 	outline: 2px solid var(--tri-highlight);
@@ -673,4 +678,25 @@ app-pokemon-type-matchups {
 		grid-template-columns: 1fr;
 		gap: 5px;
 	}
+}
+
+.tri-product .tri-brand-mark {
+	display: block;
+	object-fit: cover;
+}
+.tri-product .tri-herb-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 24px;
+}
+.tri-product .tri-herbs {
+	display: inline-flex;
+	gap: 10px;
+}
+.tri-product .tri-herb-symbol img {
+	width: 20px;
+	height: 20px;
+}
+.tri-product .tri-herbs .tri-drop-rate {
+	font-weight: 600;
 }

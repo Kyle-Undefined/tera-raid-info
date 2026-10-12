@@ -28,9 +28,17 @@ export class AbilityComponent {
 			this.close();
 		});
 	}
+	previewPointer(ability: Ability, event: PointerEvent): void {
+		// Touch contact must not open a hover preview before its click completes.
+		if (event.pointerType === 'mouse') this.preview.set(ability);
+	}
+	previewFocus(ability: Ability, event: FocusEvent): void {
+		if ((event.target as HTMLElement).matches(':focus-visible'))
+			this.preview.set(ability);
+	}
 	toggle(ability: Ability): void {
-		this.preview.set(null);
 		this.pinned.set(this.pinned() === ability ? null : ability);
+		this.preview.set(null);
 	}
 	close(): void {
 		this.pinned.set(null);

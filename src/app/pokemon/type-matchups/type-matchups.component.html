@@ -7,7 +7,7 @@
 	<div class="tri-chips">
 		@for (type of offense(); track type.name) {
 			<span class="tri-tag" [attr.data-type]="title(type.name)"
-				>{{ title(type.name) }} 2×</span
+				>{{ title(type.name) }} · 2×</span
 			>
 		} @empty {
 			<span class="tri-muted">No super effective move types.</span>
@@ -26,9 +26,10 @@
 				<span>{{ group.label }}</span>
 				<div class="tri-tagset">
 					@for (type of group.types; track type.name) {
-						<span class="tri-tag" [attr.data-type]="title(type.name)">{{
-							title(type.name)
-						}}</span>
+						<span class="tri-tag" [attr.data-type]="title(type.name)"
+							>{{ title(type.name) }} ·
+							{{ type.multiplier === 0.5 ? '½' : type.multiplier }}×</span
+						>
 					}
 				</div>
 			</div>

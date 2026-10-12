@@ -11,9 +11,9 @@
 				class="tri-info-btn"
 				[attr.aria-pressed]="pinned() === entry.ability"
 				aria-controls="ability-detail"
-				(pointerenter)="preview.set(entry.ability)"
+				(pointerenter)="previewPointer(entry.ability, $event)"
 				(pointerleave)="preview.set(null)"
-				(focus)="preview.set(entry.ability)"
+				(focus)="previewFocus(entry.ability, $event)"
 				(blur)="preview.set(null)"
 				(click)="toggle(entry.ability)"
 			>
@@ -27,6 +27,7 @@
 				<strong>{{ ability.name }}</strong
 				><button
 					type="button"
+					[attr.tabindex]="pinned() ? 0 : -1"
 					(click)="close()"
 					aria-label="Close ability details"
 				>

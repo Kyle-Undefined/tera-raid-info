@@ -32,6 +32,11 @@ test('homepage is prompt only, with usable selectors and no overflow', async ({
 	await expect(page.getByRole('button', { name: 'Share raid' })).toBeDisabled();
 	await expect(page.locator('#pokemonContent')).toHaveCount(0);
 	expect(requests).toBe(0);
+	expect(
+		await page
+			.locator('header img')
+			.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)
+	).toBe(true);
 	const tierBox = await page.getByLabel('Raid tier').boundingBox();
 	const pokemonBox = await page
 		.getByLabel('Pokémon', { exact: true })
@@ -62,6 +67,14 @@ test('selected raid has real data and working normal and shiny artwork', async (
 			)
 		).toBe(true);
 	expect(requests).toBe(1);
+	expect(
+		await page
+			.locator('#pokemonHerbs img')
+			.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)
+	).toBe(true);
+	await expect(page.locator('#pokemonTypeAdvantages')).toContainText(
+		'Electric · 2×'
+	);
 	expect(errors).toEqual([]);
 	expect(
 		await page.evaluate(
@@ -100,7 +113,8 @@ test('keyboard focus and pointer hover preview details without pinning', async (
 }, testInfo) => {
 	await choose(page);
 	const move = page.getByRole('button', { name: 'Earthquake', exact: true });
-	await move.focus();
+	await move.press('Shift+Tab');
+	await page.keyboard.press('Tab');
 	await expect(page.locator('#move-detail')).toBeVisible();
 	await expect(move).toHaveAttribute('aria-pressed', 'false');
 	await page.getByRole('button', { name: 'Home', exact: true }).focus();
@@ -143,7 +157,9 @@ test('changing Tera types updates matchups without a second request', async ({
 }) => {
 	await choose(page);
 	await page.getByLabel('Tera type', { exact: true }).selectOption('Fairy');
-	await expect(page.locator('#pokemonTeraWeaknesses')).toContainText('Poison');
+	await expect(page.locator('#pokemonTeraWeaknesses')).toContainText(
+		'Poison · 2×'
+	);
 	await expect(page.locator('#pokemonTeraWeaknesses')).toContainText('Immune');
 	await expect(page.locator('#pokemonTeraWeaknesses')).toContainText('Dragon');
 	expect(requests).toBe(1);
@@ -193,4 +209,71 @@ test('failed requests show a retry which can recover', async ({ page }) => {
 	await page.route(api, (route) => route.fulfill({ json: response }));
 	await page.getByRole('button', { name: 'Try again' }).click();
 	await expect(page.locator('#pokemon-name')).toHaveText('Garchomp');
+});
+
+for (const detail of [
+	{ name: 'Sand Veil', section: 'pokemonAbility', panel: 'ability-detail' },
+	{ name: 'Earthquake', section: 'pokemonMoves', panel: 'move-detail' },
+]) {
+	test(`${detail.name} details open without closing and reopening`, async ({
+		page,
+	}, testInfo) => {
+		await choose(page);
+		await page.evaluate(({ section, panel }) => {
+			const changes: string[] = [];
+			(window as unknown as { detailChanges: string[] }).detailChanges =
+				changes;
+			new MutationObserver((records) => {
+				for (const record of records) {
+					for (const node of record.addedNodes)
+						if (node instanceof Element && node.id === panel)
+							changes.push('opened');
+					for (const node of record.removedNodes)
+						if (node instanceof Element && node.id === panel)
+							changes.push('closed');
+				}
+			}).observe(document.getElementById(section)!, {
+				childList: true,
+				subtree: true,
+			});
+		}, detail);
+		const button = page.getByRole('button', { name: detail.name, exact: true });
+		if (testInfo.project.use.hasTouch) {
+			await button.dispatchEvent('pointerenter', { pointerType: 'touch' });
+			await expect(page.locator(`#${detail.panel}`)).toHaveCount(0, {
+				timeout: 500,
+			});
+			await button.tap();
+		} else await button.click();
+		await expect(button).toHaveAttribute('aria-pressed', 'true');
+		await expect(page.locator(`#${detail.panel}`)).toBeVisible();
+		expect(
+			await page.evaluate(
+				() => (window as unknown as { detailChanges: string[] }).detailChanges
+			)
+		).toEqual(['opened']);
+	});
+}
+
+test('detail buttons keep their position while pressed', async ({ page }) => {
+	await choose(page);
+	for (const name of ['Sand Veil', 'Earthquake']) {
+		const button = page.getByRole('button', { name, exact: true });
+		await button.hover();
+		const before = await button.boundingBox();
+		const beforeScroll = await page.evaluate(() => scrollY);
+		await page.mouse.down();
+		await page.evaluate(
+			() =>
+				new Promise<void>((resolve) =>
+					requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+				)
+		);
+		const pressed = await button.boundingBox();
+		expect(pressed!.y + (await page.evaluate(() => scrollY))).toBe(
+			before!.y + beforeScroll
+		);
+		expect(pressed!.x).toBe(before!.x);
+		await page.mouse.up();
+	}
 });
